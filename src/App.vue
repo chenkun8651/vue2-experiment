@@ -1,9 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app-nav">
+      <div>
+        <router-link to="/">Home</router-link> |
+        <router-link to="/antDesignVue">AntDesignVue</router-link>
+      </div>
     </div>
-    <router-view />
+    <router-view id="app-view" />
   </div>
 </template>
+
+<style scoped>
+#app {
+  height: 100%;
+}
+#app-nav {
+  height: 5%;
+}
+#app-view {
+  height: 95%;
+}
+</style>
