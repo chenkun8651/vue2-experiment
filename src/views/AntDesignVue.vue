@@ -68,7 +68,15 @@ export default {
       this.RouteArray = [this.currentRoute];
     } else {
       this.RouteArray = ["basics"];
+      this.currentRoute = "basics";
+      this.$router.push("/antDesignVue/basics");
     }
+  },
+  watch: {
+    $route: function (value) {
+      this.currentRoute = value.path.split("/")[2];
+      this.RouteArray = [this.currentRoute];
+    },
   },
   filters: {
     keyToName: function (value) {
@@ -85,7 +93,7 @@ export default {
     ChangeMenu(event) {
       if (event.key !== this.currentRoute) {
         this.currentRoute = event.key;
-        this.$router.push(`${event.key}`);
+        this.$router.push(`/antDesignVue/${event.key}`);
       }
     },
   },

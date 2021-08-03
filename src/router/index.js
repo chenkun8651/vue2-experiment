@@ -14,6 +14,7 @@ const routes = [
     path: '/antDesignVue',
     name: 'AntDesignVue',
     component: () => import('../views/AntDesignVue.vue'),
+    redirect: '/antDesignVue/basics',
     children: [
       {
         path: "/antDesignVue/basics",

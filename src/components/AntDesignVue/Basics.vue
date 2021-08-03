@@ -7,128 +7,141 @@
       <!-- 正常按钮 -->
       <div class="title-2-xy">
         <h3>正常按钮</h3>
-        <a-button type="default" class="item-i-xy"> 默认按钮 </a-button>
-        <a-button type="primary" class="item-i-xy"> 主要按钮 </a-button>
-        <a-button type="dashed" class="item-i-xy"> 虚线按钮 </a-button>
-        <a-button type="danger" class="item-i-xy"> 危险按钮 </a-button>
-        <a-button type="link" class="item-i-xy"> 链接按钮 </a-button>
+        <div>
+          <a-button type="default" class="item-i-xy"> 默认按钮 </a-button>
+          <a-button type="primary" class="item-i-xy"> 主要按钮 </a-button>
+          <a-button type="dashed" class="item-i-xy"> 虚线按钮 </a-button>
+          <a-button type="danger" class="item-i-xy"> 危险按钮 </a-button>
+          <a-button type="link" class="item-i-xy"> 链接按钮 </a-button>
+        </div>
       </div>
       <!-- 背景色透明按钮 -->
-      <div class="title-2-xy bc-g">
+      <div class="title-2-xy">
         <h3>背景色透明按钮</h3>
-        <a-button type="default" class="item-i-xy" :ghost="true">
-          默认按钮
-        </a-button>
-        <a-button type="primary" class="item-i-xy" :ghost="true">
-          主要按钮
-        </a-button>
-        <a-button type="dashed" class="item-i-xy" :ghost="true">
-          虚线按钮
-        </a-button>
-        <a-button type="danger" class="item-i-xy" :ghost="true">
-          危险按钮
-        </a-button>
-        <a-button type="link" class="item-i-xy" :ghost="true">
-          链接按钮
-        </a-button>
+        <div class="bc-g">
+          <a-button type="default" class="item-i-xy" :ghost="true">
+            默认按钮
+          </a-button>
+          <a-button type="primary" class="item-i-xy" :ghost="true">
+            主要按钮
+          </a-button>
+          <a-button type="dashed" class="item-i-xy" :ghost="true">
+            虚线按钮
+          </a-button>
+          <a-button type="danger" class="item-i-xy" :ghost="true">
+            危险按钮
+          </a-button>
+          <a-button type="link" class="item-i-xy" :ghost="true">
+            链接按钮
+          </a-button>
+        </div>
       </div>
       <!-- 图标按钮 -->
       <div class="title-2-xy">
         <h3>图标按钮</h3>
-        <a-button type="default" class="item-i-xy" icon="search">
-          默认按钮
-        </a-button>
-        <a-button type="primary" class="item-i-xy" icon="play-circle">
-          主要按钮
-        </a-button>
-        <a-button type="dashed" class="item-i-xy" icon="fullscreen">
-          虚线按钮
-        </a-button>
-        <a-button type="danger" class="item-i-xy" icon="delete">
-          危险按钮
-        </a-button>
-        <a-button type="link" class="item-i-xy" icon="vertical-align-bottom">
-          链接按钮
-        </a-button>
+        <div>
+          <a-button type="default" class="item-i-xy" icon="search">
+            默认按钮
+          </a-button>
+          <a-button type="primary" class="item-i-xy" icon="play-circle">
+            主要按钮
+          </a-button>
+          <a-button type="dashed" class="item-i-xy" icon="fullscreen">
+            虚线按钮
+          </a-button>
+          <a-button type="danger" class="item-i-xy" icon="delete">
+            危险按钮
+          </a-button>
+          <a-button type="link" class="item-i-xy" icon="vertical-align-bottom">
+            链接按钮
+          </a-button>
+        </div>
       </div>
       <!-- 按钮形状 -->
       <div class="title-2-xy">
         <h3>按钮形状</h3>
-        <a-button type="default" class="item-i-xy" :shape="'circle'">
-          正常圆
-        </a-button>
-        <a-button type="primary" class="item-i-xy" :shape="'round'">
-          圆角按钮
-        </a-button>
-        <a-button type="dashed" class="item-i-xy" :shape="'circle'">
-          虚线圆
-        </a-button>
-        <a-button type="danger" class="item-i-xy" :shape="'round'">
-          危险按钮
-        </a-button>
-        <a-button type="link" class="item-i-xy" :shape="'round'">
-          链接按钮
-        </a-button>
+        <div>
+          <a-button type="default" class="item-i-xy" :shape="'circle'">
+            正常圆
+          </a-button>
+          <a-button type="primary" class="item-i-xy" :shape="'round'">
+            圆角按钮
+          </a-button>
+          <a-button type="dashed" class="item-i-xy" :shape="'circle'">
+            虚线圆
+          </a-button>
+          <a-button type="danger" class="item-i-xy" :shape="'round'">
+            危险按钮
+          </a-button>
+          <a-button type="link" class="item-i-xy" :shape="'round'">
+            链接按钮
+          </a-button>
+        </div>
       </div>
       <!-- 按钮大小 -->
       <div class="title-2-xy">
         <h3>按钮大小</h3>
-        <a-button type="default" class="item-i-xy" :size="'large'">
-          大按钮
-        </a-button>
-        <a-button type="default" class="item-i-xy" :size="'default'">
-          正常按钮
-        </a-button>
-        <a-button type="default" class="item-i-xy" :size="'small'">
-          小按钮
-        </a-button>
-        <a-button type="danger" class="item-i-xy" :size="'large'">
-          危险按钮
-        </a-button>
-        <a-button type="link" class="item-i-xy" :size="'large'">
-          链接按钮
-        </a-button>
+        <div>
+          <a-button type="default" class="item-i-xy" :size="'large'">
+            大按钮
+          </a-button>
+          <a-button type="default" class="item-i-xy" :size="'default'">
+            正常按钮
+          </a-button>
+          <a-button type="default" class="item-i-xy" :size="'small'">
+            小按钮
+          </a-button>
+          <a-button type="danger" class="item-i-xy" :size="'large'">
+            危险按钮
+          </a-button>
+          <a-button type="link" class="item-i-xy" :size="'large'">
+            链接按钮
+          </a-button>
+        </div>
       </div>
       <!-- 禁用效果 -->
       <div class="title-2-xy">
         <h3>禁用效果</h3>
-        <a-button type="default" class="item-i-xy" :disabled="true">
-          默认按钮
-        </a-button>
-        <a-button type="primary" class="item-i-xy" :disabled="true">
-          主要按钮
-        </a-button>
-        <a-button type="dashed" class="item-i-xy" :disabled="true">
-          虚线按钮
-        </a-button>
-        <a-button type="danger" class="item-i-xy" :disabled="true">
-          危险按钮
-        </a-button>
-        <a-button type="link" class="item-i-xy" :disabled="true">
-          链接按钮
-        </a-button>
+        <div>
+          <a-button type="default" class="item-i-xy" :disabled="true">
+            默认按钮
+          </a-button>
+          <a-button type="primary" class="item-i-xy" :disabled="true">
+            主要按钮
+          </a-button>
+          <a-button type="dashed" class="item-i-xy" :disabled="true">
+            虚线按钮
+          </a-button>
+          <a-button type="danger" class="item-i-xy" :disabled="true">
+            危险按钮
+          </a-button>
+          <a-button type="link" class="item-i-xy" :disabled="true">
+            链接按钮
+          </a-button>
+        </div>
       </div>
       <!-- 加载效果 -->
       <div class="title-2-xy">
         <h3>加载效果</h3>
-        <a-button type="default" class="item-i-xy" :loading="true">
-          默认按钮
-        </a-button>
-        <a-button type="primary" class="item-i-xy" :loading="true">
-          主要按钮
-        </a-button>
-        <a-button type="dashed" class="item-i-xy" :loading="true">
-          虚线按钮
-        </a-button>
-        <a-button type="danger" class="item-i-xy" :loading="true">
-          危险按钮
-        </a-button>
-        <a-button type="link" class="item-i-xy" :loading="true">
-          链接按钮
-        </a-button>
+        <div>
+          <a-button type="default" class="item-i-xy" :loading="true">
+            默认按钮
+          </a-button>
+          <a-button type="primary" class="item-i-xy" :loading="true">
+            主要按钮
+          </a-button>
+          <a-button type="dashed" class="item-i-xy" :loading="true">
+            虚线按钮
+          </a-button>
+          <a-button type="danger" class="item-i-xy" :loading="true">
+            危险按钮
+          </a-button>
+          <a-button type="link" class="item-i-xy" :loading="true">
+            链接按钮
+          </a-button>
+        </div>
       </div>
     </div>
-
     <!-- 图标 -->
     <h1 class="title-xy">图标</h1>
     <div style="padding: 30px">
