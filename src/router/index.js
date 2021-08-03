@@ -26,6 +26,11 @@ const routes = [
         name: "Navigation",
         component: () => import("../components/AntDesignVue/Navigation.vue"),
       },
+      {
+        path: "/antDesignVue/form",
+        name: "Form",
+        component: () => import("../components/AntDesignVue/Form.vue"),
+      },
     ]
   },
 ]

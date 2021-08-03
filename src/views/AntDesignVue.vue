@@ -22,7 +22,7 @@
             <a-icon type="fork" />
             <span>导航组件</span>
           </a-menu-item>
-          <a-menu-item key="solution">
+          <a-menu-item key="form">
             <a-icon type="user" />
             <span>表单组件</span>
           </a-menu-item>
