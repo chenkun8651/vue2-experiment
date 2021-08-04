@@ -64,11 +64,11 @@
           <a-button type="default" class="item-i-xy" :shape="'circle'">
             正常圆
           </a-button>
-          <a-button type="primary" class="item-i-xy" :shape="'round'">
-            圆角按钮
-          </a-button>
           <a-button type="dashed" class="item-i-xy" :shape="'circle'">
             虚线圆
+          </a-button>
+          <a-button type="primary" class="item-i-xy" :shape="'round'">
+            默认按钮
           </a-button>
           <a-button type="danger" class="item-i-xy" :shape="'round'">
             危险按钮
@@ -94,7 +94,7 @@
           <a-button type="danger" class="item-i-xy" :size="'large'">
             危险按钮
           </a-button>
-          <a-button type="link" class="item-i-xy" :size="'large'">
+          <a-button type="link" class="item-i-xy" :size="'small'">
             链接按钮
           </a-button>
         </div>
