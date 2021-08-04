@@ -19,12 +19,24 @@
             <span>基础组件</span>
           </a-menu-item>
           <a-menu-item key="navigation">
-            <a-icon type="fork" />
+            <a-icon type="inbox" />
             <span>导航组件</span>
           </a-menu-item>
           <a-menu-item key="form">
-            <a-icon type="user" />
+            <a-icon type="inbox" />
             <span>表单组件</span>
+          </a-menu-item>
+          <a-menu-item key="display">
+            <a-icon type="inbox" />
+            <span>展示组件</span>
+          </a-menu-item>
+          <a-menu-item key="feedback">
+            <a-icon type="inbox" />
+            <span>反馈组件</span>
+          </a-menu-item>
+          <a-menu-item key="other">
+            <a-icon type="inbox" />
+            <span>其他组件</span>
           </a-menu-item>
         </a-menu>
       </a-layout-sider>
@@ -86,6 +98,12 @@ export default {
         return "导航组件";
       } else if (value[0] == "form") {
         return "表单组件";
+      } else if (value[0] == "display") {
+        return "展示组件";
+      } else if (value[0] == "feedback") {
+        return "反馈组件";
+      } else if (value[0] == "other") {
+        return "其他组件";
       }
     },
   },

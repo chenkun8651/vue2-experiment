@@ -11,6 +11,7 @@ const routes = [
     component: Home
   },
   {
+    // AntDesignVue
     path: '/antDesignVue',
     name: 'AntDesignVue',
     component: () => import('../views/AntDesignVue.vue'),
@@ -30,6 +31,21 @@ const routes = [
         path: "/antDesignVue/form",
         name: "Form",
         component: () => import("../components/AntDesignVue/Form.vue"),
+      },
+      {
+        path: "/antDesignVue/display",
+        name: "Display",
+        component: () => import("../components/AntDesignVue/Display.vue"),
+      },
+      {
+        path: "/antDesignVue/feedback",
+        name: "Feedback",
+        component: () => import("../components/AntDesignVue/Feedback.vue"),
+      },
+      {
+        path: "/antDesignVue/other",
+        name: "Other",
+        component: () => import("../components/AntDesignVue/Other.vue"),
       },
     ]
   },
