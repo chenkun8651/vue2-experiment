@@ -3,190 +3,126 @@
   <div>
     <!-- 按钮 -->
     <h1 class="title-xy">按钮</h1>
-    <div style="padding: 30px">
-      <!-- 正常按钮 -->
-      <div class="title-2-xy">
-        <h3>正常按钮</h3>
-        <div>
-          <a-button type="default" class="item-i-xy"> 默认按钮 </a-button>
-          <a-button type="primary" class="item-i-xy"> 主要按钮 </a-button>
-          <a-button type="dashed" class="item-i-xy"> 虚线按钮 </a-button>
-          <a-button type="danger" class="item-i-xy"> 危险按钮 </a-button>
-          <a-button type="link" class="item-i-xy"> 链接按钮 </a-button>
-        </div>
-      </div>
-      <!-- 背景色透明按钮 -->
-      <div class="title-2-xy">
-        <h3>背景色透明按钮</h3>
-        <div class="bc-g">
-          <a-button type="default" class="item-i-xy" :ghost="true">
-            默认按钮
-          </a-button>
-          <a-button type="primary" class="item-i-xy" :ghost="true">
-            主要按钮
-          </a-button>
-          <a-button type="dashed" class="item-i-xy" :ghost="true">
-            虚线按钮
-          </a-button>
-          <a-button type="danger" class="item-i-xy" :ghost="true">
-            危险按钮
-          </a-button>
-          <a-button type="link" class="item-i-xy" :ghost="true">
-            链接按钮
-          </a-button>
-        </div>
-      </div>
-      <!-- 图标按钮 -->
-      <div class="title-2-xy">
-        <h3>图标按钮</h3>
-        <div>
-          <a-button type="default" class="item-i-xy" icon="search">
-            默认按钮
-          </a-button>
-          <a-button type="primary" class="item-i-xy" icon="play-circle">
-            主要按钮
-          </a-button>
-          <a-button type="dashed" class="item-i-xy" icon="fullscreen">
-            虚线按钮
-          </a-button>
-          <a-button type="danger" class="item-i-xy" icon="delete">
-            危险按钮
-          </a-button>
-          <a-button type="link" class="item-i-xy" icon="vertical-align-bottom">
-            链接按钮
-          </a-button>
-        </div>
-      </div>
-      <!-- 按钮形状 -->
-      <div class="title-2-xy">
-        <h3>按钮形状</h3>
-        <div>
-          <a-button type="default" class="item-i-xy" :shape="'circle'">
-            正常圆
-          </a-button>
-          <a-button type="dashed" class="item-i-xy" :shape="'circle'">
-            虚线圆
-          </a-button>
-          <a-button type="primary" class="item-i-xy" :shape="'round'">
-            默认按钮
-          </a-button>
-          <a-button type="danger" class="item-i-xy" :shape="'round'">
-            危险按钮
-          </a-button>
-          <a-button type="link" class="item-i-xy" :shape="'round'">
-            链接按钮
-          </a-button>
-        </div>
-      </div>
-      <!-- 按钮大小 -->
-      <div class="title-2-xy">
-        <h3>按钮大小</h3>
-        <div>
-          <a-button type="default" class="item-i-xy" :size="'large'">
-            大按钮
-          </a-button>
-          <a-button type="default" class="item-i-xy" :size="'default'">
-            正常按钮
-          </a-button>
-          <a-button type="default" class="item-i-xy" :size="'small'">
-            小按钮
-          </a-button>
-          <a-button type="danger" class="item-i-xy" :size="'large'">
-            危险按钮
-          </a-button>
-          <a-button type="link" class="item-i-xy" :size="'small'">
-            链接按钮
-          </a-button>
-        </div>
-      </div>
-      <!-- 禁用效果 -->
-      <div class="title-2-xy">
-        <h3>禁用效果</h3>
-        <div>
-          <a-button type="default" class="item-i-xy" :disabled="true">
-            默认按钮
-          </a-button>
-          <a-button type="primary" class="item-i-xy" :disabled="true">
-            主要按钮
-          </a-button>
-          <a-button type="dashed" class="item-i-xy" :disabled="true">
-            虚线按钮
-          </a-button>
-          <a-button type="danger" class="item-i-xy" :disabled="true">
-            危险按钮
-          </a-button>
-          <a-button type="link" class="item-i-xy" :disabled="true">
-            链接按钮
-          </a-button>
-        </div>
-      </div>
-      <!-- 加载效果 -->
-      <div class="title-2-xy">
-        <h3>加载效果</h3>
-        <div>
-          <a-button type="default" class="item-i-xy" :loading="true">
-            默认按钮
-          </a-button>
-          <a-button type="primary" class="item-i-xy" :loading="true">
-            主要按钮
-          </a-button>
-          <a-button type="dashed" class="item-i-xy" :loading="true">
-            虚线按钮
-          </a-button>
-          <a-button type="danger" class="item-i-xy" :loading="true">
-            危险按钮
-          </a-button>
-          <a-button type="link" class="item-i-xy" :loading="true">
-            链接按钮
-          </a-button>
+    <div class="content">
+      <!-- 标准按钮 -->
+      <div class="content-item">
+        <h3 class="title2-xy">标准按钮</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="buttonType">
+              <a-radio-button value="default">默认按钮</a-radio-button>
+              <a-radio-button value="primary">主要按钮</a-radio-button>
+              <a-radio-button value="dashed">虚线按钮</a-radio-button>
+              <a-radio-button value="danger">危险按钮</a-radio-button>
+              <a-radio-button value="link">链接按钮</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="buttonGhost">
+              <a-radio-button :value="true">背景色透明</a-radio-button>
+              <a-radio-button :value="false">背景色不透明</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="buttonShape">
+              <a-radio-button :value="''">方形</a-radio-button>
+              <a-radio-button :value="'circle'">圆形</a-radio-button>
+              <a-radio-button :value="'round'">圆角形</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="buttonSize">
+              <a-radio-button :value="'large'">大按钮</a-radio-button>
+              <a-radio-button :value="'default'">默认按钮</a-radio-button>
+              <a-radio-button :value="'small'">小按钮</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="buttonDisabled">
+              <a-radio-button :value="true">禁用</a-radio-button>
+              <a-radio-button :value="false">启用</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="buttonLoading">
+              <a-radio-button :value="true">加载</a-radio-button>
+              <a-radio-button :value="false">完成</a-radio-button>
+            </a-radio-group>
+            <div class="string-set">
+              <span style="margin-right: 5px">设置按钮图标</span>
+              <a-input style="width: 100px" v-model="buttonIcon" />
+            </div>
+          </div>
+          <div :class="{ bcg: buttonGhost }">
+            <a-button
+              :type="buttonType"
+              :ghost="buttonGhost"
+              :icon="buttonIcon"
+              :shape="buttonShape"
+              :size="buttonSize"
+              :disabled="buttonDisabled"
+              :loading="buttonLoading"
+            >
+              默认按钮
+            </a-button>
+          </div>
         </div>
       </div>
     </div>
     <!-- 图标 -->
     <h1 class="title-xy">图标</h1>
-    <div style="padding: 30px">
-      <!-- 正常图标 -->
-      <div class="title-2-xy">
-        <h3>正常图标</h3>
-        <div class="icons-list">
-          <a-icon type="home" />
-          <a-icon type="setting" theme="filled" />
-          <a-icon type="smile" theme="outlined" />
-          <a-icon type="sync" spin />
-          <a-icon type="smile" :rotate="180" />
-          <a-icon type="loading" />
+    <div class="content">
+      <!-- 标准图标 -->
+      <div class="content-item">
+        <h3 class="title2-xy">标准图标</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="iconTheme">
+              <a-radio-button :value="'filled'">实心</a-radio-button>
+              <a-radio-button :value="'outlined'">描线</a-radio-button>
+              <a-radio-button :value="'twoTone'">双色</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="iconSpin">
+              <a-radio-button :value="true">开启旋转动画</a-radio-button>
+              <a-radio-button :value="false">关闭旋转动画</a-radio-button>
+            </a-radio-group>
+            <div class="string-set">
+              <span style="margin-right: 5px">设置图标名称</span>
+              <a-input style="width: 100px" v-model="iconName" />
+            </div>
+            <div class="number-set">
+              <span style="margin-right: 5px">设置图标旋转角度</span>
+              <a-input-number style="width: 100px" v-model="iconRotate" />
+            </div>
+            <div v-if="iconTheme === 'twoTone'" class="string-set">
+              <span style="margin-right: 5px">设置双色颜色</span>
+              <a-input style="width: 100px" v-model="iconRotatTwoToneColor" />
+            </div>
+          </div>
         </div>
-      </div>
-      <!-- 彩色图标 -->
-      <div class="title-2-xy">
-        <h3>彩色图标</h3>
-        <div class="icons-list">
-          <a-icon type="smile" theme="twoTone" />
-          <a-icon type="heart" theme="twoTone" two-tone-color="#eb2f96" />
+        <div></div>
+        <div>
           <a-icon
-            type="check-circle"
-            theme="twoTone"
-            two-tone-color="#52c41a"
+            :style="{ fontSize: '30px' }"
+            :type="iconName"
+            :theme="iconTheme"
+            :spin="iconSpin"
+            :rotate="iconRotate"
+            :two-tone-color="iconRotatTwoToneColor"
           />
         </div>
       </div>
       <!-- 自定义图标 -->
-      <div class="title-2-xy">
-        <h3>自定义图标</h3>
-        <div class="icons-list">
-          <HeartIcon :style="{ color: 'hotpink', fontSize: '30px' }" />
-          <PandaIcon :style="{ color: 'hotpink', fontSize: '30px' }" />
+      <div class="content-item">
+        <h3 class="title2-xy">自定义图标</h3>
+        <div class="content2">
+          <div class="icons-list">
+            <HeartIcon :style="{ color: 'hotpink', fontSize: '30px' }" />
+            <PandaIcon :style="{ color: 'hotpink', fontSize: '30px' }" />
+          </div>
         </div>
       </div>
       <!-- 图标库图标 -->
-      <div class="title-2-xy">
-        <h3>
+      <div class="content-item">
+        <h3 class="title2-xy">
           <a target="_blank" href="http://iconfont.cn/">iconfont.cn</a>
           图标库图标
         </h3>
-        <div class="icons-list">
-          <IconFont type="icon-facebook" />
-          <IconFont type="icon-twitter" />
+        <div class="content2">
+          <div class="icons-list">
+            <IconFont type="icon-facebook" />
+            <IconFont type="icon-twitter" />
+          </div>
         </div>
       </div>
     </div>
@@ -241,6 +177,22 @@ const IconFont = Icon.createFromIconfontCN({
   scriptUrl: "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js",
 });
 export default {
+  data() {
+    return {
+      buttonType: "default",
+      buttonGhost: false,
+      buttonShape: "",
+      buttonSize: "default",
+      buttonDisabled: false,
+      buttonLoading: false,
+      buttonIcon: "",
+      iconTheme: "filled",
+      iconSpin: false,
+      iconName: "home",
+      iconRotate: 0,
+      iconRotatTwoToneColor: "#111",
+    };
+  },
   components: {
     HeartIcon,
     PandaIcon,
@@ -250,18 +202,40 @@ export default {
 </script>
 
 <style scoped>
-.bc-g {
-  background-color: #d4d4d4;
-}
 .title-xy {
-  margin: 10px 0px;
+  padding: 10px 0px;
   text-align: center;
+  font-size: 32px;
+  font-weight: bold;
 }
-.title-2-xy {
-  margin: 5px 0px;
+.content {
+  padding: 20px;
 }
-.item-i-xy {
-  margin: 5px 20px;
+.content-item {
+  padding: 10px 0px;
+}
+.title2-xy {
+  font-size: 24px;
+  font-weight: 400;
+}
+.radio-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.radio-box .ant-radio-group {
+  margin: 5px 15px 15px 0px;
+}
+.radio-box .string-set {
+  margin: 5px 15px 15px 0px;
+}
+.radio-box .number-set {
+  margin: 5px 15px 15px 0px;
+}
+.bcg {
+  background-color: #d4d4d4;
 }
 .icons-list >>> .anticon {
   margin: 5px;
