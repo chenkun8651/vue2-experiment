@@ -43,7 +43,7 @@
               <a-input style="width: 100px" v-model="buttonIcon" />
             </div>
           </div>
-          <div :class="{ bcg: buttonGhost }">
+          <div :class="{ 'bc-d4d4d4': buttonGhost }">
             <a-button
               :type="buttonType"
               :ghost="buttonGhost"
@@ -185,7 +185,7 @@ export default {
       buttonSize: "default",
       buttonDisabled: false,
       buttonLoading: false,
-      buttonIcon: "",
+      buttonIcon: "home",
       iconTheme: "filled",
       iconSpin: false,
       iconName: "home",
@@ -198,45 +198,11 @@ export default {
     PandaIcon,
     IconFont,
   },
+  methods: {},
 };
 </script>
 
 <style scoped>
-.title-xy {
-  padding: 10px 0px;
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-}
-.content {
-  padding: 20px;
-}
-.content-item {
-  padding: 10px 0px;
-}
-.title2-xy {
-  font-size: 24px;
-  font-weight: 400;
-}
-.radio-box {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.radio-box .ant-radio-group {
-  margin: 5px 15px 15px 0px;
-}
-.radio-box .string-set {
-  margin: 5px 15px 15px 0px;
-}
-.radio-box .number-set {
-  margin: 5px 15px 15px 0px;
-}
-.bcg {
-  background-color: #d4d4d4;
-}
 .icons-list >>> .anticon {
   margin: 5px;
   font-size: 30px;

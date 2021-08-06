@@ -473,6 +473,25 @@
         </div>
       </div>
     </div>
+    <!-- 穿梭框 -->
+    <h1 class="title-xy">穿梭框</h1>
+    <div class="content">
+      <!-- 标准穿梭框 -->
+      <div class="content-item">
+        <h3>标准穿梭框</h3>
+        <div>
+          <a-transfer
+            :titles="['待完成', '已完成']"
+            :data-source="mockData"
+            :target-keys="targetKeys"
+            :selected-keys="selectedKeys"
+            :render="(item) => item.title"
+            @change="changeTransfer"
+            @selectChange="selectChangeTransfer"
+          />
+        </div>
+      </div>
+    </div>
     <!-- 表格 -->
     <h1 class="title-xy">表格</h1>
     <div style="padding: 30px">
@@ -595,6 +614,18 @@ const tableData = [
     tags: ["帅", "富有"],
   },
 ];
+const mockData = [];
+for (let i = 0; i < 20; i++) {
+  mockData.push({
+    key: i.toString(),
+    title: `内容${i + 1}`,
+    description: `描述内容${i + 1}`,
+    disabled: i % 3 < 1,
+  });
+}
+const oriTargetKeys = mockData
+  .filter((item) => +item.key % 3 > 1)
+  .map((item) => item.key);
 export default {
   data() {
     return {
@@ -619,6 +650,10 @@ export default {
       ],
       tableColumns,
       tableData,
+      // 穿梭框
+      mockData,
+      targetKeys: oriTargetKeys,
+      selectedKeys: ["1", "4"],
     };
   },
   methods: {
@@ -631,6 +666,13 @@ export default {
       this.likes = 0;
       this.dislikes = 1;
       this.action = "disliked";
+    },
+    // 穿梭框
+    changeTransfer(nextTargetKeys) {
+      this.targetKeys = nextTargetKeys;
+    },
+    selectChangeTransfer(sourceSelectedKeys, targetSelectedKeys) {
+      this.selectedKeys = [...sourceSelectedKeys, ...targetSelectedKeys];
     },
   },
 };

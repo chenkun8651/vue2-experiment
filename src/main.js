@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from './router'
 
 import 'ant-design-vue/dist/antd.css'
+import './assets/global.css'
 
 Vue.config.productionTip = false
 Vue.use(AntD);

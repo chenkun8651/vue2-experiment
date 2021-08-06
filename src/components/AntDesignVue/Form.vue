@@ -15,8 +15,8 @@
               <a-radio-button :value="'small'">小输入框</a-radio-button>
             </a-radio-group>
             <a-radio-group v-model="inputAllowClear">
-              <a-radio-button :value="true">开启清除图标</a-radio-button>
-              <a-radio-button :value="false">关闭清除图标</a-radio-button>
+              <a-radio-button :value="true">开启清除</a-radio-button>
+              <a-radio-button :value="false">关闭清除</a-radio-button>
             </a-radio-group>
             <a-radio-group v-model="inputDisabled">
               <a-radio-button :value="true">禁用</a-radio-button>
@@ -51,7 +51,7 @@
               :size="inputSize"
               :disabled="inputDisabled"
               :allow-clear="inputAllowClear"
-              :maxLength="inputMaxLength"
+              :max-length="inputMaxLength"
               :addon-before="inputAddonBefore"
               :addon-after="inputAddonAfter"
             >
@@ -78,8 +78,8 @@
               default-value="标准文本域输入框"
               :disabled="inputDisabled"
               :allow-clear="inputAllowClear"
-              :maxLength="inputMaxLength"
-              :autosize="textareaAutosize"
+              :max-length="inputMaxLength"
+              :auto-size="textareaAutosize"
             >
             </a-textarea>
           </div>
@@ -107,9 +107,8 @@
               :size="inputSize"
               :disabled="inputDisabled"
               :allow-clear="inputAllowClear"
-              :maxLength="inputMaxLength"
+              :max-length="inputMaxLength"
               :addon-before="inputAddonBefore"
-              :addon-after="inputAddonAfter"
               :enter-button="inputSearchEnterButton"
               :loading="inputSearchLoading"
             >
@@ -135,9 +134,13 @@
               placeholder="占位输入框"
               :size="inputSize"
               :disabled="inputDisabled"
-              :maxLength="inputMaxLength"
+              :max-length="inputMaxLength"
+              :addon-before="inputAddonBefore"
+              :addon-after="inputAddonAfter"
               :visibilityToggle="inputPasswordVisibilityToggle"
             >
+              <a-icon slot="prefix" :type="inputPrefix"></a-icon>
+              <a-icon slot="suffix" :type="inputSuffix"></a-icon>
             </a-input-password>
           </div>
         </div>
@@ -164,21 +167,35 @@
               <a-input-number
                 style="width: 100px"
                 v-model="inputNumberPrecision"
+                :min="0"
               />
             </div>
             <div class="number-set">
               <span style="margin-right: 5px">设置改变步数</span>
-              <a-input-number style="width: 100px" v-model="inputNumberStep" />
+              <a-input-number
+                style="width: 100px"
+                v-model="inputNumberStep"
+                :min="0"
+              />
+            </div>
+            <div class="string-set">
+              <span style="margin-right: 5px">设置小数点样式</span>
+              <a-input
+                style="width: 100px"
+                v-model="inputNumberDecimalSeparator"
+              />
             </div>
           </div>
           <a-input-number
             style="width: 300px"
             placeholder="占位输入框"
+            :default-value="1"
             :size="inputSize"
             :disabled="inputDisabled"
             :auto-focus="inputNumberAutoFocus"
             :min="inputNumberMin"
             :max="inputNumberMax"
+            :decimal-separator="inputNumberDecimalSeparator"
             :precision="inputNumberPrecision"
             :step="inputNumberStep"
           >
@@ -207,6 +224,7 @@
             <a-mentions
               style="width: 300px"
               placeholder="输入@可以找到提及信息"
+              :autoFocus="false"
               :disabled="inputDisabled"
               :placement="mentionsPlacement"
               :prefix="mentionsPrefix"
@@ -214,7 +232,7 @@
             >
               <a-mentions-option value="月光">月光</a-mentions-option>
               <a-mentions-option value="太阳">太阳</a-mentions-option>
-              <a-mentions-option value="水泥">水泥</a-mentions-option>
+              <a-mentions-option value="函数">函数</a-mentions-option>
             </a-mentions>
           </div>
         </div>
@@ -239,12 +257,12 @@
           </div>
           <div>
             <a-auto-complete
-              v-model="autoCompleteValue"
               style="width: 300px"
               placeholder="输入联想文本"
-              :data-source="autoCompleteDataSource"
+              :auto-focus="false"
               :disabled="inputDisabled"
               :allow-clear="inputAllowClear"
+              :data-source="autoCompleteDataSource"
               :backfill="autoCompleteBackfill"
               :default-active-first-option="
                 autoCompleteDefaultActiveFirstOption
@@ -269,17 +287,91 @@
               <a-radio-button :value="'multiple'">多选模式</a-radio-button>
               <a-radio-button :value="'tags'">标签模式</a-radio-button>
             </a-radio-group>
-            <a-radio-group v-model="selectAllowClear">
-              <a-radio-button :value="true">开启清除图标</a-radio-button>
-              <a-radio-button :value="false">关闭清除图标</a-radio-button>
+            <a-radio-group v-model="selectSize">
+              <a-radio-button :value="'large'">大选择框</a-radio-button>
+              <a-radio-button :value="'default'">默认选择框</a-radio-button>
+              <a-radio-button :value="'small'">小选择框</a-radio-button>
             </a-radio-group>
+            <a-radio-group v-model="selectDisabled">
+              <a-radio-button :value="true">禁用</a-radio-button>
+              <a-radio-button :value="false">启用</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="selectAllowClear">
+              <a-radio-button :value="true">开启清除</a-radio-button>
+              <a-radio-button :value="false">关闭清除</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="selectShowArrow">
+              <a-radio-button :value="true">显示下拉小箭头</a-radio-button>
+              <a-radio-button :value="false">不显示下拉小箭头</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="selectDefaultActiveFirstOption">
+              <a-radio-button :value="true">
+                开启默认高亮第一个选项
+              </a-radio-button>
+              <a-radio-button :value="false">
+                关闭默认高亮第一个选项
+              </a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="selectDropdownMatchSelectWidth">
+              <a-radio-button :value="true">开启选项和菜单同宽</a-radio-button>
+              <a-radio-button :value="false">关闭选项和菜单同宽</a-radio-button>
+            </a-radio-group>
+            <a-radio-group
+              v-if="selectMode === 'default'"
+              v-model="selectShowSearch"
+            >
+              <a-radio-button :value="true">开启单选模式可搜索</a-radio-button>
+              <a-radio-button :value="false">关闭单选模式可搜索</a-radio-button>
+            </a-radio-group>
+            <a-radio-group
+              v-if="selectMode === 'multiple' || selectMode === 'tags'"
+              v-model="selectAutoClearSearchValue"
+            >
+              <a-radio-button :value="true">
+                开启选中项后清空搜索框
+              </a-radio-button>
+              <a-radio-button :value="false">
+                关闭选中项后清空搜索框
+              </a-radio-button>
+            </a-radio-group>
+            <div
+              v-if="selectMode === 'multiple' || selectMode === 'tags'"
+              class="number-set"
+            >
+              <span style="margin-right: 5px">设置最多显示tag数</span>
+              <a-input-number
+                style="width: 100px"
+                v-model="selectMaxTagCount"
+                :min="0"
+              />
+            </div>
+            <div
+              v-if="selectMode === 'multiple' || selectMode === 'tags'"
+              class="number-set"
+            >
+              <span style="margin-right: 5px">设置最大显示tag的文本长度</span>
+              <a-input-number
+                style="width: 100px"
+                v-model="selectMaxTagTextLength"
+                :min="0"
+              />
+            </div>
           </div>
           <a-select
             style="width: 300px"
+            :auto-focus="false"
             :default-value="'1'"
-            :allow-clear="selectAllowClear"
-            :auto-clear-search-value="selectAutoClearSearchValue"
             :mode="selectMode"
+            :size="selectSize"
+            :disabled="selectDisabled"
+            :allow-clear="selectAllowClear"
+            :show-arrow="selectShowArrow"
+            :default-active-first-option="selectDefaultActiveFirstOption"
+            :auto-clear-search-value="selectAutoClearSearchValue"
+            :show-search="selectShowSearch"
+            :dropdown-match-select-width="selectDropdownMatchSelectWidth"
+            :max-tag-count="selectMaxTagCount"
+            :max-tag-text-length="selectMaxTagTextLength"
           >
             <a-select-option :value="'1'">选项一</a-select-option>
             <a-select-option :value="'2'">选项二</a-select-option>
@@ -290,48 +382,62 @@
       </div>
       <!-- 级联选择框 -->
       <div class="content-item">
-        <h3>级联选择框</h3>
-        <div>
-          <a-cascader
-            style="width: 300px"
-            placeholder="请选择一个旅游景点"
-            :options="cityOptions"
-          />
+        <h3 class="title2-xy">级联选择框（部分属性继承标准选择框）</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="cascaderExpandTrigger">
+              <a-radio-button :value="'click'">点击触发展开</a-radio-button>
+              <a-radio-button :value="'hover'">悬停触发展开</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="cascaderShowSearch">
+              <a-radio-button :value="true">开启搜索框</a-radio-button>
+              <a-radio-button :value="false">关闭搜索框</a-radio-button>
+            </a-radio-group>
+          </div>
+          <div>
+            <a-cascader
+              style="width: 300px"
+              placeholder="请选择一个旅游景点"
+              :auto-focus="false"
+              :size="selectSize"
+              :disabled="selectDisabled"
+              :allow-clear="selectAllowClear"
+              :options="cascaderOptions"
+              :expand-trigger="cascaderExpandTrigger"
+              :show-search="cascaderShowSearch"
+            >
+            </a-cascader>
+          </div>
         </div>
       </div>
       <!-- 树状选择框 -->
       <div class="content-item">
-        <h3>树状选择框</h3>
-        <div>
-          <a-tree-select
-            style="width: 200px"
-            placeholder="请选择"
-            :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
-            show-search
-            allow-clear
-            tree-default-expand-all
-          >
-            <a-tree-select-node key="1" value="选项1" title="选项1">
-              <a-tree-select-node key="1-1" value="选项1-1" title="选项1-1">
-                <a-tree-select-node
-                  key="1-1-1"
-                  value="选项1-1-1"
-                  title="选项1-1-1"
-                  :selectable="false"
-                />
-                <a-tree-select-node
-                  key="1-1-2"
-                  value="选项1-1-2"
-                  title="选项1-1-2"
-                />
-              </a-tree-select-node>
-              <a-tree-select-node key="1-2" value="选项1-2" title="选项1-2">
-                <a-tree-select-node key="1-2-1" value="选项1-2-1">
-                  <b slot="title" style="color: #08c">选项1-2-1</b>
-                </a-tree-select-node>
-              </a-tree-select-node>
-            </a-tree-select-node>
-          </a-tree-select>
+        <h3 class="title2-xy">树状选择框（部分属性继承标准选择框）</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="treeSelectShowSearch">
+              <a-radio-button :value="true">开启搜索框</a-radio-button>
+              <a-radio-button :value="false">关闭搜索框</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="treeSelectTreeCheckable">
+              <a-radio-button :value="true">开启多选框</a-radio-button>
+              <a-radio-button :value="false">关闭多选框</a-radio-button>
+            </a-radio-group>
+          </div>
+          <div>
+            <a-tree-select
+              style="width: 300px"
+              placeholder="请选择一种食物"
+              :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
+              :size="selectSize"
+              :disabled="selectDisabled"
+              :allow-clear="selectAllowClear"
+              :tree-data="treeSelectOptions"
+              :show-search="treeSelectShowSearch"
+              :tree-checkable="treeSelectTreeCheckable"
+              >>
+            </a-tree-select>
+          </div>
         </div>
       </div>
     </div>
@@ -339,31 +445,45 @@
     <h1 class="title-xy">单选框</h1>
     <div class="content">
       <!-- 标准单选框 -->
-      <h3>标准单选框</h3>
-      <div>
-        <a-radio>单选项</a-radio>
+      <h3 class="title2-xy">标准单选框</h3>
+      <div class="content2">
+        <div class="radio-box">
+          <a-radio-group v-model="radioDisabled">
+            <a-radio-button :value="true">禁用</a-radio-button>
+            <a-radio-button :value="false">启用</a-radio-button>
+          </a-radio-group>
+        </div>
+        <div>
+          <a-radio-group :options="radioOptions" :disabled="radioDisabled">
+          </a-radio-group>
+        </div>
       </div>
-      <!-- 单选框组合 -->
-      <h3>单选框组合</h3>
-      <div>
-        <a-radio-group>
-          <a-radio :value="1">单选项一</a-radio>
-          <a-radio :value="2">单选项二</a-radio>
-          <a-radio :value="3">单选项三</a-radio>
-          <a-radio :value="4">单选项四</a-radio>
-        </a-radio-group>
-      </div>
-      <!-- 按钮类型单选框组合 -->
-      <h3>按钮类型单选框组合</h3>
-      <div>
-        <a-radio-group :default-value="3" button-style="solid">
-          <a-radio-button :value="1"> 单选项一 </a-radio-button>
-          <a-radio-button :value="2" :disabled="true">
-            单选项二
-          </a-radio-button>
-          <a-radio-button :value="3"> 单选项三 </a-radio-button>
-          <a-radio-button :value="4"> 单选项四 </a-radio-button>
-        </a-radio-group>
+      <!-- 按钮单选框 -->
+      <h3 class="title2-xy">按钮单选框（部分属性继承标准单选框）</h3>
+      <div class="content2">
+        <div class="radio-box">
+          <a-radio-group v-model="radioSize">
+            <a-radio-button value="large">大单选框</a-radio-button>
+            <a-radio-button value="default">默认单选框</a-radio-button>
+            <a-radio-button value="small">小单选框</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="radioButtonStyle">
+            <a-radio-button value="outline">描边风格</a-radio-button>
+            <a-radio-button value="solid">填色风格</a-radio-button>
+          </a-radio-group>
+        </div>
+        <div>
+          <a-radio-group
+            :disabled="radioDisabled"
+            :size="radioSize"
+            :button-style="radioButtonStyle"
+          >
+            <a-radio-button value="1">单选项一</a-radio-button>
+            <a-radio-button value="2">单选项二</a-radio-button>
+            <a-radio-button value="3">单选项三</a-radio-button>
+            <a-radio-button value="4">单选项四</a-radio-button>
+          </a-radio-group>
+        </div>
       </div>
     </div>
     <!-- 多选框 -->
@@ -371,76 +491,165 @@
     <div class="content">
       <!-- 标准多选框 -->
       <div class="content-item">
-        <h3>标准多选框</h3>
-        <a-checkbox>多选项</a-checkbox>
-      </div>
-      <!-- 全选功能 -->
-      <div class="content-item">
-        <h3>全选功能-多选框组合</h3>
-        <a-checkbox
-          style="margin-right: 8px"
-          :indeterminate="indeterminate"
-          :checked="checkAll"
-          @change="changeCheckAll"
-        >
-          全选项
-        </a-checkbox>
-        <a-checkbox-group
-          v-model="checkedList"
-          :options="plainOptions"
-          @change="changeCheckValue"
-        />
+        <h3 class="title2-xy">标准多选框</h3>
+        <div class="content2">
+          <a-checkbox
+            style="margin-right: 8px"
+            :indeterminate="checkboxIndeterminate"
+            :checked="checkboxChecked"
+            @change="changeCheckAll"
+          >
+            全选项
+          </a-checkbox>
+          <a-checkbox-group
+            v-model="checkboxList"
+            :options="checkboxOptions"
+            @change="changeCheckValue"
+          >
+          </a-checkbox-group>
+        </div>
       </div>
     </div>
     <!-- 日期选择框 -->
     <h1 class="title-xy">日期选择框</h1>
     <div class="content">
-      <!-- 选择日期 -->
+      <!-- 标准日期选择框 -->
       <div class="content-item">
-        <h3>选择日期</h3>
-        <a-date-picker style="width: 200px" placeholder="选择日期" />
-      </div>
-      <!-- 选择日期时间 -->
-      <div class="content-item">
-        <h3>选择日期时间</h3>
-        <a-date-picker
-          style="width: 200px"
-          placeholder="选择日期时间"
-          show-time
-        />
-      </div>
-      <!-- 选择周 -->
-      <div class="content-item">
-        <h3>选择周</h3>
-        <a-week-picker style="width: 200px" placeholder="选择周" />
-      </div>
-      <!-- 选择月份 -->
-      <div class="content-item">
-        <h3>选择月份</h3>
-        <a-month-picker style="width: 200px" placeholder="选择月份" />
-      </div>
-      <!-- 选择日期范围 -->
-      <div class="content-item">
-        <h3>选择日期范围</h3>
-        <a-range-picker style="width: 400px" />
+        <h3 class="title2-xy">标准日期选择框</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="dateDisabled">
+              <a-radio-button :value="true">禁用</a-radio-button>
+              <a-radio-button :value="false">启用</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="dateAllowClear">
+              <a-radio-button :value="true">开启清除</a-radio-button>
+              <a-radio-button :value="false">关闭清除</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="dateInputReadOnly">
+              <a-radio-button :value="true">开启只读</a-radio-button>
+              <a-radio-button :value="false">关闭只读</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="dataShowTime">
+              <a-radio-button :value="true">开启选择时间</a-radio-button>
+              <a-radio-button :value="false">关闭选择时间</a-radio-button>
+            </a-radio-group>
+          </div>
+          <div>
+            <a-date-picker
+              style="width: 200px; margin: 0 50px 20px 0"
+              placeholder="选择日期"
+              :autoFocus="false"
+              :disabled="dateDisabled"
+              :allowClear="dateAllowClear"
+              :input-read-only="dateInputReadOnly"
+              :show-time="dataShowTime"
+            >
+            </a-date-picker>
+            <a-week-picker
+              style="width: 200px; margin: 0 50px 20px 0"
+              placeholder="选择周"
+              :autoFocus="false"
+              :disabled="dateDisabled"
+              :allowClear="dateAllowClear"
+              :input-read-only="dateInputReadOnly"
+            >
+            </a-week-picker>
+            <a-month-picker
+              style="width: 200px; margin: 0 50px 20px 0"
+              placeholder="选择月份"
+              :autoFocus="false"
+              :disabled="dateDisabled"
+              :allowClear="dateAllowClear"
+              :input-read-only="dateInputReadOnly"
+            >
+            </a-month-picker>
+            <a-range-picker
+              style="width: 400px"
+              :autoFocus="false"
+              :disabled="dateDisabled"
+              :allowClear="dateAllowClear"
+              :input-read-only="dateInputReadOnly"
+              :show-time="dataShowTime"
+            >
+            </a-range-picker>
+          </div>
+        </div>
       </div>
     </div>
     <!-- 时间选择框 -->
     <h1 class="title-xy">时间选择框</h1>
     <div class="content">
-      <!-- 选择时间 -->
+      <!-- 标准时间选择框 -->
       <div class="content-item">
-        <h3>选择时间</h3>
-        <a-time-picker style="width: 200px" placeholder="选择时间" />
-      </div>
-      <!-- 12小时制时间 -->
-      <div class="content-item">
-        <h3>12小时制时间</h3>
-        <a-time-picker
-          style="width: 200px"
-          placeholder="选择时间"
-          use12-hours
-        />
+        <h3 class="title2-xy">标准时间选择框</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="timeDisabled">
+              <a-radio-button :value="true">禁用</a-radio-button>
+              <a-radio-button :value="false">启用</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="timeAllowClear">
+              <a-radio-button :value="true">开启清除</a-radio-button>
+              <a-radio-button :value="false">关闭清除</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="timeInputReadOnly">
+              <a-radio-button :value="true">开启只读</a-radio-button>
+              <a-radio-button :value="false">关闭只读</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="timeUse12Hours">
+              <a-radio-button :value="true">开启12小时制</a-radio-button>
+              <a-radio-button :value="false">关闭12小时制</a-radio-button>
+            </a-radio-group>
+            <div class="string-set">
+              <span style="margin-right: 5px">设置时间格式</span>
+              <a-input style="width: 100px" v-model="timeFormat" />
+            </div>
+            <div class="number-set">
+              <span style="margin-right: 5px">设置小时选项间隔</span>
+              <a-input-number
+                style="width: 100px"
+                v-model="timeHourStep"
+                :max="23"
+                :min="1"
+              />
+            </div>
+            <div class="number-set">
+              <span style="margin-right: 5px">设置分钟选项间隔</span>
+              <a-input-number
+                style="width: 100px"
+                v-model="timeMinuteStep"
+                :max="59"
+                :min="1"
+              />
+            </div>
+            <div class="number-set">
+              <span style="margin-right: 5px">设置秒钟选项间隔</span>
+              <a-input-number
+                style="width: 100px"
+                v-model="timeSecondStep"
+                :max="59"
+                :min="1"
+              />
+            </div>
+          </div>
+          <div>
+            <a-time-picker
+              style="width: 200px"
+              placeholder="选择时间"
+              :autoFocus="false"
+              :disabled="timeDisabled"
+              :allowClear="timeAllowClear"
+              :input-read-only="timeInputReadOnly"
+              :use12-hours="timeUse12Hours"
+              :format="timeFormat"
+              :hour-step="timeHourStep"
+              :minute-step="timeMinuteStep"
+              :second-step="timeSecondStep"
+            >
+            </a-time-picker>
+          </div>
+        </div>
       </div>
     </div>
     <!-- 评分 -->
@@ -448,18 +657,43 @@
     <div class="content">
       <!-- 标准评分 -->
       <div class="content-item">
-        <h3>标准评分</h3>
-        <div>
-          <a-rate :default-value="2.5" :allow-half="true" />
-        </div>
-      </div>
-      <!-- 评分-更换图标 -->
-      <div class="content-item">
-        <h3>评分-更换图标</h3>
-        <div>
-          <a-rate :default-value="4.0" :allow-half="true">
-            <a-icon slot="character" type="heart" />
-          </a-rate>
+        <h3 class="title2-xy">标准评分</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="rateDisabled">
+              <a-radio-button :value="true">禁用</a-radio-button>
+              <a-radio-button :value="false">启用</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="rateAllowClear">
+              <a-radio-button :value="true">开启清除</a-radio-button>
+              <a-radio-button :value="false">关闭清除</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="rateAllowHalf">
+              <a-radio-button :value="true">开启半选</a-radio-button>
+              <a-radio-button :value="false">关闭半选</a-radio-button>
+            </a-radio-group>
+            <div class="number-set">
+              <span style="margin-right: 5px">设置评分数</span>
+              <a-input-number
+                style="width: 100px"
+                v-model="rateCount"
+                :max="10"
+                :min="1"
+              />
+            </div>
+          </div>
+          <div>
+            <a-rate
+              :autoFocus="false"
+              :default-value="3"
+              :disabled="rateDisabled"
+              :allow-clear="rateAllowClear"
+              :allow-half="rateAllowHalf"
+              :count="rateCount"
+            >
+              <a-icon slot="character" type="heart" />
+            </a-rate>
+          </div>
         </div>
       </div>
     </div>
@@ -468,25 +702,72 @@
     <div class="content">
       <!-- 标准滑动输入条 -->
       <div class="content-item">
-        <h3>标准滑动输入条</h3>
-        <div>
-          <a-slider :default-value="30" :tip-formatter="formatterSlider" />
-        </div>
-      </div>
-      <!-- 双滑块滑动输入条 -->
-      <div class="content-item">
-        <h3>双滑块滑动输入条</h3>
-        <div>
-          <a-slider :range="true" :default-value="[20, 50]" />
-        </div>
-      </div>
-      <!-- 带图标滑动输入条 -->
-      <div class="content-item">
-        <h3>带图标滑动输入条</h3>
-        <div class="icon-wrapper">
-          <a-icon :style="{ color: '#fadb14' }" type="frown-o" />
-          <a-slider :min="0" :max="20" />
-          <a-icon :style="{ color: '#fadb14' }" type="smile-o" />
+        <h3 class="title2-xy">标准滑动输入条</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="sliderDisabled">
+              <a-radio-button :value="true">禁用</a-radio-button>
+              <a-radio-button :value="false">启用</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="sliderDots">
+              <a-radio-button :value="true">开启拖拽到刻度</a-radio-button>
+              <a-radio-button :value="false">关闭拖拽到刻度</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="sliderRange">
+              <a-radio-button :value="true">开启双滑块</a-radio-button>
+              <a-radio-button :value="false">关闭双滑块</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="sliderReverse">
+              <a-radio-button :value="true">开启反向</a-radio-button>
+              <a-radio-button :value="false">关闭反向</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="sliderVertical">
+              <a-radio-button :value="true">竖直方向</a-radio-button>
+              <a-radio-button :value="false">水平方向</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="sliderTooltipVisible">
+              <a-radio-button :value="true">显示提示</a-radio-button>
+              <a-radio-button :value="false">关闭提示</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="sliderTooltipPlacement">
+              <a-radio-button :value="'top'">上方提示</a-radio-button>
+              <a-radio-button :value="'bottom'">下方提示</a-radio-button>
+            </a-radio-group>
+            <div class="number-set">
+              <span style="margin-right: 5px">设置输入条最大值</span>
+              <a-input-number
+                style="width: 100px"
+                v-model="sliderMax"
+                :max="500"
+                :min="sliderMin"
+              />
+            </div>
+            <div class="number-set">
+              <span style="margin-right: 5px">设置输入条最小值</span>
+              <a-input-number
+                style="width: 100px"
+                v-model="sliderMin"
+                :max="sliderMax"
+                :min="1"
+              />
+            </div>
+          </div>
+          <div>
+            <a-slider
+              style="height: 100px"
+              :auto-focus="false"
+              :disabled="sliderDisabled"
+              :dots="sliderDots"
+              :range="sliderRange"
+              :reverse="sliderReverse"
+              :vertical="sliderVertical"
+              :tooltip-visible="sliderTooltipVisible"
+              :tooltip-placement="sliderTooltipPlacement"
+              :max="sliderMax"
+              :min="sliderMin"
+              :tip-formatter="sliderTipFormatter"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -495,49 +776,45 @@
     <div class="content">
       <!-- 标准开关 -->
       <div class="content-item">
-        <h3>标准开关</h3>
-        <div>
-          <a-switch default-checked />
-        </div>
-      </div>
-      <!-- 带文字开关 -->
-      <div class="content-item">
-        <h3>带文字开关</h3>
-        <div>
-          <a-switch
-            checked-children="开"
-            un-checked-children="关"
-            default-checked
-          />
-        </div>
-      </div>
-      <!-- 带加载开关 -->
-      <div class="content-item">
-        <h3>带加载开关</h3>
-        <div>
-          <a-switch loading default-checked />
-        </div>
-      </div>
-    </div>
-    <!-- 穿梭框 -->
-    <h1 class="title-xy">穿梭框</h1>
-    <div class="content">
-      <!-- 标准穿梭框 -->
-      <div class="content-item">
-        <h3>标准穿梭框</h3>
-        <div>
-          <a-transfer
-            :titles="['待完成', '已完成']"
-            :data-source="mockData"
-            :target-keys="targetKeys"
-            :selected-keys="selectedKeys"
-            :render="(item) => item.title"
-            @change="changeTransfer"
-            @selectChange="selectChangeTransfer"
-          />
+        <h3 class="title2-xy">标准开关</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="switchDisabled">
+              <a-radio-button :value="true">禁用</a-radio-button>
+              <a-radio-button :value="false">启用</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="switchSize">
+              <a-radio-button :value="'default'">默认</a-radio-button>
+              <a-radio-button :value="'small'">小型</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="switchLoading">
+              <a-radio-button :value="true">开启加载</a-radio-button>
+              <a-radio-button :value="false">关闭加载</a-radio-button>
+            </a-radio-group>
+            <div class="string-set">
+              <span style="margin-right: 5px">设置打开是开关文本</span>
+              <a-input style="width: 100px" v-model="switchCheckedChildren" />
+            </div>
+            <div class="string-set">
+              <span style="margin-right: 5px">设置关闭时开关文本</span>
+              <a-input style="width: 100px" v-model="switchUnCheckedChildren" />
+            </div>
+          </div>
+          <div>
+            <a-switch
+              :auto-focus="false"
+              :disabled="switchDisabled"
+              :size="switchSize"
+              :loading="switchLoading"
+              :checked-children="switchCheckedChildren"
+              :un-checked-children="switchUnCheckedChildren"
+            >
+            </a-switch>
+          </div>
         </div>
       </div>
     </div>
+
     <!-- 上传 -->
     <h1 class="title-xy">上传</h1>
     <div class="content">
@@ -579,127 +856,76 @@
         </div>
       </div>
     </div>
-    <!-- 表单 -->
-    <h1 class="title-xy">表单</h1>
-    <div class="content">
-      <a-form
-        :label-col="{
-          xs: { span: 24 },
-          sm: { span: 5 },
-        }"
-        :wrapper-col="{
-          xs: { span: 24 },
-          sm: { span: 12 },
-        }"
-      >
-        <a-form-item
-          label="失败"
-          validate-status="error"
-          help="数据是错误的，验证失败"
-        >
-          <a-input id="error" placeholder="错误样式" />
-        </a-form-item>
-        <a-form-item label="警告" validate-status="warning">
-          <a-input id="warning" placeholder="警告样式" />
-        </a-form-item>
-        <a-form-item
-          label="验证"
-          validate-status="validating"
-          help="数据正在验证中"
-          has-feedback
-        >
-          <a-input id="validating" placeholder="验证样式" />
-        </a-form-item>
-        <a-form-item label="成功" validate-status="success" has-feedback>
-          <a-input id="success" placeholder="成功样式" />
-        </a-form-item>
-        <a-form-item label="警告" validate-status="warning" has-feedback>
-          <a-input id="warning2" placeholder="警告样式" />
-        </a-form-item>
-        <a-form-item
-          label="失败"
-          validate-status="error"
-          help="数据是错误的，验证失败"
-          has-feedback
-        >
-          <a-input id="error2" placeholder="错误样式" />
-        </a-form-item>
-        <a-form-item label="成功" validate-status="success" has-feedback>
-          <a-date-picker style="width: 100%" />
-        </a-form-item>
-        <a-form-item label="警告" validate-status="warning" has-feedback>
-          <a-time-picker style="width: 100%" />
-        </a-form-item>
-        <a-form-item label="错误" validate-status="error" has-feedback>
-          <a-select default-value="1">
-            <a-select-option value="1">选项一</a-select-option>
-            <a-select-option value="2">选项二</a-select-option>
-            <a-select-option value="3">选项三</a-select-option>
-          </a-select>
-        </a-form-item>
-        <a-form-item
-          label="验证"
-          validate-status="validating"
-          help="数据正在验证中"
-          has-feedback
-        >
-          <a-cascader :default-value="['1']" :options="[]" />
-        </a-form-item>
-        <a-form-item label="日期" style="margin-bottom: 0">
-          <a-form-item
-            validate-status="error"
-            help="选择日期错误"
-            :style="{ display: 'inline-block', width: 'calc(50% - 12px)' }"
-          >
-            <a-date-picker style="width: 100%" />
-          </a-form-item>
-          <span
-            :style="{
-              display: 'inline-block',
-              width: '24px',
-              textAlign: 'center',
-            }"
-          >
-            -
-          </span>
-          <a-form-item
-            :style="{ display: 'inline-block', width: 'calc(50% - 12px)' }"
-          >
-            <a-date-picker style="width: 100%" />
-          </a-form-item>
-        </a-form-item>
-        <a-form-item label="成功" validate-status="success" has-feedback>
-          <a-input-number style="width: 100%" />
-        </a-form-item>
-        <a-form-item label="成功" validate-status="success" has-feedback>
-          <a-input allow-clear />
-        </a-form-item>
-        <a-form-item label="警告" validate-status="warning" has-feedback>
-          <a-input-password />
-        </a-form-item>
-        <a-form-item label="错误" validate-status="error" has-feedback>
-          <a-input-password allow-clear />
-        </a-form-item>
-      </a-form>
-    </div>
   </div>
 </template>
 
 <script>
-const plainOptions = ["多选项一", "多选项二", "多选项三"];
-const defaultCheckedList = ["多选项一", "多选项三"];
-const mockData = [];
-for (let i = 0; i < 20; i++) {
-  mockData.push({
-    key: i.toString(),
-    title: `内容${i + 1}`,
-    description: `描述内容${i + 1}`,
-    disabled: i % 3 < 1,
-  });
-}
-const oriTargetKeys = mockData
-  .filter((item) => +item.key % 3 > 1)
-  .map((item) => item.key);
+const cascaderOptions = [
+  {
+    value: "sichuan",
+    label: "四川",
+    children: [
+      {
+        value: "chengdu",
+        label: "成都",
+        children: [
+          {
+            value: "wuhouci",
+            label: "武侯祠",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    value: "jiangsu",
+    label: "江苏",
+    children: [
+      {
+        value: "nanjing",
+        label: "南京",
+        children: [
+          {
+            value: "zhonghuamen",
+            label: "中华门",
+          },
+        ],
+      },
+    ],
+  },
+];
+const treeSelectOptions = [
+  {
+    title: "肉类",
+    value: "1",
+    key: "1",
+    children: [
+      {
+        title: "鸡肉",
+        value: "1-1",
+        key: "1-1",
+      },
+      {
+        title: "鸭肉",
+        value: "1-2",
+        key: "1-2",
+      },
+    ],
+  },
+  {
+    title: "蔬菜类",
+    value: "2",
+    key: "2",
+  },
+];
+const radioOptions = [
+  { label: "单选项一", value: 1 },
+  { label: "单选项二", value: 2 },
+  { label: "单选项三", value: 3 },
+  { label: "单选项四", value: 4 },
+];
+const checkboxOptions = ["多选项一", "多选项二", "多选项三", "多选项四"];
+
 const getBase64 = function (img, callback) {
   const reader = new FileReader();
   reader.addEventListener("load", () => callback(reader.result));
@@ -718,106 +944,116 @@ export default {
       inputAddonAfter: "",
       inputPrefix: "",
       inputSuffix: "",
-      textareaAutosize: true,
+      textareaAutosize: false,
       inputSearchEnterButton: true,
       inputSearchLoading: false,
       inputPasswordVisibilityToggle: true,
-      inputNumberAutoFocus: true,
+      inputNumberAutoFocus: false,
       inputNumberMin: 1,
       inputNumberMax: 100,
       inputNumberPrecision: 2,
       inputNumberStep: 2,
+      inputNumberDecimalSeparator: ".",
       mentionsPlacement: "top",
       mentionsPrefix: "@",
       mentionsSplit: "",
-      autoCompleteValue: "",
       autoCompleteDataSource: [],
       autoCompleteBackfill: true,
       autoCompleteDefaultActiveFirstOption: true,
       // 选择框
       selectMode: "default",
+      selectSize: "default",
+      selectDisabled: false,
       selectAllowClear: true,
+      selectShowArrow: true,
+      selectDefaultActiveFirstOption: true,
       selectAutoClearSearchValue: true,
-      // 级联选择框
-      cityOptions: [
-        {
-          value: "sichuan",
-          label: "四川",
-          children: [
-            {
-              value: "chengdu",
-              label: "成都",
-              children: [
-                {
-                  value: "wuhouci",
-                  label: "武侯祠",
-                },
-              ],
-            },
-          ],
-        },
-        {
-          value: "jiangsu",
-          label: "江苏",
-          children: [
-            {
-              value: "nanjing",
-              label: "南京",
-              children: [
-                {
-                  value: "zhonghuamen",
-                  label: "中华门",
-                },
-              ],
-            },
-          ],
-        },
-      ],
+      selectShowSearch: false,
+      selectDropdownMatchSelectWidth: true,
+      selectMaxTagCount: 5,
+      selectMaxTagTextLength: 3,
+      cascaderOptions: cascaderOptions,
+      cascaderExpandTrigger: "click",
+      cascaderShowSearch: false,
+      treeSelectOptions: treeSelectOptions,
+      treeSelectShowSearch: true,
+      treeSelectTreeCheckable: false,
+      // 单选框
+      radioOptions: radioOptions,
+      radioSize: "default",
+      radioDisabled: false,
+      radioButtonStyle: "outline",
       // 多选框
-      indeterminate: true,
-      checkAll: false,
-      checkedList: defaultCheckedList,
-      plainOptions: plainOptions,
-      // 穿梭框
-      mockData,
-      targetKeys: oriTargetKeys,
-      selectedKeys: ["1", "4"],
+      checkboxIndeterminate: false,
+      checkboxChecked: false,
+      checkboxList: [],
+      checkboxOptions: checkboxOptions,
+      // 日期选择器
+      dateDisabled: false,
+      dateAllowClear: false,
+      dateInputReadOnly: false,
+      dataShowTime: false,
+      // 时间选择器
+      timeDisabled: false,
+      timeAllowClear: false,
+      timeInputReadOnly: false,
+      timeUse12Hours: false,
+      timeFormat: "HH:mm:ss",
+      timeHourStep: 1,
+      timeMinuteStep: 1,
+      timeSecondStep: 1,
+      // 评分
+      rateDisabled: false,
+      rateAllowClear: false,
+      rateAllowHalf: false,
+      rateCount: 5,
+      // 滑动输入条
+      sliderDisabled: false,
+      sliderDots: false,
+      sliderRange: false,
+      sliderReverse: false,
+      sliderVertical: false,
+      sliderTooltipVisible: false,
+      sliderTooltipPlacement: "top",
+      sliderMax: 100,
+      sliderMin: 1,
+      // 开关
+      switchDisabled: false,
+      switchSize: "default",
+      switchLoading: false,
+      switchCheckedChildren: "开",
+      switchUnCheckedChildren: "关",
       // 上传
       loading: false,
       imageUrl: "",
     };
   },
   methods: {
-    // 联想输入
-    autoCompleteSearch(searchText) {
-      this.autoCompleteDataSource = !searchText
+    // 选择框-根据输入文本生成联想源数据
+    autoCompleteSearch(text) {
+      this.autoCompleteDataSource = !text
         ? []
-        : [searchText, searchText.repeat(2), searchText.repeat(3)];
+        : [text, text.repeat(2), text.repeat(3)];
     },
-    // 多选框
-    changeCheckAll(e) {
+    // 多选框-全选操作
+    changeCheckAll(event) {
       Object.assign(this, {
-        checkedList: e.target.checked ? plainOptions : [],
-        indeterminate: false,
-        checkAll: e.target.checked,
+        checkboxIndeterminate: false,
+        checkboxChecked: event.target.checked,
+        checkboxList: event.target.checked ? checkboxOptions : [],
       });
     },
-    changeCheckValue(checkedList) {
-      this.indeterminate =
-        !!checkedList.length && checkedList.length < plainOptions.length;
-      this.checkAll = checkedList.length === plainOptions.length;
+    // 多选框-更新多选列表
+    changeCheckValue(list) {
+      this.checkboxIndeterminate =
+        !!list.length && list.length < checkboxOptions.length;
+      this.checkboxChecked = list.length === checkboxOptions.length;
     },
-    // 滑动输入条
-    formatterSlider(value) {
+    // 滑动输入条-格式化输入条提示值
+    sliderTipFormatter(value) {
       return `${value}%`;
     },
-    // 穿梭框
-    changeTransfer(nextTargetKeys) {
-      this.targetKeys = nextTargetKeys;
-    },
-    selectChangeTransfer(sourceSelectedKeys, targetSelectedKeys) {
-      this.selectedKeys = [...sourceSelectedKeys, ...targetSelectedKeys];
-    },
+
     // 上传
     beforeUploadImage(file) {
       const isJpgOrPng =
@@ -848,58 +1084,6 @@ export default {
 </script>
 
 <style scoped>
-.title-xy {
-  padding: 10px 0px;
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-}
-.content {
-  padding: 20px;
-}
-.content-item {
-  padding: 10px 0px;
-}
-.title2-xy {
-  font-size: 24px;
-  font-weight: 400;
-}
-.radio-box {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.radio-box .ant-radio-group {
-  margin: 5px 15px 15px 0px;
-}
-.radio-box .string-set {
-  margin: 5px 15px 15px 0px;
-}
-.radio-box .number-set {
-  margin: 5px 15px 15px 0px;
-}
-
-.icon-wrapper {
-  position: relative;
-  padding: 0px 30px;
-}
-.icon-wrapper .anticon {
-  position: absolute;
-  top: -2px;
-  width: 16px;
-  height: 16px;
-  line-height: 1;
-  font-size: 16px;
-  color: rgba(0, 0, 0, 0.25);
-}
-.icon-wrapper .anticon:first-child {
-  left: 0;
-}
-.icon-wrapper .anticon:last-child {
-  right: 0;
-}
 .avatar-uploader > .ant-upload {
   width: 128px;
   height: 128px;

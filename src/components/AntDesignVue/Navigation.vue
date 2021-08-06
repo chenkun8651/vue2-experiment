@@ -42,7 +42,7 @@
         <div class="content2">
           <div class="radio-box">
             <div class="string-set">
-              <span style="margin-right: 5px">面包屑分隔符</span>
+              <span style="margin-right: 5px">设置面包屑分隔符</span>
               <a-input style="width: 100px" v-model="breadcrumbSeparator" />
             </div>
           </div>
@@ -480,7 +480,7 @@
 export default {
   data() {
     return {
-      affixTop: 350,
+      affixTop: 300,
       affixBottom: 350,
       breadcrumbSeparator: "/",
       dropdownTrigger: ["hover"],
@@ -506,38 +506,3 @@ export default {
   methods: {},
 };
 </script>
-
-<style scoped>
-.title-xy {
-  padding: 10px 0px;
-  text-align: center;
-  font-size: 32px;
-  font-weight: bold;
-}
-.content {
-  padding: 20px;
-}
-.content-item {
-  padding: 10px 0px;
-}
-.title2-xy {
-  font-size: 24px;
-  font-weight: 400;
-}
-.radio-box {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.radio-box .ant-radio-group {
-  margin: 5px 15px 15px 0px;
-}
-.radio-box .string-set {
-  margin: 5px 15px 15px 0px;
-}
-.radio-box .number-set {
-  margin: 5px 15px 15px 0px;
-}
-</style>

@@ -1,0 +1,38 @@
+/* 结构类 */
+.title-xy {
+  padding: 10px 0px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+.content {
+  padding: 20px;
+}
+.content-item {
+  padding: 10px 0px;
+}
+.title2-xy {
+  font-size: 24px;
+  font-weight: 400;
+}
+.radio-box {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.radio-box .ant-radio-group {
+  margin: 5px 15px 15px 0px;
+}
+.radio-box .string-set {
+  margin: 5px 15px 15px 0px;
+}
+.radio-box .number-set {
+  margin: 5px 15px 15px 0px;
+}
+
+/* 颜色类 */
+.bc-d4d4d4 {
+  background-color: #d4d4d4;
+}
