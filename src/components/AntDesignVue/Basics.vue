@@ -21,7 +21,7 @@
               <a-radio-button :value="false">背景色不透明</a-radio-button>
             </a-radio-group>
             <a-radio-group v-model="buttonShape">
-              <a-radio-button :value="''">方形</a-radio-button>
+              <a-radio-button :value="null">方形</a-radio-button>
               <a-radio-button :value="'circle'">圆形</a-radio-button>
               <a-radio-button :value="'round'">圆角形</a-radio-button>
             </a-radio-group>
@@ -89,17 +89,16 @@
               <a-input style="width: 100px" v-model="iconRotatTwoToneColor" />
             </div>
           </div>
-        </div>
-        <div></div>
-        <div>
-          <a-icon
-            :style="{ fontSize: '30px' }"
-            :type="iconName"
-            :theme="iconTheme"
-            :spin="iconSpin"
-            :rotate="iconRotate"
-            :two-tone-color="iconRotatTwoToneColor"
-          />
+          <div>
+            <a-icon
+              :style="{ fontSize: '30px' }"
+              :type="iconName"
+              :theme="iconTheme"
+              :spin="iconSpin"
+              :rotate="iconRotate"
+              :two-tone-color="iconRotatTwoToneColor"
+            />
+          </div>
         </div>
       </div>
       <!-- 自定义图标 -->
@@ -122,6 +121,79 @@
           <div class="icons-list">
             <IconFont type="icon-facebook" />
             <IconFont type="icon-twitter" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 徽标 -->
+    <h1 class="title-xy">徽标</h1>
+    <div class="content">
+      <!-- 数字徽标 -->
+      <div class="content-item">
+        <h3 class="title2-xy">数字徽标</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="badgeShowZero">
+              <a-radio-button :value="true">显示0的数字</a-radio-button>
+              <a-radio-button :value="false">不显示0的数字</a-radio-button>
+            </a-radio-group>
+            <div class="number-set">
+              <span style="margin-right: 5px">设置展示数字</span>
+              <a-input-number style="width: 100px" v-model="badgeCount" />
+            </div>
+            <div class="number-set">
+              <span style="margin-right: 5px">设置展示封顶数字</span>
+              <a-input-number
+                style="width: 100px"
+                v-model="badgeOverflowCount"
+              />
+            </div>
+          </div>
+          <div>
+            <a-badge
+              :count="badgeCount"
+              :overflow-count="badgeOverflowCount"
+              :show-zero="badgeShowZero"
+            >
+            </a-badge>
+          </div>
+        </div>
+      </div>
+      <!-- 点徽标 -->
+      <div class="content-item">
+        <h3 class="title2-xy">点徽标</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="badgeStatus">
+              <a-radio-button :value="'success'">成功</a-radio-button>
+              <a-radio-button :value="'processing'">处理中</a-radio-button>
+              <a-radio-button :value="'default'">默认</a-radio-button>
+              <a-radio-button :value="'error'">错误</a-radio-button>
+              <a-radio-button :value="'warning'">警告</a-radio-button>
+            </a-radio-group>
+            <div class="string-set">
+              <span style="margin-right: 5px">设置徽标颜色</span>
+              <a-input style="width: 100px" v-model="badgeColor" />
+            </div>
+            <div v-if="badgeStatus" class="string-set">
+              <span style="margin-right: 5px">设置状态点文本</span>
+              <a-input style="width: 100px" v-model="badgeText" />
+            </div>
+            <div class="string-set">
+              <span style="margin-right: 5px">
+                设置鼠标放在状态点显示文本
+              </span>
+              <a-input style="width: 100px" v-model="badgeTitle" />
+            </div>
+          </div>
+          <div>
+            <a-badge
+              :color="badgeColor"
+              :status="badgeStatus"
+              :text="badgeText"
+              :title="badgeTitle"
+            >
+            </a-badge>
           </div>
         </div>
       </div>
@@ -176,21 +248,32 @@ const PandaIcon = {
 const IconFont = Icon.createFromIconfontCN({
   scriptUrl: "//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js",
 });
+
 export default {
   data() {
     return {
+      // 按钮
       buttonType: "default",
       buttonGhost: false,
-      buttonShape: "",
+      buttonShape: null,
       buttonSize: "default",
       buttonDisabled: false,
       buttonLoading: false,
       buttonIcon: "home",
+      // 图标
       iconTheme: "filled",
       iconSpin: false,
       iconName: "home",
       iconRotate: 0,
       iconRotatTwoToneColor: "#111",
+      // 徽标
+      badgeShowZero: true,
+      badgeCount: 0,
+      badgeOverflowCount: 99,
+      badgeColor: null,
+      badgeStatus: "default",
+      badgeText: "",
+      badgeTitle: "状态点标题",
     };
   },
   components: {

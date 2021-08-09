@@ -79,9 +79,9 @@
                 <router-link to="/antDesignVue/basics">基础组件</router-link>
                 <a-menu slot="overlay">
                   <a-menu-item>
-                    <router-link to="/antDesignVue/basics"
-                      >基础组件</router-link
-                    >
+                    <router-link to="/antDesignVue/basics">
+                      基础组件
+                    </router-link>
                   </a-menu-item>
                   <a-menu-item>
                     <router-link to="/antDesignVue/navigation">
@@ -253,12 +253,12 @@
           <div>
             <a-menu
               style="width: 300px"
+              :default-selected-keys="['1']"
+              :default-open-keys="['3']"
               :mode="menuMode"
               :theme="menuTheme"
               :multiple="menuMultiple"
               :selectable="menuSelectable"
-              :default-selected-keys="['1']"
-              :default-open-keys="['3']"
             >
               <a-menu-item key="1">
                 <router-link to="/antDesignVue/basics">基础组件</router-link>

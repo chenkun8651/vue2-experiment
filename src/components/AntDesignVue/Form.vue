@@ -55,8 +55,10 @@
               :addon-before="inputAddonBefore"
               :addon-after="inputAddonAfter"
             >
-              <a-icon slot="prefix" :type="inputPrefix"></a-icon>
-              <a-icon slot="suffix" :type="inputSuffix"></a-icon>
+              <a-icon v-if="inputPrefix" slot="prefix" :type="inputPrefix">
+              </a-icon>
+              <a-icon v-if="inputSuffix" slot="suffix" :type="inputSuffix">
+              </a-icon>
             </a-input>
           </div>
         </div>
@@ -112,8 +114,10 @@
               :enter-button="inputSearchEnterButton"
               :loading="inputSearchLoading"
             >
-              <a-icon slot="prefix" :type="inputPrefix"></a-icon>
-              <a-icon slot="suffix" :type="inputSuffix"></a-icon>
+              <a-icon v-if="inputPrefix" slot="prefix" :type="inputPrefix">
+              </a-icon>
+              <a-icon v-if="inputSuffix" slot="suffix" :type="inputSuffix">
+              </a-icon>
             </a-input-search>
           </div>
         </div>
@@ -139,8 +143,10 @@
               :addon-after="inputAddonAfter"
               :visibilityToggle="inputPasswordVisibilityToggle"
             >
-              <a-icon slot="prefix" :type="inputPrefix"></a-icon>
-              <a-icon slot="suffix" :type="inputSuffix"></a-icon>
+              <a-icon v-if="inputPrefix" slot="prefix" :type="inputPrefix">
+              </a-icon>
+              <a-icon v-if="inputSuffix" slot="suffix" :type="inputSuffix">
+              </a-icon>
             </a-input-password>
           </div>
         </div>
@@ -497,14 +503,14 @@
             style="margin-right: 8px"
             :indeterminate="checkboxIndeterminate"
             :checked="checkboxChecked"
-            @change="changeCheckAll"
+            @change="checkboxChangeCheckAll"
           >
             全选项
           </a-checkbox>
           <a-checkbox-group
             v-model="checkboxList"
             :options="checkboxOptions"
-            @change="changeCheckValue"
+            @change="checkboxChangeCheckValue"
           >
           </a-checkbox-group>
         </div>
@@ -681,6 +687,10 @@
                 :min="1"
               />
             </div>
+            <div class="string-set">
+              <span style="margin-right: 5px">设置评分图标</span>
+              <a-input style="width: 100px" v-model="rateIcon" />
+            </div>
           </div>
           <div>
             <a-rate
@@ -691,7 +701,7 @@
               :allow-half="rateAllowHalf"
               :count="rateCount"
             >
-              <a-icon slot="character" type="heart" />
+              <a-icon slot="character" :type="rateIcon" />
             </a-rate>
           </div>
         </div>
@@ -709,6 +719,10 @@
               <a-radio-button :value="true">禁用</a-radio-button>
               <a-radio-button :value="false">启用</a-radio-button>
             </a-radio-group>
+            <a-radio-group v-model="sliderVertical">
+              <a-radio-button :value="true">竖直方向</a-radio-button>
+              <a-radio-button :value="false">水平方向</a-radio-button>
+            </a-radio-group>
             <a-radio-group v-model="sliderDots">
               <a-radio-button :value="true">开启拖拽到刻度</a-radio-button>
               <a-radio-button :value="false">关闭拖拽到刻度</a-radio-button>
@@ -721,13 +735,9 @@
               <a-radio-button :value="true">开启反向</a-radio-button>
               <a-radio-button :value="false">关闭反向</a-radio-button>
             </a-radio-group>
-            <a-radio-group v-model="sliderVertical">
-              <a-radio-button :value="true">竖直方向</a-radio-button>
-              <a-radio-button :value="false">水平方向</a-radio-button>
-            </a-radio-group>
             <a-radio-group v-model="sliderTooltipVisible">
               <a-radio-button :value="true">显示提示</a-radio-button>
-              <a-radio-button :value="false">关闭提示</a-radio-button>
+              <a-radio-button :value="false">隐藏提示</a-radio-button>
             </a-radio-group>
             <a-radio-group v-model="sliderTooltipPlacement">
               <a-radio-button :value="'top'">上方提示</a-radio-button>
@@ -757,10 +767,10 @@
               style="height: 100px"
               :auto-focus="false"
               :disabled="sliderDisabled"
+              :vertical="sliderVertical"
               :dots="sliderDots"
               :range="sliderRange"
               :reverse="sliderReverse"
-              :vertical="sliderVertical"
               :tooltip-visible="sliderTooltipVisible"
               :tooltip-placement="sliderTooltipPlacement"
               :max="sliderMax"
@@ -792,7 +802,7 @@
               <a-radio-button :value="false">关闭加载</a-radio-button>
             </a-radio-group>
             <div class="string-set">
-              <span style="margin-right: 5px">设置打开是开关文本</span>
+              <span style="margin-right: 5px">设置打开时开关文本</span>
               <a-input style="width: 100px" v-model="switchCheckedChildren" />
             </div>
             <div class="string-set">
@@ -814,45 +824,69 @@
         </div>
       </div>
     </div>
-
     <!-- 上传 -->
     <h1 class="title-xy">上传</h1>
     <div class="content">
       <!-- 标准上传 -->
       <div class="content-item">
-        <h3>标准上传</h3>
-        <div>
-          <a-upload
-            name="file"
-            action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-            :multiple="true"
-            :headers="{
-              authorization: 'authorization-text',
-            }"
-          >
-            <a-button> <a-icon type="upload" />点击上传</a-button>
-          </a-upload>
-        </div>
-      </div>
-      <!-- 头像上传 -->
-      <div class="content-item">
-        <h3>头像上传</h3>
-        <div>
-          <a-upload
-            class="avatar-uploader"
-            name="avatar"
-            action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
-            list-type="picture-card"
-            :show-upload-list="false"
-            :before-upload="beforeUploadImage"
-            @change="changeImage"
-          >
-            <img v-if="imageUrl" :src="imageUrl" alt="avatar" />
-            <div v-else>
-              <a-icon :type="loading ? 'loading' : 'plus'" />
-              <div class="ant-upload-text">上传</div>
-            </div>
-          </a-upload>
+        <h3 class="title2-xy">标准上传</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="uploadDisabled">
+              <a-radio-button :value="true">禁用</a-radio-button>
+              <a-radio-button :value="false">启用</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="uploadListType">
+              <a-radio-button :value="'text'">文本模式</a-radio-button>
+              <a-radio-button :value="'picture'">图片模式</a-radio-button>
+              <a-radio-button :value="'picture-card'">
+                图片卡片模式
+              </a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="uploadMultiple">
+              <a-radio-button :value="true">开启多选</a-radio-button>
+              <a-radio-button :value="false">关闭多选</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="uploadDirectory">
+              <a-radio-button :value="true">支持上传文件文件夹</a-radio-button>
+              <a-radio-button :value="false">
+                不支持上传文件文件夹
+              </a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="uploadShowUploadList">
+              <a-radio-button :value="true">显示上传列表</a-radio-button>
+              <a-radio-button :value="false">不显示上传列表</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="uploadOpenFileDialogOnClick">
+              <a-radio-button :value="true">显示文件上传对话框</a-radio-button>
+              <a-radio-button :value="false">
+                不显示文件上传对话框
+              </a-radio-button>
+            </a-radio-group>
+          </div>
+          <div>
+            <a-upload
+              class="avatar-uploader"
+              name="avatar"
+              action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+              :headers="{
+                authorization: 'authorization-text',
+              }"
+              :disabled="uploadDisabled"
+              :list-type="uploadListType"
+              :multiple="uploadMultiple"
+              :directory="uploadDirectory"
+              :show-upload-list="uploadShowUploadList"
+              :open-file-dialog-on-click="uploadOpenFileDialogOnClick"
+              :before-upload="uploadBeforeUploadImage"
+              @change="uploadChangeImage"
+            >
+              <img v-if="uploadImageUrl" :src="uploadImageUrl" />
+              <a-button v-else>
+                <a-icon :type="uploadLoading ? 'loading' : 'upload'" />点击上传
+              </a-button>
+            </a-upload>
+          </div>
         </div>
       </div>
     </div>
@@ -942,8 +976,8 @@ export default {
       inputMaxLength: 10,
       inputAddonBefore: "",
       inputAddonAfter: "",
-      inputPrefix: "",
-      inputSuffix: "",
+      inputPrefix: null,
+      inputSuffix: null,
       textareaAutosize: false,
       inputSearchEnterButton: true,
       inputSearchLoading: false,
@@ -1007,6 +1041,7 @@ export default {
       rateAllowClear: false,
       rateAllowHalf: false,
       rateCount: 5,
+      rateIcon: "heart",
       // 滑动输入条
       sliderDisabled: false,
       sliderDots: false,
@@ -1024,8 +1059,14 @@ export default {
       switchCheckedChildren: "开",
       switchUnCheckedChildren: "关",
       // 上传
-      loading: false,
-      imageUrl: "",
+      uploadDisabled: false,
+      uploadListType: "text",
+      uploadMultiple: false,
+      uploadDirectory: false,
+      uploadShowUploadList: false,
+      uploadOpenFileDialogOnClick: true,
+      uploadLoading: false,
+      uploadImageUrl: "",
     };
   },
   methods: {
@@ -1036,7 +1077,7 @@ export default {
         : [text, text.repeat(2), text.repeat(3)];
     },
     // 多选框-全选操作
-    changeCheckAll(event) {
+    checkboxChangeCheckAll(event) {
       Object.assign(this, {
         checkboxIndeterminate: false,
         checkboxChecked: event.target.checked,
@@ -1044,7 +1085,7 @@ export default {
       });
     },
     // 多选框-更新多选列表
-    changeCheckValue(list) {
+    checkboxChangeCheckValue(list) {
       this.checkboxIndeterminate =
         !!list.length && list.length < checkboxOptions.length;
       this.checkboxChecked = list.length === checkboxOptions.length;
@@ -1053,29 +1094,29 @@ export default {
     sliderTipFormatter(value) {
       return `${value}%`;
     },
-
-    // 上传
-    beforeUploadImage(file) {
+    // 上传-上传图片之前的回调函数
+    uploadBeforeUploadImage(file) {
       const isJpgOrPng =
         file.type === "image/jpeg" || file.type === "image/png";
       if (!isJpgOrPng) {
-        this.$message.error("You can only upload JPG file!");
+        this.$message.error("只能上传JPG，PNG类型的图片!");
       }
       const isLt2M = file.size / 1024 / 1024 < 2;
       if (!isLt2M) {
-        this.$message.error("Image must smaller than 2MB!");
+        this.$message.error("图片内容不能超过2MB!");
       }
       return isJpgOrPng && isLt2M;
     },
-    changeImage(info) {
+    // 上传-上传图片完成
+    uploadChangeImage(info) {
       if (info.file.status === "uploading") {
-        this.loading = true;
+        this.uploadLoading = true;
         return;
       }
       if (info.file.status === "done") {
         getBase64(info.file.originFileObj, (imageUrl) => {
-          this.imageUrl = imageUrl;
-          this.loading = false;
+          this.uploadImageUrl = imageUrl;
+          this.uploadLoading = false;
         });
       }
     },
@@ -1089,7 +1130,7 @@ export default {
   height: 128px;
 }
 .ant-upload-select-picture-card i {
-  font-size: 32px;
+  font-size: 26px;
   color: #999;
 }
 .ant-upload-select-picture-card .ant-upload-text {
