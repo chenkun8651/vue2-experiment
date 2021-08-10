@@ -198,6 +198,112 @@
         </div>
       </div>
     </div>
+    <!-- 标签 -->
+    <h1 class="title-xy">标签</h1>
+    <div class="content">
+      <!-- 标准标签 -->
+      <div class="content-item">
+        <h3 class="title2-xy">标准标签</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="tagVisible">
+              <a-radio-button :value="true">显示标签</a-radio-button>
+              <a-radio-button :value="false">隐藏标签</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="tagClosable">
+              <a-radio-button :value="true">显示关闭标签</a-radio-button>
+              <a-radio-button :value="false">隐藏关闭标签</a-radio-button>
+            </a-radio-group>
+            <div class="string-set">
+              <span style="margin-right: 5px">设置标签颜色</span>
+              <a-input style="width: 100px" v-model="tagColor" />
+            </div>
+          </div>
+          <div>
+            <a-tag
+              :closable="tagClosable"
+              :color="tagColor"
+              :visible="tagVisible"
+            >
+              标签
+            </a-tag>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 文字提示 -->
+    <h1 class="title-xy">文字提示</h1>
+    <div class="content">
+      <!-- 文字提示 -->
+      <div class="content-item">
+        <h3 class="title2-xy">标准文字提示</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="tooltipArrowPointAtCenter">
+              <a-radio-button :value="true">
+                开启箭头指向元素中心
+              </a-radio-button>
+              <a-radio-button :value="false">
+                关闭箭头指向元素中心
+              </a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="tooltipAutoAdjustOverflow">
+              <a-radio-button :value="true">
+                开启遮挡时自动调整位置
+              </a-radio-button>
+              <a-radio-button :value="false">
+                关闭遮挡时自动调整位置
+              </a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="tooltipPlacement">
+              <a-radio-button :value="'top'">上方</a-radio-button>
+              <a-radio-button :value="'bottom'">下方</a-radio-button>
+              <a-radio-button :value="'left'">左方</a-radio-button>
+              <a-radio-button :value="'right'">右方</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="tooltipTrigger">
+              <a-radio-button :value="'hover'">悬停触发</a-radio-button>
+              <a-radio-button :value="'focus'">聚焦触发</a-radio-button>
+              <a-radio-button :value="'click'">点击触发</a-radio-button>
+              <a-radio-button :value="'contextmenu'">
+                右键点击触发
+              </a-radio-button>
+            </a-radio-group>
+            <div class="number-set">
+              <span style="margin-right: 5px">
+                鼠标移入的延迟显示时间（秒）
+              </span>
+              <a-input-number
+                style="width: 100px"
+                v-model="tooltipMouseEnterDelay"
+              />
+            </div>
+            <div class="number-set">
+              <span style="margin-right: 5px">
+                鼠标移出的延迟显示时间（秒）
+              </span>
+              <a-input-number
+                style="width: 100px"
+                v-model="tooltipMouseLeaveDelay"
+              />
+            </div>
+          </div>
+          <div>
+            <a-tooltip
+              :arrow-point-at-center="tooltipArrowPointAtCenter"
+              :auto-adjust-overflow="tooltipAutoAdjustOverflow"
+              :mouse-enter-delay="tooltipMouseEnterDelay"
+              :mouse-leave-delay="tooltipMouseLeaveDelay"
+              :placement="tooltipPlacement"
+              :trigger="tooltipTrigger"
+            >
+              <template slot="title">这段话就是一个文字提示</template>
+              <a-button>提示消息</a-button>
+            </a-tooltip>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -274,6 +380,17 @@ export default {
       badgeStatus: "default",
       badgeText: "",
       badgeTitle: "状态点标题",
+      // 标签
+      tagVisible: true,
+      tagClosable: true,
+      tagColor: "red",
+      // 文字提示
+      tooltipArrowPointAtCenter: false,
+      tooltipAutoAdjustOverflow: false,
+      tooltipMouseEnterDelay: 1,
+      tooltipMouseLeaveDelay: 1,
+      tooltipPlacement: "top",
+      tooltipTrigger: "hover",
     };
   },
   components: {

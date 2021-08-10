@@ -553,17 +553,32 @@
     <div class="content">
       <!-- 标准穿梭框 -->
       <div class="content-item">
-        <h3>标准穿梭框</h3>
-        <div>
-          <a-transfer
-            :titles="['待完成', '已完成']"
-            :data-source="mockData"
-            :target-keys="targetKeys"
-            :selected-keys="selectedKeys"
-            :render="(item) => item.title"
-            @change="changeTransfer"
-            @selectChange="selectChangeTransfer"
-          />
+        <h3 class="title2-xy">标准穿梭框</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="transferDisabled">
+              <a-radio-button :value="true">禁用</a-radio-button>
+              <a-radio-button :value="false">启用</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="transferShowSearch">
+              <a-radio-button :value="true">开启搜索框</a-radio-button>
+              <a-radio-button :value="false">关闭搜索框</a-radio-button>
+            </a-radio-group>
+          </div>
+          <div>
+            <a-transfer
+              :titles="['待完成', '已完成']"
+              :data-source="transferDataSource"
+              :target-keys="transferTargetKeys"
+              :selected-keys="transferSelectedKeys"
+              :render="(item) => item.title"
+              :disabled="transferDisabled"
+              :show-search="transferShowSearch"
+              @change="transferChange"
+              @selectChange="transferSelectChange"
+            >
+            </a-transfer>
+          </div>
         </div>
       </div>
     </div>
@@ -572,62 +587,159 @@
     <div class="content">
       <!-- 标准表格 -->
       <div class="content-item">
-        <h3>标准表格</h3>
-        <div>
-          <a-table :columns="tableColumns" :data-source="tableData">
-            <a slot="name" slot-scope="text"> {{ text }} </a>
-            <span slot="customTitle"> 姓名 </span>
-            <span slot="tags" slot-scope="tags">
-              <a-tag
-                v-for="tag in tags"
-                :key="tag"
-                :color="
-                  tag === '帅'
-                    ? 'volcano'
-                    : tag === '富有'
-                    ? 'geekblue'
-                    : 'green'
-                "
-              >
-                {{ tag.toUpperCase() }}
-              </a-tag>
-            </span>
-            <span slot="action">
-              <a> 删除 </a>
-              <a-divider type="vertical" />
-              <a class="ant-dropdown-link"> 更多操作 <a-icon type="down" /> </a>
-            </span>
-          </a-table>
+        <h3 class="title2-xy">标准表格</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="tableBordered">
+              <a-radio-button :value="true">显示边框</a-radio-button>
+              <a-radio-button :value="false">隐藏边框</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="tableLoading">
+              <a-radio-button :value="true">加载</a-radio-button>
+              <a-radio-button :value="false">完成</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="tableShowHeader">
+              <a-radio-button :value="true">显示表头</a-radio-button>
+              <a-radio-button :value="false">隐藏表头</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="tableSize">
+              <a-radio-button :value="'default'">默认</a-radio-button>
+              <a-radio-button :value="'middle'">中型</a-radio-button>
+              <a-radio-button :value="'small'">小型</a-radio-button>
+            </a-radio-group>
+          </div>
+          <div>
+            <a-table
+              :columns="tableColumns"
+              :data-source="tableDataSource"
+              :bordered="tableBordered"
+              :loading="tableLoading"
+              :show-header="tableShowHeader"
+              :size="tableSize"
+            >
+              <a slot="name" slot-scope="text">{{ text }}</a>
+              <span slot="customTitle">姓名</span>
+              <span slot="tags" slot-scope="tags">
+                <a-tag
+                  v-for="tag in tags"
+                  :key="tag"
+                  :color="
+                    tag === '帅'
+                      ? 'volcano'
+                      : tag === '富有'
+                      ? 'geekblue'
+                      : 'green'
+                  "
+                >
+                  {{ tag.toUpperCase() }}
+                </a-tag>
+              </span>
+              <span slot="action">
+                <a>删除</a>
+                <a-divider type="vertical" />
+                <a class="ant-dropdown-link">
+                  更多操作<a-icon type="down" />
+                </a>
+              </span>
+            </a-table>
+          </div>
         </div>
       </div>
-      <!-- 边框表格 -->
+    </div>
+    <!-- 时间轴 -->
+    <h1 class="title-xy">时间轴</h1>
+    <div class="content">
+      <!-- 标准时间轴 -->
       <div class="content-item">
-        <h3>边框表格</h3>
-        <div>
-          <a-table :columns="tableColumns" :data-source="tableData" bordered>
-            <a slot="name" slot-scope="text"> {{ text }} </a>
-            <span slot="customTitle"> 姓名 </span>
-            <span slot="tags" slot-scope="tags">
-              <a-tag
-                v-for="tag in tags"
-                :key="tag"
-                :color="
-                  tag === '帅'
-                    ? 'volcano'
-                    : tag === '富有'
-                    ? 'geekblue'
-                    : 'green'
-                "
-              >
-                {{ tag.toUpperCase() }}
-              </a-tag>
-            </span>
-            <span slot="action">
-              <a> 删除 </a>
-              <a-divider type="vertical" />
-              <a class="ant-dropdown-link"> 更多操作 <a-icon type="down" /> </a>
-            </span>
-          </a-table>
+        <h3 class="title2-xy">标准时间轴</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="timelineReverse">
+              <a-radio-button :value="false">正向顺序</a-radio-button>
+              <a-radio-button :value="true">反向顺序</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="timelineMode">
+              <a-radio-button :value="'left'">左边</a-radio-button>
+              <a-radio-button :value="'alternate'">中间</a-radio-button>
+              <a-radio-button :value="'right'">右边</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="timelinePosition">
+              <a-radio-button :value="'left'">节点位于左边</a-radio-button>
+              <a-radio-button :value="'right'">节点位于右边</a-radio-button>
+            </a-radio-group>
+          </div>
+          <div>
+            <a-timeline :reverse="timelineReverse" :mode="timelineMode">
+              <a-timeline-item :position="timelinePosition">
+                创建网络服务 2015-09-01
+              </a-timeline-item>
+              <a-timeline-item :position="timelinePosition">
+                解决网络波动问题 2015-09-05
+              </a-timeline-item>
+              <a-timeline-item :position="timelinePosition">
+                技术测试 2015-09-12
+              </a-timeline-item>
+              <a-timeline-item :position="timelinePosition">
+                网络问题已解决 2015-09-26
+              </a-timeline-item>
+            </a-timeline>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 树形控件 -->
+    <h1 class="title-xy">树形控件</h1>
+    <div class="content">
+      <!-- 标准树形控件 -->
+      <div class="content-item">
+        <h3 class="title2-xy">标准树形控件</h3>
+        <div class="content2">
+          <div class="radio-box">
+            <a-radio-group v-model="treeDisabled">
+              <a-radio-button :value="true">禁用</a-radio-button>
+              <a-radio-button :value="false">启用</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="treeBlockNode">
+              <a-radio-button :value="true">开启节点占据一行</a-radio-button>
+              <a-radio-button :value="false">关闭节点占据一行</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="treeAutoExpandParent">
+              <a-radio-button :value="true">开启自动展开父节点</a-radio-button>
+              <a-radio-button :value="false">关闭自动展开父节点</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="treeCheckable">
+              <a-radio-button :value="true">
+                开启节点前添加复选框
+              </a-radio-button>
+              <a-radio-button :value="false">
+                关闭节点前添加复选框
+              </a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="treeDraggable">
+              <a-radio-button :value="true">开启节点可拖拽</a-radio-button>
+              <a-radio-button :value="false">关闭节点可拖拽</a-radio-button>
+            </a-radio-group>
+            <a-radio-group v-model="treeShowLine">
+              <a-radio-button :value="true">开启连接线</a-radio-button>
+              <a-radio-button :value="false">关闭连接线</a-radio-button>
+            </a-radio-group>
+          </div>
+          <div>
+            <a-tree
+              v-model="treeData"
+              :selectable="true"
+              :tree-data="treeTreeData"
+              :selected-keys="treeSelectedKeys"
+              :expanded-keys="treeExpandedKeys"
+              :disabled="treeDisabled"
+              :block-node="treeBlockNode"
+              :auto-expand-parent="treeAutoExpandParent"
+              :checkable="treeCheckable"
+              :draggable="treeDraggable"
+              :show-line="treeShowLine"
+            >
+            </a-tree>
+          </div>
         </div>
       </div>
     </div>
@@ -651,6 +763,18 @@ const listDataSource = [
     description: "列表描述三",
   },
 ];
+const transferDataSource = [];
+for (let i = 0; i < 20; i++) {
+  transferDataSource.push({
+    key: i.toString(),
+    title: `内容${i + 1}`,
+    description: `描述内容${i + 1}`,
+    disabled: i % 3 < 1,
+  });
+}
+const transferTargetKeys = transferDataSource
+  .filter((item) => +item.key % 3 > 1)
+  .map((item) => item.key);
 const tableColumns = [
   {
     dataIndex: "name",
@@ -680,7 +804,7 @@ const tableColumns = [
     scopedSlots: { customRender: "action" },
   },
 ];
-const tableData = [
+const tableDataSource = [
   {
     key: "1",
     name: "小陈",
@@ -703,30 +827,54 @@ const tableData = [
     tags: ["帅", "富有"],
   },
 ];
-const mockData = [];
-for (let i = 0; i < 20; i++) {
-  mockData.push({
-    key: i.toString(),
-    title: `内容${i + 1}`,
-    description: `描述内容${i + 1}`,
-    disabled: i % 3 < 1,
-  });
-}
-const oriTargetKeys = mockData
-  .filter((item) => +item.key % 3 > 1)
-  .map((item) => item.key);
+const treeTreeData = [
+  {
+    title: "水果",
+    key: "fruits",
+    children: [
+      {
+        title: "葡萄",
+        key: "grape",
+        children: [
+          { title: "紫葡萄", key: "violetGrape" },
+          { title: "青葡萄", key: "greenGrape" },
+          { title: "红葡萄", key: "redGrape" },
+        ],
+      },
+      {
+        title: "苹果",
+        key: "apple",
+        children: [
+          { title: "烂苹果", key: "iphone" },
+          { title: "青苹果", key: "greenApple" },
+          { title: "红苹果", key: "redApple" },
+        ],
+      },
+      {
+        title: "橘子",
+        key: "orange",
+      },
+    ],
+  },
+  {
+    title: "肉类",
+    key: "meat",
+    children: [
+      { title: "猪肉", key: "pork" },
+      { title: "牛肉", key: "beef" },
+      { title: "羊肉", key: "mutton" },
+    ],
+  },
+  {
+    title: "蔬菜",
+    key: "vegetables",
+  },
+];
 export default {
   data() {
     return {
       // 通用
       moment,
-
-      tableColumns,
-      tableData,
-      // 穿梭框
-      mockData,
-      targetKeys: oriTargetKeys,
-      selectedKeys: ["1", "4"],
       // 头像
       avatarShape: "circle",
       avatarSize: 32,
@@ -780,6 +928,34 @@ export default {
       statisticSuffix: "%",
       statisticDeadline: Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30,
       statisticFormat: "HH:mm:ss",
+      // 穿梭框
+      transferDataSource: transferDataSource,
+      transferTargetKeys: transferTargetKeys,
+      transferSelectedKeys: ["1", "4"],
+      transferDisabled: false,
+      transferShowSearch: false,
+      // 表格
+      tableColumns: tableColumns,
+      tableDataSource: tableDataSource,
+      tableBordered: false,
+      tableLoading: false,
+      tableShowHeader: true,
+      tableSize: "default",
+      // 时间轴
+      timelineReverse: false,
+      timelineMode: "left",
+      timelinePosition: "left",
+      // 树形结构
+      treeData: [],
+      treeTreeData: treeTreeData,
+      treeSelectedKeys: ["grape"],
+      treeExpandedKeys: ["grape", "apple"],
+      treeDisabled: false,
+      treeBlockNode: true,
+      treeAutoExpandParent: true,
+      treeCheckable: true,
+      treeDraggable: true,
+      treeShowLine: true,
     };
   },
   methods: {
@@ -795,12 +971,16 @@ export default {
       this.commentDislikes = 1;
       this.commentAction = "disliked";
     },
-    // 穿梭框
-    changeTransfer(nextTargetKeys) {
-      this.targetKeys = nextTargetKeys;
+    // 穿梭框-选中选项
+    transferSelectChange(sourceSelectedKeys, targetSelectedKeys) {
+      this.transferSelectedKeys = [
+        ...sourceSelectedKeys,
+        ...targetSelectedKeys,
+      ];
     },
-    selectChangeTransfer(sourceSelectedKeys, targetSelectedKeys) {
-      this.selectedKeys = [...sourceSelectedKeys, ...targetSelectedKeys];
+    // 穿梭框-改变选项
+    transferChange(nextTargetKeys) {
+      this.transferTargetKeys = nextTargetKeys;
     },
   },
 };

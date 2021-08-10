@@ -480,24 +480,31 @@
 export default {
   data() {
     return {
+      // 固钉
       affixTop: 300,
       affixBottom: 350,
+      // 面包屑
       breadcrumbSeparator: "/",
+      // 下拉菜单
       dropdownTrigger: ["hover"],
       dropdownPlacement: "bottomLeft",
       dropdownDisabled: false,
       dropdownSize: "default",
       dropdownType: "default",
+      // 导航菜单
       menuMode: "inline",
       menuTheme: "light",
       menuMultiple: false,
       menuSelectable: true,
+      // 分页
       paginationSize: "",
       paginationSimple: false,
       paginationDisabled: false,
+      // 步骤条
       stepDirection: "horizontal",
       stepSize: "default",
       stepType: "default",
+      // 标签页
       tabPaneMode: "top",
       tabPaneSize: "default",
       tabPaneType: "line",
