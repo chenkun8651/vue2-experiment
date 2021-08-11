@@ -313,18 +313,15 @@
         <h3 class="title2-xy">标准分页</h3>
         <div class="content2">
           <div class="radio-box">
-            <a-radio-group v-model="paginationSize" style="margin-bottom: 10px">
+            <a-radio-group v-model="paginationSize">
               <a-radio-button value="">默认</a-radio-button>
               <a-radio-button value="small">小型</a-radio-button>
             </a-radio-group>
-            <a-radio-group v-model="paginationSimple" style="margin-left: 15px">
+            <a-radio-group v-model="paginationSimple">
               <a-radio-button :value="false">复杂分页</a-radio-button>
               <a-radio-button :value="true">简洁分页</a-radio-button>
             </a-radio-group>
-            <a-radio-group
-              v-model="paginationDisabled"
-              style="margin-left: 15px"
-            >
+            <a-radio-group v-model="paginationDisabled">
               <a-radio-button :value="false">启用</a-radio-button>
               <a-radio-button :value="true">禁用</a-radio-button>
             </a-radio-group>
@@ -355,15 +352,15 @@
         <h3 class="title2-xy">标准步骤条</h3>
         <div class="content2">
           <div class="radio-box">
-            <a-radio-group v-model="stepDirection" style="margin-bottom: 10px">
+            <a-radio-group v-model="stepDirection">
               <a-radio-button value="horizontal">水平方向</a-radio-button>
               <a-radio-button value="vertical">竖直方向</a-radio-button>
             </a-radio-group>
-            <a-radio-group v-model="stepSize" style="margin-left: 15px">
+            <a-radio-group v-model="stepSize">
               <a-radio-button value="default">默认</a-radio-button>
               <a-radio-button value="small">小型</a-radio-button>
             </a-radio-group>
-            <a-radio-group v-model="stepType" style="margin-left: 15px">
+            <a-radio-group v-model="stepType">
               <a-radio-button value="default">默认类型</a-radio-button>
               <a-radio-button value="navigation">导航类型</a-radio-button>
             </a-radio-group>
@@ -429,18 +426,18 @@
         <h3 class="title2-xy">标准标签页</h3>
         <div class="content2">
           <div class="radio-box">
-            <a-radio-group v-model="tabPaneMode" style="margin-bottom: 10px">
+            <a-radio-group v-model="tabPaneMode">
               <a-radio-button value="top">上方标签页</a-radio-button>
               <a-radio-button value="right">右侧标签页</a-radio-button>
               <a-radio-button value="left">左侧标签页</a-radio-button>
               <a-radio-button value="bottom">下方标签页</a-radio-button>
             </a-radio-group>
-            <a-radio-group v-model="tabPaneSize" style="margin-left: 15px">
+            <a-radio-group v-model="tabPaneSize">
               <a-radio-button value="large">大型</a-radio-button>
               <a-radio-button value="default">默认</a-radio-button>
               <a-radio-button value="small">小型</a-radio-button>
             </a-radio-group>
-            <a-radio-group v-model="tabPaneType" style="margin-left: 15px">
+            <a-radio-group v-model="tabPaneType">
               <a-radio-button value="line">横线类型</a-radio-button>
               <a-radio-button value="card">卡片类型</a-radio-button>
               <a-radio-button value="editable-card">

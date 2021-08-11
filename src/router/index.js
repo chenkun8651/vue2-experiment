@@ -41,12 +41,7 @@ const routes = [
         path: "/antDesignVue/feedback",
         name: "Feedback",
         component: () => import("../components/AntDesignVue/Feedback.vue"),
-      },
-      {
-        path: "/antDesignVue/other",
-        name: "Other",
-        component: () => import("../components/AntDesignVue/Other.vue"),
-      },
+      }
     ]
   },
 ]

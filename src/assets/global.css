@@ -1,8 +1,7 @@
 /* 结构类 */
 .title-xy {
-  padding: 10px 0px;
   text-align: center;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
 }
 .content {
@@ -14,6 +13,9 @@
 .title2-xy {
   font-size: 24px;
   font-weight: 400;
+}
+.card-margin {
+  margin: 30px 0;
 }
 .radio-box {
   width: 100%;

@@ -2,308 +2,340 @@
   <!-- 基础组件 -->
   <div>
     <!-- 按钮 -->
-    <h1 class="title-xy">按钮</h1>
-    <div class="content">
+    <a-card class="card-margin">
+      <div slot="title" class="title-xy">按钮（Button）</div>
       <!-- 标准按钮 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准按钮</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="buttonType">
-              <a-radio-button value="default">默认按钮</a-radio-button>
-              <a-radio-button value="primary">主要按钮</a-radio-button>
-              <a-radio-button value="dashed">虚线按钮</a-radio-button>
-              <a-radio-button value="danger">危险按钮</a-radio-button>
-              <a-radio-button value="link">链接按钮</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="buttonGhost">
-              <a-radio-button :value="true">背景色透明</a-radio-button>
-              <a-radio-button :value="false">背景色不透明</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="buttonShape">
-              <a-radio-button :value="null">方形</a-radio-button>
-              <a-radio-button :value="'circle'">圆形</a-radio-button>
-              <a-radio-button :value="'round'">圆角形</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="buttonSize">
-              <a-radio-button :value="'large'">大按钮</a-radio-button>
-              <a-radio-button :value="'default'">默认按钮</a-radio-button>
-              <a-radio-button :value="'small'">小按钮</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="buttonDisabled">
-              <a-radio-button :value="true">禁用</a-radio-button>
-              <a-radio-button :value="false">启用</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="buttonLoading">
-              <a-radio-button :value="true">加载</a-radio-button>
-              <a-radio-button :value="false">完成</a-radio-button>
-            </a-radio-group>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置按钮图标</span>
-              <a-input style="width: 100px" v-model="buttonIcon" />
-            </div>
-          </div>
-          <div :class="{ 'bc-d4d4d4': buttonGhost }">
-            <a-button
-              :type="buttonType"
-              :ghost="buttonGhost"
-              :icon="buttonIcon"
-              :shape="buttonShape"
-              :size="buttonSize"
-              :disabled="buttonDisabled"
-              :loading="buttonLoading"
-            >
-              默认按钮
-            </a-button>
+      <a-card class="card-margin" title="标准按钮">
+        <div class="radio-box">
+          <a-radio-group v-model="buttonType">
+            <a-radio-button value="default">默认按钮</a-radio-button>
+            <a-radio-button value="primary">主要按钮</a-radio-button>
+            <a-radio-button value="dashed">虚线按钮</a-radio-button>
+            <a-radio-button value="danger">危险按钮</a-radio-button>
+            <a-radio-button value="link">链接按钮</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="buttonGhost">
+            <a-radio-button :value="true">按钮透明</a-radio-button>
+            <a-radio-button :value="false">按钮不透明</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="buttonShape">
+            <a-radio-button :value="null">方形</a-radio-button>
+            <a-radio-button :value="'circle'">圆形</a-radio-button>
+            <a-radio-button :value="'round'">圆角</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="buttonSize">
+            <a-radio-button :value="'large'">大按钮</a-radio-button>
+            <a-radio-button :value="'default'">默认按钮</a-radio-button>
+            <a-radio-button :value="'small'">小按钮</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="buttonDisabled">
+            <a-radio-button :value="true">禁用</a-radio-button>
+            <a-radio-button :value="false">启用</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="buttonLoading">
+            <a-radio-button :value="true">加载</a-radio-button>
+            <a-radio-button :value="false">完成</a-radio-button>
+          </a-radio-group>
+          <div class="string-set">
+            <span style="margin-right: 5px">设置按钮图标</span>
+            <a-input style="width: 100px" v-model="buttonIcon" />
           </div>
         </div>
-      </div>
-    </div>
+        <div :class="{ 'bc-d4d4d4': buttonGhost }">
+          <a-button
+            :type="buttonType"
+            :ghost="buttonGhost"
+            :icon="buttonIcon"
+            :shape="buttonShape"
+            :size="buttonSize"
+            :disabled="buttonDisabled"
+            :loading="buttonLoading"
+          >
+            默认按钮
+          </a-button>
+        </div>
+      </a-card>
+    </a-card>
     <!-- 图标 -->
-    <h1 class="title-xy">图标</h1>
-    <div class="content">
+    <a-card class="card-margin">
+      <div slot="title" class="title-xy">图标（Icon）</div>
       <!-- 标准图标 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准图标</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="iconTheme">
-              <a-radio-button :value="'filled'">实心</a-radio-button>
-              <a-radio-button :value="'outlined'">描线</a-radio-button>
-              <a-radio-button :value="'twoTone'">双色</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="iconSpin">
-              <a-radio-button :value="true">开启旋转动画</a-radio-button>
-              <a-radio-button :value="false">关闭旋转动画</a-radio-button>
-            </a-radio-group>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置图标名称</span>
-              <a-input style="width: 100px" v-model="iconName" />
-            </div>
-            <div class="number-set">
-              <span style="margin-right: 5px">设置图标旋转角度</span>
-              <a-input-number style="width: 100px" v-model="iconRotate" />
-            </div>
-            <div v-if="iconTheme === 'twoTone'" class="string-set">
-              <span style="margin-right: 5px">设置双色颜色</span>
-              <a-input style="width: 100px" v-model="iconRotatTwoToneColor" />
-            </div>
+      <a-card class="card-margin" title="标准图标">
+        <div class="radio-box">
+          <a-radio-group v-model="iconTheme">
+            <a-radio-button :value="'filled'">实心</a-radio-button>
+            <a-radio-button :value="'outlined'">描线</a-radio-button>
+            <a-radio-button :value="'twoTone'">双色</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="iconSpin">
+            <a-radio-button :value="true">开启旋转动画</a-radio-button>
+            <a-radio-button :value="false">关闭旋转动画</a-radio-button>
+          </a-radio-group>
+          <div class="string-set">
+            <span style="margin-right: 5px">设置图标名称</span>
+            <a-input style="width: 100px" v-model="iconName" />
           </div>
-          <div>
-            <a-icon
-              :style="{ fontSize: '30px' }"
-              :type="iconName"
-              :theme="iconTheme"
-              :spin="iconSpin"
-              :rotate="iconRotate"
-              :two-tone-color="iconRotatTwoToneColor"
+          <div class="number-set">
+            <span style="margin-right: 5px">设置图标旋转角度</span>
+            <a-input-number style="width: 100px" v-model="iconRotate" />
+          </div>
+          <div v-if="iconTheme === 'twoTone'" class="string-set">
+            <span style="margin-right: 5px">设置双色颜色</span>
+            <a-input style="width: 100px" v-model="iconRotatTwoToneColor" />
+          </div>
+        </div>
+        <div>
+          <a-icon
+            :style="{ fontSize: '30px' }"
+            :type="iconName"
+            :theme="iconTheme"
+            :spin="iconSpin"
+            :rotate="iconRotate"
+            :two-tone-color="iconRotatTwoToneColor"
+          />
+        </div>
+      </a-card>
+      <!-- 自定义图标 -->
+      <a-card class="card-margin" title="自定义图标">
+        <div class="icons-list">
+          <HeartIcon :style="{ color: 'hotpink', fontSize: '30px' }" />
+          <PandaIcon :style="{ color: 'hotpink', fontSize: '30px' }" />
+        </div>
+      </a-card>
+      <!-- 图标库图标 -->
+      <a-card class="card-margin">
+        <div slot="title">
+          <a target="_blank" href="http://iconfont.cn/">iconfont.cn</a>
+          图标库图标
+        </div>
+        <div class="icons-list">
+          <IconFont type="icon-facebook" />
+          <IconFont type="icon-twitter" />
+        </div>
+      </a-card>
+    </a-card>
+    <!-- 徽标 -->
+    <a-card class="card-margin">
+      <div slot="title" class="title-xy">徽标（Badge）</div>
+      <!-- 数字徽标 -->
+      <a-card class="card-margin" title="数字徽标">
+        <div class="radio-box">
+          <a-radio-group v-model="badgeShowZero">
+            <a-radio-button :value="true">显示0的数字</a-radio-button>
+            <a-radio-button :value="false">不显示0的数字</a-radio-button>
+          </a-radio-group>
+          <div class="number-set">
+            <span style="margin-right: 5px">设置展示数字</span>
+            <a-input-number style="width: 100px" v-model="badgeCount" />
+          </div>
+          <div class="number-set">
+            <span style="margin-right: 5px">设置展示封顶数字</span>
+            <a-input-number style="width: 100px" v-model="badgeOverflowCount" />
+          </div>
+        </div>
+        <div>
+          <a-badge
+            :count="badgeCount"
+            :overflow-count="badgeOverflowCount"
+            :show-zero="badgeShowZero"
+          >
+          </a-badge>
+        </div>
+      </a-card>
+      <!-- 圆点徽标 -->
+      <a-card class="card-margin" title="圆点徽标">
+        <div class="radio-box">
+          <a-radio-group v-model="badgeStatus">
+            <a-radio-button :value="'success'">成功</a-radio-button>
+            <a-radio-button :value="'processing'">处理中</a-radio-button>
+            <a-radio-button :value="'default'">默认</a-radio-button>
+            <a-radio-button :value="'error'">错误</a-radio-button>
+            <a-radio-button :value="'warning'">警告</a-radio-button>
+          </a-radio-group>
+          <div class="string-set">
+            <span style="margin-right: 5px">设置徽标颜色</span>
+            <a-input style="width: 100px" v-model="badgeColor" />
+          </div>
+          <div v-if="badgeStatus" class="string-set">
+            <span style="margin-right: 5px">设置状态点文本</span>
+            <a-input style="width: 100px" v-model="badgeText" />
+          </div>
+          <div class="string-set">
+            <span style="margin-right: 5px"> 设置鼠标放在状态点显示文本 </span>
+            <a-input style="width: 100px" v-model="badgeTitle" />
+          </div>
+        </div>
+        <div>
+          <a-badge
+            :color="badgeColor"
+            :status="badgeStatus"
+            :text="badgeText"
+            :title="badgeTitle"
+          >
+          </a-badge>
+        </div>
+      </a-card>
+    </a-card>
+    <!-- 标签 -->
+    <a-card class="card-margin">
+      <div slot="title" class="title-xy">标签（Tag）</div>
+      <!-- 标准标签 -->
+      <a-card class="card-margin" title="标准标签">
+        <div class="radio-box">
+          <a-radio-group v-model="tagVisible">
+            <a-radio-button :value="true">显示标签</a-radio-button>
+            <a-radio-button :value="false">隐藏标签</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="tagClosable">
+            <a-radio-button :value="true">显示关闭标签</a-radio-button>
+            <a-radio-button :value="false">隐藏关闭标签</a-radio-button>
+          </a-radio-group>
+          <div class="string-set">
+            <span style="margin-right: 5px">设置标签颜色</span>
+            <a-input style="width: 100px" v-model="tagColor" />
+          </div>
+        </div>
+        <div>
+          <a-tag
+            :closable="tagClosable"
+            :color="tagColor"
+            :visible="tagVisible"
+          >
+            标签
+          </a-tag>
+        </div>
+      </a-card>
+    </a-card>
+    <!-- 文字提示 -->
+    <a-card class="card-margin">
+      <div slot="title" class="title-xy">文字提示（Tooltip）</div>
+      <!-- 标准文字提示 -->
+      <a-card class="card-margin" title="标准文字提示">
+        <div class="radio-box">
+          <a-radio-group v-model="tooltipArrowPointAtCenter">
+            <a-radio-button :value="true">
+              开启箭头指向元素中心
+            </a-radio-button>
+            <a-radio-button :value="false">
+              关闭箭头指向元素中心
+            </a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="tooltipAutoAdjustOverflow">
+            <a-radio-button :value="true">
+              开启遮挡时自动调整位置
+            </a-radio-button>
+            <a-radio-button :value="false">
+              关闭遮挡时自动调整位置
+            </a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="tooltipPlacement">
+            <a-radio-button :value="'top'">上方</a-radio-button>
+            <a-radio-button :value="'bottom'">下方</a-radio-button>
+            <a-radio-button :value="'left'">左方</a-radio-button>
+            <a-radio-button :value="'right'">右方</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="tooltipTrigger">
+            <a-radio-button :value="'hover'">悬停触发</a-radio-button>
+            <a-radio-button :value="'focus'">聚焦触发</a-radio-button>
+            <a-radio-button :value="'click'">点击触发</a-radio-button>
+            <a-radio-button :value="'contextmenu'">
+              右键点击触发
+            </a-radio-button>
+          </a-radio-group>
+          <div class="number-set">
+            <span style="margin-right: 5px">
+              鼠标移入的延迟显示时间（秒）
+            </span>
+            <a-input-number
+              style="width: 100px"
+              v-model="tooltipMouseEnterDelay"
+            />
+          </div>
+          <div class="number-set">
+            <span style="margin-right: 5px">
+              鼠标移出的延迟显示时间（秒）
+            </span>
+            <a-input-number
+              style="width: 100px"
+              v-model="tooltipMouseLeaveDelay"
             />
           </div>
         </div>
-      </div>
-      <!-- 自定义图标 -->
-      <div class="content-item">
-        <h3 class="title2-xy">自定义图标</h3>
-        <div class="content2">
-          <div class="icons-list">
-            <HeartIcon :style="{ color: 'hotpink', fontSize: '30px' }" />
-            <PandaIcon :style="{ color: 'hotpink', fontSize: '30px' }" />
+        <div>
+          <a-tooltip
+            :arrow-point-at-center="tooltipArrowPointAtCenter"
+            :auto-adjust-overflow="tooltipAutoAdjustOverflow"
+            :mouse-enter-delay="tooltipMouseEnterDelay"
+            :mouse-leave-delay="tooltipMouseLeaveDelay"
+            :placement="tooltipPlacement"
+            :trigger="tooltipTrigger"
+          >
+            <template slot="title">这段话就是一个文字提示</template>
+            <a-button>提示消息</a-button>
+          </a-tooltip>
+        </div>
+      </a-card>
+    </a-card>
+    <!-- 加载 -->
+    <a-card class="card-margin">
+      <div slot="title" class="title-xy">加载（Spin）</div>
+      <!-- 标准加载 -->
+      <a-card class="card-margin" title="标准加载">
+        <div class="radio-box">
+          <a-radio-group v-model="spinSpinning">
+            <a-radio-button :value="true">加载</a-radio-button>
+            <a-radio-button :value="false">完成</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="spinSize">
+            <a-radio-button :value="'large'">大型</a-radio-button>
+            <a-radio-button :value="'default'">默认</a-radio-button>
+            <a-radio-button :value="'small'">小型</a-radio-button>
+          </a-radio-group>
+          <div class="number-set">
+            <span style="margin-right: 5px">
+              设置延迟显示加载效果的时间（毫秒）
+            </span>
+            <a-input-number style="width: 100px" v-model="spinDelay" />
+          </div>
+          <div class="string-set">
+            <span style="margin-right: 5px">设置描述文案</span>
+            <a-input style="width: 100px" v-model="spinTip" />
           </div>
         </div>
-      </div>
-      <!-- 图标库图标 -->
-      <div class="content-item">
-        <h3 class="title2-xy">
-          <a target="_blank" href="http://iconfont.cn/">iconfont.cn</a>
-          图标库图标
-        </h3>
-        <div class="content2">
-          <div class="icons-list">
-            <IconFont type="icon-facebook" />
-            <IconFont type="icon-twitter" />
-          </div>
+        <div>
+          <a-spin
+            :delay="spinDelay"
+            :size="spinSize"
+            :spinning="spinSpinning"
+            :tip="spinTip"
+          >
+            <div class="spin-content">待加载的内容</div>
+          </a-spin>
         </div>
-      </div>
-    </div>
-    <!-- 徽标 -->
-    <h1 class="title-xy">徽标</h1>
-    <div class="content">
-      <!-- 数字徽标 -->
-      <div class="content-item">
-        <h3 class="title2-xy">数字徽标</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="badgeShowZero">
-              <a-radio-button :value="true">显示0的数字</a-radio-button>
-              <a-radio-button :value="false">不显示0的数字</a-radio-button>
-            </a-radio-group>
-            <div class="number-set">
-              <span style="margin-right: 5px">设置展示数字</span>
-              <a-input-number style="width: 100px" v-model="badgeCount" />
-            </div>
-            <div class="number-set">
-              <span style="margin-right: 5px">设置展示封顶数字</span>
-              <a-input-number
-                style="width: 100px"
-                v-model="badgeOverflowCount"
-              />
-            </div>
-          </div>
-          <div>
-            <a-badge
-              :count="badgeCount"
-              :overflow-count="badgeOverflowCount"
-              :show-zero="badgeShowZero"
-            >
-            </a-badge>
-          </div>
+      </a-card>
+    </a-card>
+    <!-- 分割线 -->
+    <a-card class="card-margin">
+      <div slot="title" class="title-xy">分割线（Divider）</div>
+      <!-- 标准分割线 -->
+      <a-card class="card-margin" title="标准分割线">
+        <div class="radio-box">
+          <a-radio-group v-model="dividerType">
+            <a-radio-button :value="'horizontal'">水平分割线</a-radio-button>
+            <a-radio-button :value="'vertical'">垂直分割线</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="dividerDashed">
+            <a-radio-button :value="true">虚线</a-radio-button>
+            <a-radio-button :value="false">实线</a-radio-button>
+          </a-radio-group>
         </div>
-      </div>
-      <!-- 点徽标 -->
-      <div class="content-item">
-        <h3 class="title2-xy">点徽标</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="badgeStatus">
-              <a-radio-button :value="'success'">成功</a-radio-button>
-              <a-radio-button :value="'processing'">处理中</a-radio-button>
-              <a-radio-button :value="'default'">默认</a-radio-button>
-              <a-radio-button :value="'error'">错误</a-radio-button>
-              <a-radio-button :value="'warning'">警告</a-radio-button>
-            </a-radio-group>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置徽标颜色</span>
-              <a-input style="width: 100px" v-model="badgeColor" />
-            </div>
-            <div v-if="badgeStatus" class="string-set">
-              <span style="margin-right: 5px">设置状态点文本</span>
-              <a-input style="width: 100px" v-model="badgeText" />
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">
-                设置鼠标放在状态点显示文本
-              </span>
-              <a-input style="width: 100px" v-model="badgeTitle" />
-            </div>
-          </div>
-          <div>
-            <a-badge
-              :color="badgeColor"
-              :status="badgeStatus"
-              :text="badgeText"
-              :title="badgeTitle"
-            >
-            </a-badge>
-          </div>
+        <div>
+          <p>这是一段文字1</p>
+          <a-divider :type="dividerType" :dashed="dividerDashed" />
+          <p>这是一段文字2</p>
         </div>
-      </div>
-    </div>
-    <!-- 标签 -->
-    <h1 class="title-xy">标签</h1>
-    <div class="content">
-      <!-- 标准标签 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准标签</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="tagVisible">
-              <a-radio-button :value="true">显示标签</a-radio-button>
-              <a-radio-button :value="false">隐藏标签</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="tagClosable">
-              <a-radio-button :value="true">显示关闭标签</a-radio-button>
-              <a-radio-button :value="false">隐藏关闭标签</a-radio-button>
-            </a-radio-group>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置标签颜色</span>
-              <a-input style="width: 100px" v-model="tagColor" />
-            </div>
-          </div>
-          <div>
-            <a-tag
-              :closable="tagClosable"
-              :color="tagColor"
-              :visible="tagVisible"
-            >
-              标签
-            </a-tag>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 文字提示 -->
-    <h1 class="title-xy">文字提示</h1>
-    <div class="content">
-      <!-- 文字提示 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准文字提示</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="tooltipArrowPointAtCenter">
-              <a-radio-button :value="true">
-                开启箭头指向元素中心
-              </a-radio-button>
-              <a-radio-button :value="false">
-                关闭箭头指向元素中心
-              </a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="tooltipAutoAdjustOverflow">
-              <a-radio-button :value="true">
-                开启遮挡时自动调整位置
-              </a-radio-button>
-              <a-radio-button :value="false">
-                关闭遮挡时自动调整位置
-              </a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="tooltipPlacement">
-              <a-radio-button :value="'top'">上方</a-radio-button>
-              <a-radio-button :value="'bottom'">下方</a-radio-button>
-              <a-radio-button :value="'left'">左方</a-radio-button>
-              <a-radio-button :value="'right'">右方</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="tooltipTrigger">
-              <a-radio-button :value="'hover'">悬停触发</a-radio-button>
-              <a-radio-button :value="'focus'">聚焦触发</a-radio-button>
-              <a-radio-button :value="'click'">点击触发</a-radio-button>
-              <a-radio-button :value="'contextmenu'">
-                右键点击触发
-              </a-radio-button>
-            </a-radio-group>
-            <div class="number-set">
-              <span style="margin-right: 5px">
-                鼠标移入的延迟显示时间（秒）
-              </span>
-              <a-input-number
-                style="width: 100px"
-                v-model="tooltipMouseEnterDelay"
-              />
-            </div>
-            <div class="number-set">
-              <span style="margin-right: 5px">
-                鼠标移出的延迟显示时间（秒）
-              </span>
-              <a-input-number
-                style="width: 100px"
-                v-model="tooltipMouseLeaveDelay"
-              />
-            </div>
-          </div>
-          <div>
-            <a-tooltip
-              :arrow-point-at-center="tooltipArrowPointAtCenter"
-              :auto-adjust-overflow="tooltipAutoAdjustOverflow"
-              :mouse-enter-delay="tooltipMouseEnterDelay"
-              :mouse-leave-delay="tooltipMouseLeaveDelay"
-              :placement="tooltipPlacement"
-              :trigger="tooltipTrigger"
-            >
-              <template slot="title">这段话就是一个文字提示</template>
-              <a-button>提示消息</a-button>
-            </a-tooltip>
-          </div>
-        </div>
-      </div>
-    </div>
+      </a-card>
+    </a-card>
   </div>
 </template>
 
@@ -391,6 +423,14 @@ export default {
       tooltipMouseLeaveDelay: 1,
       tooltipPlacement: "top",
       tooltipTrigger: "hover",
+      // 加载
+      spinSpinning: true,
+      spinSize: "default",
+      spinDelay: 500,
+      spinTip: "加载中.......",
+      // 分割线
+      dividerType: "horizontal",
+      dividerDashed: false,
     };
   },
   components: {
@@ -403,8 +443,15 @@ export default {
 </script>
 
 <style scoped>
+/* 图标 */
 .icons-list >>> .anticon {
   margin: 5px;
   font-size: 30px;
+}
+/* 加载 */
+.spin-content {
+  padding: 30px;
+  border: 1px solid #91d5ff;
+  background-color: #e6f7ff;
 }
 </style>

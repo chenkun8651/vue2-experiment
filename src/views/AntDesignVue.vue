@@ -34,10 +34,6 @@
             <a-icon type="inbox" />
             <span>反馈组件</span>
           </a-menu-item>
-          <a-menu-item key="other">
-            <a-icon type="inbox" />
-            <span>其他组件</span>
-          </a-menu-item>
         </a-menu>
       </a-layout-sider>
       <a-layout>
@@ -102,8 +98,6 @@ export default {
         return "展示组件";
       } else if (value[0] == "feedback") {
         return "反馈组件";
-      } else if (value[0] == "other") {
-        return "其他组件";
       }
     },
   },
