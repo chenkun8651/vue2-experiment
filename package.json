@@ -1,9 +1,9 @@
 {
   "name": "vue-experiment",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -24,6 +24,12 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "vue-template-compiler": "^2.6.11"
+  },
+  "config": {
+    "vue-cli-service": {
+      "host": "0.0.0.0",
+      "port": "10501"
+    }
   },
   "eslintConfig": {
     "root": true,
