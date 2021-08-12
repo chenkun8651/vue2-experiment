@@ -12,9 +12,9 @@ const routes = [
   },
   {
     // AntDesignVue
-    path: '/antDesignVue',
-    name: 'AntDesignVue',
-    component: () => import('../views/AntDesignVue.vue'),
+    path: '/UIComponents',
+    name: 'UIComponents',
+    component: () => import('../views/UIComponents.vue'),
     redirect: '/antDesignVue/basics',
     children: [
       {
@@ -41,6 +41,21 @@ const routes = [
         path: "/antDesignVue/feedback",
         name: "Feedback",
         component: () => import("../components/AntDesignVue/Feedback.vue"),
+      },
+      {
+        path: "/UIComponents/button",
+        name: "Button",
+        component: () => import("../components/UIComponents/Button.vue"),
+      },
+      {
+        path: "/UIComponents/icon",
+        name: "Icon",
+        component: () => import("../components/UIComponents/Icon.vue"),
+      },
+      {
+        path: "/UIComponents/badge",
+        name: "Badge",
+        component: () => import("../components/UIComponents/Badge.vue"),
       }
     ]
   },

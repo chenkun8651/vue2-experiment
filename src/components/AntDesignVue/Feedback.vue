@@ -349,6 +349,9 @@
 </template>
 
 <script>
+import { message as ADMessage } from "ant-design-vue";
+// import { Message as ELMessage } from "element-ui";
+
 export default {
   data() {
     return {
@@ -407,19 +410,19 @@ export default {
       };
       switch (this.messageType) {
         case "success":
-          this.$message.success(config);
+          ADMessage.success(config);
           break;
         case "info":
-          this.$message.info(config);
+          ADMessage.info(config);
           break;
         case "warning":
-          this.$message.warning(config);
+          ADMessage.warning(config);
           break;
         case "error":
-          this.$message.error(config);
+          ADMessage.error(config);
           break;
         default:
-          this.$message.info(config);
+          ADMessage.info(config);
           break;
       }
     },

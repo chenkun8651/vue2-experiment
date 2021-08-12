@@ -34,6 +34,18 @@
             <a-icon type="inbox" />
             <span>反馈组件</span>
           </a-menu-item>
+          <a-menu-item key="button">
+            <a-icon type="inbox" />
+            <span>按钮组件</span>
+          </a-menu-item>
+          <a-menu-item key="icon">
+            <a-icon type="inbox" />
+            <span>图标组件</span>
+          </a-menu-item>
+          <a-menu-item key="badge">
+            <a-icon type="inbox" />
+            <span>徽标数组件</span>
+          </a-menu-item>
         </a-menu>
       </a-layout-sider>
       <a-layout>
@@ -75,9 +87,9 @@ export default {
     if (this.currentRoute) {
       this.RouteArray = [this.currentRoute];
     } else {
-      this.RouteArray = ["basics"];
-      this.currentRoute = "basics";
-      this.$router.push("/antDesignVue/basics");
+      this.RouteArray = ["button"];
+      this.currentRoute = "button";
+      this.$router.push("/UIComponents/button");
     }
   },
   watch: {
@@ -105,7 +117,7 @@ export default {
     ChangeMenu(event) {
       if (event.key !== this.currentRoute) {
         this.currentRoute = event.key;
-        this.$router.push(`/antDesignVue/${event.key}`);
+        this.$router.push(`/UIComponents/${event.key}`);
       }
     },
   },
