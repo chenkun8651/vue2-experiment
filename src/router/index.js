@@ -36,6 +36,11 @@ const routes = [
         path: "/UIComponents/tag",
         name: "Tag",
         component: () => import("../components/UIComponents/Tag.vue"),
+      },
+      {
+        path: "/UIComponents/tooltip",
+        name: "Tag",
+        component: () => import("../components/UIComponents/Tooltip.vue"),
       }
     ]
   },

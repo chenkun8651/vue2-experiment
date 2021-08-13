@@ -1,36 +1,6 @@
 <template>
   <!-- 基础组件 -->
   <div>
-    <!-- 标签 -->
-    <a-card class="card-margin">
-      <div slot="title" class="title-xy">标签（Tag）</div>
-      <!-- 标准标签 -->
-      <a-card class="card-margin" title="标准标签">
-        <div class="radio-box">
-          <a-radio-group v-model="tagVisible">
-            <a-radio-button :value="true">显示标签</a-radio-button>
-            <a-radio-button :value="false">隐藏标签</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="tagClosable">
-            <a-radio-button :value="true">显示关闭标签</a-radio-button>
-            <a-radio-button :value="false">隐藏关闭标签</a-radio-button>
-          </a-radio-group>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置标签颜色</span>
-            <a-input style="width: 100px" v-model="tagColor" />
-          </div>
-        </div>
-        <div>
-          <a-tag
-            :closable="tagClosable"
-            :color="tagColor"
-            :visible="tagVisible"
-          >
-            标签
-          </a-tag>
-        </div>
-      </a-card>
-    </a-card>
     <!-- 文字提示 -->
     <a-card class="card-margin">
       <div slot="title" class="title-xy">文字提示（Tooltip）</div>
@@ -168,22 +138,22 @@
 export default {
   data() {
     return {
-      // 标签
-      tagVisible: true,
-      tagClosable: true,
-      tagColor: "red",
-      // 文字提示
+      // AntDesignVue
       tooltipArrowPointAtCenter: false,
       tooltipAutoAdjustOverflow: false,
       tooltipMouseEnterDelay: 1,
       tooltipMouseLeaveDelay: 1,
       tooltipPlacement: "top",
       tooltipTrigger: "hover",
-      // 加载
-      spinSpinning: true,
-      spinSize: "default",
-      spinDelay: 500,
-      spinTip: "加载中.......",
+      // ElementUI
+      tooltipEffect: "dark",
+      tooltipOffset: 0,
+      tooltipTransition: "el-fade-in-linear",
+      tooltipPlacement: "top",
+      tooltipVisibleArrow: true,
+      tooltipOpenDelay: 0,
+      tooltipHideAfter: 0,
+      tooltipDisabled: false,
       // 分割线
       dividerType: "horizontal",
       dividerDashed: false,

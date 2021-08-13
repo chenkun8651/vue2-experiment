@@ -30,6 +30,10 @@
             <a-icon type="inbox" />
             <span>标签组件</span>
           </a-menu-item>
+          <a-menu-item key="tooltip">
+            <a-icon type="inbox" />
+            <span>文字提示组件</span>
+          </a-menu-item>
         </a-menu>
       </a-layout-sider>
       <a-layout>
@@ -92,8 +96,8 @@ export default {
         return "徽标数组件";
       } else if (value[0] == "tag") {
         return "标签组件";
-      } else if (value[0] == "feedback") {
-        return "反馈组件";
+      } else if (value[0] == "tooltip") {
+        return "文字提示组件";
       }
     },
   },

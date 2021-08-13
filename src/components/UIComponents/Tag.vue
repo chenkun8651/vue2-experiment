@@ -1,5 +1,5 @@
 <template>
-  <!-- 基础组件 -->
+  <!-- 标签组件 -->
   <div>
     <!-- 标签 -->
     <a-card class="card-margin">
