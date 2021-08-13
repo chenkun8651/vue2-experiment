@@ -4,7 +4,7 @@
       <div id="app-nav">
         <div>
           <router-link to="/">Home</router-link> |
-          <router-link to="/antDesignVue">AntDesignVue</router-link>
+          <router-link to="/UIComponents">UIComponents</router-link>
         </div>
       </div>
       <router-view id="app-view" />
