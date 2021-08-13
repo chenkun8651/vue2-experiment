@@ -19,14 +19,14 @@
             <a-radio-button :value="false">隐藏背景透明</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonShape">
-            <a-radio-button :value="null">方形</a-radio-button>
-            <a-radio-button :value="'circle'">圆形</a-radio-button>
-            <a-radio-button :value="'round'">圆角</a-radio-button>
+            <a-radio-button :value="null">方形按钮</a-radio-button>
+            <a-radio-button :value="'circle'">圆形按钮</a-radio-button>
+            <a-radio-button :value="'round'">圆角按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonSize">
-            <a-radio-button :value="'large'">大按钮</a-radio-button>
-            <a-radio-button :value="'default'">默认按钮</a-radio-button>
-            <a-radio-button :value="'small'">小按钮</a-radio-button>
+            <a-radio-button :value="'large'">大号按钮</a-radio-button>
+            <a-radio-button :value="'default'">中号按钮</a-radio-button>
+            <a-radio-button :value="'small'">小号按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonBlock">
             <a-radio-button :value="true">宽度撑满</a-radio-button>
@@ -73,22 +73,22 @@
             <a-radio-button :value="'text'">文本按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonPlainE">
-            <a-radio-button :value="true">显示朴素</a-radio-button>
-            <a-radio-button :value="false">隐藏朴素</a-radio-button>
+            <a-radio-button :value="true">显示简洁按钮</a-radio-button>
+            <a-radio-button :value="false">隐藏简洁按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonRoundE">
-            <a-radio-button :value="true">显示圆角</a-radio-button>
-            <a-radio-button :value="false">隐藏圆角</a-radio-button>
+            <a-radio-button :value="true">显示圆角按钮</a-radio-button>
+            <a-radio-button :value="false">隐藏圆角按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonCircleE">
-            <a-radio-button :value="true">显示圆形</a-radio-button>
-            <a-radio-button :value="false">隐藏圆形</a-radio-button>
+            <a-radio-button :value="true">显示圆形按钮</a-radio-button>
+            <a-radio-button :value="false">隐藏圆形按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonSizeE">
-            <a-radio-button :value="null">默认按钮</a-radio-button>
-            <a-radio-button :value="'medium'">中等按钮</a-radio-button>
-            <a-radio-button :value="'small'">小按钮</a-radio-button>
-            <a-radio-button :value="'mini'">迷你按钮</a-radio-button>
+            <a-radio-button :value="null">大号按钮</a-radio-button>
+            <a-radio-button :value="'medium'">中号按钮</a-radio-button>
+            <a-radio-button :value="'small'">小号按钮</a-radio-button>
+            <a-radio-button :value="'mini'">迷你号按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonDisabledE">
             <a-radio-button :value="true">禁用</a-radio-button>
@@ -135,10 +135,10 @@
             <a-radio-button :value="false">隐藏背景透明</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonSizeA">
-            <a-radio-button :value="'large'">大按钮</a-radio-button>
-            <a-radio-button :value="null">默认按钮</a-radio-button>
-            <a-radio-button :value="'small'">小按钮</a-radio-button>
-            <a-radio-button :value="'smaller'">超小按钮</a-radio-button>
+            <a-radio-button :value="'large'">大号按钮</a-radio-button>
+            <a-radio-button :value="null">中号按钮</a-radio-button>
+            <a-radio-button :value="'small'">小号按钮</a-radio-button>
+            <a-radio-button :value="'smaller'">超小号按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonDisabledA">
             <a-radio-button :value="true">禁用</a-radio-button>
@@ -184,9 +184,9 @@
             <a-radio-button :value="false">隐藏背景透明</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonSizeV">
-            <a-radio-button :value="'large'">大按钮</a-radio-button>
-            <a-radio-button :value="'default'">默认按钮</a-radio-button>
-            <a-radio-button :value="'small'">小按钮</a-radio-button>
+            <a-radio-button :value="'large'">大号按钮</a-radio-button>
+            <a-radio-button :value="'default'">中号按钮</a-radio-button>
+            <a-radio-button :value="'small'">小号按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonLongV">
             <a-radio-button :value="true">宽度撑满</a-radio-button>

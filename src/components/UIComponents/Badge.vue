@@ -8,19 +8,19 @@
       <a-card class="card-margin" title="AntDesignVue 徽标数">
         <div class="radio-box">
           <a-radio-group v-model="badgeDot" @change="changeDot">
-            <a-radio-button :value="null">显示数字</a-radio-button>
-            <a-radio-button :value="false">显示圆点</a-radio-button>
+            <a-radio-button :value="null">显示数字徽标</a-radio-button>
+            <a-radio-button :value="false">显示圆点徽标</a-radio-button>
           </a-radio-group>
           <div class="string-set">
-            <span style="margin-right: 5px">设置徽标文本</span>
+            <span style="margin-right: 5px">设置徽标附加文本</span>
             <a-input style="width: 100px" v-model="badgeText" />
           </div>
           <a-radio-group v-show="badgeDot === false" v-model="badgeStatus">
-            <a-radio-button :value="'success'">成功</a-radio-button>
-            <a-radio-button :value="'processing'">处理中</a-radio-button>
-            <a-radio-button :value="'default'">默认</a-radio-button>
-            <a-radio-button :value="'error'">错误</a-radio-button>
-            <a-radio-button :value="'warning'">警告</a-radio-button>
+            <a-radio-button :value="'success'">成功徽标</a-radio-button>
+            <a-radio-button :value="'processing'">处理中徽标</a-radio-button>
+            <a-radio-button :value="'default'">默认徽标</a-radio-button>
+            <a-radio-button :value="'error'">错误徽标</a-radio-button>
+            <a-radio-button :value="'warning'">警告徽标</a-radio-button>
           </a-radio-group>
           <div v-show="badgeDot === false" class="string-set">
             <span style="margin-right: 5px">设置徽标颜色</span>
@@ -31,11 +31,11 @@
             <a-radio-button :value="false">隐藏数字0</a-radio-button>
           </a-radio-group>
           <div v-show="badgeDot === null" class="number-set">
-            <span style="margin-right: 5px">设置展示数字</span>
+            <span style="margin-right: 5px">设置徽标展示数字</span>
             <a-input-number style="width: 100px" v-model="badgeCount" />
           </div>
           <div v-show="badgeDot === null" class="number-set">
-            <span style="margin-right: 5px">设置展示封顶数字</span>
+            <span style="margin-right: 5px">设置徽标展示封顶数字</span>
             <a-input-number style="width: 100px" v-model="badgeOverflowCount" />
           </div>
         </div>
@@ -57,27 +57,27 @@
       <!-- ElementUI -->
       <a-card class="card-margin" title="ElementUI 徽标数">
         <div class="radio-box">
-          <a-radio-group v-model="badgeIsDotE">
-            <a-radio-button :value="false">显示数字</a-radio-button>
-            <a-radio-button :value="true">显示圆点</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="badgeTypeE">
-            <a-radio-button :value="'success'">成功</a-radio-button>
-            <a-radio-button :value="'primary'">默认</a-radio-button>
-            <a-radio-button :value="'info'">信息</a-radio-button>
-            <a-radio-button :value="'danger'">错误</a-radio-button>
-            <a-radio-button :value="'warning'">警告</a-radio-button>
-          </a-radio-group>
           <a-radio-group v-model="badgeHiddenE">
             <a-radio-button :value="false">显示徽标</a-radio-button>
             <a-radio-button :value="true">隐藏徽标</a-radio-button>
           </a-radio-group>
+          <a-radio-group v-model="badgeIsDotE">
+            <a-radio-button :value="false">显示数字徽标</a-radio-button>
+            <a-radio-button :value="true">显示圆点徽标</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="badgeTypeE">
+            <a-radio-button :value="'success'">成功徽标</a-radio-button>
+            <a-radio-button :value="'primary'">默认徽标</a-radio-button>
+            <a-radio-button :value="'info'">信息徽标</a-radio-button>
+            <a-radio-button :value="'danger'">错误徽标</a-radio-button>
+            <a-radio-button :value="'warning'">警告徽标</a-radio-button>
+          </a-radio-group>
           <div v-show="!badgeIsDotE" class="number-set">
-            <span style="margin-right: 5px">设置展示数字</span>
+            <span style="margin-right: 5px">设置徽标展示数字</span>
             <a-input-number style="width: 100px" v-model="badgeValueE" />
           </div>
           <div v-show="!badgeIsDotE" class="number-set">
-            <span style="margin-right: 5px">设置展示封顶数字</span>
+            <span style="margin-right: 5px">设置徽标展示封顶数字</span>
             <a-input-number style="width: 100px" v-model="badgeMaxE" />
           </div>
         </div>
@@ -96,25 +96,25 @@
       <!-- AtUI -->
       <a-card class="card-margin" title="AtUI 徽标数">
         <div class="radio-box">
-          <a-radio-group v-model="badgeDotA">
-            <a-radio-button :value="false">显示数字</a-radio-button>
-            <a-radio-button :value="true">显示圆点</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="badgeStatusA">
-            <a-radio-button :value="'success'">成功</a-radio-button>
-            <a-radio-button :value="'info'">信息</a-radio-button>
-            <a-radio-button :value="'warning'">警告</a-radio-button>
-          </a-radio-group>
           <a-radio-group v-model="badgeShowA">
             <a-radio-button :value="true">显示徽标</a-radio-button>
             <a-radio-button :value="false">隐藏徽标</a-radio-button>
           </a-radio-group>
+          <a-radio-group v-model="badgeDotA">
+            <a-radio-button :value="false">显示数字徽标</a-radio-button>
+            <a-radio-button :value="true">显示圆点徽标</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="badgeStatusA">
+            <a-radio-button :value="'success'">成功徽标</a-radio-button>
+            <a-radio-button :value="'info'">信息徽标</a-radio-button>
+            <a-radio-button :value="'warning'">警告徽标</a-radio-button>
+          </a-radio-group>
           <div v-show="!badgeDotA" class="number-set">
-            <span style="margin-right: 5px">设置展示数字</span>
+            <span style="margin-right: 5px">设置徽标展示数字</span>
             <a-input-number style="width: 100px" v-model="badgeValueA" />
           </div>
           <div v-show="!badgeDotA" class="number-set">
-            <span style="margin-right: 5px">设置展示封顶数字</span>
+            <span style="margin-right: 5px">设置徽标展示封顶数字</span>
             <a-input-number style="width: 100px" v-model="badgeMaxNumA" />
           </div>
         </div>
@@ -134,45 +134,44 @@
       <a-card class="card-margin" title="ViewUI 徽标数">
         <div class="radio-box">
           <a-radio-group v-model="badgeDotV" @change="changeDotV">
-            <a-radio-button :value="false">显示数字</a-radio-button>
-            <a-radio-button :value="null">显示圆点</a-radio-button>
+            <a-radio-button :value="false">显示数字徽标</a-radio-button>
+            <a-radio-button :value="null">显示圆点徽标</a-radio-button>
           </a-radio-group>
           <a-radio-group v-show="badgeDotV !== null" v-model="badgeTypeV">
-            <a-radio-button :value="'success'">成功数字</a-radio-button>
-            <a-radio-button :value="'primary'">默认数字</a-radio-button>
-            <a-radio-button :value="'normal'">普通数字</a-radio-button>
-            <a-radio-button :value="'error'">错误数字</a-radio-button>
-            <a-radio-button :value="'warning'">警告数字</a-radio-button>
-            <a-radio-button :value="'info'">信息数字</a-radio-button>
+            <a-radio-button :value="'success'">成功徽标</a-radio-button>
+            <a-radio-button :value="'primary'">默认徽标</a-radio-button>
+            <a-radio-button :value="'normal'">普通徽标</a-radio-button>
+            <a-radio-button :value="'error'">错误徽标</a-radio-button>
+            <a-radio-button :value="'warning'">警告徽标</a-radio-button>
           </a-radio-group>
           <a-radio-group v-show="badgeDotV !== null" v-model="badgeShowZeroV">
             <a-radio-button :value="true">显示数字0</a-radio-button>
             <a-radio-button :value="false">隐藏数字0</a-radio-button>
           </a-radio-group>
           <div v-show="badgeDotV !== null" class="number-set">
-            <span style="margin-right: 5px">设置展示数字</span>
+            <span style="margin-right: 5px">设置徽标展示数字</span>
             <a-input-number style="width: 100px" v-model="badgeCountV" />
           </div>
           <div v-show="badgeDotV !== null" class="number-set">
-            <span style="margin-right: 5px">设置展示封顶数字</span>
+            <span style="margin-right: 5px">设置徽标展示封顶数字</span>
             <a-input-number
               style="width: 100px"
               v-model="badgeOverflowCountV"
             />
           </div>
           <a-radio-group v-show="badgeDotV === null" v-model="badgeStatusV">
-            <a-radio-button :value="'success'">成功状态</a-radio-button>
-            <a-radio-button :value="'processing'">处理中状态</a-radio-button>
-            <a-radio-button :value="'default'">默认状态</a-radio-button>
-            <a-radio-button :value="'error'">错误状态</a-radio-button>
-            <a-radio-button :value="'warning'">警告状态</a-radio-button>
+            <a-radio-button :value="'success'">成功徽标</a-radio-button>
+            <a-radio-button :value="'processing'">处理中徽标</a-radio-button>
+            <a-radio-button :value="'default'">默认徽标</a-radio-button>
+            <a-radio-button :value="'error'">错误徽标</a-radio-button>
+            <a-radio-button :value="'warning'">警告徽标</a-radio-button>
           </a-radio-group>
           <div v-show="badgeDotV === null" class="string-set">
             <span style="margin-right: 5px">设置徽标颜色</span>
             <a-input style="width: 100px" v-model="badgeColorV" />
           </div>
           <div v-show="badgeDotV === null" class="string-set">
-            <span style="margin-right: 5px">设置状态点文本</span>
+            <span style="margin-right: 5px">设置状态徽标文本</span>
             <a-input style="width: 100px" v-model="badgeTextV" />
           </div>
         </div>

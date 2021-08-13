@@ -14,26 +14,6 @@
           mode="inline"
           @click="ChangeMenu"
         >
-          <a-menu-item key="basics">
-            <a-icon type="inbox" />
-            <span>基础组件</span>
-          </a-menu-item>
-          <a-menu-item key="navigation">
-            <a-icon type="inbox" />
-            <span>导航组件</span>
-          </a-menu-item>
-          <a-menu-item key="form">
-            <a-icon type="inbox" />
-            <span>表单组件</span>
-          </a-menu-item>
-          <a-menu-item key="display">
-            <a-icon type="inbox" />
-            <span>展示组件</span>
-          </a-menu-item>
-          <a-menu-item key="feedback">
-            <a-icon type="inbox" />
-            <span>反馈组件</span>
-          </a-menu-item>
           <a-menu-item key="button">
             <a-icon type="inbox" />
             <span>按钮组件</span>
@@ -45,6 +25,10 @@
           <a-menu-item key="badge">
             <a-icon type="inbox" />
             <span>徽标数组件</span>
+          </a-menu-item>
+          <a-menu-item key="tag">
+            <a-icon type="inbox" />
+            <span>标签组件</span>
           </a-menu-item>
         </a-menu>
       </a-layout-sider>
@@ -100,20 +84,21 @@ export default {
   },
   filters: {
     keyToName: function (value) {
-      if (value[0] == "basics") {
-        return "基础组件";
-      } else if (value[0] == "navigation") {
-        return "导航组件";
-      } else if (value[0] == "form") {
-        return "表单组件";
-      } else if (value[0] == "display") {
-        return "展示组件";
+      if (value[0] == "button") {
+        return "按钮组件";
+      } else if (value[0] == "icon") {
+        return "图标组件";
+      } else if (value[0] == "badge") {
+        return "徽标数组件";
+      } else if (value[0] == "tag") {
+        return "标签组件";
       } else if (value[0] == "feedback") {
         return "反馈组件";
       }
     },
   },
   methods: {
+    // 菜单跳转
     ChangeMenu(event) {
       if (event.key !== this.currentRoute) {
         this.currentRoute = event.key;

@@ -14,34 +14,9 @@ const routes = [
     // AntDesignVue
     path: '/UIComponents',
     name: 'UIComponents',
+    redirect: '/UIComponents/button',
     component: () => import('../views/UIComponents.vue'),
-    redirect: '/antDesignVue/basics',
     children: [
-      {
-        path: "/antDesignVue/basics",
-        name: "Basics",
-        component: () => import("../components/AntDesignVue/Basics.vue"),
-      },
-      {
-        path: "/antDesignVue/navigation",
-        name: "Navigation",
-        component: () => import("../components/AntDesignVue/Navigation.vue"),
-      },
-      {
-        path: "/antDesignVue/form",
-        name: "Form",
-        component: () => import("../components/AntDesignVue/Form.vue"),
-      },
-      {
-        path: "/antDesignVue/display",
-        name: "Display",
-        component: () => import("../components/AntDesignVue/Display.vue"),
-      },
-      {
-        path: "/antDesignVue/feedback",
-        name: "Feedback",
-        component: () => import("../components/AntDesignVue/Feedback.vue"),
-      },
       {
         path: "/UIComponents/button",
         name: "Button",
@@ -56,6 +31,11 @@ const routes = [
         path: "/UIComponents/badge",
         name: "Badge",
         component: () => import("../components/UIComponents/Badge.vue"),
+      },
+      {
+        path: "/UIComponents/tag",
+        name: "Tag",
+        component: () => import("../components/UIComponents/Tag.vue"),
       }
     ]
   },

@@ -7,34 +7,37 @@
       <!-- AntDesignVue -->
       <a-card class="card-margin" title="AntDesignVue 图标">
         <div class="radio-box">
-          <a-radio-group v-model="iconTheme">
-            <a-radio-button :value="'filled'">实心</a-radio-button>
-            <a-radio-button :value="'outlined'">描线</a-radio-button>
-            <a-radio-button :value="'twoTone'">双色</a-radio-button>
-          </a-radio-group>
           <a-radio-group v-model="iconSpin">
             <a-radio-button :value="true">开启旋转动画</a-radio-button>
             <a-radio-button :value="false">关闭旋转动画</a-radio-button>
           </a-radio-group>
           <div class="number-set">
-            <span style="margin-right: 5px">设置图标旋转角度</span>
+            <span style="margin-right: 5px">设置图标初始旋转角度</span>
             <a-input-number style="width: 100px" v-model="iconRotate" />
           </div>
-          <div v-if="iconTheme === 'twoTone'" class="string-set">
-            <span style="margin-right: 5px">设置双色颜色</span>
-            <a-input style="width: 100px" v-model="iconRotatTwoToneColor" />
-          </div>
+          <a-radio-group v-model="iconTheme">
+            <a-radio-button :value="'filled'">实心图标</a-radio-button>
+            <a-radio-button :value="'outlined'">描线图标</a-radio-button>
+            <a-radio-button :value="'twoTone'">双色图标</a-radio-button>
+          </a-radio-group>
           <div class="string-set">
             <span style="margin-right: 5px">设置图标名称</span>
             <a-input style="width: 150px" v-model="iconName" />
           </div>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标颜色</span>
-            <a-input style="width: 150px" v-model="iconColor" />
-          </div>
           <div class="number-set">
             <span style="margin-right: 5px">设置图标大小</span>
-            <a-input-number style="width: 150px" v-model="iconSize" />
+            <a-input-number style="width: 100px" v-model="iconSize" />
+          </div>
+          <div
+            v-show="iconTheme === 'filled' || iconTheme === 'outlined'"
+            class="string-set"
+          >
+            <span style="margin-right: 5px">设置实心（描线）图标颜色</span>
+            <a-input style="width: 100px" v-model="iconColor" />
+          </div>
+          <div v-show="iconTheme === 'twoTone'" class="string-set">
+            <span style="margin-right: 5px">设置双色图标颜色</span>
+            <a-input style="width: 100px" v-model="iconRotatTwoToneColor" />
           </div>
         </div>
         <div>
@@ -92,13 +95,13 @@
             <span style="margin-right: 5px">设置图标名称</span>
             <a-input style="width: 150px" v-model="iconNameE" />
           </div>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标颜色</span>
-            <a-input style="width: 150px" v-model="iconColorE" />
-          </div>
           <div class="number-set">
             <span style="margin-right: 5px">设置图标大小</span>
-            <a-input-number style="width: 150px" v-model="iconSizeE" />
+            <a-input-number style="width: 100px" v-model="iconSizeE" />
+          </div>
+          <div class="string-set">
+            <span style="margin-right: 5px">设置图标颜色</span>
+            <a-input style="width: 100px" v-model="iconColorE" />
           </div>
         </div>
         <div>
@@ -115,13 +118,13 @@
             <span style="margin-right: 5px">设置图标名称</span>
             <a-input style="width: 150px" v-model="iconNameA" />
           </div>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标颜色</span>
-            <a-input style="width: 150px" v-model="iconColorA" />
-          </div>
           <div class="number-set">
             <span style="margin-right: 5px">设置图标大小</span>
-            <a-input-number style="width: 150px" v-model="iconSizeA" />
+            <a-input-number style="width: 100px" v-model="iconSizeA" />
+          </div>
+          <div class="string-set">
+            <span style="margin-right: 5px">设置图标颜色</span>
+            <a-input style="width: 100px" v-model="iconColorA" />
           </div>
         </div>
         <div>
@@ -138,13 +141,13 @@
             <span style="margin-right: 5px">设置图标名称</span>
             <a-input style="width: 150px" v-model="iconNameV" />
           </div>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标颜色</span>
-            <a-input style="width: 150px" v-model="iconColorV" />
-          </div>
           <div class="number-set">
             <span style="margin-right: 5px">设置图标大小</span>
             <a-input-number style="width: 150px" v-model="iconSizeV" />
+          </div>
+          <div class="string-set">
+            <span style="margin-right: 5px">设置图标颜色</span>
+            <a-input style="width: 150px" v-model="iconColorV" />
           </div>
         </div>
         <div>
@@ -207,25 +210,25 @@ export default {
   data() {
     return {
       // AntDesignVue
-      iconTheme: "filled",
       iconSpin: false,
       iconRotate: 0,
-      iconRotatTwoToneColor: "#111",
+      iconTheme: "filled",
       iconName: "home",
-      iconColor: "#111",
       iconSize: 30,
+      iconColor: "#111",
+      iconRotatTwoToneColor: "#ccc",
       // ElementUI
       iconNameE: "el-icon-edit",
-      iconColorE: "#111",
       iconSizeE: 30,
+      iconColorE: "#111",
       // AtUI
       iconNameA: "icon icon-zoom-in",
-      iconColorA: "#111",
       iconSizeA: 30,
+      iconColorA: "#111",
       // ViewUI
       iconNameV: "ios-add-circle",
-      iconColorV: "#111",
       iconSizeV: 30,
+      iconColorV: "#111",
     };
   },
   components: {

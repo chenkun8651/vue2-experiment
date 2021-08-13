@@ -1,68 +1,6 @@
 <template>
   <!-- 基础组件 -->
   <div>
-    <!-- 徽标 -->
-    <a-card class="card-margin">
-      <div slot="title" class="title-xy">徽标（Badge）</div>
-      <!-- 数字徽标 -->
-      <a-card class="card-margin" title="数字徽标">
-        <div class="radio-box">
-          <a-radio-group v-model="badgeShowZero">
-            <a-radio-button :value="true">显示0的数字</a-radio-button>
-            <a-radio-button :value="false">不显示0的数字</a-radio-button>
-          </a-radio-group>
-          <div class="number-set">
-            <span style="margin-right: 5px">设置展示数字</span>
-            <a-input-number style="width: 100px" v-model="badgeCount" />
-          </div>
-          <div class="number-set">
-            <span style="margin-right: 5px">设置展示封顶数字</span>
-            <a-input-number style="width: 100px" v-model="badgeOverflowCount" />
-          </div>
-        </div>
-        <div>
-          <a-badge
-            :count="badgeCount"
-            :overflow-count="badgeOverflowCount"
-            :show-zero="badgeShowZero"
-          >
-          </a-badge>
-        </div>
-      </a-card>
-      <!-- 圆点徽标 -->
-      <a-card class="card-margin" title="圆点徽标">
-        <div class="radio-box">
-          <a-radio-group v-model="badgeStatus">
-            <a-radio-button :value="'success'">成功</a-radio-button>
-            <a-radio-button :value="'processing'">处理中</a-radio-button>
-            <a-radio-button :value="'default'">默认</a-radio-button>
-            <a-radio-button :value="'error'">错误</a-radio-button>
-            <a-radio-button :value="'warning'">警告</a-radio-button>
-          </a-radio-group>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置徽标颜色</span>
-            <a-input style="width: 100px" v-model="badgeColor" />
-          </div>
-          <div v-if="badgeStatus" class="string-set">
-            <span style="margin-right: 5px">设置状态点文本</span>
-            <a-input style="width: 100px" v-model="badgeText" />
-          </div>
-          <div class="string-set">
-            <span style="margin-right: 5px"> 设置鼠标放在状态点显示文本 </span>
-            <a-input style="width: 100px" v-model="badgeTitle" />
-          </div>
-        </div>
-        <div>
-          <a-badge
-            :color="badgeColor"
-            :status="badgeStatus"
-            :text="badgeText"
-            :title="badgeTitle"
-          >
-          </a-badge>
-        </div>
-      </a-card>
-    </a-card>
     <!-- 标签 -->
     <a-card class="card-margin">
       <div slot="title" class="title-xy">标签（Tag）</div>
@@ -230,13 +168,6 @@
 export default {
   data() {
     return {
-      // 徽标
-      badgeShowZero: true,
-      badgeCount: 0,
-      badgeOverflowCount: 99,
-      badgeColor: null,
-      badgeStatus: "default",
-      badgeText: "",
       // 标签
       tagVisible: true,
       tagClosable: true,
