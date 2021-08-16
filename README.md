@@ -1,24 +1,29 @@
 # vue-experiment
 
-## Project setup
-```
+## 下载项目资源
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+### 开发编译（热加载模式）
+
+```bash
+npm run dev
 ```
 
-### Compiles and minifies for production
-```
+### 生产编译（压缩生产）
+
+```bash
 npm run build
 ```
 
-### Lints and fixes files
-```
+### 检查和修复文件
+
+```bash
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 自定义配置
+
+参见 [自定义配置](https://cli.vuejs.org/config/).
