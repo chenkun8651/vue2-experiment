@@ -11,7 +11,7 @@ const routes = [
     component: Home
   },
   {
-    // AntDesignVue
+    // UIComponents
     path: '/UIComponents',
     name: 'UIComponents',
     redirect: '/UIComponents/button',
@@ -41,6 +41,11 @@ const routes = [
         path: "/UIComponents/tooltip",
         name: "Tag",
         component: () => import("../components/UIComponents/Tooltip.vue"),
+      },
+      {
+        path: "/UIComponents/spin",
+        name: "Spin",
+        component: () => import("../components/UIComponents/Spin.vue"),
       }
     ]
   },

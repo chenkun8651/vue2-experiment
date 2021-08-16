@@ -34,6 +34,10 @@
             <a-icon type="inbox" />
             <span>文字提示组件</span>
           </a-menu-item>
+          <a-menu-item key="spin">
+            <a-icon type="inbox" />
+            <span>加载组件</span>
+          </a-menu-item>
         </a-menu>
       </a-layout-sider>
       <a-layout>
@@ -98,6 +102,8 @@ export default {
         return "标签组件";
       } else if (value[0] == "tooltip") {
         return "文字提示组件";
+      } else if (value[0] == "spin") {
+        return "加载组件";
       }
     },
   },
