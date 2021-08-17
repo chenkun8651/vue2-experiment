@@ -37,26 +37,26 @@
             <a-radio-button :value="false">关闭渐变动画</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tagSizeE">
-            <a-radio-button :value="null">大号标签</a-radio-button>
-            <a-radio-button :value="'medium'">中号标签</a-radio-button>
-            <a-radio-button :value="'small'">小号标签</a-radio-button>
-            <a-radio-button :value="'mini'">迷你号标签</a-radio-button>
+            <a-radio-button :value="null">large</a-radio-button>
+            <a-radio-button :value="'medium'">medium</a-radio-button>
+            <a-radio-button :value="'small'">small</a-radio-button>
+            <a-radio-button :value="'mini'">mini</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tagEffectE">
-            <a-radio-button :value="'light'">浅色主题</a-radio-button>
-            <a-radio-button :value="'dark'">深色主题</a-radio-button>
-            <a-radio-button :value="'plain'">简洁主题</a-radio-button>
+            <a-radio-button :value="'light'">light</a-radio-button>
+            <a-radio-button :value="'dark'">dark</a-radio-button>
+            <a-radio-button :value="'plain'">plain</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tagTypeE">
-            <a-radio-button :value="null">默认标签</a-radio-button>
-            <a-radio-button :value="'success'">成功标签</a-radio-button>
-            <a-radio-button :value="'info'">信息标签</a-radio-button>
-            <a-radio-button :value="'warning'">警告标签</a-radio-button>
-            <a-radio-button :value="'danger'">危险标签</a-radio-button>
+            <a-radio-button :value="null">default</a-radio-button>
+            <a-radio-button :value="'success'">success</a-radio-button>
+            <a-radio-button :value="'info'">info</a-radio-button>
+            <a-radio-button :value="'warning'">warning</a-radio-button>
+            <a-radio-button :value="'danger'">danger</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tagClosableE">
-            <a-radio-button :value="true">显示关闭标签</a-radio-button>
-            <a-radio-button :value="false">隐藏关闭标签</a-radio-button>
+            <a-radio-button :value="true">显示关闭按钮</a-radio-button>
+            <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tagHitE">
             <a-radio-button :value="true">显示边框描线</a-radio-button>
@@ -85,12 +85,12 @@
       <a-card class="card-margin" title="AtUI 标签">
         <div class="radio-box">
           <a-radio-group v-model="tagColorA">
-            <a-radio-button :value="'default'">默认标签</a-radio-button>
-            <a-radio-button :value="'primary'">主要标签</a-radio-button>
-            <a-radio-button :value="'success'">成功标签</a-radio-button>
-            <a-radio-button :value="'error'">错误标签</a-radio-button>
-            <a-radio-button :value="'warning'">警告标签</a-radio-button>
-            <a-radio-button :value="'info'">信息标签</a-radio-button>
+            <a-radio-button :value="'default'">default</a-radio-button>
+            <a-radio-button :value="'primary'">primary</a-radio-button>
+            <a-radio-button :value="'success'">success</a-radio-button>
+            <a-radio-button :value="'error'">error</a-radio-button>
+            <a-radio-button :value="'warning'">warning</a-radio-button>
+            <a-radio-button :value="'info'">info</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tagClosableA">
             <a-radio-button :value="true">显示关闭按钮</a-radio-button>
@@ -113,21 +113,21 @@
             <a-radio-button :value="false">关闭渐变动画</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="TagSizeV">
-            <a-radio-button :value="'large'">大号标签</a-radio-button>
-            <a-radio-button :value="'medium'">中号标签</a-radio-button>
-            <a-radio-button :value="'default'">小号标签</a-radio-button>
+            <a-radio-button :value="'large'">large</a-radio-button>
+            <a-radio-button :value="'medium'">medium</a-radio-button>
+            <a-radio-button :value="'default'">default</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="TagTypeV">
-            <a-radio-button :value="null">普通标签</a-radio-button>
-            <a-radio-button :value="'border'">边框标签</a-radio-button>
-            <a-radio-button :value="'dot'">圆点标签</a-radio-button>
+            <a-radio-button :value="null">default</a-radio-button>
+            <a-radio-button :value="'border'">border</a-radio-button>
+            <a-radio-button :value="'dot'">dot</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="TagColorV">
-            <a-radio-button :value="'default'">默认标签</a-radio-button>
-            <a-radio-button :value="'primary'">主要标签</a-radio-button>
-            <a-radio-button :value="'success'">成功标签</a-radio-button>
-            <a-radio-button :value="'error'">错误标签</a-radio-button>
-            <a-radio-button :value="'warning'">警告标签</a-radio-button>
+            <a-radio-button :value="'default'">default</a-radio-button>
+            <a-radio-button :value="'primary'">primary</a-radio-button>
+            <a-radio-button :value="'success'">success</a-radio-button>
+            <a-radio-button :value="'error'">error</a-radio-button>
+            <a-radio-button :value="'warning'">warning</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="TagClosableV">
             <a-radio-button :value="true">显示关闭按钮</a-radio-button>

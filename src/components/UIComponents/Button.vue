@@ -7,11 +7,11 @@
       <a-card class="card-margin" title="AntDesignVue 按钮">
         <div class="radio-box">
           <a-radio-group v-model="buttonType">
-            <a-radio-button :value="'default'">默认按钮</a-radio-button>
-            <a-radio-button :value="'primary'">主要按钮</a-radio-button>
-            <a-radio-button :value="'dashed'">虚线按钮</a-radio-button>
-            <a-radio-button :value="'danger'">危险按钮</a-radio-button>
-            <a-radio-button :value="'link'">链接按钮</a-radio-button>
+            <a-radio-button :value="'default'">default</a-radio-button>
+            <a-radio-button :value="'primary'">primary</a-radio-button>
+            <a-radio-button :value="'dashed'">dashed</a-radio-button>
+            <a-radio-button :value="'danger'">danger</a-radio-button>
+            <a-radio-button :value="'link'">link</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonGhost">
             <a-radio-button :value="true">显示背景透明</a-radio-button>
@@ -23,9 +23,9 @@
             <a-radio-button :value="'round'">圆角按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonSize">
-            <a-radio-button :value="'large'">大号按钮</a-radio-button>
-            <a-radio-button :value="'default'">中号按钮</a-radio-button>
-            <a-radio-button :value="'small'">小号按钮</a-radio-button>
+            <a-radio-button :value="'large'">large</a-radio-button>
+            <a-radio-button :value="'default'">default</a-radio-button>
+            <a-radio-button :value="'small'">small</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonBlock">
             <a-radio-button :value="true">宽度撑满</a-radio-button>
@@ -63,13 +63,13 @@
       <a-card class="card-margin" title="ElementUI 按钮">
         <div class="radio-box">
           <a-radio-group v-model="buttonTypeE">
-            <a-radio-button :value="null">默认按钮</a-radio-button>
-            <a-radio-button :value="'primary'">主要按钮</a-radio-button>
-            <a-radio-button :value="'success'">成功按钮</a-radio-button>
-            <a-radio-button :value="'warning'">警告按钮</a-radio-button>
-            <a-radio-button :value="'danger'">危险按钮</a-radio-button>
-            <a-radio-button :value="'info'">信息按钮</a-radio-button>
-            <a-radio-button :value="'text'">文本按钮</a-radio-button>
+            <a-radio-button :value="null">default</a-radio-button>
+            <a-radio-button :value="'primary'">primary</a-radio-button>
+            <a-radio-button :value="'success'">success</a-radio-button>
+            <a-radio-button :value="'warning'">warning</a-radio-button>
+            <a-radio-button :value="'danger'">danger</a-radio-button>
+            <a-radio-button :value="'info'">info</a-radio-button>
+            <a-radio-button :value="'text'">text</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonPlainE">
             <a-radio-button :value="true">显示简洁按钮</a-radio-button>
@@ -84,10 +84,10 @@
             <a-radio-button :value="false">隐藏圆形按钮</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonSizeE">
-            <a-radio-button :value="null">大号按钮</a-radio-button>
-            <a-radio-button :value="'medium'">中号按钮</a-radio-button>
-            <a-radio-button :value="'small'">小号按钮</a-radio-button>
-            <a-radio-button :value="'mini'">迷你号按钮</a-radio-button>
+            <a-radio-button :value="null">large</a-radio-button>
+            <a-radio-button :value="'medium'">medium</a-radio-button>
+            <a-radio-button :value="'small'">small</a-radio-button>
+            <a-radio-button :value="'mini'">mini</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonDisabledE">
             <a-radio-button :value="true">禁用</a-radio-button>
@@ -121,23 +121,23 @@
       <a-card class="card-margin" title="AtUI 按钮">
         <div class="radio-box">
           <a-radio-group v-model="buttonTypeA">
-            <a-radio-button :value="'default'">默认按钮</a-radio-button>
-            <a-radio-button :value="'primary'">主要按钮</a-radio-button>
-            <a-radio-button :value="'success'">成功按钮</a-radio-button>
-            <a-radio-button :value="'warning'">警告按钮</a-radio-button>
-            <a-radio-button :value="'error'">错误按钮</a-radio-button>
-            <a-radio-button :value="'info'">信息按钮</a-radio-button>
-            <a-radio-button :value="'text'">文本按钮</a-radio-button>
+            <a-radio-button :value="'default'">default</a-radio-button>
+            <a-radio-button :value="'primary'">primary</a-radio-button>
+            <a-radio-button :value="'success'">success</a-radio-button>
+            <a-radio-button :value="'warning'">warning</a-radio-button>
+            <a-radio-button :value="'error'">error</a-radio-button>
+            <a-radio-button :value="'info'">info</a-radio-button>
+            <a-radio-button :value="'text'">text</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonHollowA">
             <a-radio-button :value="true">显示背景透明</a-radio-button>
             <a-radio-button :value="false">隐藏背景透明</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonSizeA">
-            <a-radio-button :value="'large'">大号按钮</a-radio-button>
-            <a-radio-button :value="null">中号按钮</a-radio-button>
-            <a-radio-button :value="'small'">小号按钮</a-radio-button>
-            <a-radio-button :value="'smaller'">超小号按钮</a-radio-button>
+            <a-radio-button :value="'large'">large</a-radio-button>
+            <a-radio-button :value="null">medium</a-radio-button>
+            <a-radio-button :value="'small'">small</a-radio-button>
+            <a-radio-button :value="'smaller'">smaller</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonDisabledA">
             <a-radio-button :value="true">禁用</a-radio-button>
@@ -169,23 +169,23 @@
       <a-card class="card-margin" title="ViewUI 按钮">
         <div class="radio-box">
           <a-radio-group v-model="buttonTypeV">
-            <a-radio-button :value="'default'">默认按钮</a-radio-button>
-            <a-radio-button :value="'primary'">主要按钮</a-radio-button>
-            <a-radio-button :value="'success'">成功按钮</a-radio-button>
-            <a-radio-button :value="'warning'">警告按钮</a-radio-button>
-            <a-radio-button :value="'error'">错误按钮</a-radio-button>
-            <a-radio-button :value="'dashed'">虚线按钮</a-radio-button>
-            <a-radio-button :value="'info'">信息按钮</a-radio-button>
-            <a-radio-button :value="'text'">文本按钮</a-radio-button>
+            <a-radio-button :value="'default'">default</a-radio-button>
+            <a-radio-button :value="'primary'">primary</a-radio-button>
+            <a-radio-button :value="'success'">success</a-radio-button>
+            <a-radio-button :value="'warning'">warning</a-radio-button>
+            <a-radio-button :value="'error'">error</a-radio-button>
+            <a-radio-button :value="'dashed'">dashed</a-radio-button>
+            <a-radio-button :value="'info'">info</a-radio-button>
+            <a-radio-button :value="'text'">text</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonGhostV">
             <a-radio-button :value="true">显示背景透明</a-radio-button>
             <a-radio-button :value="false">隐藏背景透明</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonSizeV">
-            <a-radio-button :value="'large'">大号按钮</a-radio-button>
-            <a-radio-button :value="'default'">中号按钮</a-radio-button>
-            <a-radio-button :value="'small'">小号按钮</a-radio-button>
+            <a-radio-button :value="'large'">large</a-radio-button>
+            <a-radio-button :value="'default'">default</a-radio-button>
+            <a-radio-button :value="'small'">small</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="buttonLongV">
             <a-radio-button :value="true">宽度撑满</a-radio-button>

@@ -7,12 +7,12 @@
       <a-card class="card-margin" title="AntDesignVue 分割线">
         <div class="radio-box">
           <a-radio-group v-model="dividerType">
-            <a-radio-button :value="'horizontal'">水平方向</a-radio-button>
-            <a-radio-button :value="'vertical'">垂直方向</a-radio-button>
+            <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
+            <a-radio-button :value="'vertical'">vertical</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="dividerDashed">
-            <a-radio-button :value="true">虚线</a-radio-button>
             <a-radio-button :value="false">实线</a-radio-button>
+            <a-radio-button :value="true">虚线</a-radio-button>
           </a-radio-group>
         </div>
         <div>
@@ -25,8 +25,8 @@
       <a-card class="card-margin" title="ElementUI 分割线">
         <div class="radio-box">
           <a-radio-group v-model="dividerDirectionE">
-            <a-radio-button :value="'horizontal'">水平方向</a-radio-button>
-            <a-radio-button :value="'vertical'">垂直方向</a-radio-button>
+            <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
+            <a-radio-button :value="'vertical'">vertical</a-radio-button>
           </a-radio-group>
         </div>
         <div>
@@ -43,12 +43,12 @@
       <a-card class="card-margin" title="ViewUI 分割线">
         <div class="radio-box">
           <a-radio-group v-model="dividerTypeV">
-            <a-radio-button :value="'horizontal'">水平方向</a-radio-button>
-            <a-radio-button :value="'vertical'">垂直方向</a-radio-button>
+            <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
+            <a-radio-button :value="'vertical'">vertical</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="dividerDashedV">
-            <a-radio-button :value="true">虚线</a-radio-button>
             <a-radio-button :value="false">实线</a-radio-button>
+            <a-radio-button :value="true">虚线</a-radio-button>
           </a-radio-group>
         </div>
         <div>

@@ -42,6 +42,10 @@
             <a-icon type="inbox" />
             <span>分割线组件</span>
           </a-menu-item>
+          <a-menu-item key="avatar">
+            <a-icon type="inbox" />
+            <span>头像组件</span>
+          </a-menu-item>
         </a-menu>
       </a-layout-sider>
       <a-layout>

@@ -11,9 +11,9 @@
             <a-radio-button :value="false">完成</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="spinSize">
-            <a-radio-button :value="'large'">大号加载</a-radio-button>
-            <a-radio-button :value="'default'">中号加载</a-radio-button>
-            <a-radio-button :value="'small'">小号加载</a-radio-button>
+            <a-radio-button :value="'large'">large</a-radio-button>
+            <a-radio-button :value="'default'">default</a-radio-button>
+            <a-radio-button :value="'small'">small</a-radio-button>
           </a-radio-group>
           <div class="number-set">
             <span style="margin-right: 5px">
@@ -73,9 +73,9 @@
             <a-radio-button :value="false">完成</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="spinSizeV">
-            <a-radio-button :value="'large'">大号加载</a-radio-button>
-            <a-radio-button :value="null">中号加载</a-radio-button>
-            <a-radio-button :value="'small'">小号加载</a-radio-button>
+            <a-radio-button :value="'large'">large</a-radio-button>
+            <a-radio-button :value="null">default</a-radio-button>
+            <a-radio-button :value="'small'">small</a-radio-button>
           </a-radio-group>
         </div>
         <div>

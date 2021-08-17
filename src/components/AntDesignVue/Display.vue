@@ -32,7 +32,6 @@
           </div>
           <div>
             <a-avatar
-              class="item-i-xy"
               :icon="avatarIcon"
               :shape="avatarShape"
               :size="avatarSize"

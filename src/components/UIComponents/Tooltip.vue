@@ -23,17 +23,17 @@
             </a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tooltipPlacement">
-            <a-radio-button :value="'top'">上方弹出</a-radio-button>
-            <a-radio-button :value="'bottom'">下方弹出</a-radio-button>
-            <a-radio-button :value="'left'">左侧弹出</a-radio-button>
-            <a-radio-button :value="'right'">右侧弹出</a-radio-button>
+            <a-radio-button :value="'top'">top</a-radio-button>
+            <a-radio-button :value="'bottom'">bottom</a-radio-button>
+            <a-radio-button :value="'left'">left</a-radio-button>
+            <a-radio-button :value="'right'">right</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tooltipTrigger">
-            <a-radio-button :value="'hover'">悬停触发</a-radio-button>
-            <a-radio-button :value="'focus'">聚焦触发</a-radio-button>
-            <a-radio-button :value="'click'">点击触发</a-radio-button>
+            <a-radio-button :value="'hover'">hover</a-radio-button>
+            <a-radio-button :value="'focus'">focus</a-radio-button>
+            <a-radio-button :value="'click'">click</a-radio-button>
             <a-radio-button :value="'contextmenu'">
-              右键点击触发
+              contextmenu
             </a-radio-button>
           </a-radio-group>
           <div class="number-set">
@@ -77,14 +77,14 @@
             <a-radio-button :value="false">启用</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tooltipEffectE">
-            <a-radio-button :value="'dark'">深色主题</a-radio-button>
-            <a-radio-button :value="'light'">浅色主题</a-radio-button>
+            <a-radio-button :value="'dark'">dark</a-radio-button>
+            <a-radio-button :value="'light'">light</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tooltipPlacementE">
-            <a-radio-button :value="'top'">上方弹出</a-radio-button>
-            <a-radio-button :value="'bottom'">下方弹出</a-radio-button>
-            <a-radio-button :value="'left'">左侧弹出</a-radio-button>
-            <a-radio-button :value="'right'">右侧弹出</a-radio-button>
+            <a-radio-button :value="'top'">top</a-radio-button>
+            <a-radio-button :value="'bottom'">bottom</a-radio-button>
+            <a-radio-button :value="'left'">left</a-radio-button>
+            <a-radio-button :value="'right'">right</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tooltipVisibleArrowE">
             <a-radio-button :value="true">显示箭头</a-radio-button>
@@ -127,10 +127,10 @@
       <a-card class="card-margin" title="AtUI 文字提示">
         <div class="radio-box">
           <a-radio-group v-model="tooltipPlacementA">
-            <a-radio-button :value="'top'">上方弹出</a-radio-button>
-            <a-radio-button :value="'bottom'">下方弹出</a-radio-button>
-            <a-radio-button :value="'left'">左侧弹出</a-radio-button>
-            <a-radio-button :value="'right'">右侧弹出</a-radio-button>
+            <a-radio-button :value="'top'">top</a-radio-button>
+            <a-radio-button :value="'bottom'">bottom</a-radio-button>
+            <a-radio-button :value="'left'">left</a-radio-button>
+            <a-radio-button :value="'right'">right</a-radio-button>
           </a-radio-group>
         </div>
         <div>
@@ -154,14 +154,14 @@
             <a-radio-button :value="false">关闭常显</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tooltipThemeV">
-            <a-radio-button :value="'dark'">深色主题</a-radio-button>
-            <a-radio-button :value="'light'">浅色主题</a-radio-button>
+            <a-radio-button :value="'dark'">dark</a-radio-button>
+            <a-radio-button :value="'light'">light</a-radio-button>
           </a-radio-group>
           <a-radio-group v-model="tooltipPlacementV">
-            <a-radio-button :value="'top'">上方弹出</a-radio-button>
-            <a-radio-button :value="'bottom'">下方弹出</a-radio-button>
-            <a-radio-button :value="'left'">左侧弹出</a-radio-button>
-            <a-radio-button :value="'right'">右侧弹出</a-radio-button>
+            <a-radio-button :value="'top'">top</a-radio-button>
+            <a-radio-button :value="'bottom'">bottom</a-radio-button>
+            <a-radio-button :value="'left'">left</a-radio-button>
+            <a-radio-button :value="'right'">right</a-radio-button>
           </a-radio-group>
           <div class="number-set">
             <span style="margin-right: 5px">设置文字提示偏移量</span>

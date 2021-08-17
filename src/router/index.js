@@ -51,6 +51,11 @@ const routes = [
         path: "/UIComponents/divider",
         name: "Divider",
         component: () => import("../components/UIComponents/Divider.vue"),
+      },
+      {
+        path: "/UIComponents/avatar",
+        name: "Avatar",
+        component: () => import("../components/UIComponents/Avatar.vue"),
       }
     ]
   },
