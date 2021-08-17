@@ -1,75 +1,10 @@
 <template>
   <!-- 展示组件 -->
   <div>
-    <!-- 头像 -->
-    <h1 class="title-xy">头像</h1>
-    <div class="content">
-      <!-- 标准头像 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准头像</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="avatarShape">
-              <a-radio-button :value="'circle'">圆形</a-radio-button>
-              <a-radio-button :value="'square'">方形</a-radio-button>
-            </a-radio-group>
-            <div class="number-set">
-              <span style="margin-right: 5px">设置头像大小</span>
-              <a-input-number style="width: 100px" v-model="avatarSize" />
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置头像内图片</span>
-              <a-input style="width: 100px" v-model="avatarIcon" />
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置头像内链接图像</span>
-              <a-input style="width: 300px" v-model="avatarSrc" />
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置头像图像加载失败时文本</span>
-              <a-input style="width: 100px" v-model="avatarAlt" />
-            </div>
-          </div>
-          <div>
-            <a-avatar
-              :icon="avatarIcon"
-              :shape="avatarShape"
-              :size="avatarSize"
-              :src="avatarSrc"
-              :alt="avatarAlt"
-            >
-            </a-avatar>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- 日历 -->
     <h1 class="title-xy">日历</h1>
     <div class="content">
       <!-- 标准日历 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准日历</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="calendarFullscreen">
-              <a-radio-button :value="true">全屏模式</a-radio-button>
-              <a-radio-button :value="false">卡片模式</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="calendarMode">
-              <a-radio-button :value="'month'">按月查看</a-radio-button>
-              <a-radio-button :value="'year'">按年查看</a-radio-button>
-            </a-radio-group>
-          </div>
-          <div>
-            <a-calendar
-              class="calendar"
-              :fullscreen="calendarFullscreen"
-              :mode="calendarMode"
-            >
-            </a-calendar>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- 卡片 -->
     <h1 class="title-xy">卡片</h1>
@@ -1018,16 +953,7 @@ export default {
     return {
       // 通用
       moment,
-      // 头像
-      avatarShape: "circle",
-      avatarSize: 32,
-      avatarIcon: "user",
-      avatarSrc:
-        "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png",
-      avatarAlt: "没有图片",
-      // 日历
-      calendarFullscreen: true,
-      calendarMode: "month",
+
       // 卡片
       cardLoading: false,
       cardBordered: true,
@@ -1150,12 +1076,6 @@ export default {
 </script>
 
 <style scoped>
-/* 日历 */
-.calendar {
-  width: 1000px;
-  border: 1px solid #d9d9d9;
-  border-radius: 6px;
-}
 /* 卡片 */
 .card {
   display: flex;

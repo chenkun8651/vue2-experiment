@@ -46,6 +46,10 @@
             <a-icon type="inbox" />
             <span>头像组件</span>
           </a-menu-item>
+          <a-menu-item key="calendar">
+            <a-icon type="inbox" />
+            <span>日历组件</span>
+          </a-menu-item>
         </a-menu>
       </a-layout-sider>
       <a-layout>
