@@ -1,7 +1,6 @@
 <template>
   <!-- 加载组件 -->
   <div>
-    <!-- 加载 -->
     <a-card class="card-margin">
       <div slot="title" class="title-xy">加载</div>
       <!-- AntDesignVue -->

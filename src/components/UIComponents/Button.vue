@@ -1,7 +1,6 @@
 <template>
   <!-- 按钮组件 -->
   <div>
-    <!-- 按钮 -->
     <a-card class="card-margin">
       <div slot="title" class="title-xy">按钮</div>
       <!-- AntDesignVue -->
@@ -264,5 +263,6 @@ export default {
       buttonLoadingV: false,
     };
   },
+  methods: {},
 };
 </script>

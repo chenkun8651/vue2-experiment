@@ -46,6 +46,11 @@ const routes = [
         path: "/UIComponents/spin",
         name: "Spin",
         component: () => import("../components/UIComponents/Spin.vue"),
+      },
+      {
+        path: "/UIComponents/divider",
+        name: "Divider",
+        component: () => import("../components/UIComponents/Divider.vue"),
       }
     ]
   },

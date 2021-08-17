@@ -1,7 +1,6 @@
 <template>
   <!-- 文字提示组件 -->
   <div>
-    <!-- 文字提示 -->
     <a-card class="card-margin">
       <div slot="title" class="title-xy">文字提示</div>
       <!-- AntDesignVue -->
@@ -228,5 +227,6 @@ export default {
       tooltipDelayV: 0,
     };
   },
+  methods: {},
 };
 </script>

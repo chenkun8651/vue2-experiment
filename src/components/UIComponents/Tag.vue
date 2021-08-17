@@ -1,7 +1,6 @@
 <template>
   <!-- 标签组件 -->
   <div>
-    <!-- 标签 -->
     <a-card class="card-margin">
       <div slot="title" class="title-xy">标签</div>
       <!-- AntDesignVue -->
@@ -194,5 +193,6 @@ export default {
       TagCheckedV: true,
     };
   },
+  methods: {},
 };
 </script>

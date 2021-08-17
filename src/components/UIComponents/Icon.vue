@@ -1,7 +1,6 @@
 <template>
   <!-- 图标组件 -->
   <div>
-    <!-- 图标 -->
     <a-card class="card-margin">
       <div slot="title" class="title-xy">图标</div>
       <!-- AntDesignVue -->
@@ -236,5 +235,6 @@ export default {
     PandaIcon,
     IconFont,
   },
+  methods: {},
 };
 </script>

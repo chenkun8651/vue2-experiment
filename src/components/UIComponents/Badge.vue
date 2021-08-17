@@ -1,7 +1,6 @@
 <template>
   <!-- 徽标数组件 -->
   <div>
-    <!-- 徽标数 -->
     <a-card class="card-margin">
       <div slot="title" class="title-xy">徽标数</div>
       <!-- AntDesignVue -->
@@ -41,9 +40,8 @@
         </div>
         <div>
           <a-badge
-            style="margin: 5px 10px"
-            :status="badgeStatus"
             :dot="badgeDot"
+            :status="badgeStatus"
             :show-zero="badgeShowZero"
             :count="badgeCount"
             :overflow-count="badgeOverflowCount"
@@ -83,11 +81,11 @@
         </div>
         <div>
           <el-badge
+            :is-dot="badgeIsDotE"
             :type="badgeTypeE"
             :hidden="badgeHiddenE"
-            :max="badgeMaxE"
-            :is-dot="badgeIsDotE"
             :value="badgeValueE"
+            :max="badgeMaxE"
           >
             <el-button>评论</el-button>
           </el-badge>
