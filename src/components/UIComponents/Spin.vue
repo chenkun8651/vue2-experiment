@@ -34,7 +34,7 @@
             :spinning="spinSpinning"
             :tip="spinTip"
           >
-            <div class="spin-content">加载好的内容</div>
+            <div class="spin-content">加载内容</div>
           </a-spin>
         </div>
       </a-card>
@@ -59,7 +59,7 @@
           </div>
         </div>
         <div>
-          <div id="loading-content">加载好的内容</div>
+          <div id="loading-content">加载内容</div>
         </div>
       </a-card>
       <!-- AtUI -->
@@ -69,35 +69,18 @@
       <!-- ViewUI -->
       <a-card class="card-margin" title="ViewUI 加载">
         <div class="radio-box">
-          <a-radio-group v-model="spinSpinning">
+          <a-radio-group v-model="spinSpinningV">
             <a-radio-button :value="true">加载</a-radio-button>
             <a-radio-button :value="false">完成</a-radio-button>
           </a-radio-group>
-          <a-radio-group v-model="spinSize">
+          <a-radio-group v-model="spinSizeV">
             <a-radio-button :value="'large'">大号加载</a-radio-button>
-            <a-radio-button :value="'default'">中号加载</a-radio-button>
+            <a-radio-button :value="null">中号加载</a-radio-button>
             <a-radio-button :value="'small'">小号加载</a-radio-button>
           </a-radio-group>
-          <div class="number-set">
-            <span style="margin-right: 5px">
-              设置延迟显示加载时间（毫秒）
-            </span>
-            <a-input-number style="width: 100px" v-model="spinDelay" />
-          </div>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置加载描述文案</span>
-            <a-input style="width: 100px" v-model="spinTip" />
-          </div>
         </div>
         <div>
-          <a-spin
-            :delay="spinDelay"
-            :size="spinSize"
-            :spinning="spinSpinning"
-            :tip="spinTip"
-          >
-            <div class="spin-content">加载好的内容</div>
-          </a-spin>
+          <Spin v-show="spinSpinningV" :size="spinSizeV"></Spin>
         </div>
       </a-card>
     </a-card>
@@ -111,7 +94,7 @@ export default {
   data() {
     return {
       // AntDesignVue
-      spinSpinning: false,
+      spinSpinningV: false,
       spinSize: "default",
       spinDelay: null,
       spinTip: "加载中...",
@@ -121,6 +104,9 @@ export default {
       spinSpinnerE: "el-icon-loading",
       spinTextE: "加载中...",
       spinBackgroundE: "",
+      // ViewUI
+      spinSpinning: false,
+      spinSizeV: null,
     };
   },
   methods: {
