@@ -61,6 +61,11 @@ const routes = [
         path: "/UIComponents/calendar",
         name: "Calendar",
         component: () => import("../components/UIComponents/Calendar.vue"),
+      },
+      {
+        path: "/UIComponents/card",
+        name: "Card",
+        component: () => import("../components/UIComponents/Card.vue"),
       }
     ]
   },

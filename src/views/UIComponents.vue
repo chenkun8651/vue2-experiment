@@ -50,6 +50,10 @@
             <a-icon type="inbox" />
             <span>日历组件</span>
           </a-menu-item>
+          <a-menu-item key="card">
+            <a-icon type="inbox" />
+            <span>卡片组件</span>
+          </a-menu-item>
         </a-menu>
       </a-layout-sider>
       <a-layout>
@@ -118,6 +122,12 @@ export default {
         return "加载组件";
       } else if (value[0] == "divider") {
         return "分割线组件";
+      } else if (value[0] == "avatar") {
+        return "头像组件";
+      } else if (value[0] == "calendar") {
+        return "日历组件";
+      } else if (value[0] == "card") {
+        return "卡片组件";
       }
     },
   },

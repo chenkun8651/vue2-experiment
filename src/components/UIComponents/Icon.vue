@@ -1,158 +1,155 @@
 <template>
   <!-- 图标组件 -->
   <div>
-    <a-card class="card-margin">
-      <div slot="title" class="title-xy">图标</div>
-      <!-- AntDesignVue -->
-      <a-card class="card-margin" title="AntDesignVue 图标">
-        <div class="radio-box">
-          <a-radio-group v-model="iconSpin">
-            <a-radio-button :value="true">开启旋转动画</a-radio-button>
-            <a-radio-button :value="false">关闭旋转动画</a-radio-button>
-          </a-radio-group>
-          <div class="number-set">
-            <span style="margin-right: 5px">设置图标初始旋转角度</span>
-            <a-input-number style="width: 100px" v-model="iconRotate" />
-          </div>
-          <a-radio-group v-model="iconTheme">
-            <a-radio-button :value="'filled'">实心图标</a-radio-button>
-            <a-radio-button :value="'outlined'">描线图标</a-radio-button>
-            <a-radio-button :value="'twoTone'">双色图标</a-radio-button>
-          </a-radio-group>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标名称</span>
-            <a-input style="width: 150px" v-model="iconName" />
-          </div>
-          <div class="number-set">
-            <span style="margin-right: 5px">设置图标大小</span>
-            <a-input-number style="width: 100px" v-model="iconSize" />
-          </div>
-          <div
-            v-show="iconTheme === 'filled' || iconTheme === 'outlined'"
-            class="string-set"
-          >
-            <span style="margin-right: 5px">设置实心（描线）图标颜色</span>
-            <a-input style="width: 100px" v-model="iconColor" />
-          </div>
-          <div v-show="iconTheme === 'twoTone'" class="string-set">
-            <span style="margin-right: 5px">设置双色图标颜色</span>
-            <a-input style="width: 100px" v-model="iconRotatTwoToneColor" />
-          </div>
+    <!-- AntDesignVue -->
+    <a-card class="card-margin" title="AntDesignVue 图标">
+      <div class="radio-box">
+        <a-radio-group v-model="iconSpin">
+          <a-radio-button :value="true">开启旋转动画</a-radio-button>
+          <a-radio-button :value="false">关闭旋转动画</a-radio-button>
+        </a-radio-group>
+        <div class="number-set">
+          <span style="margin-right: 5px">设置图标初始旋转角度</span>
+          <a-input-number style="width: 100px" v-model="iconRotate" />
         </div>
-        <div>
-          <a-icon
-            :style="{ fontSize: `${iconSize}px`, color: `${iconColor}` }"
-            :type="iconName"
-            :theme="iconTheme"
-            :spin="iconSpin"
-            :rotate="iconRotate"
-            :two-tone-color="iconRotatTwoToneColor"
-          ></a-icon>
+        <a-radio-group v-model="iconTheme">
+          <a-radio-button :value="'filled'">实心图标</a-radio-button>
+          <a-radio-button :value="'outlined'">描线图标</a-radio-button>
+          <a-radio-button :value="'twoTone'">双色图标</a-radio-button>
+        </a-radio-group>
+        <div class="string-set">
+          <span style="margin-right: 5px">设置图标名称</span>
+          <a-input style="width: 150px" v-model="iconName" />
         </div>
-        <div class="icons-list">
-          <span>自定义图标</span>
-          <HeartIcon
-            :style="{
-              fontSize: `${iconSize}px`,
-              color: `${iconColor}`,
-              margin: '5px',
-            }"
-          />
-          <PandaIcon
-            :style="{
-              fontSize: `${iconSize}px`,
-              color: `${iconColor}`,
-              margin: '5px',
-            }"
-          />
-          <span style="margin-left: 50px">
-            <a target="_blank" href="http://iconfont.cn/">iconfont.cn</a>
-            图标库图标
-          </span>
-          <IconFont
-            :style="{
-              fontSize: `${iconSize}px`,
-              color: `${iconColor}`,
-              margin: '5px',
-            }"
-            type="icon-facebook"
-          />
-          <IconFont
-            :style="{
-              fontSize: `${iconSize}px`,
-              color: `${iconColor}`,
-              margin: '5px',
-            }"
-            type="icon-twitter"
-          />
+        <div class="number-set">
+          <span style="margin-right: 5px">设置图标大小</span>
+          <a-input-number style="width: 100px" v-model="iconSize" />
         </div>
-      </a-card>
-      <!-- ElementUI -->
-      <a-card class="card-margin" title="ElementUI 图标">
-        <div class="radio-box">
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标名称</span>
-            <a-input style="width: 150px" v-model="iconNameE" />
-          </div>
-          <div class="number-set">
-            <span style="margin-right: 5px">设置图标大小</span>
-            <a-input-number style="width: 100px" v-model="iconSizeE" />
-          </div>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标颜色</span>
-            <a-input style="width: 100px" v-model="iconColorE" />
-          </div>
+        <div
+          v-show="iconTheme === 'filled' || iconTheme === 'outlined'"
+          class="string-set"
+        >
+          <span style="margin-right: 5px">设置实心（描线）图标颜色</span>
+          <a-input style="width: 100px" v-model="iconColor" />
         </div>
-        <div>
-          <i
-            :style="{ fontSize: `${iconSizeE}px`, color: `${iconColorE}` }"
-            :class="iconNameE"
-          ></i>
+        <div v-show="iconTheme === 'twoTone'" class="string-set">
+          <span style="margin-right: 5px">设置双色图标颜色</span>
+          <a-input style="width: 100px" v-model="iconRotatTwoToneColor" />
         </div>
-      </a-card>
-      <!-- AtUI -->
-      <a-card class="card-margin" title="AtUI 图标">
-        <div class="radio-box">
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标名称</span>
-            <a-input style="width: 150px" v-model="iconNameA" />
-          </div>
-          <div class="number-set">
-            <span style="margin-right: 5px">设置图标大小</span>
-            <a-input-number style="width: 100px" v-model="iconSizeA" />
-          </div>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标颜色</span>
-            <a-input style="width: 100px" v-model="iconColorA" />
-          </div>
+      </div>
+      <div>
+        <a-icon
+          :style="{ fontSize: `${iconSize}px`, color: `${iconColor}` }"
+          :type="iconName"
+          :theme="iconTheme"
+          :spin="iconSpin"
+          :rotate="iconRotate"
+          :two-tone-color="iconRotatTwoToneColor"
+        ></a-icon>
+      </div>
+      <div class="icons-list">
+        <span>自定义图标</span>
+        <HeartIcon
+          :style="{
+            fontSize: `${iconSize}px`,
+            color: `${iconColor}`,
+            margin: '5px',
+          }"
+        />
+        <PandaIcon
+          :style="{
+            fontSize: `${iconSize}px`,
+            color: `${iconColor}`,
+            margin: '5px',
+          }"
+        />
+        <span style="margin-left: 50px">
+          <a target="_blank" href="http://iconfont.cn/">iconfont.cn</a>
+          图标库图标
+        </span>
+        <IconFont
+          :style="{
+            fontSize: `${iconSize}px`,
+            color: `${iconColor}`,
+            margin: '5px',
+          }"
+          type="icon-facebook"
+        />
+        <IconFont
+          :style="{
+            fontSize: `${iconSize}px`,
+            color: `${iconColor}`,
+            margin: '5px',
+          }"
+          type="icon-twitter"
+        />
+      </div>
+    </a-card>
+    <!-- ElementUI -->
+    <a-card class="card-margin" title="ElementUI 图标">
+      <div class="radio-box">
+        <div class="string-set">
+          <span style="margin-right: 5px">设置图标名称</span>
+          <a-input style="width: 150px" v-model="iconNameE" />
         </div>
-        <div>
-          <i
-            :style="{ fontSize: `${iconSizeA}px`, color: `${iconColorA}` }"
-            :class="iconNameA"
-          ></i>
+        <div class="number-set">
+          <span style="margin-right: 5px">设置图标大小</span>
+          <a-input-number style="width: 100px" v-model="iconSizeE" />
         </div>
-      </a-card>
-      <!-- ViewUI -->
-      <a-card class="card-margin" title="ViewUI 图标">
-        <div class="radio-box">
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标名称</span>
-            <a-input style="width: 150px" v-model="iconNameV" />
-          </div>
-          <div class="number-set">
-            <span style="margin-right: 5px">设置图标大小</span>
-            <a-input-number style="width: 150px" v-model="iconSizeV" />
-          </div>
-          <div class="string-set">
-            <span style="margin-right: 5px">设置图标颜色</span>
-            <a-input style="width: 150px" v-model="iconColorV" />
-          </div>
+        <div class="string-set">
+          <span style="margin-right: 5px">设置图标颜色</span>
+          <a-input style="width: 100px" v-model="iconColorE" />
         </div>
-        <div>
-          <Icon :type="iconNameV" :size="iconSizeV" :color="iconColorV"></Icon>
+      </div>
+      <div>
+        <i
+          :style="{ fontSize: `${iconSizeE}px`, color: `${iconColorE}` }"
+          :class="iconNameE"
+        ></i>
+      </div>
+    </a-card>
+    <!-- AtUI -->
+    <a-card class="card-margin" title="AtUI 图标">
+      <div class="radio-box">
+        <div class="string-set">
+          <span style="margin-right: 5px">设置图标名称</span>
+          <a-input style="width: 150px" v-model="iconNameA" />
         </div>
-      </a-card>
+        <div class="number-set">
+          <span style="margin-right: 5px">设置图标大小</span>
+          <a-input-number style="width: 100px" v-model="iconSizeA" />
+        </div>
+        <div class="string-set">
+          <span style="margin-right: 5px">设置图标颜色</span>
+          <a-input style="width: 100px" v-model="iconColorA" />
+        </div>
+      </div>
+      <div>
+        <i
+          :style="{ fontSize: `${iconSizeA}px`, color: `${iconColorA}` }"
+          :class="iconNameA"
+        ></i>
+      </div>
+    </a-card>
+    <!-- ViewUI -->
+    <a-card class="card-margin" title="ViewUI 图标">
+      <div class="radio-box">
+        <div class="string-set">
+          <span style="margin-right: 5px">设置图标名称</span>
+          <a-input style="width: 150px" v-model="iconNameV" />
+        </div>
+        <div class="number-set">
+          <span style="margin-right: 5px">设置图标大小</span>
+          <a-input-number style="width: 150px" v-model="iconSizeV" />
+        </div>
+        <div class="string-set">
+          <span style="margin-right: 5px">设置图标颜色</span>
+          <a-input style="width: 150px" v-model="iconColorV" />
+        </div>
+      </div>
+      <div>
+        <Icon :type="iconNameV" :size="iconSizeV" :color="iconColorV"></Icon>
+      </div>
     </a-card>
   </div>
 </template>

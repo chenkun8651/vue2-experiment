@@ -1,11 +1,6 @@
 <template>
   <!-- 展示组件 -->
   <div>
-    <!-- 日历 -->
-    <h1 class="title-xy">日历</h1>
-    <div class="content">
-      <!-- 标准日历 -->
-    </div>
     <!-- 卡片 -->
     <h1 class="title-xy">卡片</h1>
     <div class="content">
@@ -953,7 +948,6 @@ export default {
     return {
       // 通用
       moment,
-
       // 卡片
       cardLoading: false,
       cardBordered: true,
