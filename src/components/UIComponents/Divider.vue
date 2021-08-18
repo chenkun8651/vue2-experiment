@@ -51,7 +51,7 @@
       </div>
       <div>
         <p>一段文字1</p>
-        <Divider :type="dividerTypeV" :dashed="dividerDashedV"> </Divider>
+        <Divider :type="dividerTypeV" :dashed="dividerDashedV"></Divider>
         <p>一段文字2</p>
       </div>
     </a-card>

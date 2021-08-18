@@ -9,50 +9,14 @@
       >
         <div class="logo" />
         <a-menu
-          v-model="RouteArray"
+          v-model="routeArray"
           theme="dark"
           mode="inline"
           @click="ChangeMenu"
         >
-          <a-menu-item key="button">
-            <a-icon type="inbox" />
-            <span>按钮组件</span>
-          </a-menu-item>
-          <a-menu-item key="icon">
-            <a-icon type="inbox" />
-            <span>图标组件</span>
-          </a-menu-item>
-          <a-menu-item key="badge">
-            <a-icon type="inbox" />
-            <span>徽标数组件</span>
-          </a-menu-item>
-          <a-menu-item key="tag">
-            <a-icon type="inbox" />
-            <span>标签组件</span>
-          </a-menu-item>
-          <a-menu-item key="tooltip">
-            <a-icon type="inbox" />
-            <span>文字提示组件</span>
-          </a-menu-item>
-          <a-menu-item key="spin">
-            <a-icon type="inbox" />
-            <span>加载组件</span>
-          </a-menu-item>
-          <a-menu-item key="divider">
-            <a-icon type="inbox" />
-            <span>分割线组件</span>
-          </a-menu-item>
-          <a-menu-item key="avatar">
-            <a-icon type="inbox" />
-            <span>头像组件</span>
-          </a-menu-item>
-          <a-menu-item key="calendar">
-            <a-icon type="inbox" />
-            <span>日历组件</span>
-          </a-menu-item>
-          <a-menu-item key="card">
-            <a-icon type="inbox" />
-            <span>卡片组件</span>
+          <a-menu-item v-for="item in UIComponentsMenu" :key="item.key">
+            <a-icon :type="item.icon" />
+            <span>{{ item.name }}</span>
           </a-menu-item>
         </a-menu>
       </a-layout-sider>
@@ -62,8 +26,9 @@
             class="trigger"
             :type="collapsed ? 'menu-unfold' : 'menu-fold'"
             @click="() => (collapsed = !collapsed)"
-          />
-          {{ RouteArray | keyToName }}
+          >
+          </a-icon>
+          {{ routeArray | keyToName }}
         </a-layout-header>
         <a-layout-content
           :style="{
@@ -82,60 +47,45 @@
 </template>
 
 <script>
+import { UIComponentsMenu } from "../router/menu";
+
 export default {
   data() {
     return {
+      UIComponentsMenu: UIComponentsMenu,
       collapsed: false,
-      currentRoute: null,
-      RouteArray: [],
+      routeCurrent: null,
+      routeArray: [],
     };
   },
   mounted() {
-    this.currentRoute = this.$router.currentRoute.path.split("/")[2];
-    if (this.currentRoute) {
-      this.RouteArray = [this.currentRoute];
+    this.routeCurrent = this.$router.currentRoute.path.split("/")[2];
+    if (this.routeCurrent) {
+      this.routeArray = [this.routeCurrent];
     } else {
-      this.RouteArray = ["button"];
-      this.currentRoute = "button";
+      this.routeCurrent = "button";
+      this.routeArray = ["button"];
       this.$router.push("/UIComponents/button");
     }
   },
   watch: {
     $route: function (value) {
-      this.currentRoute = value.path.split("/")[2];
-      this.RouteArray = [this.currentRoute];
+      this.routeCurrent = value.path.split("/")[2];
+      this.routeArray = [this.routeCurrent];
     },
   },
   filters: {
     keyToName: function (value) {
-      if (value[0] == "button") {
-        return "按钮组件";
-      } else if (value[0] == "icon") {
-        return "图标组件";
-      } else if (value[0] == "badge") {
-        return "徽标数组件";
-      } else if (value[0] == "tag") {
-        return "标签组件";
-      } else if (value[0] == "tooltip") {
-        return "文字提示组件";
-      } else if (value[0] == "spin") {
-        return "加载组件";
-      } else if (value[0] == "divider") {
-        return "分割线组件";
-      } else if (value[0] == "avatar") {
-        return "头像组件";
-      } else if (value[0] == "calendar") {
-        return "日历组件";
-      } else if (value[0] == "card") {
-        return "卡片组件";
+      if (value.length > 0) {
+        return UIComponentsMenu.find((i) => i.key === value[0]).name;
       }
     },
   },
   methods: {
     // 菜单跳转
     ChangeMenu(event) {
-      if (event.key !== this.currentRoute) {
-        this.currentRoute = event.key;
+      if (this.routeCurrent !== event.key) {
+        this.routeCurrent = event.key;
         this.$router.push(`/UIComponents/${event.key}`);
       }
     },

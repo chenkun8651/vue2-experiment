@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +7,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: () => import('../views/Home.vue'),
   },
   {
     // UIComponents
@@ -18,9 +17,39 @@ const routes = [
     component: () => import('../views/UIComponents.vue'),
     children: [
       {
+        path: "/UIComponents/avatar",
+        name: "Avatar",
+        component: () => import("../components/UIComponents/Avatar.vue"),
+      },
+      {
+        path: "/UIComponents/badge",
+        name: "Badge",
+        component: () => import("../components/UIComponents/Badge.vue"),
+      },
+      {
         path: "/UIComponents/button",
         name: "Button",
         component: () => import("../components/UIComponents/Button.vue"),
+      },
+      {
+        path: "/UIComponents/calendar",
+        name: "Calendar",
+        component: () => import("../components/UIComponents/Calendar.vue"),
+      },
+      {
+        path: "/UIComponents/card",
+        name: "Card",
+        component: () => import("../components/UIComponents/Card.vue"),
+      },
+      {
+        path: "/UIComponents/carousel",
+        name: "Carousel",
+        component: () => import("../components/UIComponents/Carousel.vue"),
+      },
+      {
+        path: "/UIComponents/divider",
+        name: "Divider",
+        component: () => import("../components/UIComponents/Divider.vue"),
       },
       {
         path: "/UIComponents/icon",
@@ -28,9 +57,9 @@ const routes = [
         component: () => import("../components/UIComponents/Icon.vue"),
       },
       {
-        path: "/UIComponents/badge",
-        name: "Badge",
-        component: () => import("../components/UIComponents/Badge.vue"),
+        path: "/UIComponents/spin",
+        name: "Spin",
+        component: () => import("../components/UIComponents/Spin.vue"),
       },
       {
         path: "/UIComponents/tag",
@@ -42,31 +71,6 @@ const routes = [
         name: "Tag",
         component: () => import("../components/UIComponents/Tooltip.vue"),
       },
-      {
-        path: "/UIComponents/spin",
-        name: "Spin",
-        component: () => import("../components/UIComponents/Spin.vue"),
-      },
-      {
-        path: "/UIComponents/divider",
-        name: "Divider",
-        component: () => import("../components/UIComponents/Divider.vue"),
-      },
-      {
-        path: "/UIComponents/avatar",
-        name: "Avatar",
-        component: () => import("../components/UIComponents/Avatar.vue"),
-      },
-      {
-        path: "/UIComponents/calendar",
-        name: "Calendar",
-        component: () => import("../components/UIComponents/Calendar.vue"),
-      },
-      {
-        path: "/UIComponents/card",
-        name: "Card",
-        component: () => import("../components/UIComponents/Card.vue"),
-      }
     ]
   },
 ]

@@ -45,7 +45,8 @@
           :spin="iconSpin"
           :rotate="iconRotate"
           :two-tone-color="iconRotatTwoToneColor"
-        ></a-icon>
+        >
+        </a-icon>
       </div>
       <div class="icons-list">
         <span>自定义图标</span>
@@ -105,7 +106,8 @@
         <i
           :style="{ fontSize: `${iconSizeE}px`, color: `${iconColorE}` }"
           :class="iconNameE"
-        ></i>
+        >
+        </i>
       </div>
     </a-card>
     <!-- AtUI -->
@@ -128,7 +130,8 @@
         <i
           :style="{ fontSize: `${iconSizeA}px`, color: `${iconColorA}` }"
           :class="iconNameA"
-        ></i>
+        >
+        </i>
       </div>
     </a-card>
     <!-- ViewUI -->

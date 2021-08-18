@@ -14,7 +14,7 @@
         </div>
         <div class="string-set">
           <span style="margin-right: 5px">设置头像图标</span>
-          <a-input style="width: 100px" v-model="avatarIcon" />
+          <a-input style="width: 150px" v-model="avatarIcon" />
         </div>
         <div class="string-set">
           <span style="margin-right: 5px">设置链接图片</span>
