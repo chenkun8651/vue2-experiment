@@ -800,7 +800,6 @@ export default {
       // 通用
       moment,
 
-
       // 折叠面板
       collapseBordered: false,
       collapseAccordion: false,

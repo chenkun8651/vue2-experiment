@@ -30,6 +30,11 @@ export const UIComponentsMenu = [
         name: "走马灯组件",
     },
     {
+        key: "collapse",
+        icon: "inbox",
+        name: "折叠面板组件",
+    },
+    {
         key: "divider",
         icon: "inbox",
         name: "分割线组件",

@@ -47,6 +47,11 @@ const routes = [
         component: () => import("../components/UIComponents/Carousel.vue"),
       },
       {
+        path: "/UIComponents/collapse",
+        name: "Collapse",
+        component: () => import("../components/UIComponents/Collapse.vue"),
+      },
+      {
         path: "/UIComponents/divider",
         name: "Divider",
         component: () => import("../components/UIComponents/Divider.vue"),
