@@ -1,114 +1,6 @@
 <template>
   <!-- 展示组件 -->
   <div>
-    <!-- 折叠面板 -->
-    <h1 class="title-xy">折叠面板</h1>
-    <div class="content">
-      <!-- 标准折叠面板 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准折叠面板</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="collapseBordered">
-              <a-radio-button :value="true">显示边框</a-radio-button>
-              <a-radio-button :value="false">隐藏边框</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="collapseAccordion">
-              <a-radio-button :value="true">开启手风琴</a-radio-button>
-              <a-radio-button :value="false">关闭手风琴</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="collapseDestroyInactivePanel">
-              <a-radio-button :value="true">
-                开启销毁折叠隐藏的面板
-              </a-radio-button>
-              <a-radio-button :value="false">
-                关闭销毁折叠隐藏的面板
-              </a-radio-button>
-            </a-radio-group>
-          </div>
-          <div>
-            <a-collapse
-              default-active-key="1"
-              :bordered="collapseBordered"
-              :accordion="collapseAccordion"
-              :destroy-inactive-panel="collapseDestroyInactivePanel"
-            >
-              <a-collapse-panel key="1" header="折叠面板1">
-                <p>折叠面板内容</p>
-              </a-collapse-panel>
-              <a-collapse-panel key="2" header="折叠面板2">
-                <p>折叠面板内容</p>
-              </a-collapse-panel>
-              <a-collapse-panel key="3" header="折叠面板3">
-                <p>折叠面板内容</p>
-              </a-collapse-panel>
-            </a-collapse>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 评论 -->
-    <h1 class="title-xy">评论</h1>
-    <div class="content">
-      <!-- 标准评论 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准评论</h3>
-        <div class="content2">
-          <div>
-            <a-comment>
-              <!-- 评论人 -->
-              <a slot="author">陈坤</a>
-              <!-- 头像 -->
-              <a-avatar
-                slot="avatar"
-                src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                alt="陈坤"
-              >
-              </a-avatar>
-              <!-- 日期 -->
-              <a-tooltip
-                slot="datetime"
-                :title="moment().format('YYYY-MM-DD HH:mm:ss')"
-              >
-                <span>{{ moment().fromNow() }}</span>
-              </a-tooltip>
-              <!-- 操作 -->
-              <template slot="actions">
-                <span key="comment-basic-like">
-                  <a-tooltip title="赞">
-                    <a-icon
-                      type="like"
-                      :theme="commentAction === 'liked' ? 'filled' : 'outlined'"
-                      @click="commentLike"
-                    />
-                  </a-tooltip>
-                  <span style="padding-left: '8px'; cursor: 'auto'">
-                    {{ commentLikes }}
-                  </span>
-                </span>
-                <span key="comment-basic-dislike">
-                  <a-tooltip title="踩">
-                    <a-icon
-                      type="dislike"
-                      :theme="
-                        commentAction === 'disliked' ? 'filled' : 'outlined'
-                      "
-                      @click="commentDislike"
-                    />
-                  </a-tooltip>
-                  <span style="padding-left: '8px'; cursor: 'auto'">
-                    {{ commentDislikes }}
-                  </span>
-                </span>
-                <span key="comment-basic-reply-to">回复</span>
-              </template>
-              <!-- 评论内容 -->
-              <p slot="content">AndDesignVue这套UI框架非常好用</p>
-            </a-comment>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- 描述列表 -->
     <h1 class="title-xy">描述列表</h1>
     <div class="content">
@@ -799,15 +691,6 @@ export default {
     return {
       // 通用
       moment,
-
-      // 折叠面板
-      collapseBordered: false,
-      collapseAccordion: false,
-      collapseDestroyInactivePanel: false,
-      // 评论
-      commentLikes: 0,
-      commentDislikes: 0,
-      commentAction: null,
       // 描述列表
       descriptionsBordered: false,
       descriptionsSize: "default",
@@ -883,18 +766,6 @@ export default {
     };
   },
   methods: {
-    // 评论-赞
-    commentLike() {
-      this.commentLikes = 1;
-      this.commentDislikes = 0;
-      this.commentAction = "liked";
-    },
-    // 评论-踩
-    commentDislike() {
-      this.commentLikes = 0;
-      this.commentDislikes = 1;
-      this.commentAction = "disliked";
-    },
     // 穿梭框-选中选项
     transferSelectChange(sourceSelectedKeys, targetSelectedKeys) {
       this.transferSelectedKeys = [

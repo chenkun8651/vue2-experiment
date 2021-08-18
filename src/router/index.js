@@ -52,6 +52,11 @@ const routes = [
         component: () => import("../components/UIComponents/Collapse.vue"),
       },
       {
+        path: "/UIComponents/comment",
+        name: "Comment",
+        component: () => import("../components/UIComponents/Comment.vue"),
+      },
+      {
         path: "/UIComponents/divider",
         name: "Divider",
         component: () => import("../components/UIComponents/Divider.vue"),

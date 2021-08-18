@@ -35,6 +35,11 @@ export const UIComponentsMenu = [
         name: "折叠面板组件",
     },
     {
+        key: "comment",
+        icon: "inbox",
+        name: "评论组件",
+    },
+    {
         key: "divider",
         icon: "inbox",
         name: "分割线组件",
