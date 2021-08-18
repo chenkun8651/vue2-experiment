@@ -691,6 +691,7 @@ export default {
     return {
       // 通用
       moment,
+
       // 描述列表
       descriptionsBordered: false,
       descriptionsSize: "default",

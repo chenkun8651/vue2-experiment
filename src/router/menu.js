@@ -40,6 +40,11 @@ export const UIComponentsMenu = [
         name: "评论组件",
     },
     {
+        key: "descriptions",
+        icon: "inbox",
+        name: "描述列表组件",
+    },
+    {
         key: "divider",
         icon: "inbox",
         name: "分割线组件",
