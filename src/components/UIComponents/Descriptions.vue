@@ -86,7 +86,7 @@
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 描述列表">
-      <div class="c-f5222d">ViewUI框架没有描述列表组件</div>
+      <div class="c-faad14">ViewUI框架的描述列表组件需要付费使用</div>
     </a-card>
   </div>
 </template>

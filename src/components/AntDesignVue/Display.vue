@@ -5,37 +5,6 @@
     <h1 class="title-xy">气泡卡片</h1>
     <div class="content">
       <!-- 标准气泡卡片 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准气泡卡片</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="popoverTrigger">
-              <a-radio-button :value="'hover'">悬停触发</a-radio-button>
-              <a-radio-button :value="'focus'">聚焦触发</a-radio-button>
-              <a-radio-button :value="'click'">点击触发</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="popoverPlacement">
-              <a-radio-button :value="'top'">上方弹出</a-radio-button>
-              <a-radio-button :value="'bottom'">下方弹出</a-radio-button>
-              <a-radio-button :value="'left'">左侧弹出</a-radio-button>
-              <a-radio-button :value="'right'">右侧弹出</a-radio-button>
-            </a-radio-group>
-          </div>
-          <div>
-            <a-popover
-              title="气泡卡片"
-              :trigger="popoverTrigger"
-              :placement="popoverPlacement"
-            >
-              <template slot="content">
-                <p>卡片内容</p>
-                <p>卡片内容</p>
-              </template>
-              <a-button type="primary">气泡卡片</a-button>
-            </a-popover>
-          </div>
-        </div>
-      </div>
     </div>
     <!-- 统计数值 -->
     <h1 class="title-xy">统计数值</h1>
@@ -563,9 +532,7 @@ export default {
     return {
       // 通用
       moment,
-      // 气泡卡片
-      popoverTrigger: "hover",
-      popoverPlacement: "top",
+
       // 统计数值
       statisticGroupSeparator: ",",
       statisticDecimalSeparator: ".",
