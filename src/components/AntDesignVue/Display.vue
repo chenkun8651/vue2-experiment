@@ -1,27 +1,10 @@
 <template>
   <!-- 展示组件 -->
   <div>
-    <!-- 描述列表 -->
-    <h1 class="title-xy">描述列表</h1>
-    <div class="content"></div>
     <!-- 占位图 -->
     <h1 class="title-xy">占位图</h1>
     <div class="content">
-      <!-- 标准占位图 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准占位图</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <div class="string-set">
-              <span style="margin-right: 5px">设置描述内容</span>
-              <a-input style="width: 100px" v-model="emptyDescription" />
-            </div>
-          </div>
-          <div>
-            <a-empty :description="emptyDescription"></a-empty>
-          </div>
-        </div>
-      </div>
+
     </div>
     <!-- 列表 -->
     <h1 class="title-xy">列表</h1>
@@ -653,11 +636,6 @@ export default {
     return {
       // 通用
       moment,
-
-      // 描述列表
-
-      // 占位图
-      emptyDescription: "",
       // 列表
       listDataSource: listDataSource,
       listBordered: false,

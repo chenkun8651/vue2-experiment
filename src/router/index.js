@@ -67,6 +67,11 @@ const routes = [
         component: () => import("../components/UIComponents/Divider.vue"),
       },
       {
+        path: "/UIComponents/empty",
+        name: "Empty",
+        component: () => import("../components/UIComponents/Empty.vue"),
+      },
+      {
         path: "/UIComponents/icon",
         name: "Icon",
         component: () => import("../components/UIComponents/Icon.vue"),

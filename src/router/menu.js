@@ -50,6 +50,11 @@ export const UIComponentsMenu = [
         name: "分割线组件",
     },
     {
+        key: "empty",
+        icon: "inbox",
+        name: "空状态组件",
+    },
+    {
         key: "icon",
         icon: "inbox",
         name: "图标组件",
