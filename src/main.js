@@ -17,7 +17,6 @@ import 'view-design/dist/styles/iview.css'
 import './assets/global.css'
 
 Vue.config.productionTip = false
-
 Vue.use(AntDesignVue)
 Vue.use(ElementUI)
 Vue.use(AtUI)

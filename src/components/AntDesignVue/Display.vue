@@ -3,45 +3,7 @@
   <div>
     <!-- 描述列表 -->
     <h1 class="title-xy">描述列表</h1>
-    <div class="content">
-      <!-- 标准描述列表 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准描述列表</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="descriptionsBordered">
-              <a-radio-button :value="true">显示边框</a-radio-button>
-              <a-radio-button :value="false">隐藏边框</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="descriptionsSize">
-              <a-radio-button :value="'default'">默认</a-radio-button>
-              <a-radio-button :value="'middle'">中型</a-radio-button>
-              <a-radio-button :value="'small'">小型</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="descriptionsLayout">
-              <a-radio-button :value="'horizontal'">水平布局</a-radio-button>
-              <a-radio-button :value="'vertical'">垂直布局</a-radio-button>
-            </a-radio-group>
-          </div>
-          <div>
-            <a-descriptions
-              title="用户信息"
-              :bordered="descriptionsBordered"
-              :size="descriptionsSize"
-              :layout="descriptionsLayout"
-            >
-              <a-descriptions-item label="姓名">陈坤</a-descriptions-item>
-              <a-descriptions-item label="电话">1810000000</a-descriptions-item>
-              <a-descriptions-item label="现居地">火星</a-descriptions-item>
-              <a-descriptions-item label="备注">----</a-descriptions-item>
-              <a-descriptions-item label="地址">
-                中国 北京 第三大街 185号
-              </a-descriptions-item>
-            </a-descriptions>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="content"></div>
     <!-- 占位图 -->
     <h1 class="title-xy">占位图</h1>
     <div class="content">
@@ -693,9 +655,7 @@ export default {
       moment,
 
       // 描述列表
-      descriptionsBordered: false,
-      descriptionsSize: "default",
-      descriptionsLayout: "horizontal",
+
       // 占位图
       emptyDescription: "",
       // 列表
