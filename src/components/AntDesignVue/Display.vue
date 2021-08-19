@@ -1,65 +1,6 @@
 <template>
   <!-- 展示组件 -->
   <div>
-    <!-- 占位图 -->
-    <h1 class="title-xy">占位图</h1>
-    <div class="content">
-
-    </div>
-    <!-- 列表 -->
-    <h1 class="title-xy">列表</h1>
-    <div class="content">
-      <!-- 标准列表 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准列表</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="listBordered">
-              <a-radio-button :value="true">显示边框</a-radio-button>
-              <a-radio-button :value="false">隐藏边框</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="listSize">
-              <a-radio-button :value="'default'">默认</a-radio-button>
-              <a-radio-button :value="'middle'">中型</a-radio-button>
-              <a-radio-button :value="'small'">小型</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="listSplit">
-              <a-radio-button :value="true">显示分割线</a-radio-button>
-              <a-radio-button :value="false">隐藏分割线</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="listItemLayout">
-              <a-radio-button :value="'horizontal'">横向</a-radio-button>
-              <a-radio-button :value="'vertical'">垂直</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="listLoading">
-              <a-radio-button :value="true">加载</a-radio-button>
-              <a-radio-button :value="false">完成</a-radio-button>
-            </a-radio-group>
-          </div>
-          <a-list
-            :data-source="listDataSource"
-            :bordered="listBordered"
-            :size="listSize"
-            :split="listSplit"
-            :item-layout="listItemLayout"
-            :loading="listLoading"
-          >
-            <a-list-item slot="renderItem" slot-scope="item">
-              <a-list-item-meta :description="item.description">
-                <a slot="title" href="https://www.antdv.com/">
-                  {{ item.title }}
-                </a>
-                <a-avatar
-                  slot="avatar"
-                  src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-                >
-                </a-avatar>
-              </a-list-item-meta>
-            </a-list-item>
-          </a-list>
-        </div>
-      </div>
-    </div>
     <!-- 气泡卡片 -->
     <h1 class="title-xy">气泡卡片</h1>
     <div class="content">
@@ -510,20 +451,6 @@
 <script>
 import moment from "moment";
 
-const listDataSource = [
-  {
-    title: "列表标题一",
-    description: "列表描述一",
-  },
-  {
-    title: "列表标题二",
-    description: "列表描述二",
-  },
-  {
-    title: "列表标题三",
-    description: "列表描述三",
-  },
-];
 const transferDataSource = [];
 for (let i = 0; i < 20; i++) {
   transferDataSource.push({
@@ -636,13 +563,6 @@ export default {
     return {
       // 通用
       moment,
-      // 列表
-      listDataSource: listDataSource,
-      listBordered: false,
-      listSize: "default",
-      listSplit: false,
-      listItemLayout: "horizontal",
-      listLoading: false,
       // 气泡卡片
       popoverTrigger: "hover",
       popoverPlacement: "top",

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import { UIComponentsMenu } from "./menu"
 
 Vue.use(VueRouter)
 
@@ -14,84 +15,8 @@ const routes = [
     path: '/UIComponents',
     name: 'UIComponents',
     redirect: '/UIComponents/button',
+    children: UIComponentsMenu,
     component: () => import('../views/UIComponents.vue'),
-    children: [
-      {
-        path: "/UIComponents/avatar",
-        name: "Avatar",
-        component: () => import("../components/UIComponents/Avatar.vue"),
-      },
-      {
-        path: "/UIComponents/badge",
-        name: "Badge",
-        component: () => import("../components/UIComponents/Badge.vue"),
-      },
-      {
-        path: "/UIComponents/button",
-        name: "Button",
-        component: () => import("../components/UIComponents/Button.vue"),
-      },
-      {
-        path: "/UIComponents/calendar",
-        name: "Calendar",
-        component: () => import("../components/UIComponents/Calendar.vue"),
-      },
-      {
-        path: "/UIComponents/card",
-        name: "Card",
-        component: () => import("../components/UIComponents/Card.vue"),
-      },
-      {
-        path: "/UIComponents/carousel",
-        name: "Carousel",
-        component: () => import("../components/UIComponents/Carousel.vue"),
-      },
-      {
-        path: "/UIComponents/collapse",
-        name: "Collapse",
-        component: () => import("../components/UIComponents/Collapse.vue"),
-      },
-      {
-        path: "/UIComponents/comment",
-        name: "Comment",
-        component: () => import("../components/UIComponents/Comment.vue"),
-      },
-      {
-        path: "/UIComponents/descriptions",
-        name: "Descriptions",
-        component: () => import("../components/UIComponents/Descriptions.vue"),
-      },
-      {
-        path: "/UIComponents/divider",
-        name: "Divider",
-        component: () => import("../components/UIComponents/Divider.vue"),
-      },
-      {
-        path: "/UIComponents/empty",
-        name: "Empty",
-        component: () => import("../components/UIComponents/Empty.vue"),
-      },
-      {
-        path: "/UIComponents/icon",
-        name: "Icon",
-        component: () => import("../components/UIComponents/Icon.vue"),
-      },
-      {
-        path: "/UIComponents/spin",
-        name: "Spin",
-        component: () => import("../components/UIComponents/Spin.vue"),
-      },
-      {
-        path: "/UIComponents/tag",
-        name: "Tag",
-        component: () => import("../components/UIComponents/Tag.vue"),
-      },
-      {
-        path: "/UIComponents/tooltip",
-        name: "Tag",
-        component: () => import("../components/UIComponents/Tooltip.vue"),
-      },
-    ]
   },
 ]
 
