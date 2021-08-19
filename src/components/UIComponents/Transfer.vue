@@ -1,4 +1,4 @@
-a-transfer<template>
+<template>
   <!-- 穿梭框组件 -->
   <div>
     <!-- AntDesignVue -->

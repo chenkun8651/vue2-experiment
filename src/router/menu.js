@@ -105,6 +105,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Spin.vue"),
     },
     {
+        key: "table",
+        name: "表格组件",
+        icon: "inbox",
+        path: "/UIComponents/table",
+        component: () => import("../components/UIComponents/Table.vue"),
+    },
+    {
         key: "tag",
         name: "标签组件",
         icon: "inbox",

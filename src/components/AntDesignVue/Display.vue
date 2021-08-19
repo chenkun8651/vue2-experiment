@@ -1,70 +1,6 @@
 <template>
   <!-- 展示组件 -->
   <div>
-    <!-- 表格 -->
-    <h1 class="title-xy">表格</h1>
-    <div class="content">
-      <!-- 标准表格 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准表格</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="tableBordered">
-              <a-radio-button :value="true">显示边框</a-radio-button>
-              <a-radio-button :value="false">隐藏边框</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="tableLoading">
-              <a-radio-button :value="true">加载</a-radio-button>
-              <a-radio-button :value="false">完成</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="tableShowHeader">
-              <a-radio-button :value="true">显示表头</a-radio-button>
-              <a-radio-button :value="false">隐藏表头</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="tableSize">
-              <a-radio-button :value="'default'">默认</a-radio-button>
-              <a-radio-button :value="'middle'">中型</a-radio-button>
-              <a-radio-button :value="'small'">小型</a-radio-button>
-            </a-radio-group>
-          </div>
-          <div>
-            <a-table
-              :columns="tableColumns"
-              :data-source="tableDataSource"
-              :bordered="tableBordered"
-              :loading="tableLoading"
-              :show-header="tableShowHeader"
-              :size="tableSize"
-            >
-              <a slot="name" slot-scope="text">{{ text }}</a>
-              <span slot="customTitle">姓名</span>
-              <span slot="tags" slot-scope="tags">
-                <a-tag
-                  v-for="tag in tags"
-                  :key="tag"
-                  :color="
-                    tag === '帅'
-                      ? 'volcano'
-                      : tag === '富有'
-                      ? 'geekblue'
-                      : 'green'
-                  "
-                >
-                  {{ tag.toUpperCase() }}
-                </a-tag>
-              </span>
-              <span slot="action">
-                <a>删除</a>
-                <a-divider type="vertical" />
-                <a class="ant-dropdown-link">
-                  更多操作<a-icon type="down" />
-                </a>
-              </span>
-            </a-table>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- 时间轴 -->
     <h1 class="title-xy">时间轴</h1>
     <div class="content">
@@ -312,58 +248,6 @@
 <script>
 import moment from "moment";
 
-const tableColumns = [
-  {
-    dataIndex: "name",
-    key: "name",
-    slots: { title: "customTitle" },
-    scopedSlots: { customRender: "name" },
-  },
-  {
-    title: "年龄",
-    dataIndex: "age",
-    key: "age",
-  },
-  {
-    title: "地址",
-    dataIndex: "address",
-    key: "address",
-  },
-  {
-    title: "标签",
-    key: "tags",
-    dataIndex: "tags",
-    scopedSlots: { customRender: "tags" },
-  },
-  {
-    title: "操作",
-    key: "action",
-    scopedSlots: { customRender: "action" },
-  },
-];
-const tableDataSource = [
-  {
-    key: "1",
-    name: "小陈",
-    age: 32,
-    address: "地球",
-    tags: ["帅", "富有"],
-  },
-  {
-    key: "2",
-    name: "宇少",
-    age: 42,
-    address: "地球",
-    tags: ["帅", "大佬"],
-  },
-  {
-    key: "3",
-    name: "胖胖",
-    age: 32,
-    address: "地球",
-    tags: ["帅", "富有"],
-  },
-];
 const treeTreeData = [
   {
     title: "水果",
@@ -412,13 +296,6 @@ export default {
     return {
       // 通用
       moment,
-      // 表格
-      tableColumns: tableColumns,
-      tableDataSource: tableDataSource,
-      tableBordered: false,
-      tableLoading: false,
-      tableShowHeader: true,
-      tableSize: "default",
       // 时间轴
       timelineReverse: false,
       timelineMode: "left",
