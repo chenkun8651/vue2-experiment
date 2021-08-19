@@ -1,114 +1,6 @@
 <template>
   <!-- 展示组件 -->
   <div>
-    <!-- 气泡卡片 -->
-    <h1 class="title-xy">气泡卡片</h1>
-    <div class="content">
-      <!-- 标准气泡卡片 -->
-    </div>
-    <!-- 统计数值 -->
-    <h1 class="title-xy">统计数值</h1>
-    <div class="content">
-      <!-- 标准统计数值 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准统计数值</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <div class="string-set">
-              <span style="margin-right: 5px">设置千分位标识符</span>
-              <a-input style="width: 100px" v-model="statisticGroupSeparator">
-              </a-input>
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置小数点</span>
-              <a-input style="width: 100px" v-model="statisticDecimalSeparator">
-              </a-input>
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置数值精度</span>
-              <a-input-number style="width: 100px" v-model="statisticPrecision">
-              </a-input-number>
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置数值前缀</span>
-              <a-input style="width: 100px" v-model="statisticPrefix">
-              </a-input>
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置数值后缀</span>
-              <a-input style="width: 100px" v-model="statisticSuffix">
-              </a-input>
-            </div>
-          </div>
-          <a-statistic
-            title="账号余额 (CNY)"
-            :value="91235112893"
-            :decimalSeparator="statisticDecimalSeparator"
-            :groupSeparator="statisticGroupSeparator"
-            :precision="statisticPrecision"
-            :prefix="statisticPrefix"
-            :suffix="statisticSuffix"
-          >
-          </a-statistic>
-        </div>
-      </div>
-      <!-- 倒计时统计数值 -->
-      <div class="content-item">
-        <h3 class="title2-xy">倒计时统计数值</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <div class="string-set">
-              <span style="margin-right: 5px">设置时间格式化</span>
-              <a-input style="width: 200px" v-model="statisticFormat">
-              </a-input>
-            </div>
-          </div>
-          <div>
-            <a-statistic-countdown
-              title="倒计时"
-              :value="statisticDeadline"
-              :prefix="statisticPrefix"
-              :suffix="statisticSuffix"
-              :format="statisticFormat"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 穿梭框 -->
-    <h1 class="title-xy">穿梭框</h1>
-    <div class="content">
-      <!-- 标准穿梭框 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准穿梭框</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="transferDisabled">
-              <a-radio-button :value="true">禁用</a-radio-button>
-              <a-radio-button :value="false">启用</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="transferShowSearch">
-              <a-radio-button :value="true">开启搜索框</a-radio-button>
-              <a-radio-button :value="false">关闭搜索框</a-radio-button>
-            </a-radio-group>
-          </div>
-          <div>
-            <a-transfer
-              :titles="['待完成', '已完成']"
-              :data-source="transferDataSource"
-              :target-keys="transferTargetKeys"
-              :selected-keys="transferSelectedKeys"
-              :render="(item) => item.title"
-              :disabled="transferDisabled"
-              :show-search="transferShowSearch"
-              @change="transferChange"
-              @selectChange="transferSelectChange"
-            >
-            </a-transfer>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- 表格 -->
     <h1 class="title-xy">表格</h1>
     <div class="content">
@@ -420,18 +312,6 @@
 <script>
 import moment from "moment";
 
-const transferDataSource = [];
-for (let i = 0; i < 20; i++) {
-  transferDataSource.push({
-    key: i.toString(),
-    title: `内容${i + 1}`,
-    description: `描述内容${i + 1}`,
-    disabled: i % 3 < 1,
-  });
-}
-const transferTargetKeys = transferDataSource
-  .filter((item) => +item.key % 3 > 1)
-  .map((item) => item.key);
 const tableColumns = [
   {
     dataIndex: "name",
@@ -532,21 +412,6 @@ export default {
     return {
       // 通用
       moment,
-
-      // 统计数值
-      statisticGroupSeparator: ",",
-      statisticDecimalSeparator: ".",
-      statisticPrecision: 2,
-      statisticPrefix: "",
-      statisticSuffix: "%",
-      statisticDeadline: Date.now() + 1000 * 60 * 60 * 24 * 2 + 1000 * 30,
-      statisticFormat: "HH:mm:ss",
-      // 穿梭框
-      transferDataSource: transferDataSource,
-      transferTargetKeys: transferTargetKeys,
-      transferSelectedKeys: ["1", "4"],
-      transferDisabled: false,
-      transferShowSearch: false,
       // 表格
       tableColumns: tableColumns,
       tableDataSource: tableDataSource,
@@ -591,18 +456,6 @@ export default {
       skeletonTitle: true,
     };
   },
-  methods: {
-    // 穿梭框-选中选项
-    transferSelectChange(sourceSelectedKeys, targetSelectedKeys) {
-      this.transferSelectedKeys = [
-        ...sourceSelectedKeys,
-        ...targetSelectedKeys,
-      ];
-    },
-    // 穿梭框-改变选项
-    transferChange(nextTargetKeys) {
-      this.transferTargetKeys = nextTargetKeys;
-    },
-  },
+  methods: {},
 };
 </script>

@@ -1,5 +1,12 @@
 export const UIComponentsMenu = [
     {
+        key: "antDesignVue",
+        name: "AntDesignVue特色组件",
+        icon: "inbox",
+        path: "/UIComponents/antDesignVue",
+        component: () => import("../components/UIComponents/AntDesignVue.vue"),
+    },
+    {
         key: "avatar",
         name: "头像组件",
         icon: "inbox",
@@ -47,13 +54,6 @@ export const UIComponentsMenu = [
         icon: "inbox",
         path: "/UIComponents/collapse",
         component: () => import("../components/UIComponents/Collapse.vue"),
-    },
-    {
-        key: "comment",
-        name: "评论组件",
-        icon: "inbox",
-        path: "/UIComponents/comment",
-        component: () => import("../components/UIComponents/Comment.vue"),
     },
     {
         key: "descriptions",
@@ -117,5 +117,12 @@ export const UIComponentsMenu = [
         icon: "inbox",
         path: "/UIComponents/tooltip",
         component: () => import("../components/UIComponents/Tooltip.vue"),
+    },
+    {
+        key: "transfer",
+        name: "穿梭框组件",
+        icon: "inbox",
+        path: "/UIComponents/transfer",
+        component: () => import("../components/UIComponents/Transfer.vue"),
     },
 ];

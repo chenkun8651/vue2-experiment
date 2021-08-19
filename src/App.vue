@@ -1,13 +1,13 @@
 <template>
   <a-config-provider :locale="locale">
     <div id="app">
-      <div id="app-nav">
+      <div class="app-nav">
         <div>
           <router-link to="/">Home</router-link> |
           <router-link to="/UIComponents">UIComponents</router-link>
         </div>
       </div>
-      <router-view id="app-view" />
+      <router-view />
     </div>
   </a-config-provider>
 </template>
@@ -31,10 +31,7 @@ export default {
 #app {
   height: 100%;
 }
-#app-nav {
-  height: 5%;
-}
-#app-view {
-  height: 95%;
+.app-nav {
+  height: 40px;
 }
 </style>

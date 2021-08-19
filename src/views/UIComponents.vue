@@ -1,49 +1,47 @@
 <template>
-  <div>
-    <a-layout id="components-layout-demo-custom-trigger">
-      <a-layout-sider
-        v-model="collapsed"
-        :width="200"
-        :collapsible="true"
-        :trigger="null"
+  <a-layout class="ui-components-layout">
+    <a-layout-sider
+      v-model="collapsed"
+      :width="230"
+      :collapsible="true"
+      :trigger="null"
+    >
+      <div class="logo" />
+      <a-menu
+        v-model="routeArray"
+        :theme="'dark'"
+        :mode="'inline'"
+        @click="ChangeMenu"
       >
-        <div class="logo" />
-        <a-menu
-          v-model="routeArray"
-          theme="dark"
-          mode="inline"
-          @click="ChangeMenu"
+        <a-menu-item v-for="item in UIComponentsMenu" :key="item.key">
+          <a-icon :type="item.icon" />
+          <span>{{ item.name }}</span>
+        </a-menu-item>
+      </a-menu>
+    </a-layout-sider>
+    <a-layout>
+      <a-layout-header :style="{ background: '#fff', padding: '0' }">
+        <a-icon
+          class="trigger"
+          :type="collapsed ? 'menu-unfold' : 'menu-fold'"
+          @click="() => (collapsed = !collapsed)"
         >
-          <a-menu-item v-for="item in UIComponentsMenu" :key="item.key">
-            <a-icon :type="item.icon" />
-            <span>{{ item.name }}</span>
-          </a-menu-item>
-        </a-menu>
-      </a-layout-sider>
-      <a-layout>
-        <a-layout-header :style="{ background: '#fff', padding: '0' }">
-          <a-icon
-            class="trigger"
-            :type="collapsed ? 'menu-unfold' : 'menu-fold'"
-            @click="() => (collapsed = !collapsed)"
-          >
-          </a-icon>
-          {{ routeArray | keyToName }}
-        </a-layout-header>
-        <a-layout-content
-          :style="{
-            margin: '20px 16px',
-            padding: '20px',
-            background: '#fff',
-            minHeight: '280px',
-            overflow: 'auto',
-          }"
-        >
-          <router-view></router-view>
-        </a-layout-content>
-      </a-layout>
+        </a-icon>
+        {{ routeArray | keyToName }}
+      </a-layout-header>
+      <a-layout-content
+        :style="{
+          margin: '20px 16px',
+          padding: '20px',
+          background: '#fff',
+          minHeight: '280px',
+          overflow: 'auto',
+        }"
+      >
+        <router-view></router-view>
+      </a-layout-content>
     </a-layout>
-  </div>
+  </a-layout>
 </template>
 
 <script>
@@ -94,20 +92,20 @@ export default {
 </script>
 
 <style scoped>
-#components-layout-demo-custom-trigger {
-  height: 100%;
+.ui-components-layout {
+  overflow: hidden;
 }
-#components-layout-demo-custom-trigger .trigger {
+.ui-components-layout .trigger {
   font-size: 18px;
   line-height: 64px;
   padding: 0 24px;
   cursor: pointer;
   transition: color 0.3s;
 }
-#components-layout-demo-custom-trigger .trigger:hover {
+.ui-components-layout .trigger:hover {
   color: #1890ff;
 }
-#components-layout-demo-custom-trigger .logo {
+.ui-components-layout .logo {
   height: 32px;
   background: rgba(255, 255, 255, 0.2);
   margin: 16px;
