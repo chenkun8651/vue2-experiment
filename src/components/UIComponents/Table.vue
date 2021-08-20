@@ -203,8 +203,8 @@
           <a-radio-button :value="false">不高亮当前行</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="tableDisabledHoverV">
-          <a-radio-button :value="true">开启鼠标悬停高亮</a-radio-button>
-          <a-radio-button :value="false">关闭鼠标悬停高亮</a-radio-button>
+          <a-radio-button :value="true">关闭鼠标悬停高亮</a-radio-button>
+          <a-radio-button :value="false">开启鼠标悬停高亮</a-radio-button>
         </a-radio-group>
       </div>
       <div>
