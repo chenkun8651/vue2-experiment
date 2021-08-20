@@ -98,6 +98,20 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Popover.vue"),
     },
     {
+        key: "progress",
+        name: "进度条",
+        icon: "inbox",
+        path: "/UIComponents/progress",
+        component: () => import("../components/UIComponents/Progress.vue"),
+    },
+    {
+        key: "skeleton",
+        name: "骨架屏",
+        icon: "inbox",
+        path: "/UIComponents/skeleton",
+        component: () => import("../components/UIComponents/Skeleton.vue"),
+    },
+    {
         key: "spin",
         name: "加载",
         icon: "inbox",
