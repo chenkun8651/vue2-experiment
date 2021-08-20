@@ -119,6 +119,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Tag.vue"),
     },
     {
+        key: "timeline",
+        name: "时间轴组件",
+        icon: "inbox",
+        path: "/UIComponents/timeline",
+        component: () => import("../components/UIComponents/Timeline.vue"),
+    },
+    {
         key: "tooltip",
         name: "文字提示组件",
         icon: "inbox",

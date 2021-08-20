@@ -5,8 +5,8 @@
     <a-card class="card-margin" title="AntDesignVue 文字提示">
       <div class="radio-box">
         <a-radio-group v-model="tooltipArrowPointAtCenter">
-          <a-radio-button :value="true"> 开启箭头指向元素中心 </a-radio-button>
-          <a-radio-button :value="false"> 关闭箭头指向元素中心 </a-radio-button>
+          <a-radio-button :value="true">开启箭头指向元素中心</a-radio-button>
+          <a-radio-button :value="false">关闭箭头指向元素中心</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="tooltipAutoAdjustOverflow">
           <a-radio-button :value="true">
@@ -26,17 +26,17 @@
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'focus'">focus</a-radio-button>
           <a-radio-button :value="'click'">click</a-radio-button>
-          <a-radio-button :value="'contextmenu'"> contextmenu </a-radio-button>
+          <a-radio-button :value="'contextmenu'">contextmenu</a-radio-button>
         </a-radio-group>
         <div class="number-set">
-          <span style="margin-right: 5px"> 鼠标移入的延迟显示时间（秒） </span>
+          <span style="margin-right: 5px">鼠标移入的延迟显示时间（秒）</span>
           <a-input-number
             style="width: 100px"
             v-model="tooltipMouseEnterDelay"
           />
         </div>
         <div class="number-set">
-          <span style="margin-right: 5px"> 鼠标移出的延迟显示时间（秒） </span>
+          <span style="margin-right: 5px">鼠标移出的延迟显示时间（秒）</span>
           <a-input-number
             style="width: 100px"
             v-model="tooltipMouseLeaveDelay"
