@@ -1,5 +1,5 @@
 <template>
-  <!-- 加载组件 -->
+  <!-- 加载 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 加载">
@@ -59,7 +59,7 @@
     </a-card>
     <!-- AtUI -->
     <a-card class="card-AtUI" title="AtUI 加载">
-      <div class="c-f5222d">AtUI框架没有加载组件</div>
+      <div class="c-f5222d">AtUI框架没有加载</div>
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 加载">

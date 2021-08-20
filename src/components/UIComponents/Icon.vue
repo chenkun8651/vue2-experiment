@@ -1,5 +1,5 @@
 <template>
-  <!-- 图标组件 -->
+  <!-- 图标 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 图标">

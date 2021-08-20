@@ -1,5 +1,5 @@
 <template>
-  <!-- 文字提示组件 -->
+  <!-- 文字提示 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 文字提示">

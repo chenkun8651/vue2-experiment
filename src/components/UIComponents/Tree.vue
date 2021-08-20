@@ -1,5 +1,5 @@
 <template>
-  <!-- 树形控件组件 -->
+  <!-- 树形控件 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 树形控件">
@@ -27,7 +27,6 @@
       </div>
       <div>
         <a-tree
-          :selectable="true"
           :tree-data="treeTreeData"
           :disabled="treeDisabled"
           :show-line="treeShowLine"
@@ -41,13 +40,13 @@
     <!-- ElementUI -->
     <a-card class="card-margin" title="ElementUI 树形控件">
       <div class="radio-box">
-        <a-radio-group v-model="treeHighlightCurrentE">
-          <a-radio-button :value="true">显示当前节点高亮</a-radio-button>
-          <a-radio-button :value="false">隐藏当前节点高亮</a-radio-button>
-        </a-radio-group>
         <a-radio-group v-model="treeShowCheckboxE">
           <a-radio-button :value="true">开启节点复选功能</a-radio-button>
           <a-radio-button :value="false">关闭节点复选功能</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="treeHighlightCurrentE">
+          <a-radio-button :value="true">显示当前节点高亮</a-radio-button>
+          <a-radio-button :value="false">隐藏当前节点高亮</a-radio-button>
         </a-radio-group>
       </div>
       <div>
@@ -60,54 +59,28 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 时间轴">
-      <div class="radio-box">
-        <a-radio-group v-model="timelinePendingA">
-          <a-radio-button :value="true">开启幽灵节点</a-radio-button>
-          <a-radio-button :value="false">关闭幽灵节点</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="timelineColorA">
-          <a-radio-button :value="'blue'">blue</a-radio-button>
-          <a-radio-button :value="'red'">red</a-radio-button>
-          <a-radio-button :value="'green'">green</a-radio-button>
-          <a-radio-button :value="'yellow'">yellow</a-radio-button>
-        </a-radio-group>
-      </div>
-      <div>
-        <at-timeline :pending="timelinePendingA">
-          <at-timeline-item
-            v-for="(item, index) in timeline"
-            :key="index"
-            :color="timelineColorA"
-          >
-            {{ item.content }} {{ item.timestamp }}
-          </at-timeline-item>
-        </at-timeline>
-      </div>
+    <a-card class="card-margin" title="AtUI 树形控件">
+      <div class="c-f5222d">AtUI框架没有树形控件</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 时间轴">
+    <a-card class="card-margin" title="ViewUI 树形控件">
       <div class="radio-box">
-        <a-radio-group v-model="timelinePendingV">
-          <a-radio-button :value="true">开启幽灵节点</a-radio-button>
-          <a-radio-button :value="false">关闭幽灵节点</a-radio-button>
+        <a-radio-group v-model="treeShowCheckboxV">
+          <a-radio-button :value="true">开启节点复选功能</a-radio-button>
+          <a-radio-button :value="false">关闭节点复选功能</a-radio-button>
         </a-radio-group>
-        <a-radio-group v-model="timelineColorV">
-          <a-radio-button :value="'blue'">blue</a-radio-button>
-          <a-radio-button :value="'red'">red</a-radio-button>
-          <a-radio-button :value="'green'">green</a-radio-button>
+        <a-radio-group v-model="treeExpandNode">
+          <a-radio-button :value="true">开启点击标题展开</a-radio-button>
+          <a-radio-button :value="false">关闭点击标题展开</a-radio-button>
         </a-radio-group>
       </div>
       <div>
-        <Timeline :pending="timelinePendingV">
-          <TimelineItem
-            v-for="(item, index) in timeline"
-            :key="index"
-            :color="timelineColorV"
-          >
-            {{ item.content }} {{ item.timestamp }}
-          </TimelineItem>
-        </Timeline>
+        <Tree
+          :data="treeTreeData"
+          :show-checkbox="treeShowCheckboxV"
+          :expand-node="treeExpandNode"
+        >
+        </Tree>
       </div>
     </a-card>
   </div>
@@ -189,33 +162,14 @@ const treeTreeData = [
   },
   {
     id: "vegetables",
-    label: "肉类",
+    label: "蔬菜",
     key: "vegetables",
     title: "蔬菜",
-  },
-];
-const timeline = [
-  {
-    content: "创建网络服务",
-    timestamp: "2018-04-15",
-  },
-  {
-    content: "解决网络波动问题",
-    timestamp: "2018-04-13",
-  },
-  {
-    content: "技术测试",
-    timestamp: "2018-04-11",
-  },
-  {
-    content: "网络问题已解决",
-    timestamp: "2018-04-09",
   },
 ];
 export default {
   data() {
     return {
-      timeline: timeline,
       treeTreeData: treeTreeData,
       // AntDesignVue
       treeDisabled: false,
@@ -224,14 +178,11 @@ export default {
       treeBlockNode: true,
       treeAutoExpandParent: true,
       // ElementUI
-      treeHighlightCurrentE: true,
       treeShowCheckboxE: true,
-      // AtUI
-      timelinePendingA: false,
-      timelineColorA: "blue",
+      treeHighlightCurrentE: true,
       // ViewUI
-      timelinePendingV: false,
-      timelineColorV: "blue",
+      treeShowCheckboxV: true,
+      treeExpandNode: true,
     };
   },
   methods: {},

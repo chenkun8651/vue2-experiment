@@ -1,5 +1,5 @@
 <template>
-  <!-- 穿梭框组件 -->
+  <!-- 穿梭框 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 穿梭框">
@@ -49,7 +49,7 @@
     </a-card>
     <!-- AtUI -->
     <a-card class="card-margin" title="AtUI 穿梭框">
-      <div class="c-f5222d">AtUI框架没有穿梭框组件</div>
+      <div class="c-f5222d">AtUI框架没有穿梭框</div>
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 穿梭框">
@@ -97,7 +97,6 @@ for (let i = 0; i < 20; i++) {
 const transferTargetKeys = transferDataSource
   .filter((item) => +item.key % 3 > 1)
   .map((item) => item.key);
-
 export default {
   data() {
     return {

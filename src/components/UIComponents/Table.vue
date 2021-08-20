@@ -1,5 +1,5 @@
 <template>
-  <!-- 表格组件 -->
+  <!-- 表格 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 表格">
@@ -47,7 +47,7 @@
           <span slot="action">
             <a>删除</a>
             <a-divider type="vertical" />
-            <a class="ant-dropdown-link"> 更多操作<a-icon type="down" /> </a>
+            <a class="ant-dropdown-link">更多操作<a-icon type="down" /></a>
           </span>
         </a-table>
       </div>

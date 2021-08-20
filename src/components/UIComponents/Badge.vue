@@ -1,5 +1,5 @@
 <template>
-  <!-- 徽标数组件 -->
+  <!-- 徽标数 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 徽标数">

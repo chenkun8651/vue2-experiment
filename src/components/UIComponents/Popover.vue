@@ -1,5 +1,5 @@
 <template>
-  <!-- 弹出框组件 -->
+  <!-- 弹出框 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 弹出框">

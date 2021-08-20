@@ -1,5 +1,5 @@
 <template>
-  <!-- 列表组件 -->
+  <!-- 列表 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 列表">
@@ -53,11 +53,11 @@
     </a-card>
     <!-- ElementUI -->
     <a-card class="card-margin" title="ElementUI 列表">
-      <div class="c-f5222d">ElementUI框架没有列表组件</div>
+      <div class="c-f5222d">ElementUI框架没有列表</div>
     </a-card>
     <!-- AtUI -->
     <a-card class="card-margin" title="AtUI 列表">
-      <div class="c-f5222d">AtUI框架没有列表组件</div>
+      <div class="c-f5222d">AtUI框架没有列表</div>
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 列表">

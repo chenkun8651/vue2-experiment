@@ -1,5 +1,5 @@
 <template>
-  <!-- 描述列表组件 -->
+  <!-- 描述列表 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 描述列表">
@@ -82,11 +82,11 @@
     </a-card>
     <!-- AtUI -->
     <a-card class="card-margin" title="AtUI 描述列表">
-      <div class="c-f5222d">AtUI框架没有描述列表组件</div>
+      <div class="c-f5222d">AtUI框架没有描述列表</div>
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 描述列表">
-      <div class="c-faad14">ViewUI框架的描述列表组件需要付费使用</div>
+      <div class="c-faad14">ViewUI框架的描述列表需要付费使用</div>
     </a-card>
   </div>
 </template>

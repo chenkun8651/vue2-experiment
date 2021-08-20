@@ -1,5 +1,5 @@
 <template>
-  <!-- 日历组件 -->
+  <!-- 日历 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 日历">
@@ -37,11 +37,11 @@
     </a-card>
     <!-- AtUI -->
     <a-card class="card-margin" title="AtUI 日历">
-      <div class="c-f5222d">AtUI框架没有日历组件</div>
+      <div class="c-f5222d">AtUI框架没有日历</div>
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 日历">
-      <div class="c-faad14">ViewUI框架的日历组件需要付费使用</div>
+      <div class="c-faad14">ViewUI框架的日历需要付费使用</div>
     </a-card>
   </div>
 </template>

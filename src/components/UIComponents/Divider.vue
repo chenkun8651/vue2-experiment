@@ -1,5 +1,5 @@
 <template>
-  <!-- 分割线组件 -->
+  <!-- 分割线 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 分割线">
@@ -35,7 +35,7 @@
     </a-card>
     <!-- AtUI -->
     <a-card class="card-margin" title="AtUI 分割线">
-      <div class="c-f5222d">AtUI框架没有分割线组件</div>
+      <div class="c-f5222d">AtUI框架没有分割线</div>
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 分割线">

@@ -1,5 +1,5 @@
 <template>
-  <!-- 走马灯组件 -->
+  <!-- 走马灯 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 走马灯">
@@ -105,7 +105,7 @@
     </a-card>
     <!-- AtUI -->
     <a-card class="card-margin" title="AtUI 走马灯">
-      <div class="c-f5222d">AtUI框架没有走马灯组件</div>
+      <div class="c-f5222d">AtUI框架没有走马灯</div>
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 走马灯">

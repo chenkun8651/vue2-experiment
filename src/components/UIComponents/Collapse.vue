@@ -1,5 +1,5 @@
 <template>
-  <!-- 折叠面板组件 -->
+  <!-- 折叠面板 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 折叠面板">

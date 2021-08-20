@@ -1,5 +1,5 @@
 <template>
-  <!-- 头像组件 -->
+  <!-- 头像 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 头像">
@@ -80,7 +80,7 @@
     </a-card>
     <!-- AtUI -->
     <a-card class="card-margin" title="AtUI 头像">
-      <div class="c-f5222d">AtUI框架没有头像组件</div>
+      <div class="c-f5222d">AtUI框架没有头像</div>
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 头像">

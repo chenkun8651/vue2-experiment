@@ -1,5 +1,5 @@
 <template>
-  <!-- 时间轴组件 -->
+  <!-- 时间轴 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 时间轴">

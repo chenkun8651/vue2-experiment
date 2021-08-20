@@ -1,5 +1,5 @@
 <template>
-  <!-- 按钮组件 -->
+  <!-- 按钮 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 按钮">

@@ -1,5 +1,5 @@
 <template>
-  <!-- 空状态组件 -->
+  <!-- 空状态 -->
   <div>
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 空状态">
@@ -36,11 +36,11 @@
     </a-card>
     <!-- AtUI -->
     <a-card class="card-margin" title="AtUI 空状态">
-      <div class="c-f5222d">AtUI框架没有空状态组件</div>
+      <div class="c-f5222d">AtUI框架没有空状态</div>
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 空状态">
-      <div class="c-f5222d">ViewUI框架没有空状态组件</div>
+      <div class="c-f5222d">ViewUI框架没有空状态</div>
     </a-card>
   </div>
 </template>

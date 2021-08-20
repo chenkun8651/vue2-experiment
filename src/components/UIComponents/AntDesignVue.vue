@@ -1,5 +1,5 @@
 <template>
-  <!-- AntDesignVue特色组件 -->
+  <!-- AntDesignVue特色 -->
   <div>
     <!-- 评论组件 -->
     <a-card class="card-margin" title="AntDesignVue 评论">
