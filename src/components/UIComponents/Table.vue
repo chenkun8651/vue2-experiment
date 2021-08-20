@@ -24,7 +24,7 @@
       </div>
       <div>
         <a-table
-          :columns="tableColumns"
+          :columns="tableColumnsA"
           :data-source="tableDataSource"
           :size="tableSize"
           :bordered="tableBordered"
@@ -80,7 +80,7 @@
       </div>
       <div>
         <el-table
-          :data="tableDataSourceE"
+          :data="tableDataSource"
           :size="tableSizeE"
           :border="tableBorderE"
           :show-header="tableShowHeaderE"
@@ -98,10 +98,10 @@
               </el-popover>
             </template>
           </el-table-column>
-          <el-table-column label="日期" width="200">
+          <el-table-column label="年龄" width="200">
             <template slot-scope="scope">
               <i class="el-icon-time"></i>
-              <span style="margin-left: 10px">{{ scope.row.date }}</span>
+              <span style="margin-left: 10px">{{ scope.row.age }}</span>
             </template>
           </el-table-column>
           <el-table-column label="操作">
@@ -159,8 +159,8 @@
       </div>
       <div>
         <at-table
-          :columns="tableColumnsA"
-          :data="tableDataSourceA"
+          :columns="tableColumnsB"
+          :data="tableDataSource"
           :size="tableSizeA"
           :border="tableBorderA"
           :stripe="tableStripeA"
@@ -176,14 +176,94 @@
     </a-card>
     <!-- ViewUI -->
     <a-card class="card-margin" title="ViewUI 表格">
-      <div class="radio-box"></div>
-      <div></div>
+      <div class="radio-box">
+        <a-radio-group v-model="tableSizeV">
+          <a-radio-button :value="'large'">large</a-radio-button>
+          <a-radio-button :value="'default'">default</a-radio-button>
+          <a-radio-button :value="'small'">small</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="tableBorderV">
+          <a-radio-button :value="true">显示边框</a-radio-button>
+          <a-radio-button :value="false">隐藏边框</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="tableShowHeaderV">
+          <a-radio-button :value="true">显示表头</a-radio-button>
+          <a-radio-button :value="false">隐藏表头</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="tableStripeV">
+          <a-radio-button :value="true">显示斑马条纹</a-radio-button>
+          <a-radio-button :value="false">隐藏斑马条纹</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="tableLoadingV">
+          <a-radio-button :value="true">加载</a-radio-button>
+          <a-radio-button :value="false">完成</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="tableHighlightCurrentRowV">
+          <a-radio-button :value="true">高亮当前行</a-radio-button>
+          <a-radio-button :value="false">不高亮当前行</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="tableDisabledHoverV">
+          <a-radio-button :value="true">开启鼠标悬停高亮</a-radio-button>
+          <a-radio-button :value="false">关闭鼠标悬停高亮</a-radio-button>
+        </a-radio-group>
+      </div>
+      <div>
+        <Table
+          :columns="tableColumnsB"
+          :data="tableDataSource"
+          :size="tableSizeV"
+          :border="tableBorderV"
+          :show-header="tableShowHeaderV"
+          :stripe="tableStripeV"
+          :loading="tableLoadingV"
+          :highlight-row="tableHighlightCurrentRowV"
+          :disabled-hover="tableDisabledHoverV"
+        >
+        </Table>
+      </div>
     </a-card>
   </div>
 </template>
 
 <script>
-const tableColumns = [
+const tableDataSource = [
+  {
+    key: "1",
+    name: "库里",
+    age: 18,
+    address: "深圳市宝安区创业一路",
+    tags: ["大佬", "富有"],
+  },
+  {
+    key: "2",
+    name: "詹姆斯",
+    age: 25,
+    address: "广州市天河区岗顶",
+    tags: ["帅", "富有"],
+  },
+  {
+    key: "3",
+    name: "科比",
+    age: 24,
+    address: "上海市浦东新区",
+    tags: ["大佬", "富有"],
+  },
+  {
+    key: "4",
+    name: "欧文",
+    age: 20,
+    address: "广州市番禺区大学城",
+    tags: ["帅", "大佬"],
+  },
+  {
+    key: "5",
+    name: "托马斯",
+    age: 19,
+    address: "北京市朝阳区",
+    tags: ["大佬"],
+  },
+];
+const tableColumnsA = [
   {
     dataIndex: "name",
     key: "name",
@@ -212,52 +292,7 @@ const tableColumns = [
     scopedSlots: { customRender: "action" },
   },
 ];
-const tableDataSource = [
-  {
-    key: "1",
-    name: "小陈",
-    age: 32,
-    address: "地球",
-    tags: ["帅", "富有"],
-  },
-  {
-    key: "2",
-    name: "宇少",
-    age: 42,
-    address: "地球",
-    tags: ["帅", "大佬"],
-  },
-  {
-    key: "3",
-    name: "胖胖",
-    age: 32,
-    address: "地球",
-    tags: ["帅", "富有"],
-  },
-];
-const tableDataSourceE = [
-  {
-    date: "2016-05-02",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1518 号",
-  },
-  {
-    date: "2016-05-04",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1517 号",
-  },
-  {
-    date: "2016-05-01",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1519 号",
-  },
-  {
-    date: "2016-05-03",
-    name: "王小虎",
-    address: "上海市普陀区金沙江路 1516 号",
-  },
-];
-const tableColumnsA = [
+const tableColumnsB = [
   {
     title: "姓名",
     key: "name",
@@ -271,54 +306,24 @@ const tableColumnsA = [
     key: "address",
   },
 ];
-const tableDataSourceA = [
-  {
-    name: "库里",
-    age: 18,
-    address: "深圳市宝安区创业一路",
-  },
-  {
-    name: "詹姆斯",
-    age: 25,
-    address: "广州市天河区岗顶",
-  },
-  {
-    name: "科比",
-    age: 24,
-    address: "上海市浦东新区",
-  },
-  {
-    name: "欧文",
-    age: 20,
-    address: "广州市番禺区大学城",
-  },
-  {
-    name: "托马斯",
-    age: 19,
-    address: "北京市朝阳区",
-  },
-];
-
 export default {
   data() {
     return {
-      // AntDesignVue
-      tableColumns: tableColumns,
       tableDataSource: tableDataSource,
+      tableColumnsA: tableColumnsA,
+      tableColumnsB: tableColumnsB,
+      // AntDesignVue
       tableSize: "default",
       tableBordered: true,
       tableShowHeader: true,
       tableLoading: false,
       // ElementUI
-      tableDataSourceE: tableDataSourceE,
       tableSizeE: null,
       tableBorderE: true,
       tableShowHeaderE: true,
       tableStripeE: false,
       tableHighlightCurrentRowE: false,
       // AtUI
-      tableColumnsA: tableColumnsA,
-      tableDataSourceA: tableDataSourceA,
       tableSizeA: "normal",
       tableBorderA: true,
       tableStripeA: false,
@@ -328,6 +333,14 @@ export default {
       tableShowPageTotalA: true,
       tableShowPageSizerA: true,
       tableShowPageQuickjumpA: true,
+      // ViewUI
+      tableSizeV: "default",
+      tableBorderV: true,
+      tableShowHeaderV: true,
+      tableStripeV: false,
+      tableLoadingV: false,
+      tableHighlightCurrentRowV: false,
+      tableDisabledHoverV: false,
     };
   },
   methods: {},
