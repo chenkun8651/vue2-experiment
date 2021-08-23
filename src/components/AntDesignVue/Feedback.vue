@@ -4,61 +4,7 @@
     <!-- 警告提示 -->
     <h1 class="title-xy">警告提示</h1>
     <div class="content">
-      <!-- 标准警告提示 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准警告提示</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="alertType">
-              <a-radio-button :value="'success'">成功提示</a-radio-button>
-              <a-radio-button :value="'info'">信息提示</a-radio-button>
-              <a-radio-button :value="'warning'">警告提示</a-radio-button>
-              <a-radio-button :value="'error'">错误提示</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="alertBanner">
-              <a-radio-button :value="false">显示边框</a-radio-button>
-              <a-radio-button :value="true">隐藏边框</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="alertShowIcon">
-              <a-radio-button :value="true">显示提示图标</a-radio-button>
-              <a-radio-button :value="false">隐藏提示图标</a-radio-button>
-            </a-radio-group>
-            <div class="string-set">
-              <span style="margin-right: 5px">自定义提示图标</span>
-              <a-input style="width: 100px" v-model="alertIcon" />
-            </div>
-            <a-radio-group v-model="alertClosable">
-              <a-radio-button :value="true">显示关闭按钮</a-radio-button>
-              <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
-            </a-radio-group>
-            <div class="string-set">
-              <span style="margin-right: 5px">自定义关闭按钮</span>
-              <a-input style="width: 100px" v-model="alertCloseText" />
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置标题</span>
-              <a-input style="width: 200px" v-model="alertMessage" />
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置辅助内容</span>
-              <a-input style="width: 200px" v-model="alertDescription" />
-            </div>
-          </div>
-          <div>
-            <a-alert
-              :message="alertMessage"
-              :description="alertDescription"
-              :banner="alertBanner"
-              :closable="alertClosable"
-              :close-text="alertCloseText"
-              :show-icon="alertShowIcon"
-              :icon="alertIcon"
-              :type="alertType"
-            >
-            </a-alert>
-          </div>
-        </div>
-      </div>
+
     </div>
     <!-- 全局提示 -->
     <h1 class="title-xy">全局提示</h1>
@@ -355,15 +301,6 @@ import { message as ADMessage } from "ant-design-vue";
 export default {
   data() {
     return {
-      // 警告提示
-      alertType: "success",
-      alertBanner: false,
-      alertShowIcon: true,
-      alertIcon: "",
-      alertClosable: true,
-      alertCloseText: "",
-      alertMessage: "警告提示标题",
-      alertDescription: "警告提示辅助内容",
       // 全局提示
       messageType: "success",
       messageDuration: 2,

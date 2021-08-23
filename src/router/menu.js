@@ -7,6 +7,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/AntDesignVue.vue"),
     },
     {
+        key: "alert",
+        name: "警告提示",
+        icon: "inbox",
+        path: "/UIComponents/alert",
+        component: () => import("../components/UIComponents/Alert.vue"),
+    },
+    {
         key: "avatar",
         name: "头像",
         icon: "inbox",
