@@ -219,15 +219,6 @@ export default {
       alertClosableV: true,
     };
   },
-  methods: {
-    focusAvatarSize() {
-      if (typeof this.avatarSizeE === "string") {
-        this.avatarSizeE = 32;
-      }
-      if (typeof this.avatarSizeV === "string") {
-        this.avatarSizeV = 32;
-      }
-    },
-  },
+  methods: {},
 };
 </script>
