@@ -1,74 +1,6 @@
 <template>
   <!-- 反馈组件 -->
   <div>
-    <!-- 通知提醒框 -->
-    <h1 class="title-xy">通知提醒框</h1>
-    <div class="content">
-      <!-- 标准通知提醒框 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准通知提醒框</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="notificationType">
-              <a-radio-button :value="'success'">成功提示</a-radio-button>
-              <a-radio-button :value="'info'">信息提示</a-radio-button>
-              <a-radio-button :value="'warning'">警告提示</a-radio-button>
-              <a-radio-button :value="'error'">错误提示</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="notificationPlacement">
-              <a-radio-button :value="'topRight'">右上弹出</a-radio-button>
-              <a-radio-button :value="'topLeft'">左上弹出</a-radio-button>
-              <a-radio-button :value="'bottomRight'">右下弹出</a-radio-button>
-              <a-radio-button :value="'bottomLeft'">左下弹出</a-radio-button>
-            </a-radio-group>
-            <div class="number-set">
-              <span style="margin-right: 5px">设置自动关闭的延时</span>
-              <a-input-number
-                style="width: 100px"
-                v-model="notificationDuration"
-              />
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置标题</span>
-              <a-input style="width: 200px" v-model="notificationMessage" />
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置内容</span>
-              <a-input style="width: 200px" v-model="notificationDescription" />
-            </div>
-            <div
-              v-if="
-                notificationPlacement === 'topRight' ||
-                notificationPlacement === 'topLeft'
-              "
-              class="string-set"
-            >
-              <span style="margin-right: 5px">
-                设置弹出时通知框离顶部的距离
-              </span>
-              <a-input style="width: 200px" v-model="notificationTop" />
-            </div>
-            <div
-              v-if="
-                notificationPlacement === 'bottomRight' ||
-                notificationPlacement === 'bottomLeft'
-              "
-              class="string-set"
-            >
-              <span style="margin-right: 5px">
-                设置弹出时通知框离底部的距离
-              </span>
-              <a-input style="width: 200px" v-model="notificationBottom" />
-            </div>
-          </div>
-          <div>
-            <a-button type="primary" @click="popNotification">
-              通知提醒框按钮
-            </a-button>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- 气泡确认框 -->
     <h1 class="title-xy">气泡确认框</h1>
     <div class="content">
@@ -262,14 +194,6 @@
 export default {
   data() {
     return {
-      // 通知提醒框
-      notificationType: "success",
-      notificationPlacement: "topRight",
-      notificationDuration: 4,
-      notificationMessage: "通知提醒框标题",
-      notificationDescription: "通知提醒框内容",
-      notificationBottom: "24px",
-      notificationTop: "24px",
       // 气泡确认框
       popconfirmDisabled: false,
       popconfirmPlacement: "top",
@@ -295,35 +219,6 @@ export default {
       modalWidth: 520,
     };
   },
-  methods: {
-    // 弹出通知提醒按钮
-    popNotification() {
-      const config = {
-        placement: this.notificationPlacement,
-        duration: this.notificationDuration,
-        message: this.notificationMessage,
-        description: this.notificationDescription,
-        top: this.notificationTop,
-        bottom: this.notificationBottom,
-      };
-      switch (this.notificationType) {
-        case "success":
-          this.$notification.success(config);
-          break;
-        case "info":
-          this.$notification.info(config);
-          break;
-        case "warning":
-          this.$notification.warning(config);
-          break;
-        case "error":
-          this.$notification.error(config);
-          break;
-        default:
-          this.$notification.info(config);
-          break;
-      }
-    },
-  },
+  methods: {},
 };
 </script>
