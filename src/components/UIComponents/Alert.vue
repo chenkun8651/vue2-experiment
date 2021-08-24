@@ -139,7 +139,7 @@
           <a-input style="width: 200px" v-model="alertDescriptionA" />
         </div>
       </div>
-      <div class="c-f5222d">
+      <div>
         <at-alert
           :type="alertTypeA"
           :show-icon="alertShowIconA"

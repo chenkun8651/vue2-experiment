@@ -105,6 +105,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Message.vue"),
     },
     {
+        key: "notification",
+        name: "通知提示",
+        icon: "inbox",
+        path: "/UIComponents/notification",
+        component: () => import("../components/UIComponents/Notification.vue"),
+    },
+    {
         key: "popover",
         name: "弹出框",
         icon: "inbox",
