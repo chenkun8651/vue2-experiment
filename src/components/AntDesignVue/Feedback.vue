@@ -1,42 +1,6 @@
 <template>
   <!-- 反馈组件 -->
   <div>
-    <!-- 警告提示 -->
-    <h1 class="title-xy">警告提示</h1>
-    <div class="content">
-
-    </div>
-    <!-- 全局提示 -->
-    <h1 class="title-xy">全局提示</h1>
-    <div class="content">
-      <!-- 标准全局提示 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准全局提示</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="messageType">
-              <a-radio-button :value="'success'">成功提示</a-radio-button>
-              <a-radio-button :value="'info'">信息提示</a-radio-button>
-              <a-radio-button :value="'warning'">警告提示</a-radio-button>
-              <a-radio-button :value="'error'">错误提示</a-radio-button>
-            </a-radio-group>
-            <div class="number-set">
-              <span style="margin-right: 5px">设置自动关闭的延时</span>
-              <a-input-number style="width: 100px" v-model="messageDuration" />
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置内容</span>
-              <a-input style="width: 200px" v-model="messageContent" />
-            </div>
-          </div>
-          <div>
-            <a-button type="primary" @click="popMessage">
-              全局提示按钮
-            </a-button>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- 通知提醒框 -->
     <h1 class="title-xy">通知提醒框</h1>
     <div class="content">
@@ -295,16 +259,9 @@
 </template>
 
 <script>
-import { message as ADMessage } from "ant-design-vue";
-// import { Message as ELMessage } from "element-ui";
-
 export default {
   data() {
     return {
-      // 全局提示
-      messageType: "success",
-      messageDuration: 2,
-      messageContent: "全局提示内容",
       // 通知提醒框
       notificationType: "success",
       notificationPlacement: "topRight",
@@ -339,30 +296,6 @@ export default {
     };
   },
   methods: {
-    // 弹出全局消息提示
-    popMessage() {
-      const config = {
-        content: this.messageContent,
-        duration: this.messageDuration,
-      };
-      switch (this.messageType) {
-        case "success":
-          ADMessage.success(config);
-          break;
-        case "info":
-          ADMessage.info(config);
-          break;
-        case "warning":
-          ADMessage.warning(config);
-          break;
-        case "error":
-          ADMessage.error(config);
-          break;
-        default:
-          ADMessage.info(config);
-          break;
-      }
-    },
     // 弹出通知提醒按钮
     popNotification() {
       const config = {

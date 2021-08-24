@@ -15,19 +15,19 @@
           <a-radio-button :value="true">隐藏边框</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="alertShowIcon">
-          <a-radio-button :value="true">显示提示图标</a-radio-button>
-          <a-radio-button :value="false">隐藏提示图标</a-radio-button>
+          <a-radio-button :value="true">显示图标</a-radio-button>
+          <a-radio-button :value="false">隐藏图标</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
-          <span style="margin-right: 5px">自定义提示图标</span>
+        <div v-show="alertShowIcon" class="string-set">
+          <span style="margin-right: 5px">自定义图标</span>
           <a-input style="width: 100px" v-model="alertIcon" />
         </div>
         <a-radio-group v-model="alertClosable">
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
-          <span style="margin-right: 5px">自定义关闭按钮</span>
+        <div v-show="alertClosable" class="string-set">
+          <span style="margin-right: 5px">自定义关闭文本</span>
           <a-input style="width: 100px" v-model="alertCloseText" />
         </div>
         <div class="string-set">
@@ -41,14 +41,14 @@
       </div>
       <div>
         <a-alert
-          :message="alertMessage"
-          :description="alertDescription"
+          :type="alertType"
           :banner="alertBanner"
-          :closable="alertClosable"
-          :close-text="alertCloseText"
           :show-icon="alertShowIcon"
           :icon="alertIcon"
-          :type="alertType"
+          :closable="alertClosable"
+          :close-text="alertCloseText"
+          :message="alertMessage"
+          :description="alertDescription"
         >
         </a-alert>
       </div>
@@ -56,32 +56,32 @@
     <!-- ElementUI -->
     <a-card class="card-margin" title="ElementUI 警告提示">
       <div class="radio-box">
-        <a-radio-group v-model="alertTypeE">
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-          <a-radio-button :value="'info'">info</a-radio-button>
-          <a-radio-button :value="'error'">error</a-radio-button>
-        </a-radio-group>
         <a-radio-group v-model="alertEffectE">
           <a-radio-button :value="'light'">light</a-radio-button>
           <a-radio-button :value="'dark'">dark</a-radio-button>
         </a-radio-group>
+        <a-radio-group v-model="alertTypeE">
+          <a-radio-button :value="'success'">success</a-radio-button>
+          <a-radio-button :value="'info'">info</a-radio-button>
+          <a-radio-button :value="'warning'">warning</a-radio-button>
+          <a-radio-button :value="'error'">error</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="alertCenterE">
+          <a-radio-button :value="true">显示文本居中</a-radio-button>
+          <a-radio-button :value="false">隐藏文本居中</a-radio-button>
+        </a-radio-group>
         <a-radio-group v-model="alertShowIconE">
-          <a-radio-button :value="true">显示提示图标</a-radio-button>
-          <a-radio-button :value="false">隐藏提示图标</a-radio-button>
+          <a-radio-button :value="true">显示图标</a-radio-button>
+          <a-radio-button :value="false">隐藏图标</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="alertClosableE">
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
-          <span style="margin-right: 5px">自定义关闭按钮</span>
+        <div v-show="alertClosableE" class="string-set">
+          <span style="margin-right: 5px">自定义关闭文本</span>
           <a-input style="width: 100px" v-model="alertCloseTextE" />
         </div>
-        <a-radio-group v-model="alertCenterE">
-          <a-radio-button :value="true">显示文本居中</a-radio-button>
-          <a-radio-button :value="false">隐藏文本居中</a-radio-button>
-        </a-radio-group>
         <div class="string-set">
           <span style="margin-right: 5px">设置标题</span>
           <a-input style="width: 200px" v-model="alertTitleE" />
@@ -93,12 +93,12 @@
       </div>
       <div>
         <el-alert
-          :type="alertTypeE"
           :effect="alertEffectE"
+          :type="alertTypeE"
+          :center="alertCenterE"
           :show-icon="alertShowIconE"
           :closable="alertClosableE"
           :close-text="alertCloseTextE"
-          :center="alertCenterE"
           :title="alertTitleE"
           :description="alertDescriptionE"
         >
@@ -115,19 +115,19 @@
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="alertShowIconA">
-          <a-radio-button :value="true">显示提示图标</a-radio-button>
-          <a-radio-button :value="false">隐藏提示图标</a-radio-button>
+          <a-radio-button :value="true">显示图标</a-radio-button>
+          <a-radio-button :value="false">隐藏图标</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
-          <span style="margin-right: 5px">自定义提示图标</span>
+        <div v-show="alertShowIconA" class="string-set">
+          <span style="margin-right: 5px">自定义图标</span>
           <a-input style="width: 100px" v-model="alertIconA" />
         </div>
         <a-radio-group v-model="alertClosableA">
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
-          <span style="margin-right: 5px">自定义关闭按钮</span>
+        <div v-show="alertClosableA" class="string-set">
+          <span style="margin-right: 5px">自定义关闭文本</span>
           <a-input style="width: 100px" v-model="alertCloseTextA" />
         </div>
         <div class="string-set">
@@ -162,13 +162,21 @@
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="alertShowIconV">
-          <a-radio-button :value="true">显示提示图标</a-radio-button>
-          <a-radio-button :value="false">隐藏提示图标</a-radio-button>
+          <a-radio-button :value="true">显示图标</a-radio-button>
+          <a-radio-button :value="false">隐藏图标</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="alertClosableV">
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
+        <div class="string-set">
+          <span style="margin-right: 5px">设置标题</span>
+          <a-input style="width: 200px" v-model="alertMessageV" />
+        </div>
+        <div class="string-set">
+          <span style="margin-right: 5px">设置辅助内容</span>
+          <a-input style="width: 200px" v-model="alertDescriptionV" />
+        </div>
       </div>
       <div>
         <Alert
@@ -176,7 +184,8 @@
           :show-icon="alertShowIconV"
           :closable="alertClosableV"
         >
-          警告提示辅助内容
+          {{ alertMessageV }}
+          <span slot="desc">{{ alertDescriptionV }}</span>
         </Alert>
       </div>
     </a-card>
@@ -189,34 +198,36 @@ export default {
     return {
       // AntDesignVue
       alertType: "success",
-      alertBanner: true,
-      alertShowIcon: true,
+      alertBanner: false,
+      alertShowIcon: false,
       alertIcon: "",
-      alertClosable: true,
+      alertClosable: false,
       alertCloseText: "",
       alertMessage: "警告提示标题",
       alertDescription: "警告提示辅助内容",
       // ElementUI
-      alertTypeE: "success",
       alertEffectE: "light",
-      alertShowIconE: true,
-      alertClosableE: true,
-      alertCloseTextE: "",
+      alertTypeE: "success",
       alertCenterE: false,
+      alertShowIconE: false,
+      alertClosableE: false,
+      alertCloseTextE: "",
       alertTitleE: "警告提示标题",
       alertDescriptionE: "警告提示辅助内容",
       // AtUI
       alertTypeA: "success",
-      alertShowIconA: true,
+      alertShowIconA: false,
       alertIconA: "",
-      alertClosableA: true,
+      alertClosableA: false,
       alertCloseTextA: "",
       alertMessageA: "警告提示标题",
       alertDescriptionA: "警告提示辅助内容",
       // ViewUI
       alertTypeV: "success",
-      alertShowIconV: true,
-      alertClosableV: true,
+      alertShowIconV: false,
+      alertClosableV: false,
+      alertMessageV: "警告提示标题",
+      alertDescriptionV: "警告提示辅助内容",
     };
   },
   methods: {},

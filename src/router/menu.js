@@ -98,6 +98,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/List.vue"),
     },
     {
+        key: "message",
+        name: "消息提示",
+        icon: "inbox",
+        path: "/UIComponents/message",
+        component: () => import("../components/UIComponents/Message.vue"),
+    },
+    {
         key: "popover",
         name: "弹出框",
         icon: "inbox",
