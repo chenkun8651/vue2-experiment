@@ -7,6 +7,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/AntDesignVue.vue"),
     },
     {
+        key: "affix",
+        name: "固钉",
+        icon: "inbox",
+        path: "/UIComponents/affix",
+        component: () => import("../components/UIComponents/Affix.vue"),
+    },
+    {
         key: "alert",
         name: "警告提示",
         icon: "inbox",
@@ -33,6 +40,13 @@ export const UIComponentsMenu = [
         icon: "inbox",
         path: "/UIComponents/button",
         component: () => import("../components/UIComponents/Button.vue"),
+    },
+    {
+        key: "breadcrumb",
+        name: "面包屑",
+        icon: "inbox",
+        path: "/UIComponents/breadcrumb",
+        component: () => import("../components/UIComponents/Breadcrumb.vue"),
     },
     {
         key: "calendar",
@@ -91,6 +105,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Divider.vue"),
     },
     {
+        key: "dropdown",
+        name: "下拉菜单",
+        icon: "inbox",
+        path: "/UIComponents/dropdown",
+        component: () => import("../components/UIComponents/Dropdown.vue"),
+    },
+    {
         key: "empty",
         name: "空状态",
         icon: "inbox",
@@ -110,6 +131,27 @@ export const UIComponentsMenu = [
         icon: "inbox",
         path: "/UIComponents/icon",
         component: () => import("../components/UIComponents/Icon.vue"),
+    },
+    {
+        key: "menu",
+        name: "菜单",
+        icon: "inbox",
+        path: "/UIComponents/menu",
+        component: () => import("../components/UIComponents/Menu.vue"),
+    },
+    {
+        key: "pageHeader",
+        name: "页头",
+        icon: "inbox",
+        path: "/UIComponents/pageHeader",
+        component: () => import("../components/UIComponents/PageHeader.vue"),
+    },
+    {
+        key: "pagination",
+        name: "分页",
+        icon: "inbox",
+        path: "/UIComponents/pagination",
+        component: () => import("../components/UIComponents/Pagination.vue"),
     },
     {
         key: "list",
@@ -175,6 +217,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Spin.vue"),
     },
     {
+        key: "steps",
+        name: "步骤条",
+        icon: "inbox",
+        path: "/UIComponents/steps",
+        component: () => import("../components/UIComponents/Steps.vue"),
+    },
+    {
         key: "switch",
         name: "开关",
         icon: "inbox",
@@ -187,6 +236,13 @@ export const UIComponentsMenu = [
         icon: "inbox",
         path: "/UIComponents/table",
         component: () => import("../components/UIComponents/Table.vue"),
+    },
+    {
+        key: "tabs",
+        name: "标签页",
+        icon: "inbox",
+        path: "/UIComponents/tabs",
+        component: () => import("../components/UIComponents/Tabs.vue"),
     },
     {
         key: "tag",
