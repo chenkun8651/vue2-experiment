@@ -70,6 +70,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Descriptions.vue"),
     },
     {
+        key: "drawer",
+        name: "抽屉",
+        icon: "inbox",
+        path: "/UIComponents/drawer",
+        component: () => import("../components/UIComponents/Drawer.vue"),
+    },
+    {
         key: "divider",
         name: "分割线",
         icon: "inbox",
@@ -112,18 +119,18 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Notification.vue"),
     },
     {
-        key: "popover",
-        name: "弹出框",
-        icon: "inbox",
-        path: "/UIComponents/popover",
-        component: () => import("../components/UIComponents/Popover.vue"),
-    },
-    {
         key: "popConfirm",
         name: "弹出确认框",
         icon: "inbox",
         path: "/UIComponents/popConfirm",
         component: () => import("../components/UIComponents/PopConfirm.vue"),
+    },
+    {
+        key: "popover",
+        name: "弹出框",
+        icon: "inbox",
+        path: "/UIComponents/popover",
+        component: () => import("../components/UIComponents/Popover.vue"),
     },
     {
         key: "progress",
