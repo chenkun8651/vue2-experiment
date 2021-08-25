@@ -1,47 +1,6 @@
 <template>
   <!-- 反馈组件 -->
   <div>
-    <!-- 气泡确认框 -->
-    <h1 class="title-xy">气泡确认框</h1>
-    <div class="content">
-      <!-- 标准气泡确认框 -->
-      <div class="content-item">
-        <h3 class="title2-xy">标准气泡确认框</h3>
-        <div class="content2">
-          <div class="radio-box">
-            <a-radio-group v-model="popconfirmDisabled">
-              <a-radio-button :value="true">禁用</a-radio-button>
-              <a-radio-button :value="false">启用</a-radio-button>
-            </a-radio-group>
-            <a-radio-group v-model="popconfirmPlacement">
-              <a-radio-button :value="'top'">上方弹出</a-radio-button>
-              <a-radio-button :value="'bottom'">下方弹出</a-radio-button>
-              <a-radio-button :value="'left'">左边弹出</a-radio-button>
-              <a-radio-button :value="'right'">右边弹出</a-radio-button>
-            </a-radio-group>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置确定按钮文本</span>
-              <a-input style="width: 100px" v-model="popconfirmOkText" />
-            </div>
-            <div class="string-set">
-              <span style="margin-right: 5px">设置取消按钮文本</span>
-              <a-input style="width: 100px" v-model="popconfirmCancelText" />
-            </div>
-          </div>
-          <div>
-            <a-popconfirm
-              title="标准气泡确认框"
-              :disabled="popconfirmDisabled"
-              :placement="popconfirmPlacement"
-              :ok-text="popconfirmOkText"
-              :cancel-text="popconfirmCancelText"
-            >
-              <a-button type="primary">气泡确认框按钮</a-button>
-            </a-popconfirm>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- 抽屉 -->
     <h1 class="title-xy">抽屉</h1>
     <div class="content">
@@ -194,11 +153,6 @@
 export default {
   data() {
     return {
-      // 气泡确认框
-      popconfirmDisabled: false,
-      popconfirmPlacement: "top",
-      popconfirmOkText: "确定",
-      popconfirmCancelText: "取消",
       // 抽屉
       drawerVisible: false,
       drawerPlacement: "right",

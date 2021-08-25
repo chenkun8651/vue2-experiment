@@ -1,6 +1,7 @@
 <template>
   <!-- 通知提示 -->
   <div>
+    <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 通知提示">
       <div class="radio-box">
         <a-radio-group v-model="notificationType">
@@ -142,7 +143,7 @@ export default {
       // AntDesignVue
       notificationType: "success",
       notificationPlacement: "topRight",
-      notificationDuration: 4,
+      notificationDuration: 8,
       notificationMessage: "通知提醒框标题",
       notificationDescription: "通知提醒框内容",
       notificationBottom: "24px",
@@ -151,14 +152,14 @@ export default {
       notificationTypeE: "success",
       notificationPositionE: "top-right",
       notificationShowCloseE: false,
-      notificationDurationE: 4000,
+      notificationDurationE: 8000,
       notificationTitleE: "通知提醒框标题",
       notificationMessageE: "通知提醒框内容",
       notificationOffsetE: 0,
       // AtUI
       notificationTypeA: "success",
       notificationShowCloseA: false,
-      notificationDurationA: 4000,
+      notificationDurationA: 8000,
       notificationTitleA: "通知提醒框标题",
       notificationMessageA: "通知提醒框内容",
     };

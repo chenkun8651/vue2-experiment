@@ -119,6 +119,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Popover.vue"),
     },
     {
+        key: "popConfirm",
+        name: "弹出确认框",
+        icon: "inbox",
+        path: "/UIComponents/popConfirm",
+        component: () => import("../components/UIComponents/PopConfirm.vue"),
+    },
+    {
         key: "progress",
         name: "进度条",
         icon: "inbox",
