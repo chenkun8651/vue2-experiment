@@ -56,11 +56,25 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Carousel.vue"),
     },
     {
+        key: "checkbox",
+        name: "多选框",
+        icon: "inbox",
+        path: "/UIComponents/checkbox",
+        component: () => import("../components/UIComponents/Checkbox.vue"),
+    },
+    {
         key: "collapse",
         name: "折叠面板",
         icon: "inbox",
         path: "/UIComponents/collapse",
         component: () => import("../components/UIComponents/Collapse.vue"),
+    },
+    {
+        key: "datePicker",
+        name: "日期选择框",
+        icon: "inbox",
+        path: "/UIComponents/datePicker",
+        component: () => import("../components/UIComponents/DatePicker.vue"),
     },
     {
         key: "descriptions",
@@ -84,6 +98,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Empty.vue"),
     },
     {
+        key: "input",
+        name: "输入框",
+        icon: "inbox",
+        path: "/UIComponents/input",
+        component: () => import("../components/UIComponents/Input.vue"),
+    },
+    {
         key: "icon",
         name: "图标",
         icon: "inbox",
@@ -105,6 +126,27 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Popover.vue"),
     },
     {
+        key: "radio",
+        name: "单选框",
+        icon: "inbox",
+        path: "/UIComponents/radio",
+        component: () => import("../components/UIComponents/Radio.vue"),
+    },
+    {
+        key: "rate",
+        name: "评分",
+        icon: "inbox",
+        path: "/UIComponents/rate",
+        component: () => import("../components/UIComponents/Rate.vue"),
+    },
+    {
+        key: "select",
+        name: "选择框",
+        icon: "inbox",
+        path: "/UIComponents/select",
+        component: () => import("../components/UIComponents/Select.vue"),
+    },
+    {
         key: "progress",
         name: "进度条",
         icon: "inbox",
@@ -119,11 +161,25 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Skeleton.vue"),
     },
     {
+        key: "slider",
+        name: "滑动输入条",
+        icon: "inbox",
+        path: "/UIComponents/slider",
+        component: () => import("../components/UIComponents/Slider.vue"),
+    },
+    {
         key: "spin",
         name: "加载",
         icon: "inbox",
         path: "/UIComponents/spin",
         component: () => import("../components/UIComponents/Spin.vue"),
+    },
+    {
+        key: "switch",
+        name: "开关",
+        icon: "inbox",
+        path: "/UIComponents/switch",
+        component: () => import("../components/UIComponents/Switch.vue"),
     },
     {
         key: "table",
@@ -145,6 +201,13 @@ export const UIComponentsMenu = [
         icon: "inbox",
         path: "/UIComponents/timeline",
         component: () => import("../components/UIComponents/Timeline.vue"),
+    },
+    {
+        key: "timePicker",
+        name: "时间选择框",
+        icon: "inbox",
+        path: "/UIComponents/timePicker",
+        component: () => import("../components/UIComponents/TimePicker.vue"),
     },
     {
         key: "tooltip",
