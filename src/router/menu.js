@@ -112,6 +112,13 @@ export const UIComponentsMenu = [
         component: () => import("../components/UIComponents/Message.vue"),
     },
     {
+        key: "modal",
+        name: "对话框",
+        icon: "inbox",
+        path: "/UIComponents/modal",
+        component: () => import("../components/UIComponents/Modal.vue"),
+    },
+    {
         key: "notification",
         name: "通知提示",
         icon: "inbox",
