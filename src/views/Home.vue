@@ -1,12 +1,9 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-  </div>
+  <div>主页</div>
 </template>
 
 <script>
 export default {
   name: "Home",
-  components: {},
 };
 </script>

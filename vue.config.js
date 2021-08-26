@@ -5,6 +5,7 @@ module.exports = {
     host: "0.0.0.0",
     port: 10501,
   },
+
   // Webpack配置
   configureWebpack: {
     resolve: {
@@ -13,4 +14,8 @@ module.exports = {
       }
     }
   },
+
+  transpileDependencies: [
+    'vuetify'
+  ]
 }
