@@ -67,10 +67,7 @@ export default {
       (this.timer = setTimeout(() => {
         this.$refs.ul.setAttribute(
           "style",
-          `
-        animation: none;
-        transform: translateY(calc(var(--i) * -9.09%))
-      `
+          `animation: none;transform: translateY(calc(var(--i) * -9.09%))`
         );
       }, this.delay * 1000));
   },

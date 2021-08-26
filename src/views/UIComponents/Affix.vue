@@ -5,33 +5,42 @@
     <a-card class="card-margin" title="AntDesignVue 固钉">
       <div class="radio-box">
         <div class="number-set">
-          <span style="margin-right: 5px">顶部偏移量</span>
-          <a-input-number style="width: 100px" v-model="affixTop" />
-        </div>
-        <div class="number-set">
-          <span style="margin-right: 5px">底部偏移量</span>
-          <a-input-number style="width: 100px" v-model="affixBottom" />
+          <span style="margin-right: 5px">设置顶部触发偏移量</span>
+          <a-input-number style="width: 100px" v-model="affixTop" :min="0" />
         </div>
       </div>
       <div>
-        <a-affix style="margin-bottom: 10px" :offset-top="affixTop">
-          <a-button type="primary" @click="affixTop += 10">
-            添加固钉到窗口顶部触发的偏移量
-          </a-button>
-        </a-affix>
-        <a-affix :offset-bottom="affixBottom">
-          <a-button type="primary" @click="affixBottom += 10">
-            添加固钉到窗口底部触发的偏移量
-          </a-button>
+        <a-affix :offset-top="affixTop">
+          <a-button>AntDesignVue固钉</a-button>
         </a-affix>
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 固钉"></a-card>
+    <a-card class="card-margin" title="ElementUI 固钉">
+      <div class="c-f5222d">ElementUI框架没有固钉</div>
+    </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 固钉"></a-card>
+    <a-card class="card-margin" title="AtUI 固钉">
+      <div class="c-f5222d">AtUI框架没有固钉</div>
+    </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 固钉"></a-card>
+    <a-card class="card-margin" title="ViewUI 固钉">
+      <div class="radio-box">
+        <div class="number-set">
+          <span style="margin-right: 5px">设置顶部触发偏移量</span>
+          <a-input-number
+            style="width: 100px"
+            v-model="affixOffsetTopV"
+            :min="0"
+          />
+        </div>
+      </div>
+      <div>
+        <Affix :offset-top="affixOffsetTopV">
+          <Button>ViewUI固钉</Button>
+        </Affix>
+      </div>
+    </a-card>
   </div>
 </template>
 
@@ -40,11 +49,9 @@ export default {
   data() {
     return {
       // AntDesignVue
-      affixTop: 300,
-      affixBottom: 350,
-      // ElementUI
-      // AtUI
+      affixTop: 330,
       // ViewUI
+      affixOffsetTopV: 860,
     };
   },
   methods: {},
