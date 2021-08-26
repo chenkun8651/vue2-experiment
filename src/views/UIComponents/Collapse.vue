@@ -5,8 +5,8 @@
     <a-card class="card-margin" title="AntDesignVue 折叠面板">
       <div class="radio-box">
         <a-radio-group v-model="collapseBordered">
-          <a-radio-button :value="true">显示边框</a-radio-button>
-          <a-radio-button :value="false">隐藏边框</a-radio-button>
+          <a-radio-button :value="true">普通风格</a-radio-button>
+          <a-radio-button :value="false">极简风格</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="collapseAccordion">
           <a-radio-button :value="false">普通折叠面板</a-radio-button>
