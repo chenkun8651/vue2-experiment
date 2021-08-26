@@ -50,7 +50,7 @@ export default {
 .phone-nav {
   display: none !important;
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   .pc-nav {
     display: none;
   }
