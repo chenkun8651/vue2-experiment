@@ -10,8 +10,8 @@
           <a-radio-button :value="'small'">small</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="descriptionsLayout">
-          <a-radio-button :value="'horizontal'">水平布局</a-radio-button>
-          <a-radio-button :value="'vertical'">垂直布局</a-radio-button>
+          <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
+          <a-radio-button :value="'vertical'">vertical</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="descriptionsBordered">
           <a-radio-button :value="true">显示边框</a-radio-button>
@@ -50,8 +50,8 @@
           <a-radio-button :value="'mini'">mini</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="descriptionsDirectionE">
-          <a-radio-button :value="'horizontal'">水平布局</a-radio-button>
-          <a-radio-button :value="'vertical'">垂直布局</a-radio-button>
+          <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
+          <a-radio-button :value="'vertical'">vertical</a-radio-button>
         </a-radio-group>
         <a-radio-group v-model="descriptionsBorderE">
           <a-radio-button :value="true">显示边框</a-radio-button>

@@ -14,9 +14,9 @@
         </a-radio-group>
       </div>
       <div>
-        <p>一段文字1</p>
+        <p>分割内容上半部分</p>
         <a-divider :type="dividerType" :dashed="dividerDashed"></a-divider>
-        <p>一段文字2</p>
+        <p>分割内容下半部分</p>
       </div>
     </a-card>
     <!-- ElementUI -->
@@ -28,9 +28,9 @@
         </a-radio-group>
       </div>
       <div>
-        <p>一段文字1</p>
+        <p>分割内容上半部分</p>
         <el-divider :direction="dividerDirectionE"></el-divider>
-        <p>一段文字2</p>
+        <p>分割内容下半部分</p>
       </div>
     </a-card>
     <!-- AtUI -->
@@ -50,9 +50,9 @@
         </a-radio-group>
       </div>
       <div>
-        <p>一段文字1</p>
+        <p>分割内容上半部分</p>
         <Divider :type="dividerTypeV" :dashed="dividerDashedV"></Divider>
-        <p>一段文字2</p>
+        <p>分割内容下半部分</p>
       </div>
     </a-card>
   </div>
