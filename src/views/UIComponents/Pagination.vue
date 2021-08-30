@@ -34,7 +34,20 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 分页"></a-card>
+    <a-card class="card-margin" title="ElementUI 分页">
+      <div>
+        <el-pagination
+          :background="background"
+          :small="small"
+          :disabled="disabled"
+          :page-size="20"
+          :page-sizes="[10, 20, 30, 40, 50]"
+          layout="prev, pager, next"
+          :total="50"
+        >
+        </el-pagination>
+      </div>
+    </a-card>
     <!-- AtUI -->
     <a-card class="card-margin" title="AtUI 分页"></a-card>
     <!-- ViewUI -->
