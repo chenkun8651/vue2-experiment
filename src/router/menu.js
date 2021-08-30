@@ -141,7 +141,7 @@ export const UIComponentsMenu = [
     },
     {
         key: "menu",
-        name: "菜单",
+        name: "导航菜单",
         icon: "inbox",
         path: "/UIComponents/menu",
         component: () => import("../views/UIComponents/Menu.vue"),
