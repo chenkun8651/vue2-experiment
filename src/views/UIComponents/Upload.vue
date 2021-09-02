@@ -4,64 +4,153 @@
     <!-- AntDesignVue -->
     <a-card class="card-margin" title="AntDesignVue 上传">
       <div class="radio-box">
-        <a-radio-group v-model="uploadDisabled">
+        <a-radio-group v-model="AntDesignVue.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
         </a-radio-group>
-        <a-radio-group v-model="uploadListType">
-          <a-radio-button :value="'text'">文本模式</a-radio-button>
-          <a-radio-button :value="'picture'">图片模式</a-radio-button>
+        <a-radio-group v-model="AntDesignVue.listType">
+          <a-radio-button :value="'text'">text</a-radio-button>
+          <a-radio-button :value="'picture'">picture</a-radio-button>
           <a-radio-button :value="'picture-card'">
-            图片卡片模式
+            picture-card
           </a-radio-button>
         </a-radio-group>
-        <a-radio-group v-model="uploadMultiple">
+        <a-radio-group v-model="AntDesignVue.multiple">
           <a-radio-button :value="true">开启多选</a-radio-button>
           <a-radio-button :value="false">关闭多选</a-radio-button>
         </a-radio-group>
-        <a-radio-group v-model="uploadDirectory">
+        <a-radio-group v-model="AntDesignVue.directory">
           <a-radio-button :value="true">支持上传文件文件夹</a-radio-button>
-          <a-radio-button :value="false"> 不支持上传文件文件夹 </a-radio-button>
+          <a-radio-button :value="false">不支持上传文件文件夹</a-radio-button>
         </a-radio-group>
-        <a-radio-group v-model="uploadShowUploadList">
+        <a-radio-group v-model="AntDesignVue.showUploadList">
           <a-radio-button :value="true">显示上传列表</a-radio-button>
           <a-radio-button :value="false">不显示上传列表</a-radio-button>
         </a-radio-group>
-        <a-radio-group v-model="uploadOpenFileDialogOnClick">
+        <a-radio-group v-model="AntDesignVue.openFileDialogOnClick">
           <a-radio-button :value="true">显示文件上传对话框</a-radio-button>
-          <a-radio-button :value="false"> 不显示文件上传对话框 </a-radio-button>
+          <a-radio-button :value="false">不显示文件上传对话框</a-radio-button>
         </a-radio-group>
       </div>
       <div>
         <a-upload
           class="avatar-uploader"
-          name="avatar"
-          action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+          :disabled="AntDesignVue.disabled"
+          :list-type="AntDesignVue.listType"
+          :multiple="AntDesignVue.multiple"
+          :directory="AntDesignVue.directory"
+          :show-upload-list="AntDesignVue.showUploadList"
+          :open-file-dialog-on-click="AntDesignVue.openFileDialogOnClick"
+          :action="'https://www.mocky.io/v2/5cc8019d300000980a055e76'"
           :headers="{
             authorization: 'authorization-text',
           }"
-          :disabled="uploadDisabled"
-          :list-type="uploadListType"
-          :multiple="uploadMultiple"
-          :directory="uploadDirectory"
-          :show-upload-list="uploadShowUploadList"
-          :open-file-dialog-on-click="uploadOpenFileDialogOnClick"
-          :before-upload="uploadBeforeUploadImage"
+          :before-upload="beforeUploadImage"
           @change="uploadChangeImage"
         >
-          <img v-if="uploadImageUrl" :src="uploadImageUrl" />
+          <img v-if="AntDesignVue.imageUrl" :src="AntDesignVue.imageUrl" />
           <a-button v-else>
-            <a-icon :type="uploadLoading ? 'loading' : 'upload'" />点击上传
+            <a-icon :type="AntDesignVue.loading ? 'loading' : 'upload'" />
+            点击上传
           </a-button>
         </a-upload>
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 上传"></a-card>
+    <a-card class="card-margin" title="ElementUI 上传">
+      <div class="radio-box">
+        <a-radio-group v-model="ElementUI.disabled">
+          <a-radio-button :value="true">禁用</a-radio-button>
+          <a-radio-button :value="false">启用</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="ElementUI.listType">
+          <a-radio-button :value="'text'">text</a-radio-button>
+          <a-radio-button :value="'picture'">picture</a-radio-button>
+          <a-radio-button :value="'picture-card'">
+            picture-card
+          </a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="ElementUI.drag">
+          <a-radio-button :value="true">支持拖拽上传</a-radio-button>
+          <a-radio-button :value="false">不支持拖拽上传</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="ElementUI.multiple">
+          <a-radio-button :value="true">开启多选</a-radio-button>
+          <a-radio-button :value="false">关闭多选</a-radio-button>
+        </a-radio-group>
+        <div class="number-set">
+          <span style="margin-right: 5px">设置上传限制数量</span>
+          <a-input-number
+            style="width: 100px"
+            v-model="ElementUI.limit"
+            :max="10"
+            :min="0"
+          />
+        </div>
+      </div>
+      <div>
+        <el-upload
+          class="upload-demo"
+          :disabled="ElementUI.disabled"
+          :list-type="ElementUI.listType"
+          :drag="ElementUI.drag"
+          :multiple="ElementUI.multiple"
+          :limit="ElementUI.limit"
+          :action="'https://jsonplaceholder.typicode.com/posts/'"
+        >
+          <el-button>点击上传</el-button>
+          <div slot="tip" class="el-upload__tip">
+            只能上传jpg/png文件，且不超过500kb
+          </div>
+        </el-upload>
+      </div>
+    </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 上传"></a-card>
+    <a-card class="card-margin" title="AtUI 上传">
+      <div class="c-f5222d">AtUI框架没有上传</div>
+    </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 上传"></a-card>
+    <a-card class="card-margin" title="ViewUI 上传">
+      <div class="radio-box">
+        <a-radio-group v-model="ViewUI.disabled">
+          <a-radio-button :value="true">禁用</a-radio-button>
+          <a-radio-button :value="false">启用</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="ViewUI.type">
+          <a-radio-button :value="'select'">select</a-radio-button>
+          <a-radio-button :value="'drag'">drag</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="ViewUI.multiple">
+          <a-radio-button :value="true">开启多选</a-radio-button>
+          <a-radio-button :value="false">关闭多选</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="ViewUI.paste">
+          <a-radio-button :value="true">支持粘贴上传文件</a-radio-button>
+          <a-radio-button :value="false">不支持粘贴上传文件</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="ViewUI.webkitdirectory">
+          <a-radio-button :value="true">支持上传文件文件夹</a-radio-button>
+          <a-radio-button :value="false">不支持上传文件文件夹</a-radio-button>
+        </a-radio-group>
+        <a-radio-group v-model="ViewUI.showUploadList">
+          <a-radio-button :value="true">显示上传列表</a-radio-button>
+          <a-radio-button :value="false">不显示上传列表</a-radio-button>
+        </a-radio-group>
+      </div>
+      <div>
+        <Upload
+          :disabled="ViewUI.disabled"
+          :type="ViewUI.type"
+          :paste="ViewUI.paste"
+          :multiple="ViewUI.multiple"
+          :show-upload-list="ViewUI.showUploadList"
+          :webkitdirectory="ViewUI.webkitdirectory"
+          :action="'//jsonplaceholder.typicode.com/posts/'"
+        >
+          <Button icon="ios-cloud-upload-outline">点击上传</Button>
+        </Upload>
+      </div>
+    </a-card>
   </div>
 </template>
 
@@ -74,22 +163,35 @@ const getBase64 = function (img, callback) {
 export default {
   data() {
     return {
-      // AntDesignVue
-      uploadDisabled: false,
-      uploadListType: "text",
-      uploadMultiple: false,
-      uploadDirectory: false,
-      uploadShowUploadList: false,
-      uploadOpenFileDialogOnClick: true,
-      uploadLoading: false,
-      uploadImageUrl: "",
-      // ElementUI
-      // AtUI
-      // ViewUI
+      AntDesignVue: {
+        disabled: false,
+        listType: "text",
+        multiple: false,
+        directory: false,
+        showUploadList: false,
+        openFileDialogOnClick: true,
+        loading: false,
+        imageUrl: "",
+      },
+      ElementUI: {
+        disabled: false,
+        listType: "text",
+        drag: false,
+        multiple: false,
+        limit: 3,
+      },
+      ViewUI: {
+        disabled: false,
+        type: "select",
+        multiple: false,
+        paste: false,
+        webkitdirectory: true,
+        showUploadList: false,
+      },
     };
   },
   methods: {
-    uploadBeforeUploadImage(file) {
+    beforeUploadImage(file) {
       const isJpgOrPng =
         file.type === "image/jpeg" || file.type === "image/png";
       if (!isJpgOrPng) {
@@ -103,13 +205,13 @@ export default {
     },
     uploadChangeImage(info) {
       if (info.file.status === "uploading") {
-        this.uploadLoading = true;
+        this.AntDesignVue.loading = true;
         return;
       }
       if (info.file.status === "done") {
         getBase64(info.file.originFileObj, (imageUrl) => {
-          this.uploadImageUrl = imageUrl;
-          this.uploadLoading = false;
+          this.AntDesignVue.imageUrl = imageUrl;
+          this.AntDesignVue.loading = false;
         });
       }
     },
