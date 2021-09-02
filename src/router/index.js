@@ -11,7 +11,6 @@ const routes = [
     component: () => import('../views/Home.vue'),
   },
   {
-    // UIComponents
     path: '/UIComponents',
     name: 'UIComponents',
     redirect: '/UIComponents/button',

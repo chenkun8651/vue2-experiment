@@ -35,18 +35,18 @@ export const UIComponentsMenu = [
         component: () => import("../views/UIComponents/Badge.vue"),
     },
     {
-        key: "button",
-        name: "按钮",
-        icon: "inbox",
-        path: "/UIComponents/button",
-        component: () => import("../views/UIComponents/Button.vue"),
-    },
-    {
         key: "breadcrumb",
         name: "面包屑",
         icon: "inbox",
         path: "/UIComponents/breadcrumb",
         component: () => import("../views/UIComponents/Breadcrumb.vue"),
+    },
+    {
+        key: "button",
+        name: "按钮",
+        icon: "inbox",
+        path: "/UIComponents/button",
+        component: () => import("../views/UIComponents/Button.vue"),
     },
     {
         key: "calendar",
@@ -84,11 +84,11 @@ export const UIComponentsMenu = [
         component: () => import("../views/UIComponents/Collapse.vue"),
     },
     {
-        key: "datePicker",
-        name: "日期选择框",
+        key: "dateTimePicker",
+        name: "日期（时间）选择框",
         icon: "inbox",
-        path: "/UIComponents/datePicker",
-        component: () => import("../views/UIComponents/DatePicker.vue"),
+        path: "/UIComponents/dateTimePicker",
+        component: () => import("../views/UIComponents/DateTimePicker.vue.vue"),
     },
     {
         key: "descriptions",
@@ -98,18 +98,18 @@ export const UIComponentsMenu = [
         component: () => import("../views/UIComponents/Descriptions.vue"),
     },
     {
-        key: "drawer",
-        name: "抽屉",
-        icon: "inbox",
-        path: "/UIComponents/drawer",
-        component: () => import("../views/UIComponents/Drawer.vue"),
-    },
-    {
         key: "divider",
         name: "分割线",
         icon: "inbox",
         path: "/UIComponents/divider",
         component: () => import("../views/UIComponents/Divider.vue"),
+    },
+    {
+        key: "drawer",
+        name: "抽屉",
+        icon: "inbox",
+        path: "/UIComponents/drawer",
+        component: () => import("../views/UIComponents/Drawer.vue"),
     },
     {
         key: "dropdown",
@@ -126,13 +126,6 @@ export const UIComponentsMenu = [
         component: () => import("../views/UIComponents/Empty.vue"),
     },
     {
-        key: "input",
-        name: "输入框",
-        icon: "inbox",
-        path: "/UIComponents/input",
-        component: () => import("../views/UIComponents/Input.vue"),
-    },
-    {
         key: "icon",
         name: "图标",
         icon: "inbox",
@@ -140,25 +133,11 @@ export const UIComponentsMenu = [
         component: () => import("../views/UIComponents/Icon.vue"),
     },
     {
-        key: "menu",
-        name: "导航菜单",
+        key: "input",
+        name: "输入框",
         icon: "inbox",
-        path: "/UIComponents/menu",
-        component: () => import("../views/UIComponents/Menu.vue"),
-    },
-    {
-        key: "pageHeader",
-        name: "页头",
-        icon: "inbox",
-        path: "/UIComponents/pageHeader",
-        component: () => import("../views/UIComponents/PageHeader.vue"),
-    },
-    {
-        key: "pagination",
-        name: "分页",
-        icon: "inbox",
-        path: "/UIComponents/pagination",
-        component: () => import("../views/UIComponents/Pagination.vue"),
+        path: "/UIComponents/input",
+        component: () => import("../views/UIComponents/Input.vue"),
     },
     {
         key: "list",
@@ -166,6 +145,13 @@ export const UIComponentsMenu = [
         icon: "inbox",
         path: "/UIComponents/list",
         component: () => import("../views/UIComponents/List.vue"),
+    },
+    {
+        key: "menu",
+        name: "导航菜单",
+        icon: "inbox",
+        path: "/UIComponents/menu",
+        component: () => import("../views/UIComponents/Menu.vue"),
     },
     {
         key: "message",
@@ -189,6 +175,20 @@ export const UIComponentsMenu = [
         component: () => import("../views/UIComponents/Notification.vue"),
     },
     {
+        key: "pageHeader",
+        name: "页头",
+        icon: "inbox",
+        path: "/UIComponents/pageHeader",
+        component: () => import("../views/UIComponents/PageHeader.vue"),
+    },
+    {
+        key: "pagination",
+        name: "分页",
+        icon: "inbox",
+        path: "/UIComponents/pagination",
+        component: () => import("../views/UIComponents/Pagination.vue"),
+    },
+    {
         key: "popConfirm",
         name: "弹出确认框",
         icon: "inbox",
@@ -201,6 +201,13 @@ export const UIComponentsMenu = [
         icon: "inbox",
         path: "/UIComponents/popover",
         component: () => import("../views/UIComponents/Popover.vue"),
+    },
+    {
+        key: "progress",
+        name: "进度条",
+        icon: "inbox",
+        path: "/UIComponents/progress",
+        component: () => import("../views/UIComponents/Progress.vue"),
     },
     {
         key: "radio",
@@ -222,13 +229,6 @@ export const UIComponentsMenu = [
         icon: "inbox",
         path: "/UIComponents/select",
         component: () => import("../views/UIComponents/Select.vue"),
-    },
-    {
-        key: "progress",
-        name: "进度条",
-        icon: "inbox",
-        path: "/UIComponents/progress",
-        component: () => import("../views/UIComponents/Progress.vue"),
     },
     {
         key: "skeleton",
@@ -294,13 +294,6 @@ export const UIComponentsMenu = [
         component: () => import("../views/UIComponents/Timeline.vue"),
     },
     {
-        key: "timePicker",
-        name: "时间选择框",
-        icon: "inbox",
-        path: "/UIComponents/timePicker",
-        component: () => import("../views/UIComponents/TimePicker.vue"),
-    },
-    {
         key: "tooltip",
         name: "文字提示",
         icon: "inbox",
@@ -320,5 +313,12 @@ export const UIComponentsMenu = [
         icon: "inbox",
         path: "/UIComponents/tree",
         component: () => import("../views/UIComponents/Tree.vue"),
+    },
+    {
+        key: "upload",
+        name: "上传",
+        icon: "inbox",
+        path: "/UIComponents/upload",
+        component: () => import("../views/UIComponents/Upload.vue"),
     },
 ];
