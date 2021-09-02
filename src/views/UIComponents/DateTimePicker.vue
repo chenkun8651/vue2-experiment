@@ -2,179 +2,273 @@
   <!-- 日期选择框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 日期选择框">
-      <div class="radio-box">
-        <a-radio-group v-model="dateDisabled">
-          <a-radio-button :value="true">禁用</a-radio-button>
-          <a-radio-button :value="false">启用</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateAllowClear">
-          <a-radio-button :value="true">开启清除</a-radio-button>
-          <a-radio-button :value="false">关闭清除</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateInputReadOnly">
-          <a-radio-button :value="true">开启只读</a-radio-button>
-          <a-radio-button :value="false">关闭只读</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dataShowTime">
-          <a-radio-button :value="true">开启时间单位</a-radio-button>
-          <a-radio-button :value="false">关闭时间单位</a-radio-button>
-        </a-radio-group>
+    <a-card class="card-margin" title="AntDesignVue 日期（时间）选择框">
+      <!-- 通用API -->
+      <div class="card-item">
+        <h3>通用API</h3>
+        <div class="radio-box">
+          <a-radio-group v-model="AntDesignVue.disabled">
+            <a-radio-button :value="true">禁用</a-radio-button>
+            <a-radio-button :value="false">启用</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="AntDesignVue.allowClear">
+            <a-radio-button :value="true">开启清除</a-radio-button>
+            <a-radio-button :value="false">关闭清除</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="AntDesignVue.inputReadOnly">
+            <a-radio-button :value="true">开启只读</a-radio-button>
+            <a-radio-button :value="false">关闭只读</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="AntDesignVue.showTime">
+            <a-radio-button :value="true">开启时间单位</a-radio-button>
+            <a-radio-button :value="false">关闭时间单位</a-radio-button>
+          </a-radio-group>
+        </div>
       </div>
-      <div>
-        <a-date-picker
-          style="width: 200px; margin-right: 30px"
-          placeholder="选择日期"
-          :autoFocus="false"
-          :disabled="dateDisabled"
-          :allowClear="dateAllowClear"
-          :input-read-only="dateInputReadOnly"
-          :show-time="dataShowTime"
-        >
-        </a-date-picker>
-        <a-week-picker
-          style="width: 200px; margin-right: 30px"
-          placeholder="选择周"
-          :autoFocus="false"
-          :disabled="dateDisabled"
-          :allowClear="dateAllowClear"
-          :input-read-only="dateInputReadOnly"
-        >
-        </a-week-picker>
-        <a-month-picker
-          style="width: 200px; margin-right: 30px"
-          placeholder="选择月份"
-          :autoFocus="false"
-          :disabled="dateDisabled"
-          :allowClear="dateAllowClear"
-          :input-read-only="dateInputReadOnly"
-        >
-        </a-month-picker>
-        <a-range-picker
-          style="width: 400px"
-          :autoFocus="false"
-          :disabled="dateDisabled"
-          :allowClear="dateAllowClear"
-          :input-read-only="dateInputReadOnly"
-          :show-time="dataShowTime"
-        >
-        </a-range-picker>
+      <!-- 日期选择框 -->
+      <div class="card-item">
+        <h3>日期选择框</h3>
+        <div>
+          <a-date-picker
+            style="width: 200px"
+            :disabled="AntDesignVue.disabled"
+            :allow-clear="AntDesignVue.allowClear"
+            :input-read-only="AntDesignVue.inputReadOnly"
+            :show-time="AntDesignVue.showTime"
+          >
+          </a-date-picker>
+        </div>
+      </div>
+      <!-- 范围日期选择框 -->
+      <div class="card-item">
+        <h3>范围日期选择框</h3>
+        <div>
+          <a-range-picker
+            style="width: 200px"
+            :disabled="AntDesignVue.disabled"
+            :allow-clear="AntDesignVue.allowClear"
+            :input-read-only="AntDesignVue.inputReadOnly"
+            :show-time="AntDesignVue.showTime"
+          >
+          </a-range-picker>
+        </div>
+      </div>
+      <!-- 日期（周）选择框 -->
+      <div class="card-item">
+        <h3>日期（周）选择框</h3>
+        <div>
+          <a-week-picker
+            style="width: 200px"
+            :disabled="AntDesignVue.disabled"
+            :allow-clear="AntDesignVue.allowClear"
+            :input-read-only="AntDesignVue.inputReadOnly"
+          >
+          </a-week-picker>
+        </div>
+      </div>
+      <!-- 日期（月）选择框 -->
+      <div class="card-item">
+        <h3>日期（月）选择框</h3>
+        <div>
+          <a-month-picker
+            style="width: 200px"
+            :disabled="AntDesignVue.disabled"
+            :allow-clear="AntDesignVue.allowClear"
+            :input-read-only="AntDesignVue.inputReadOnly"
+          >
+          </a-month-picker>
+        </div>
+      </div>
+      <!-- 时间选择框 -->
+      <div class="card-item">
+        <h3>时间选择框</h3>
+        <div>
+          <a-time-picker
+            style="width: 200px"
+            :disabled="AntDesignVue.disabled"
+            :allow-clear="AntDesignVue.allowClear"
+            :input-read-only="AntDesignVue.inputReadOnly"
+          >
+          </a-time-picker>
+        </div>
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 日期选择框">
-      <div class="radio-box">
-        <a-radio-group v-model="dateDisabledE">
-          <a-radio-button :value="true">禁用</a-radio-button>
-          <a-radio-button :value="false">启用</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateClearableE">
-          <a-radio-button :value="true">开启清除</a-radio-button>
-          <a-radio-button :value="false">关闭清除</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateReadonlyE">
-          <a-radio-button :value="true">开启只读</a-radio-button>
-          <a-radio-button :value="false">关闭只读</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateEditableE">
-          <a-radio-button :value="true">开启编辑</a-radio-button>
-          <a-radio-button :value="false">关闭编辑</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateTypeE">
-          <a-radio-button :value="'year'">year</a-radio-button>
-          <a-radio-button :value="'month'">month</a-radio-button>
-          <a-radio-button :value="'week'">week</a-radio-button>
-          <a-radio-button :value="'date'">date</a-radio-button>
-          <a-radio-button :value="'datetime'">datetime</a-radio-button>
-          <a-radio-button :value="'monthrange'">monthrange</a-radio-button>
-          <a-radio-button :value="'daterange'">daterange</a-radio-button>
-          <a-radio-button :value="'datetimerange'">
-            datetimerange
-          </a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateSizeE">
-          <a-radio-button :value="'large'">large</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-          <a-radio-button :value="'mini'">mini</a-radio-button>
-        </a-radio-group>
+    <a-card class="card-margin" title="ElementUI 日期（时间）选择框">
+      <!-- 通用API -->
+      <div class="card-item">
+        <h3>通用API</h3>
+        <div class="radio-box">
+          <a-radio-group v-model="ElementUI.disabled">
+            <a-radio-button :value="true">禁用</a-radio-button>
+            <a-radio-button :value="false">启用</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="ElementUI.clearable">
+            <a-radio-button :value="true">开启清除</a-radio-button>
+            <a-radio-button :value="false">关闭清除</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="ElementUI.readonly">
+            <a-radio-button :value="true">开启只读</a-radio-button>
+            <a-radio-button :value="false">关闭只读</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="ElementUI.editable">
+            <a-radio-button :value="true">开启编辑</a-radio-button>
+            <a-radio-button :value="false">关闭编辑</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="ElementUI.size">
+            <a-radio-button :value="'large'">large</a-radio-button>
+            <a-radio-button :value="'medium'">medium</a-radio-button>
+            <a-radio-button :value="'small'">small</a-radio-button>
+            <a-radio-button :value="'mini'">mini</a-radio-button>
+          </a-radio-group>
+        </div>
       </div>
-      <div>
-        <el-date-picker
-          v-model="dateValueE"
-          :disabled="dateDisabledE"
-          :clearable="dateClearableE"
-          :readonly="dateReadonlyE"
-          :editable="dateEditableE"
-          :type="dateTypeE"
-          :size="dateSizeE"
-          :align="'center'"
-        >
-        </el-date-picker>
+      <!-- 日期选择框 -->
+      <div class="card-item">
+        <h3>日期选择框</h3>
+        <div class="radio-box">
+          <a-radio-group v-model="ElementUI.type">
+            <a-radio-button :value="'year'">year</a-radio-button>
+            <a-radio-button :value="'month'">month</a-radio-button>
+            <a-radio-button :value="'week'">week</a-radio-button>
+            <a-radio-button :value="'date'">date</a-radio-button>
+            <a-radio-button :value="'datetime'">datetime</a-radio-button>
+            <a-radio-button :value="'monthrange'">monthrange</a-radio-button>
+            <a-radio-button :value="'daterange'">daterange</a-radio-button>
+            <a-radio-button :value="'datetimerange'">
+              datetimerange
+            </a-radio-button>
+          </a-radio-group>
+        </div>
+        <div>
+          <el-date-picker
+            :disabled="ElementUI.disabled"
+            :clearable="ElementUI.clearable"
+            :readonly="ElementUI.readonly"
+            :editable="ElementUI.editable"
+            :size="ElementUI.size"
+            v-model="ElementUI.value"
+            :type="ElementUI.type"
+          >
+          </el-date-picker>
+        </div>
+      </div>
+      <!-- 时间选择框 -->
+      <div class="card-item">
+        <h3>时间选择框</h3>
+        <div>
+          <el-time-select
+            :disabled="ElementUI.disabled"
+            :clearable="ElementUI.clearable"
+            :readonly="ElementUI.readonly"
+            :editable="ElementUI.editable"
+            :size="ElementUI.size"
+            v-model="ElementUI.value2"
+          >
+          </el-time-select>
+        </div>
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 日期选择框">
-      <div class="c-f5222d">AtUI框架没有日期选择框</div>
+    <a-card class="card-margin" title="AtUI 日期（时间）选择框">
+      <div class="c-f5222d">AtUI框架没有日期（时间）选择框</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 日期选择框">
-      <div class="radio-box">
-        <a-radio-group v-model="dateDisabledV">
-          <a-radio-button :value="true">禁用</a-radio-button>
-          <a-radio-button :value="false">启用</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateClearableV">
-          <a-radio-button :value="true">开启清除</a-radio-button>
-          <a-radio-button :value="false">关闭清除</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateReadonlyV">
-          <a-radio-button :value="true">开启只读</a-radio-button>
-          <a-radio-button :value="false">关闭只读</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateEditableV">
-          <a-radio-button :value="true">开启编辑</a-radio-button>
-          <a-radio-button :value="false">关闭编辑</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateShowWeekNumbersV">
-          <a-radio-button :value="true">显示星期数</a-radio-button>
-          <a-radio-button :value="false">隐藏星期数</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateTypeV">
-          <a-radio-button :value="'year'">year</a-radio-button>
-          <a-radio-button :value="'month'">month</a-radio-button>
-          <a-radio-button :value="'date'">date</a-radio-button>
-          <a-radio-button :value="'datetime'">datetime</a-radio-button>
-          <a-radio-button :value="'daterange'">daterange</a-radio-button>
-          <a-radio-button :value="'datetimerange'">
-            datetimerange
-          </a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="dateSizeV">
-          <a-radio-button :value="'large'">large</a-radio-button>
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="datePlacementV">
-          <a-radio-button :value="'top'">top</a-radio-button>
-          <a-radio-button :value="'bottom'">bottom</a-radio-button>
-          <a-radio-button :value="'left'">left</a-radio-button>
-          <a-radio-button :value="'right'">right</a-radio-button>
-        </a-radio-group>
+    <a-card class="card-margin" title="ViewUI 日期（时间）选择框">
+      <!-- 通用API -->
+      <div class="card-item">
+        <h3>通用API</h3>
+        <div class="radio-box">
+          <a-radio-group v-model="ViewUI.disabled">
+            <a-radio-button :value="true">禁用</a-radio-button>
+            <a-radio-button :value="false">启用</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="ViewUI.clearable">
+            <a-radio-button :value="true">开启清除</a-radio-button>
+            <a-radio-button :value="false">关闭清除</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="ViewUI.readonly">
+            <a-radio-button :value="true">开启只读</a-radio-button>
+            <a-radio-button :value="false">关闭只读</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="ViewUI.editable">
+            <a-radio-button :value="true">开启编辑</a-radio-button>
+            <a-radio-button :value="false">关闭编辑</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="ViewUI.size">
+            <a-radio-button :value="'large'">large</a-radio-button>
+            <a-radio-button :value="'default'">default</a-radio-button>
+            <a-radio-button :value="'small'">small</a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="ViewUI.placement">
+            <a-radio-button :value="'top'">top</a-radio-button>
+            <a-radio-button :value="'bottom'">bottom</a-radio-button>
+            <a-radio-button :value="'left'">left</a-radio-button>
+            <a-radio-button :value="'right'">right</a-radio-button>
+          </a-radio-group>
+        </div>
       </div>
-      <div>
-        <DatePicker
-          style="width: 350px"
-          :value="dateValueV"
-          :disabled="dateDisabledV"
-          :clearable="dateClearableV"
-          :readonly="dateReadonlyV"
-          :editable="dateEditableV"
-          :show-week-numbers="dateShowWeekNumbersV"
-          :type="dateTypeV"
-          :size="dateSizeV"
-          :placement="datePlacementV"
-        >
-        </DatePicker>
+      <!-- 日期选择框 -->
+      <div class="card-item">
+        <h3>日期选择框</h3>
+        <div class="radio-box">
+          <a-radio-group v-model="ViewUI.type">
+            <a-radio-button :value="'year'">year</a-radio-button>
+            <a-radio-button :value="'month'">month</a-radio-button>
+            <a-radio-button :value="'date'">date</a-radio-button>
+            <a-radio-button :value="'datetime'">datetime</a-radio-button>
+            <a-radio-button :value="'daterange'">daterange</a-radio-button>
+            <a-radio-button :value="'datetimerange'">
+              datetimerange
+            </a-radio-button>
+          </a-radio-group>
+          <a-radio-group v-model="ViewUI.showWeekNumbers">
+            <a-radio-button :value="true">显示星期数</a-radio-button>
+            <a-radio-button :value="false">隐藏星期数</a-radio-button>
+          </a-radio-group>
+        </div>
+        <div>
+          <DatePicker
+            :disabled="ViewUI.disabled"
+            :clearable="ViewUI.clearable"
+            :readonly="ViewUI.readonly"
+            :editable="ViewUI.editable"
+            :size="ViewUI.size"
+            :placement="ViewUI.placement"
+            :value="ViewUI.value"
+            :type="ViewUI.type"
+            :show-week-numbers="ViewUI.showWeekNumbers"
+          >
+          </DatePicker>
+        </div>
+      </div>
+      <!-- 时间选择框 -->
+      <div class="card-item">
+        <h3>时间选择框</h3>
+        <div class="radio-box">
+          <a-radio-group v-model="ViewUI.type2">
+            <a-radio-button :value="'time'">time</a-radio-button>
+            <a-radio-button :value="'timerange'">timerange</a-radio-button>
+          </a-radio-group>
+          <div class="string-set">
+            <span style="margin-right: 5px">设置两个时间的分隔符</span>
+            <a-input style="width: 100px" v-model="ViewUI.separator" />
+          </div>
+        </div>
+        <div>
+          <TimePicker
+            :disabled="ViewUI.disabled"
+            :clearable="ViewUI.clearable"
+            :readonly="ViewUI.readonly"
+            :editable="ViewUI.editable"
+            :size="ViewUI.size"
+            :placement="ViewUI.placement"
+            :value="ViewUI.value2"
+            :type="ViewUI.type2"
+            :separator="ViewUI.separator"
+          >
+          </TimePicker>
+        </div>
       </div>
     </a-card>
   </div>
@@ -184,29 +278,37 @@
 export default {
   data() {
     return {
-      // AntDesignVue
-      dateDisabled: false,
-      dateAllowClear: false,
-      dateInputReadOnly: false,
-      dataShowTime: false,
-      // ElementUI
-      dateValueE: null,
-      dateDisabledE: false,
-      dateClearableE: false,
-      dateReadonlyE: false,
-      dateEditableE: false,
-      dateTypeE: "datetime",
-      dateSizeE: "small",
-      // ViewUI
-      dateValueV: null,
-      dateDisabledV: false,
-      dateClearableV: false,
-      dateReadonlyV: false,
-      dateEditableV: false,
-      dateShowWeekNumbersV: false,
-      dateTypeV: "datetime",
-      dateSizeV: "default",
-      datePlacementV: "bottom",
+      AntDesignVue: {
+        disabled: false,
+        allowClear: false,
+        inputReadOnly: false,
+        showTime: false,
+      },
+      ElementUI: {
+        disabled: false,
+        clearable: false,
+        readonly: false,
+        editable: false,
+        size: "small",
+        value: null,
+        type: "datetime",
+        value2: null,
+        value3: null,
+      },
+      ViewUI: {
+        disabled: false,
+        clearable: false,
+        readonly: false,
+        editable: false,
+        size: "default",
+        placement: "bottom",
+        value: null,
+        type: "datetime",
+        showWeekNumbers: false,
+        value2: null,
+        type2: "time",
+        separator: "-",
+      },
     };
   },
   methods: {},

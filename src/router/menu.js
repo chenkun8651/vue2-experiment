@@ -88,7 +88,7 @@ export const UIComponentsMenu = [
         name: "日期（时间）选择框",
         icon: "inbox",
         path: "/UIComponents/dateTimePicker",
-        component: () => import("../views/UIComponents/DateTimePicker.vue.vue"),
+        component: () => import("../views/UIComponents/DateTimePicker.vue"),
     },
     {
         key: "descriptions",
