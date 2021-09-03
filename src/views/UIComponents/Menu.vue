@@ -2,8 +2,8 @@
   <!-- 导航菜单 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 导航菜单">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 导航菜单">
+      <div class="control-box">
         <a-radio-group v-model="AntDesignVue.menuMode">
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
           <a-radio-button :value="'vertical-right'">
@@ -57,8 +57,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 导航菜单">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 导航菜单">
+      <div class="control-box">
         <a-radio-group v-model="ElementUI.menuMode">
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
@@ -113,8 +113,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 导航菜单">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 导航菜单">
+      <div class="control-box">
         <a-radio-group v-model="AtUI.menuMode">
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
           <a-radio-button :value="'inline'">inline</a-radio-button>
@@ -160,8 +160,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 导航菜单">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 导航菜单">
+      <div class="control-box">
         <a-radio-group v-model="ViewUI.menuMode">
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>

@@ -2,8 +2,8 @@
   <!-- 徽标数 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 徽标数">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 徽标数">
+      <div class="control-box">
         <a-radio-group v-model="badgeDot" @change="changeDot">
           <a-radio-button :value="null">数字徽标</a-radio-button>
           <a-radio-button :value="false">圆点徽标</a-radio-button>
@@ -51,8 +51,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 徽标数">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 徽标数">
+      <div class="control-box">
         <a-radio-group v-model="badgeHiddenE">
           <a-radio-button :value="false">显示徽标</a-radio-button>
           <a-radio-button :value="true">隐藏徽标</a-radio-button>
@@ -90,8 +90,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 徽标数">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 徽标数">
+      <div class="control-box">
         <a-radio-group v-model="badgeShowA">
           <a-radio-button :value="true">显示徽标</a-radio-button>
           <a-radio-button :value="false">隐藏徽标</a-radio-button>
@@ -127,8 +127,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 徽标数">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 徽标数">
+      <div class="control-box">
         <a-radio-group v-model="badgeDotV" @change="changeDotV">
           <a-radio-button :value="false">数字徽标</a-radio-button>
           <a-radio-button :value="null">圆点徽标</a-radio-button>

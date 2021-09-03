@@ -2,8 +2,8 @@
   <!-- 通知提示 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 通知提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 通知提示">
+      <div class="control-box">
         <a-radio-group v-model="notificationType">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -54,8 +54,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 通知提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 通知提示">
+      <div class="control-box">
         <a-radio-group v-model="notificationTypeE">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -97,8 +97,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 通知提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 通知提示">
+      <div class="control-box">
         <a-radio-group v-model="notificationTypeA">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -130,7 +130,7 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 通知提示">
+    <a-card class="mtb-20" title="ViewUI 通知提示">
       <div class="c-faad14">ViewUI框架的通知提示需要付费使用</div>
     </a-card>
   </div>

@@ -2,11 +2,11 @@
   <!-- 输入框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 输入框">
+    <a-card class="mtb-20" title="AntDesignVue 输入框">
       <!-- 通用API -->
       <div class="card-item">
         <h3>通用API</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AntDesignVue.inputDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -82,7 +82,7 @@
       <!-- 文本域输入框 -->
       <div class="card-item">
         <h3>文本域输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AntDesignVue.textareaAutosize">
             <a-radio-button :value="true">开启内容自适应高度</a-radio-button>
             <a-radio-button :value="false">关闭内容自适应高度</a-radio-button>
@@ -102,7 +102,7 @@
       <!-- 密码输入框 -->
       <div class="card-item">
         <h3>密码输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AntDesignVue.inputPasswordVisibilityToggle">
             <a-radio-button :value="true">显示切换密码图标</a-radio-button>
             <a-radio-button :value="false">隐藏切换密码图标</a-radio-button>
@@ -136,7 +136,7 @@
       <!-- 数字输入框 -->
       <div class="card-item">
         <h3>数字输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <div class="number-set">
             <span style="margin-right: 5px">设置最小数字</span>
             <a-input-number
@@ -193,7 +193,7 @@
       <!-- 搜索输入框 -->
       <div class="card-item">
         <h3>搜索输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AntDesignVue.inputSearchLoading">
             <a-radio-button :value="true">加载</a-radio-button>
             <a-radio-button :value="false">完成</a-radio-button>
@@ -232,7 +232,7 @@
       <!-- 提及输入框 -->
       <div class="card-item">
         <h3>提及输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AntDesignVue.mentionsPlacement">
             <a-radio-button :value="'top'">top</a-radio-button>
             <a-radio-button :value="'bottom'">bottom</a-radio-button>
@@ -282,11 +282,11 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 输入框">
+    <a-card class="mtb-20" title="ElementUI 输入框">
       <!-- 通用API -->
       <div class="card-item">
         <h3>通用API</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ElementUI.inputDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -333,7 +333,7 @@
       <!-- 标准输入框 -->
       <div class="card-item">
         <h3>标准输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ElementUI.inputType">
             <a-radio-button :value="'text'">text</a-radio-button>
             <a-radio-button :value="'textarea'">textarea</a-radio-button>
@@ -395,7 +395,7 @@
       <!-- 数字输入框 -->
       <div class="card-item">
         <h3>数字输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ElementUI.inputNumberControls">
             <a-radio-button :value="true">显示控制按钮</a-radio-button>
             <a-radio-button :value="false">隐藏控制按钮</a-radio-button>
@@ -426,7 +426,7 @@
       <!-- 联想输入框 -->
       <div class="card-item">
         <h3>联想输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ElementUI.autocompletePlacement">
             <a-radio-button :value="'top-start'">top-start</a-radio-button>
             <a-radio-button :value="'top'">top</a-radio-button>
@@ -460,11 +460,11 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 输入框">
+    <a-card class="mtb-20" title="AtUI 输入框">
       <!-- 通用API -->
       <div class="card-item">
         <h3>通用API</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AtUI.inputDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -491,7 +491,7 @@
       <!-- 标准输入框 -->
       <div class="card-item">
         <h3>标准输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AtUI.inputType">
             <a-radio-button :value="'text'">text</a-radio-button>
             <a-radio-button :value="'number'">number</a-radio-button>
@@ -531,7 +531,7 @@
       <!-- 数字输入框 -->
       <div class="card-item">
         <h3>数字输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <div class="number-set">
             <span style="margin-right: 5px">设置数字精度</span>
             <a-input-number
@@ -559,7 +559,7 @@
       <!-- 文本域输入框 -->
       <div class="card-item">
         <h3>文本域输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AtUI.inputAutosize">
             <a-radio-button :value="true">自动调整输入框高度</a-radio-button>
             <a-radio-button :value="false">不自动调整输入框高度</a-radio-button>
@@ -585,11 +585,11 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 输入框">
+    <a-card class="mtb-20" title="ViewUI 输入框">
       <!-- 通用API -->
       <div class="card-item">
         <h3>通用API</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ViewUI.inputDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -612,7 +612,7 @@
       <!-- 标准输入框 -->
       <div class="card-item">
         <h3>标准输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ViewUI.inputType">
             <a-radio-button :value="'text'">text</a-radio-button>
             <a-radio-button :value="'textarea'">textarea</a-radio-button>
@@ -675,7 +675,7 @@
       <!-- 数字输入框 -->
       <div class="card-item">
         <h3>数字输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ViewUI.inputNumberEditable">
             <a-radio-button :value="true">开启编辑</a-radio-button>
             <a-radio-button :value="false">关闭编辑</a-radio-button>
@@ -735,7 +735,7 @@
       <!-- 联想输入框 -->
       <div class="card-item">
         <h3>联想输入框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ViewUI.autoCompletePlacement">
             <a-radio-button :value="'top-start'">top-start</a-radio-button>
             <a-radio-button :value="'top'">top</a-radio-button>

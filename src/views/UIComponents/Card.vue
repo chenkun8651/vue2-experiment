@@ -2,8 +2,8 @@
   <!-- 卡片 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 卡片">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 卡片">
+      <div class="control-box">
         <a-radio-group v-model="cardLoading">
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>
@@ -87,8 +87,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 卡片">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 卡片">
+      <div class="control-box">
         <a-radio-group v-model="cardShadowE">
           <a-radio-button :value="'always'">always</a-radio-button>
           <a-radio-button :value="'hover'">hover</a-radio-button>
@@ -110,8 +110,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 卡片">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 卡片">
+      <div class="control-box">
         <a-radio-group v-model="cardBorderedA">
           <a-radio-button :value="true">有边框</a-radio-button>
           <a-radio-button :value="false">无边框</a-radio-button>
@@ -141,8 +141,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 卡片">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 卡片">
+      <div class="control-box">
         <a-radio-group v-model="cardBorderedV">
           <a-radio-button :value="true">有边框</a-radio-button>
           <a-radio-button :value="false">无边框</a-radio-button>

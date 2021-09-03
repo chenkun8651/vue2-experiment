@@ -1,8 +1,8 @@
 <template>
   <!-- 进度条 -->
   <div>
-    <a-card class="card-margin" title="AntDesignVue 进度条">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 进度条">
+      <div class="control-box">
         <a-radio-group v-model="progressType">
           <a-radio-button :value="'line'">line</a-radio-button>
           <a-radio-button :value="'circle'">circle</a-radio-button>
@@ -84,8 +84,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 进度条">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 进度条">
+      <div class="control-box">
         <a-radio-group v-model="progressTypeE">
           <a-radio-button :value="'line'">line</a-radio-button>
           <a-radio-button :value="'circle'">circle</a-radio-button>
@@ -146,8 +146,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 进度条">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 进度条">
+      <div class="control-box">
         <div class="number-set">
           <span style="margin-right: 5px">设置进度条百分比</span>
           <a-input-number style="width: 100px" v-model="progressPercentA" />
@@ -171,8 +171,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 进度条">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 进度条">
+      <div class="control-box">
         <a-radio-group v-model="progressVerticalV">
           <a-radio-button :value="true">垂直</a-radio-button>
           <a-radio-button :value="false">水平</a-radio-button>

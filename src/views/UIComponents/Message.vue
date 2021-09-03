@@ -2,8 +2,8 @@
   <!-- 消息提示 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 消息提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 消息提示">
+      <div class="control-box">
         <a-radio-group v-model="messageType">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -25,8 +25,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 消息提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 消息提示">
+      <div class="control-box">
         <a-radio-group v-model="messageTypeE">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -59,8 +59,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 消息提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 消息提示">
+      <div class="control-box">
         <a-radio-group v-model="messageTypeA">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -81,8 +81,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 消息提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 消息提示">
+      <div class="control-box">
         <a-radio-group v-model="messageTypeV">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>

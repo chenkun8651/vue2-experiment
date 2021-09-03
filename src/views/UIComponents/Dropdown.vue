@@ -2,8 +2,8 @@
   <!-- 下拉菜单 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 下拉菜单">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 下拉菜单">
+      <div class="control-box">
         <a-radio-group v-model="dropdownDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -78,8 +78,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 下拉菜单">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 下拉菜单">
+      <div class="control-box">
         <a-radio-group v-model="dropdownPlacementE">
           <a-radio-button :value="'bottom-start'">bottom-start</a-radio-button>
           <a-radio-button :value="'bottom'">bottom</a-radio-button>
@@ -152,8 +152,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 下拉菜单">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 下拉菜单">
+      <div class="control-box">
         <a-radio-group v-model="dropdownTriggerA">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'click'">click</a-radio-button>
@@ -189,8 +189,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 下拉菜单">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 下拉菜单">
+      <div class="control-box">
         <a-radio-group v-model="dropdownTriggerV">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'click'">click</a-radio-button>

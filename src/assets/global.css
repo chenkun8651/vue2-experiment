@@ -1,25 +1,32 @@
 /* 结构类 */
-.card-margin {
-  margin: 20px 0;
+.w-100 {
+  width: 100px;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.mtb-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .card-item {
   padding: 20px 10px 15px;
   border: 1px solid #e8e8e8;
 }
-.radio-box {
+.control-box {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
-.radio-box .ant-radio-group {
+.ant-radio-group {
   margin: 10px 20px 10px 0px;
 }
-.radio-box .string-set {
+.string-set {
   margin: 10px 20px 10px 0px;
 }
-.radio-box .number-set {
+.number-set {
   margin: 10px 20px 10px 0px;
 }
 

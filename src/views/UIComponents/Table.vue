@@ -2,8 +2,8 @@
   <!-- 表格 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 表格">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 表格">
+      <div class="control-box">
         <a-radio-group v-model="tableSize">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'middle'">middle</a-radio-button>
@@ -53,8 +53,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 表格">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 表格">
+      <div class="control-box">
         <a-radio-group v-model="tableSizeE">
           <a-radio-button :value="null">default</a-radio-button>
           <a-radio-button :value="'medium'">medium</a-radio-button>
@@ -114,8 +114,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 表格">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 表格">
+      <div class="control-box">
         <a-radio-group v-model="tableSizeA">
           <a-radio-button :value="'large'">large</a-radio-button>
           <a-radio-button :value="'normal'">normal</a-radio-button>
@@ -175,8 +175,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 表格">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 表格">
+      <div class="control-box">
         <a-radio-group v-model="tableSizeV">
           <a-radio-button :value="'large'">large</a-radio-button>
           <a-radio-button :value="'default'">default</a-radio-button>

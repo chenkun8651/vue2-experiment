@@ -43,6 +43,12 @@
         </a-layout-content>
       </a-layout>
     </a-layout>
+    <div class="ui-components-menu">
+      <div v-for="item in UIComponentsMenu" :key="item.key"></div>
+    </div>
+    <div class="ui-components-view">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -71,6 +77,7 @@ export default {
       this.$router.push("/UIComponents/button");
     }
   },
+
   watch: {
     $route: function (value) {
       this.routeCurrent = value.path.split("/")[2];
@@ -80,6 +87,7 @@ export default {
       this.drawer = false;
     },
   },
+
   filters: {
     keyToName: function (value) {
       if (value.length > 0) {
@@ -87,8 +95,8 @@ export default {
       }
     },
   },
+
   methods: {
-    // 菜单跳转
     ChangeMenu(event) {
       if (this.routeCurrent !== event.key) {
         this.routeCurrent = event.key;

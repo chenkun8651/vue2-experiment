@@ -2,8 +2,8 @@
   <!-- 走马灯 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 走马灯">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 走马灯">
+      <div class="control-box">
         <a-radio-group v-model="carouselAutoplay">
           <a-radio-button :value="true">开启自动播放</a-radio-button>
           <a-radio-button :value="false">关闭自动播放</a-radio-button>
@@ -48,8 +48,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 走马灯">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 走马灯">
+      <div class="control-box">
         <a-radio-group v-model="carouselDirectionE">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -104,12 +104,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 走马灯">
+    <a-card class="mtb-20" title="AtUI 走马灯">
       <div class="c-f5222d">AtUI框架没有走马灯</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 走马灯">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 走马灯">
+      <div class="control-box">
         <a-radio-group v-model="carouselAutoplayV">
           <a-radio-button :value="true">开启自动播放</a-radio-button>
           <a-radio-button :value="false">关闭自动播放</a-radio-button>

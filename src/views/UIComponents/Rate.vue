@@ -2,8 +2,8 @@
   <!-- 评分 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 评分">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 评分">
+      <div class="control-box">
         <a-radio-group v-model="AntDesignVue.rateDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -41,8 +41,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 评分">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 评分">
+      <div class="control-box">
         <a-radio-group v-model="ElementUI.rateDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -67,8 +67,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 评分">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 评分">
+      <div class="control-box">
         <a-radio-group v-model="AtUI.rateDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -103,8 +103,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 评分">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 评分">
+      <div class="control-box">
         <a-radio-group v-model="ViewUI.rateDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>

@@ -2,11 +2,11 @@
   <!-- 日期选择框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 日期（时间）选择框">
+    <a-card class="mtb-20" title="AntDesignVue 日期（时间）选择框">
       <!-- 通用API -->
       <div class="card-item">
         <h3>通用API</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AntDesignVue.disabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -94,11 +94,11 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 日期（时间）选择框">
+    <a-card class="mtb-20" title="ElementUI 日期（时间）选择框">
       <!-- 通用API -->
       <div class="card-item">
         <h3>通用API</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ElementUI.disabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -126,7 +126,7 @@
       <!-- 日期选择框 -->
       <div class="card-item">
         <h3>日期选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ElementUI.type">
             <a-radio-button :value="'year'">year</a-radio-button>
             <a-radio-button :value="'month'">month</a-radio-button>
@@ -170,15 +170,15 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 日期（时间）选择框">
+    <a-card class="mtb-20" title="AtUI 日期（时间）选择框">
       <div class="c-f5222d">AtUI框架没有日期（时间）选择框</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 日期（时间）选择框">
+    <a-card class="mtb-20" title="ViewUI 日期（时间）选择框">
       <!-- 通用API -->
       <div class="card-item">
         <h3>通用API</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ViewUI.disabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -211,7 +211,7 @@
       <!-- 日期选择框 -->
       <div class="card-item">
         <h3>日期选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ViewUI.type">
             <a-radio-button :value="'year'">year</a-radio-button>
             <a-radio-button :value="'month'">month</a-radio-button>
@@ -245,7 +245,7 @@
       <!-- 时间选择框 -->
       <div class="card-item">
         <h3>时间选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ViewUI.type2">
             <a-radio-button :value="'time'">time</a-radio-button>
             <a-radio-button :value="'timerange'">timerange</a-radio-button>

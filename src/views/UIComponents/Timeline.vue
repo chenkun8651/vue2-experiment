@@ -2,8 +2,8 @@
   <!-- 时间轴 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 时间轴">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 时间轴">
+      <div class="control-box">
         <a-radio-group v-model="timelineMode">
           <a-radio-button :value="'left'">left</a-radio-button>
           <a-radio-button :value="'alternate'">alternate</a-radio-button>
@@ -31,8 +31,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 时间轴">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 时间轴">
+      <div class="control-box">
         <a-radio-group v-model="timelineReverseE">
           <a-radio-button :value="true">反序</a-radio-button>
           <a-radio-button :value="false">正序</a-radio-button>
@@ -74,8 +74,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 时间轴">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 时间轴">
+      <div class="control-box">
         <a-radio-group v-model="timelinePendingA">
           <a-radio-button :value="true">开启幽灵节点</a-radio-button>
           <a-radio-button :value="false">关闭幽灵节点</a-radio-button>
@@ -100,8 +100,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 时间轴">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 时间轴">
+      <div class="control-box">
         <a-radio-group v-model="timelinePendingV">
           <a-radio-button :value="true">开启幽灵节点</a-radio-button>
           <a-radio-button :value="false">关闭幽灵节点</a-radio-button>

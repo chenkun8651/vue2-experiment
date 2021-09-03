@@ -2,8 +2,8 @@
   <!-- 分割线 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 分割线">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 分割线">
+      <div class="control-box">
         <a-radio-group v-model="dividerType">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -20,8 +20,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 分割线">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 分割线">
+      <div class="control-box">
         <a-radio-group v-model="dividerDirectionE">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -34,12 +34,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 分割线">
+    <a-card class="mtb-20" title="AtUI 分割线">
       <div class="c-f5222d">AtUI框架没有分割线</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 分割线">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 分割线">
+      <div class="control-box">
         <a-radio-group v-model="dividerTypeV">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>

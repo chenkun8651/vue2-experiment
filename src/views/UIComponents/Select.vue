@@ -2,11 +2,11 @@
   <!-- 选择框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 选择框">
+    <a-card class="mtb-20" title="AntDesignVue 选择框">
       <!-- 通用API -->
       <div class="card-item">
         <h3>通用API</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AntDesignVue.selectDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -29,7 +29,7 @@
       <!-- 标准选择框 -->
       <div class="card-item">
         <h3>标准选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AntDesignVue.selectMode">
             <a-radio-button :value="'default'">default</a-radio-button>
             <a-radio-button :value="'multiple'">multiple</a-radio-button>
@@ -96,7 +96,7 @@
       <!-- 级联选择框 -->
       <div class="card-item">
         <h3>级联选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AntDesignVue.cascaderExpandTrigger">
             <a-radio-button :value="'click'">click</a-radio-button>
             <a-radio-button :value="'hover'">hover</a-radio-button>
@@ -119,7 +119,7 @@
       <!-- 树状选择框 -->
       <div class="card-item">
         <h3>树状选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AntDesignVue.treeSelectTreeCheckable">
             <a-radio-button :value="true">开启多选</a-radio-button>
             <a-radio-button :value="false">关闭多选</a-radio-button>
@@ -142,11 +142,11 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 选择框">
+    <a-card class="mtb-20" title="ElementUI 选择框">
       <!-- 通用API -->
       <div class="card-item">
         <h3>通用API</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ElementUI.selectDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -165,7 +165,7 @@
       <!-- 标准选择框 -->
       <div class="card-item">
         <h3>标准选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ElementUI.selectFilterable">
             <a-radio-button :value="true">开启搜索</a-radio-button>
             <a-radio-button :value="false">关闭搜索</a-radio-button>
@@ -210,7 +210,7 @@
       <!-- 级联选择框 -->
       <div class="card-item">
         <h3>级联选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ElementUI.cascaderShowAllLevels">
             <a-radio-button :value="true">显示选中值的完整路径</a-radio-button>
             <a-radio-button :value="false">隐藏选中值的完整路径</a-radio-button>
@@ -244,11 +244,11 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 选择框">
+    <a-card class="mtb-20" title="AtUI 选择框">
       <!-- 标准选择框 -->
       <div class="card-item">
         <h3>标准选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="AtUI.selectDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -309,11 +309,11 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 选择框">
+    <a-card class="mtb-20" title="ViewUI 选择框">
       <!-- 通用API -->
       <div class="card-item">
         <h3>通用API</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ViewUI.selectDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -336,7 +336,7 @@
       <!-- 标准选择框 -->
       <div class="card-item">
         <h3>标准选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ViewUI.selectMultiple">
             <a-radio-button :value="true">开启多选</a-radio-button>
             <a-radio-button :value="false">关闭多选</a-radio-button>
@@ -370,7 +370,7 @@
       <!-- 级联选择框 -->
       <div class="card-item">
         <h3>级联选择框</h3>
-        <div class="radio-box">
+        <div class="control-box">
           <a-radio-group v-model="ViewUI.cascaderTrigger">
             <a-radio-button :value="'click'">click</a-radio-button>
             <a-radio-button :value="'hover'">hover</a-radio-button>

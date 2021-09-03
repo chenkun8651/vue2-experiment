@@ -2,8 +2,8 @@
   <!-- 弹出框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 弹出框">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 弹出框">
+      <div class="control-box">
         <a-radio-group v-model="popoverTrigger">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'focus'">focus</a-radio-button>
@@ -31,8 +31,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 弹出框">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 弹出框">
+      <div class="control-box">
         <a-radio-group v-model="popoverTriggerE">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'focus'">focus</a-radio-button>
@@ -115,8 +115,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 弹出框">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 弹出框">
+      <div class="control-box">
         <a-radio-group v-model="popoverTriggerA">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'focus'">focus</a-radio-button>
@@ -141,8 +141,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 弹出框">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 弹出框">
+      <div class="control-box">
         <a-radio-group v-model="popoverTriggerV">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'focus'">focus</a-radio-button>

@@ -2,8 +2,8 @@
   <!-- 描述列表 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 描述列表">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 描述列表">
+      <div class="control-box">
         <a-radio-group v-model="descriptionsSize">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'middle'">middle</a-radio-button>
@@ -41,8 +41,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 描述列表">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 描述列表">
+      <div class="control-box">
         <a-radio-group v-model="descriptionsSizeE">
           <a-radio-button :value="'null'">default</a-radio-button>
           <a-radio-button :value="'medium'">medium</a-radio-button>
@@ -81,11 +81,11 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 描述列表">
+    <a-card class="mtb-20" title="AtUI 描述列表">
       <div class="c-f5222d">AtUI框架没有描述列表</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 描述列表">
+    <a-card class="mtb-20" title="ViewUI 描述列表">
       <div class="c-faad14">ViewUI框架的描述列表需要付费使用</div>
     </a-card>
   </div>

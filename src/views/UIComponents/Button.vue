@@ -2,8 +2,8 @@
   <!-- 按钮 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 按钮">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 按钮">
+      <div class="control-box">
         <a-radio-group v-model="buttonType">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'primary'">primary</a-radio-button>
@@ -58,8 +58,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 按钮">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 按钮">
+      <div class="control-box">
         <a-radio-group v-model="buttonTypeE">
           <a-radio-button :value="null">default</a-radio-button>
           <a-radio-button :value="'primary'">primary</a-radio-button>
@@ -116,8 +116,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 按钮">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 按钮">
+      <div class="control-box">
         <a-radio-group v-model="buttonTypeA">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'primary'">primary</a-radio-button>
@@ -164,8 +164,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 按钮">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 按钮">
+      <div class="control-box">
         <a-radio-group v-model="buttonTypeV">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'primary'">primary</a-radio-button>

@@ -2,8 +2,8 @@
   <!-- 步骤条 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 步骤条">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 步骤条">
+      <div class="control-box">
         <a-radio-group v-model="AntDesignVue.direction">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -64,8 +64,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 步骤条">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 步骤条">
+      <div class="control-box">
         <a-radio-group v-model="ElementUI.simple">
           <a-radio-button :value="true">简洁风格</a-radio-button>
           <a-radio-button :value="false">普通风格</a-radio-button>
@@ -134,8 +134,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 步骤条">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 步骤条">
+      <div class="control-box">
         <a-radio-group v-model="AtUI.direction">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -175,8 +175,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 步骤条">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 步骤条">
+      <div class="control-box">
         <a-radio-group v-model="ViewUI.direction">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>

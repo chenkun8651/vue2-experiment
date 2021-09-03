@@ -2,8 +2,8 @@
   <!-- 抽屉 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 抽屉">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 抽屉">
+      <div class="control-box">
         <a-radio-group v-model="drawerVisible">
           <a-radio-button :value="true">打开抽屉</a-radio-button>
           <a-radio-button :value="false">关闭抽屉</a-radio-button>
@@ -77,8 +77,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 抽屉">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 抽屉">
+      <div class="control-box">
         <a-radio-group v-model="drawerVisibleE">
           <a-radio-button :value="true">打开抽屉</a-radio-button>
           <a-radio-button :value="false">关闭抽屉</a-radio-button>
@@ -145,12 +145,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 抽屉">
+    <a-card class="mtb-20" title="AtUI 抽屉">
       <div class="c-f5222d">AtUI框架没有抽屉</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 抽屉">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 抽屉">
+      <div class="control-box">
         <a-radio-group v-model="drawerVisibleV">
           <a-radio-button :value="true">打开抽屉</a-radio-button>
           <a-radio-button :value="false">关闭抽屉</a-radio-button>

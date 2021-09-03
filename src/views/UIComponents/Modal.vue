@@ -2,8 +2,8 @@
   <!-- 对话框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 对话框">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 对话框">
+      <div class="control-box">
         <a-radio-group v-model="modalVisible">
           <a-radio-button :value="true">打开对话框</a-radio-button>
           <a-radio-button :value="false">关闭对话框</a-radio-button>
@@ -67,8 +67,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 对话框">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 对话框">
+      <div class="control-box">
         <a-radio-group v-model="modalVisibleE">
           <a-radio-button :value="true">打开对话框</a-radio-button>
           <a-radio-button :value="false">关闭对话框</a-radio-button>
@@ -136,12 +136,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 对话框">
+    <a-card class="mtb-20" title="AtUI 对话框">
       <div class="c-f5222d">AtUI框架没有对话框</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 对话框">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 对话框">
+      <div class="control-box">
         <a-radio-group v-model="modalVisibleV">
           <a-radio-button :value="true">打开对话框</a-radio-button>
           <a-radio-button :value="false">关闭对话框</a-radio-button>

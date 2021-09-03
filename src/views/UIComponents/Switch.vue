@@ -2,8 +2,8 @@
   <!-- 开关 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 开关">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 开关">
+      <div class="control-box">
         <a-radio-group v-model="AntDesignVue.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -44,8 +44,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 开关">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 开关">
+      <div class="control-box">
         <a-radio-group v-model="ElementUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -80,8 +80,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 开关">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 开关">
+      <div class="control-box">
         <a-radio-group v-model="AtUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -112,8 +112,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 开关">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 开关">
+      <div class="control-box">
         <a-radio-group v-model="ViewUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>

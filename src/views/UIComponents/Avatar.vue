@@ -2,8 +2,8 @@
   <!-- 头像 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 头像">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 头像">
+      <div class="control-box">
         <a-radio-group v-model="avatarShape">
           <a-radio-button :value="'circle'">圆形</a-radio-button>
           <a-radio-button :value="'square'">方形</a-radio-button>
@@ -32,8 +32,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 头像">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 头像">
+      <div class="control-box">
         <a-radio-group v-model="avatarShapeE">
           <a-radio-button :value="'circle'">圆形</a-radio-button>
           <a-radio-button :value="'square'">方形</a-radio-button>
@@ -79,12 +79,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 头像">
+    <a-card class="mtb-20" title="AtUI 头像">
       <div class="c-f5222d">AtUI框架没有头像</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 头像">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 头像">
+      <div class="control-box">
         <a-radio-group v-model="avatarShapeV">
           <a-radio-button :value="'circle'">圆形</a-radio-button>
           <a-radio-button :value="'square'">方形</a-radio-button>

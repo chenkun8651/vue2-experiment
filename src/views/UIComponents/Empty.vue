@@ -2,8 +2,8 @@
   <!-- 空状态 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 空状态">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 空状态">
+      <div class="control-box">
         <div class="string-set">
           <span style="margin-right: 5px">设置图片链接</span>
           <a-input style="width: 200px" v-model="emptyImage" />
@@ -18,8 +18,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 空状态">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 空状态">
+      <div class="control-box">
         <div class="string-set">
           <span style="margin-right: 5px">设置图片链接</span>
           <a-input style="width: 200px" v-model="emptyImageE" />
@@ -35,11 +35,11 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 空状态">
+    <a-card class="mtb-20" title="AtUI 空状态">
       <div class="c-f5222d">AtUI框架没有空状态</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 空状态">
+    <a-card class="mtb-20" title="ViewUI 空状态">
       <div class="c-f5222d">ViewUI框架没有空状态</div>
     </a-card>
   </div>

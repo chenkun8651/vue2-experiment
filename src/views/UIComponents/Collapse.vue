@@ -2,8 +2,8 @@
   <!-- 折叠面板 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 折叠面板">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 折叠面板">
+      <div class="control-box">
         <a-radio-group v-model="collapseBordered">
           <a-radio-button :value="true">普通风格</a-radio-button>
           <a-radio-button :value="false">极简风格</a-radio-button>
@@ -28,8 +28,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 折叠面板">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 折叠面板">
+      <div class="control-box">
         <a-radio-group v-model="collapseAccordionE">
           <a-radio-button :value="false">普通折叠面板</a-radio-button>
           <a-radio-button :value="true">手风琴折叠面板</a-radio-button>
@@ -50,8 +50,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 折叠面板">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 折叠面板">
+      <div class="control-box">
         <a-radio-group v-model="collapseSimpleA">
           <a-radio-button :value="false">普通风格</a-radio-button>
           <a-radio-button :value="true">极简风格</a-radio-button>
@@ -76,8 +76,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 折叠面板">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 折叠面板">
+      <div class="control-box">
         <a-radio-group v-model="collapseSimpleV">
           <a-radio-button :value="false">普通风格</a-radio-button>
           <a-radio-button :value="true">极简风格</a-radio-button>

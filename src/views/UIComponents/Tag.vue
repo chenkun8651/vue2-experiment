@@ -2,8 +2,8 @@
   <!-- 标签 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 标签">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 标签">
+      <div class="control-box">
         <a-radio-group v-model="tagVisible">
           <a-radio-button :value="true">显示标签</a-radio-button>
           <a-radio-button :value="false">隐藏标签</a-radio-button>
@@ -24,8 +24,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 标签">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 标签">
+      <div class="control-box">
         <a-radio-group v-model="tagDisableTransitionsE">
           <a-radio-button :value="true">开启渐变动画</a-radio-button>
           <a-radio-button :value="false">关闭渐变动画</a-radio-button>
@@ -76,8 +76,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 标签">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 标签">
+      <div class="control-box">
         <a-radio-group v-model="tagColorA">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'primary'">primary</a-radio-button>
@@ -100,8 +100,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 标签">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 标签">
+      <div class="control-box">
         <a-radio-group v-model="TagFadeV">
           <a-radio-button :value="true">开启渐变动画</a-radio-button>
           <a-radio-button :value="false">关闭渐变动画</a-radio-button>

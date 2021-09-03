@@ -2,8 +2,8 @@
   <!-- 文字提示 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 文字提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 文字提示">
+      <div class="control-box">
         <a-radio-group v-model="tooltipArrowPointAtCenter">
           <a-radio-button :value="true">开启箭头指向元素中心</a-radio-button>
           <a-radio-button :value="false">关闭箭头指向元素中心</a-radio-button>
@@ -58,8 +58,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 文字提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 文字提示">
+      <div class="control-box">
         <a-radio-group v-model="tooltipDisabledE">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -112,8 +112,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 文字提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 文字提示">
+      <div class="control-box">
         <a-radio-group v-model="tooltipPlacementA">
           <a-radio-button :value="'top'">top</a-radio-button>
           <a-radio-button :value="'bottom'">bottom</a-radio-button>
@@ -131,8 +131,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 文字提示">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 文字提示">
+      <div class="control-box">
         <a-radio-group v-model="tooltipDisabledV">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>

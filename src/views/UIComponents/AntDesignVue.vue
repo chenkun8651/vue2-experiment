@@ -2,7 +2,7 @@
   <!-- AntDesignVue特色 -->
   <div>
     <!-- 评论组件 -->
-    <a-card class="card-margin" title="AntDesignVue 评论">
+    <a-card class="mtb-20" title="AntDesignVue 评论">
       <div>
         <a-comment>
           <!-- 评论人 -->
@@ -55,8 +55,8 @@
       </div>
     </a-card>
     <!-- 统计数值组件 -->
-    <a-card class="card-margin" title="AntDesignVue 统计数值">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 统计数值">
+      <div class="control-box">
         <div class="string-set">
           <span style="margin-right: 5px">设置千分位标识符</span>
           <a-input style="width: 100px" v-model="statisticGroupSeparator">
@@ -95,8 +95,8 @@
       </div>
     </a-card>
     <!-- 倒计时组件 -->
-    <a-card class="card-margin" title="AntDesignVue 倒计时">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 倒计时">
+      <div class="control-box">
         <div class="string-set">
           <span style="margin-right: 5px">设置时间格式化</span>
           <a-input style="width: 200px" v-model="statisticFormat"> </a-input>

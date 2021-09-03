@@ -2,8 +2,8 @@
   <!-- 图标 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 图标">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 图标">
+      <div class="control-box">
         <a-radio-group v-model="iconSpin">
           <a-radio-button :value="true">开启旋转动画</a-radio-button>
           <a-radio-button :value="false">关闭旋转动画</a-radio-button>
@@ -87,8 +87,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 图标">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 图标">
+      <div class="control-box">
         <div class="string-set">
           <span style="margin-right: 5px">设置图标名称</span>
           <a-input style="width: 150px" v-model="iconNameE" />
@@ -111,8 +111,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 图标">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AtUI 图标">
+      <div class="control-box">
         <div class="string-set">
           <span style="margin-right: 5px">设置图标名称</span>
           <a-input style="width: 150px" v-model="iconNameA" />
@@ -135,8 +135,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 图标">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 图标">
+      <div class="control-box">
         <div class="string-set">
           <span style="margin-right: 5px">设置图标名称</span>
           <a-input style="width: 150px" v-model="iconNameV" />

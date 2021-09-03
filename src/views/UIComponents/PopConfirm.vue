@@ -2,8 +2,8 @@
   <!-- 弹出确认框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 弹出确认框">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 弹出确认框">
+      <div class="control-box">
         <a-radio-group v-model="popconfirmDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -45,8 +45,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 弹出确认框">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 弹出确认框">
+      <div class="control-box">
         <div class="string-set">
           <span style="margin-right: 5px">设置弹出框标题（内容）文本</span>
           <a-input style="width: 200px" v-model="popconfirmTitleE" />
@@ -102,11 +102,11 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 弹出确认框">
+    <a-card class="mtb-20" title="AtUI 弹出确认框">
       <div class="c-f5222d">AtUI框架没有弹出确认框</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 弹出确认框">
+    <a-card class="mtb-20" title="ViewUI 弹出确认框">
       <div class="c-f5222d">ViewUI框架没有弹出确认框</div>
     </a-card>
   </div>

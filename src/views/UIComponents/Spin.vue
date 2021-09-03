@@ -2,8 +2,8 @@
   <!-- 加载 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 加载">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 加载">
+      <div class="control-box">
         <a-radio-group v-model="spinSpinning">
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>
@@ -34,8 +34,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 加载">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 加载">
+      <div class="control-box">
         <a-radio-group v-model="spinStatusE" @change="changeLoading">
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>
@@ -62,8 +62,8 @@
       <div class="c-f5222d">AtUI框架没有加载</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 加载">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ViewUI 加载">
+      <div class="control-box">
         <a-radio-group v-model="spinSpinningV">
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>

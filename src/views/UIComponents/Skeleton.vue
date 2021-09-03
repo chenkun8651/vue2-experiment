@@ -2,8 +2,8 @@
   <!-- 骨架屏 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="card-margin" title="AntDesignVue 骨架屏">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="AntDesignVue 骨架屏">
+      <div class="control-box">
         <a-radio-group v-model="skeletonLoading">
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完毕</a-radio-button>
@@ -38,8 +38,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="card-margin" title="ElementUI 骨架屏">
-      <div class="radio-box">
+    <a-card class="mtb-20" title="ElementUI 骨架屏">
+      <div class="control-box">
         <a-radio-group v-model="skeletonLoadingE">
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完毕</a-radio-button>
@@ -76,11 +76,11 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="card-margin" title="AtUI 骨架屏">
+    <a-card class="mtb-20" title="AtUI 骨架屏">
       <div class="c-f5222d">AtUI框架没有骨架屏</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="card-margin" title="ViewUI 骨架屏">
+    <a-card class="mtb-20" title="ViewUI 骨架屏">
       <div class="c-f5222d">ViewUI框架没有骨架屏</div>
     </a-card>
   </div>
