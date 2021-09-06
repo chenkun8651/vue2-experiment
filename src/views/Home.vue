@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div>主页</div>
     <ul class="flex">
       <ScrollNum
         v-for="(num, idx) of numArr"

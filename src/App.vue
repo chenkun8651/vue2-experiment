@@ -1,21 +1,17 @@
 <template>
   <a-config-provider :locale="locale">
     <div id="app">
-      <div class="pc-nav">
-        <div>
-          <router-link to="/">Home</router-link> |
-          <router-link to="/UIComponents">UIComponents</router-link>
+      <div class="pc-nav flex divide-x divide-green-500 mx-4 my-4">
+        <div class="w-1/6">
+          <div class="flex items-center">
+            <img class="w-14 h-10" src="./assets/img/product.png" />
+            <span class="text-2xl font-normal">UI框架实验库</span>
+          </div>
         </div>
+        <div class="w-4/6">搜索</div>
+        <div class="w-1/6">路由</div>
       </div>
       <router-view class="view" />
-      <v-bottom-navigation class="phone-nav" horizontal grow>
-        <v-btn>
-          <router-link to="/">Home</router-link>
-        </v-btn>
-        <v-btn>
-          <router-link to="/UIComponents">UIComponents</router-link>
-        </v-btn>
-      </v-bottom-navigation>
     </div>
   </a-config-provider>
 </template>
@@ -32,6 +28,13 @@ export default {
       locale: zhCN,
     };
   },
+  methods: {
+    chageRouter(value) {
+      if (value) {
+        this.$router.push(`/${value}`);
+      }
+    },
+  },
 };
 </script>
 
@@ -39,24 +42,18 @@ export default {
 #app {
   height: 100%;
 }
-.view {
-  height: calc(100% - 40px);
-  overflow: auto;
-}
-
 .pc-nav {
   height: 40px;
 }
-.phone-nav {
-  display: none !important;
+.view {
+  width: 100%;
+  height: calc(100% - 72px);
+  overflow: auto;
 }
+
 @media screen and (max-width: 600px) {
   .pc-nav {
     display: none;
-  }
-  .phone-nav {
-    display: flex !important;
-    height: 40px;
   }
 }
 </style>

@@ -12,7 +12,7 @@
           v-model="routeArray"
           :theme="'dark'"
           :mode="'inline'"
-          @click="ChangeMenu"
+          @click="changeMenu"
         >
           <a-menu-item v-for="item in UIComponentsMenu" :key="item.key">
             <a-icon :type="item.icon" />
@@ -44,7 +44,9 @@
       </a-layout>
     </a-layout>
     <div class="ui-components-menu">
-      <div v-for="item in UIComponentsMenu" :key="item.key"></div>
+      <div v-for="item in UIComponentsMenu" :key="item.key">
+        <div>{{ item.name }}</div>
+      </div>
     </div>
     <div class="ui-components-view">
       <router-view></router-view>
@@ -97,7 +99,7 @@ export default {
   },
 
   methods: {
-    ChangeMenu(event) {
+    changeMenu(event) {
       if (this.routeCurrent !== event.key) {
         this.routeCurrent = event.key;
         this.$router.push(`/UIComponents/${event.key}`);
