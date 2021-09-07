@@ -15,8 +15,8 @@ import 'view-design/dist/styles/iview.css'
 
 import App from './App.vue'
 import router from './router/index.js'
-import './assets/style/global.css'
 import './assets/style/tailwind.css'
+import './assets/style/global.css'
 
 Vue.config.productionTip = false
 Vue.use(AntDesignVue)

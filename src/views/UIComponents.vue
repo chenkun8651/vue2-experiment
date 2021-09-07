@@ -1,54 +1,34 @@
 <template>
-  <div>
-    <a-layout class="ui-components-layout">
-      <a-layout-sider
-        v-model="collapsed"
-        :width="230"
-        :collapsible="true"
-        :trigger="null"
+  <div class="flex max-w-full">
+    <!-- 菜单 -->
+    <div class="menu w-1/6 py-8 border-r">
+      <div
+        v-for="item in UIComponentsMenu"
+        :key="item.key"
+        class="max-w-full h-12 leading-12 hover:text-blue-500 cursor-pointer"
+        :class="{
+          'border-r-4 border-blue-500 text-blue-500 bg-blue-100':
+            activation === item.key,
+          'over-auto': mousePostion === 'menu',
+          'overflow-hidden': mousePostion === 'view',
+        }"
+        @click="toRouter(item.key)"
+        @mouseenter="this.mousePostion = 'menu'"
+        @mouseleave="this.mousePostion = 'view'"
       >
-        <div class="logo" />
-        <a-menu
-          v-model="routeArray"
-          :theme="'dark'"
-          :mode="'inline'"
-          @click="changeMenu"
-        >
-          <a-menu-item v-for="item in UIComponentsMenu" :key="item.key">
-            <a-icon :type="item.icon" />
-            <span>{{ item.name }}</span>
-          </a-menu-item>
-        </a-menu>
-      </a-layout-sider>
-      <a-layout>
-        <a-layout-header :style="{ background: '#fff', padding: '0' }">
-          <a-icon
-            class="trigger"
-            :type="collapsed ? 'menu-unfold' : 'menu-fold'"
-            @click="() => (collapsed = !collapsed)"
-          >
-          </a-icon>
-          {{ routeArray | keyToName }}
-        </a-layout-header>
-        <a-layout-content
-          :style="{
-            margin: '20px 16px',
-            padding: '20px',
-            background: '#fff',
-            minHeight: '280px',
-            overflow: 'auto',
-          }"
-        >
-          <router-view></router-view>
-        </a-layout-content>
-      </a-layout>
-    </a-layout>
-    <div class="ui-components-menu">
-      <div v-for="item in UIComponentsMenu" :key="item.key">
-        <div>{{ item.name }}</div>
+        <div class="pl-5">{{ item.name }}</div>
       </div>
     </div>
-    <div class="ui-components-view">
+    <!-- 内容 -->
+    <div
+      class="menu-view w-5/6"
+      :class="{
+        'over-auto': mousePostion === 'view',
+        'overflow-hidden': mousePostion === 'menu',
+      }"
+      @mouseenter="mousePostion = 'view'"
+      @mouseleave="mousePostion = 'menu'"
+    >
       <router-view></router-view>
     </div>
   </div>
@@ -61,32 +41,22 @@ export default {
   data() {
     return {
       UIComponentsMenu: UIComponentsMenu,
-      collapsed: false,
-      routeCurrent: null,
-      routeArray: [],
-      drawer: false,
-      group: null,
+      activation: null,
+      mousePostion: null,
     };
   },
 
   mounted() {
-    this.routeCurrent = this.$router.currentRoute.path.split("/")[2];
-    if (this.routeCurrent) {
-      this.routeArray = [this.routeCurrent];
-    } else {
-      this.routeCurrent = "button";
-      this.routeArray = ["button"];
+    this.activation = this.$router.currentRoute.path.split("/")[2];
+    if (!this.activation) {
+      this.activation = "button";
       this.$router.push("/UIComponents/button");
     }
   },
 
   watch: {
     $route: function (value) {
-      this.routeCurrent = value.path.split("/")[2];
-      this.routeArray = [this.routeCurrent];
-    },
-    group() {
-      this.drawer = false;
+      this.activation = value.path.split("/")[2];
     },
   },
 
@@ -99,10 +69,10 @@ export default {
   },
 
   methods: {
-    changeMenu(event) {
-      if (this.routeCurrent !== event.key) {
-        this.routeCurrent = event.key;
-        this.$router.push(`/UIComponents/${event.key}`);
+    toRouter(value) {
+      if (value && value !== this.activation) {
+        this.activation = value;
+        this.$router.push(`/UIComponents/${value}`);
       }
     },
   },
@@ -110,22 +80,12 @@ export default {
 </script>
 
 <style scoped>
-.ui-components-layout {
-  overflow: hidden;
+.menu {
+  height: 100%;
+  overflow: auto;
 }
-.ui-components-layout .trigger {
-  font-size: 18px;
-  line-height: 64px;
-  padding: 0 24px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-.ui-components-layout .trigger:hover {
-  color: #1890ff;
-}
-.ui-components-layout .logo {
-  height: 32px;
-  background: rgba(255, 255, 255, 0.2);
-  margin: 16px;
+.menu-view {
+  height: 100%;
+  overflow: auto;
 }
 </style>
