@@ -2,8 +2,8 @@
   <!-- 表格 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 表格">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 表格">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tableSize">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'middle'">middle</a-radio-button>
@@ -53,8 +53,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 表格">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 表格">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tableSizeE">
           <a-radio-button :value="null">default</a-radio-button>
           <a-radio-button :value="'medium'">medium</a-radio-button>
@@ -114,8 +114,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 表格">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 表格">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tableSizeA">
           <a-radio-button :value="'large'">large</a-radio-button>
           <a-radio-button :value="'normal'">normal</a-radio-button>
@@ -137,7 +137,7 @@
           <a-radio-button :value="true">开启分页</a-radio-button>
           <a-radio-button :value="false">关闭分页</a-radio-button>
         </a-radio-group>
-        <div v-show="tablePaginationA" class="number-set">
+        <div v-show="tablePaginationA" class="my-2 mr-5">
           <span style="margin-right: 5px">设置分页条数</span>
           <a-input-number style="width: 100px" v-model="tablePageSizeA" />
         </div>
@@ -175,8 +175,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 表格">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 表格">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tableSizeV">
           <a-radio-button :value="'large'">large</a-radio-button>
           <a-radio-button :value="'default'">default</a-radio-button>

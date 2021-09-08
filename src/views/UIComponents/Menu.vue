@@ -2,8 +2,8 @@
   <!-- 导航菜单 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 导航菜单">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 导航菜单">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AntDesignVue.menuMode">
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
           <a-radio-button :value="'vertical-right'">
@@ -57,8 +57,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 导航菜单">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 导航菜单">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ElementUI.menuMode">
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
@@ -67,14 +67,14 @@
           <a-radio-button :value="true">开启只能打开一个子菜单</a-radio-button>
           <a-radio-button :value="false">关闭只能打开一个子菜单</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置菜单背景色</span>
           <a-input
             style="width: 100px"
             v-model="ElementUI.menuBackgroundColor"
           />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置菜单文字颜色</span>
           <a-input style="width: 100px" v-model="ElementUI.menuTextColor" />
         </div>
@@ -113,8 +113,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 导航菜单">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 导航菜单">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AtUI.menuMode">
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
           <a-radio-button :value="'inline'">inline</a-radio-button>
@@ -160,8 +160,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 导航菜单">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 导航菜单">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ViewUI.menuMode">
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>

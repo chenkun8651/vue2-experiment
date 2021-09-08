@@ -2,13 +2,13 @@
   <!-- 徽标数 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 徽标数">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 徽标数">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="badgeDot" @change="changeDot">
           <a-radio-button :value="null">数字徽标</a-radio-button>
           <a-radio-button :value="false">圆点徽标</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标附加文本</span>
           <a-input style="width: 100px" v-model="badgeText" />
         </div>
@@ -19,7 +19,7 @@
           <a-radio-button :value="'error'">error</a-radio-button>
           <a-radio-button :value="'warning'">warning</a-radio-button>
         </a-radio-group>
-        <div v-show="badgeDot === false" class="string-set">
+        <div v-show="badgeDot === false" class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标颜色</span>
           <a-input style="width: 100px" v-model="badgeColor" />
         </div>
@@ -27,11 +27,11 @@
           <a-radio-button :value="true">显示数字0</a-radio-button>
           <a-radio-button :value="false">隐藏数字0</a-radio-button>
         </a-radio-group>
-        <div v-show="badgeDot === null" class="number-set">
+        <div v-show="badgeDot === null" class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标展示数字</span>
           <a-input-number style="width: 100px" v-model="badgeCount" />
         </div>
-        <div v-show="badgeDot === null" class="number-set">
+        <div v-show="badgeDot === null" class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标展示封顶数字</span>
           <a-input-number style="width: 100px" v-model="badgeOverflowCount" />
         </div>
@@ -51,8 +51,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 徽标数">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 徽标数">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="badgeHiddenE">
           <a-radio-button :value="false">显示徽标</a-radio-button>
           <a-radio-button :value="true">隐藏徽标</a-radio-button>
@@ -68,11 +68,11 @@
           <a-radio-button :value="'danger'">danger</a-radio-button>
           <a-radio-button :value="'warning'">warning</a-radio-button>
         </a-radio-group>
-        <div v-show="!badgeIsDotE" class="number-set">
+        <div v-show="!badgeIsDotE" class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标展示数字</span>
           <a-input-number style="width: 100px" v-model="badgeValueE" />
         </div>
-        <div v-show="!badgeIsDotE" class="number-set">
+        <div v-show="!badgeIsDotE" class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标展示封顶数字</span>
           <a-input-number style="width: 100px" v-model="badgeMaxE" />
         </div>
@@ -90,8 +90,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 徽标数">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 徽标数">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="badgeShowA">
           <a-radio-button :value="true">显示徽标</a-radio-button>
           <a-radio-button :value="false">隐藏徽标</a-radio-button>
@@ -105,11 +105,11 @@
           <a-radio-button :value="'info'">info</a-radio-button>
           <a-radio-button :value="'warning'">warning</a-radio-button>
         </a-radio-group>
-        <div v-show="!badgeDotA" class="number-set">
+        <div v-show="!badgeDotA" class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标展示数字</span>
           <a-input-number style="width: 100px" v-model="badgeValueA" />
         </div>
-        <div v-show="!badgeDotA" class="number-set">
+        <div v-show="!badgeDotA" class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标展示封顶数字</span>
           <a-input-number style="width: 100px" v-model="badgeMaxNumA" />
         </div>
@@ -127,8 +127,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 徽标数">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 徽标数">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="badgeDotV" @change="changeDotV">
           <a-radio-button :value="false">数字徽标</a-radio-button>
           <a-radio-button :value="null">圆点徽标</a-radio-button>
@@ -144,11 +144,11 @@
           <a-radio-button :value="true">显示数字0</a-radio-button>
           <a-radio-button :value="false">隐藏数字0</a-radio-button>
         </a-radio-group>
-        <div v-show="badgeDotV !== null" class="number-set">
+        <div v-show="badgeDotV !== null" class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标展示数字</span>
           <a-input-number style="width: 100px" v-model="badgeCountV" />
         </div>
-        <div v-show="badgeDotV !== null" class="number-set">
+        <div v-show="badgeDotV !== null" class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标展示封顶数字</span>
           <a-input-number style="width: 100px" v-model="badgeOverflowCountV" />
         </div>
@@ -159,11 +159,11 @@
           <a-radio-button :value="'error'">error</a-radio-button>
           <a-radio-button :value="'warning'">warning</a-radio-button>
         </a-radio-group>
-        <div v-show="badgeDotV === null" class="string-set">
+        <div v-show="badgeDotV === null" class="my-2 mr-5">
           <span style="margin-right: 5px">设置徽标颜色</span>
           <a-input style="width: 100px" v-model="badgeColorV" />
         </div>
-        <div v-show="badgeDotV === null" class="string-set">
+        <div v-show="badgeDotV === null" class="my-2 mr-5">
           <span style="margin-right: 5px">设置状态徽标文本</span>
           <a-input style="width: 100px" v-model="badgeTextV" />
         </div>

@@ -2,9 +2,9 @@
   <!-- 面包屑 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 面包屑">
-      <div class="control-box">
-        <div class="string-set">
+    <a-card class="my-5" title="AntDesignVue 面包屑">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置分隔符</span>
           <a-input style="width: 100px" v-model="breadcrumbSeparator" />
         </div>
@@ -24,9 +24,9 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 面包屑">
-      <div class="control-box">
-        <div class="string-set">
+    <a-card class="my-5" title="ElementUI 面包屑">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置分隔符</span>
           <a-input style="width: 100px" v-model="breadcrumbSeparatorE" />
         </div>
@@ -42,9 +42,9 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 面包屑">
-      <div class="control-box">
-        <div class="string-set">
+    <a-card class="my-5" title="AtUI 面包屑">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置分隔符</span>
           <a-input style="width: 100px" v-model="breadcrumbSeparatorA" />
         </div>
@@ -60,9 +60,9 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 面包屑">
-      <div class="control-box">
-        <div class="string-set">
+    <a-card class="my-5" title="ViewUI 面包屑">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置分隔符</span>
           <a-input style="width: 100px" v-model="breadcrumbSeparatorV" />
         </div>

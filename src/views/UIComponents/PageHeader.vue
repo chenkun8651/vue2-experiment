@@ -2,7 +2,7 @@
   <!-- 页头 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 页头">
+    <a-card class="my-5" title="AntDesignVue 页头">
       <div>
         <a-page-header
           style="border: 1px solid rgb(235, 237, 240)"
@@ -14,7 +14,7 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 页头">
+    <a-card class="my-5" title="ElementUI 页头">
       <div>
         <el-page-header
           style="border: 1px solid rgb(235, 237, 240); padding: 15px"
@@ -26,12 +26,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 页头">
-      <div class="c-f5222d">AtUI框架没有页头</div>
+    <a-card class="my-5" title="AtUI 页头">
+      <div class="text-red-500">AtUI框架没有页头</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 页头">
-      <div class="c-faad14">ViewUI框架页头需要付费使用</div>
+    <a-card class="my-5" title="ViewUI 页头">
+      <div class="text-yellow-500">ViewUI框架页头需要付费使用</div>
     </a-card>
   </div>
 </template>

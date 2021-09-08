@@ -2,8 +2,8 @@
   <!-- 列表 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 列表">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 列表">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="listSize">
           <a-radio-button :value="'large'">large</a-radio-button>
           <a-radio-button :value="'default'">default</a-radio-button>
@@ -52,16 +52,16 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 列表">
-      <div class="c-f5222d">ElementUI框架没有列表</div>
+    <a-card class="my-5" title="ElementUI 列表">
+      <div class="text-red-500">ElementUI框架没有列表</div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 列表">
-      <div class="c-f5222d">AtUI框架没有列表</div>
+    <a-card class="my-5" title="AtUI 列表">
+      <div class="text-red-500">AtUI框架没有列表</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 列表">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 列表">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="listSizeV">
           <a-radio-button :value="'large'">large</a-radio-button>
           <a-radio-button :value="'default'">default</a-radio-button>

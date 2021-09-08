@@ -2,8 +2,8 @@
   <!-- 下拉菜单 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 下拉菜单">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 下拉菜单">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="dropdownDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -78,8 +78,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 下拉菜单">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 下拉菜单">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="dropdownPlacementE">
           <a-radio-button :value="'bottom-start'">bottom-start</a-radio-button>
           <a-radio-button :value="'bottom'">bottom</a-radio-button>
@@ -99,11 +99,11 @@
           <a-radio-button :value="'small'">small</a-radio-button>
           <a-radio-button :value="'mini'">mini</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置展开下拉菜单的延时（毫秒）</span>
           <a-input-number style="width: 100px" v-model="dropdownShowTimeoutE" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置收起下拉菜单的延时（毫秒）</span>
           <a-input-number style="width: 100px" v-model="dropdownHideTimeoutE" />
         </div>
@@ -152,8 +152,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 下拉菜单">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 下拉菜单">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="dropdownTriggerA">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'click'">click</a-radio-button>
@@ -189,8 +189,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 下拉菜单">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 下拉菜单">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="dropdownTriggerV">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'click'">click</a-radio-button>

@@ -2,8 +2,8 @@
   <!-- 评分 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 评分">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 评分">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AntDesignVue.rateDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -16,14 +16,14 @@
           <a-radio-button :value="true">开启清除</a-radio-button>
           <a-radio-button :value="false">关闭清除</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置评分数</span>
           <a-input-number
             style="width: 100px"
             v-model="AntDesignVue.rateCount"
           />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置评分图标</span>
           <a-input style="width: 100px" v-model="AntDesignVue.rateIcon" />
         </div>
@@ -41,8 +41,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 评分">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 评分">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ElementUI.rateDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -51,7 +51,7 @@
           <a-radio-button :value="true">开启半选</a-radio-button>
           <a-radio-button :value="false">关闭半选</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置评分数</span>
           <a-input-number style="width: 100px" v-model="ElementUI.rateMax" />
         </div>
@@ -67,8 +67,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 评分">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 评分">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AtUI.rateDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -81,11 +81,11 @@
           <a-radio-button :value="true">显示辅助文字</a-radio-button>
           <a-radio-button :value="false">隐藏辅助文字</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置评分数</span>
           <a-input-number style="width: 100px" v-model="AtUI.rateCount" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置评分图标</span>
           <a-input style="width: 100px" v-model="AtUI.rateIcon" />
         </div>
@@ -103,8 +103,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 评分">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 评分">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ViewUI.rateDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -121,7 +121,7 @@
           <a-radio-button :value="true">显示辅助文字</a-radio-button>
           <a-radio-button :value="false">隐藏辅助文字</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置评分数</span>
           <a-input-number style="width: 100px" v-model="ViewUI.rateCount" />
         </div>

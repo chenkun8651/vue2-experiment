@@ -2,8 +2,8 @@
   <!-- 弹出框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 弹出框">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 弹出框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="popoverTrigger">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'focus'">focus</a-radio-button>
@@ -31,8 +31,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 弹出框">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 弹出框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="popoverTriggerE">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'focus'">focus</a-radio-button>
@@ -53,7 +53,7 @@
           <a-radio-button :value="true">显示箭头</a-radio-button>
           <a-radio-button :value="false">隐藏箭头</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置弹出框宽度</span>
           <a-input-number
             style="width: 100px"
@@ -61,7 +61,7 @@
             :min="150"
           />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置弹出框偏移量</span>
           <a-input-number
             style="width: 100px"
@@ -69,13 +69,13 @@
             :min="0"
           />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置弹出动画</span>
           <a-input style="width: 100px" v-model="popoverTransitionE" />
         </div>
         <div
           v-show="popoverTriggerE === 'hover' || popoverTriggerE === 'manual'"
-          class="number-set"
+          class="my-2 mr-5"
         >
           <span style="margin-right: 5px">设置打开显示延迟时间（毫秒）</span>
           <a-input-number
@@ -86,7 +86,7 @@
         </div>
         <div
           v-show="popoverTriggerE === 'hover' || popoverTriggerE === 'manual'"
-          class="number-set"
+          class="my-2 mr-5"
         >
           <span style="margin-right: 5px">设置关闭显示延迟时间（毫秒）</span>
           <a-input-number
@@ -115,8 +115,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 弹出框">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 弹出框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="popoverTriggerA">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'focus'">focus</a-radio-button>
@@ -141,8 +141,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 弹出框">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 弹出框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="popoverTriggerV">
           <a-radio-button :value="'hover'">hover</a-radio-button>
           <a-radio-button :value="'focus'">focus</a-radio-button>
@@ -166,7 +166,7 @@
           <a-radio-button :value="true">开启对话模式</a-radio-button>
           <a-radio-button :value="false">关闭对话模式</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置弹出框宽度</span>
           <a-input-number
             style="width: 100px"
@@ -174,7 +174,7 @@
             :min="150"
           />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置弹出框偏移量</span>
           <a-input-number
             style="width: 100px"

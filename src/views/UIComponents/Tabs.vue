@@ -2,8 +2,8 @@
   <!-- 标签页 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 标签页">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 标签页">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AntDesignVue.type">
           <a-radio-button :value="'line'">line</a-radio-button>
           <a-radio-button :value="'card'">card</a-radio-button>
@@ -39,8 +39,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 标签页">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 标签页">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ElementUI.type">
           <a-radio-button :value="'card'">card</a-radio-button>
           <a-radio-button :value="'border-card'">border-card</a-radio-button>
@@ -93,8 +93,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 标签页">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 标签页">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AtUI.type">
           <a-radio-button :value="'line'">line</a-radio-button>
           <a-radio-button :value="'card'">card</a-radio-button>
@@ -133,8 +133,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 标签页">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 标签页">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ViewUI.type">
           <a-radio-button :value="'line'">line</a-radio-button>
           <a-radio-button :value="'card'">card</a-radio-button>

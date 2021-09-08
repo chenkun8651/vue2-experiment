@@ -2,8 +2,8 @@
   <!-- 描述列表 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 描述列表">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 描述列表">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="descriptionsSize">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'middle'">middle</a-radio-button>
@@ -41,8 +41,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 描述列表">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 描述列表">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="descriptionsSizeE">
           <a-radio-button :value="'null'">default</a-radio-button>
           <a-radio-button :value="'medium'">medium</a-radio-button>
@@ -81,12 +81,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 描述列表">
-      <div class="c-f5222d">AtUI框架没有描述列表</div>
+    <a-card class="my-5" title="AtUI 描述列表">
+      <div class="text-red-500">AtUI框架没有描述列表</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 描述列表">
-      <div class="c-faad14">ViewUI框架的描述列表需要付费使用</div>
+    <a-card class="my-5" title="ViewUI 描述列表">
+      <div class="text-yellow-500">ViewUI框架的描述列表需要付费使用</div>
     </a-card>
   </div>
 </template>

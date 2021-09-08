@@ -2,8 +2,8 @@
   <!-- 对话框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 对话框">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 对话框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="modalVisible">
           <a-radio-button :value="true">打开对话框</a-radio-button>
           <a-radio-button :value="false">关闭对话框</a-radio-button>
@@ -32,19 +32,19 @@
             关闭按ESC键关闭对话框功能
           </a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标题文本</span>
           <a-input style="width: 100px" v-model="modalTitle" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置确定按钮文本</span>
           <a-input style="width: 100px" v-model="modalOkText" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置取消按钮文本</span>
           <a-input style="width: 100px" v-model="modalCancelText" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置对话框宽度</span>
           <a-input style="width: 100px" v-model="modalWidth" />
         </div>
@@ -67,8 +67,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 对话框">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 对话框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="modalVisibleE">
           <a-radio-button :value="true">打开对话框</a-radio-button>
           <a-radio-button :value="false">关闭对话框</a-radio-button>
@@ -105,15 +105,15 @@
             关闭按ESC键关闭对话框功能
           </a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标题文本</span>
           <a-input style="width: 100px" v-model="modalTitleE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置对话框宽度</span>
           <a-input style="width: 100px" v-model="modalWidthE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置对话框到顶部的距离</span>
           <a-input style="width: 100px" v-model="modalTopE" />
         </div>
@@ -136,12 +136,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 对话框">
-      <div class="c-f5222d">AtUI框架没有对话框</div>
+    <a-card class="my-5" title="AtUI 对话框">
+      <div class="text-red-500">AtUI框架没有对话框</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 对话框">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 对话框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="modalVisibleV">
           <a-radio-button :value="true">打开对话框</a-radio-button>
           <a-radio-button :value="false">关闭对话框</a-radio-button>
@@ -189,19 +189,19 @@
             重新打开时不重置拖拽的位置
           </a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标题文本</span>
           <a-input style="width: 100px" v-model="modalTitleV" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置确定按钮文本</span>
           <a-input style="width: 100px" v-model="modalOkTextV" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置取消按钮文本</span>
           <a-input style="width: 100px" v-model="modalCancelTextV" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置对话框宽度</span>
           <a-input style="width: 100px" v-model="modalWidthV" />
         </div>

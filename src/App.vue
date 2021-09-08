@@ -2,7 +2,7 @@
   <a-config-provider :locale="locale">
     <div id="app">
       <!-- 导航 -->
-      <div class="flex items-center max-w-full h-14 border-b-2">
+      <div class="flex items-center w-full h-14 border-b-2">
         <div class="w-1/6">
           <div v-show="activation === 'Home'" class="flex items-center">
             <img class="w-10 h-10 mx-2" src="./assets/img/home.png" />
@@ -69,8 +69,8 @@
           </div>
         </div>
       </div>
-      <!-- 内容 -->
-      <router-view class="view" />
+      <!-- 一级页面 -->
+      <router-view class="view"></router-view>
     </div>
   </a-config-provider>
 </template>

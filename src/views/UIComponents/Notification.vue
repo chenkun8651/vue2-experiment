@@ -2,8 +2,8 @@
   <!-- 通知提示 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 通知提示">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 通知提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="notificationType">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -16,15 +16,15 @@
           <a-radio-button :value="'bottomRight'">bottomRight</a-radio-button>
           <a-radio-button :value="'bottomLeft'">bottomLeft</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置自动关闭的延时（秒）</span>
           <a-input-number style="width: 100px" v-model="notificationDuration" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标题</span>
           <a-input style="width: 200px" v-model="notificationMessage" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置内容</span>
           <a-input style="width: 200px" v-model="notificationDescription" />
         </div>
@@ -33,7 +33,7 @@
             notificationPlacement === 'topRight' ||
             notificationPlacement === 'topLeft'
           "
-          class="string-set"
+          class="my-2 mr-5"
         >
           <span style="margin-right: 5px">设置弹出时通知框离顶部的距离</span>
           <a-input style="width: 200px" v-model="notificationTop" />
@@ -43,7 +43,7 @@
             notificationPlacement === 'bottomRight' ||
             notificationPlacement === 'bottomLeft'
           "
-          class="string-set"
+          class="my-2 mr-5"
         >
           <span style="margin-right: 5px">设置弹出时通知框离底部的距离</span>
           <a-input style="width: 200px" v-model="notificationBottom" />
@@ -54,8 +54,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 通知提示">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 通知提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="notificationTypeE">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -72,22 +72,22 @@
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置自动关闭的延时（毫秒）</span>
           <a-input-number
             style="width: 100px"
             v-model="notificationDurationE"
           />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标题</span>
           <a-input style="width: 200px" v-model="notificationTitleE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置内容</span>
           <a-input style="width: 200px" v-model="notificationMessageE" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置提示偏移距离</span>
           <a-input-number style="width: 200px" v-model="notificationOffsetE" />
         </div>
@@ -97,8 +97,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 通知提示">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 通知提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="notificationTypeA">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -109,18 +109,18 @@
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置自动关闭的延时（毫秒）</span>
           <a-input-number
             style="width: 100px"
             v-model="notificationDurationA"
           />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标题</span>
           <a-input style="width: 200px" v-model="notificationTitleA" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置内容</span>
           <a-input style="width: 200px" v-model="notificationMessageA" />
         </div>
@@ -130,8 +130,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 通知提示">
-      <div class="c-faad14">ViewUI框架的通知提示需要付费使用</div>
+    <a-card class="my-5" title="ViewUI 通知提示">
+      <div class="text-yellow-500">ViewUI框架的通知提示需要付费使用</div>
     </a-card>
   </div>
 </template>

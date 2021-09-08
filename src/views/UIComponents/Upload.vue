@@ -2,8 +2,8 @@
   <!-- 上传 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 上传">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 上传">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AntDesignVue.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -57,8 +57,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 上传">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 上传">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ElementUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -78,7 +78,7 @@
           <a-radio-button :value="true">开启多选</a-radio-button>
           <a-radio-button :value="false">关闭多选</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置上传限制数量</span>
           <a-input-number
             style="width: 100px"
@@ -106,12 +106,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 上传">
-      <div class="c-f5222d">AtUI框架没有上传</div>
+    <a-card class="my-5" title="AtUI 上传">
+      <div class="text-red-500">AtUI框架没有上传</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 上传">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 上传">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ViewUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>

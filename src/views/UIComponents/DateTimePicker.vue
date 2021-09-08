@@ -2,11 +2,11 @@
   <!-- 日期选择框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 日期（时间）选择框">
+    <a-card class="my-5" title="AntDesignVue 日期（时间）选择框">
       <!-- 通用API -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>通用API</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="AntDesignVue.disabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -26,7 +26,7 @@
         </div>
       </div>
       <!-- 日期选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>日期选择框</h3>
         <div>
           <a-date-picker
@@ -40,7 +40,7 @@
         </div>
       </div>
       <!-- 范围日期选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>范围日期选择框</h3>
         <div>
           <a-range-picker
@@ -54,7 +54,7 @@
         </div>
       </div>
       <!-- 日期（周）选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>日期（周）选择框</h3>
         <div>
           <a-week-picker
@@ -67,7 +67,7 @@
         </div>
       </div>
       <!-- 日期（月）选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>日期（月）选择框</h3>
         <div>
           <a-month-picker
@@ -80,7 +80,7 @@
         </div>
       </div>
       <!-- 时间选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>时间选择框</h3>
         <div>
           <a-time-picker
@@ -94,11 +94,11 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 日期（时间）选择框">
+    <a-card class="my-5" title="ElementUI 日期（时间）选择框">
       <!-- 通用API -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>通用API</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ElementUI.disabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -124,9 +124,9 @@
         </div>
       </div>
       <!-- 日期选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>日期选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ElementUI.type">
             <a-radio-button :value="'year'">year</a-radio-button>
             <a-radio-button :value="'month'">month</a-radio-button>
@@ -154,7 +154,7 @@
         </div>
       </div>
       <!-- 时间选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>时间选择框</h3>
         <div>
           <el-time-select
@@ -170,15 +170,15 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 日期（时间）选择框">
-      <div class="c-f5222d">AtUI框架没有日期（时间）选择框</div>
+    <a-card class="my-5" title="AtUI 日期（时间）选择框">
+      <div class="text-red-500">AtUI框架没有日期（时间）选择框</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 日期（时间）选择框">
+    <a-card class="my-5" title="ViewUI 日期（时间）选择框">
       <!-- 通用API -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>通用API</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ViewUI.disabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -209,9 +209,9 @@
         </div>
       </div>
       <!-- 日期选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>日期选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ViewUI.type">
             <a-radio-button :value="'year'">year</a-radio-button>
             <a-radio-button :value="'month'">month</a-radio-button>
@@ -243,14 +243,14 @@
         </div>
       </div>
       <!-- 时间选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>时间选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ViewUI.type2">
             <a-radio-button :value="'time'">time</a-radio-button>
             <a-radio-button :value="'timerange'">timerange</a-radio-button>
           </a-radio-group>
-          <div class="string-set">
+          <div class="my-2 mr-5">
             <span style="margin-right: 5px">设置两个时间的分隔符</span>
             <a-input style="width: 100px" v-model="ViewUI.separator" />
           </div>

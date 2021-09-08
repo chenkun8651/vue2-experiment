@@ -1,36 +1,30 @@
 <template>
-  <div class="flex max-w-full">
+  <div class="w-full flex">
     <!-- 菜单 -->
-    <div class="menu w-1/6 py-8 border-r">
+    <div
+      class="w-1/6 h-full py-5 border-r"
+      :class="{
+        'overflow-auto': mousePostion === 'menu',
+        'overflow-hidden': mousePostion === 'view',
+      }"
+    >
       <div
         v-for="item in UIComponentsMenu"
         :key="item.key"
-        class="max-w-full h-12 leading-12 hover:text-blue-500 cursor-pointer"
+        class="w-full h-12 leading-12 hover:text-blue-500 cursor-pointer"
         :class="{
           'border-r-4 border-blue-500 text-blue-500 bg-blue-100':
             activation === item.key,
-          'over-auto': mousePostion === 'menu',
-          'overflow-hidden': mousePostion === 'view',
         }"
         @click="toRouter(item.key)"
-        @mouseenter="this.mousePostion = 'menu'"
-        @mouseleave="this.mousePostion = 'view'"
+        @mouseenter="mousePostion = 'menu'"
+        @mouseleave="mousePostion = 'view'"
       >
         <div class="pl-5">{{ item.name }}</div>
       </div>
     </div>
-    <!-- 内容 -->
-    <div
-      class="menu-view w-5/6"
-      :class="{
-        'over-auto': mousePostion === 'view',
-        'overflow-hidden': mousePostion === 'menu',
-      }"
-      @mouseenter="mousePostion = 'view'"
-      @mouseleave="mousePostion = 'menu'"
-    >
-      <router-view></router-view>
-    </div>
+    <!-- 二级页面 -->
+    <router-view class="w-5/6 h-full p-5 overflow-auto"></router-view>
   </div>
 </template>
 
@@ -42,10 +36,9 @@ export default {
     return {
       UIComponentsMenu: UIComponentsMenu,
       activation: null,
-      mousePostion: null,
+      mousePostion: "menu",
     };
   },
-
   mounted() {
     this.activation = this.$router.currentRoute.path.split("/")[2];
     if (!this.activation) {
@@ -53,13 +46,11 @@ export default {
       this.$router.push("/UIComponents/button");
     }
   },
-
   watch: {
     $route: function (value) {
       this.activation = value.path.split("/")[2];
     },
   },
-
   filters: {
     keyToName: function (value) {
       if (value.length > 0) {
@@ -67,7 +58,6 @@ export default {
       }
     },
   },
-
   methods: {
     toRouter(value) {
       if (value && value !== this.activation) {
@@ -78,14 +68,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.menu {
-  height: 100%;
-  overflow: auto;
-}
-.menu-view {
-  height: 100%;
-  overflow: auto;
-}
-</style>

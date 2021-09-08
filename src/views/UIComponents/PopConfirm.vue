@@ -2,8 +2,8 @@
   <!-- 弹出确认框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 弹出确认框">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 弹出确认框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="popconfirmDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -14,19 +14,19 @@
           <a-radio-button :value="'left'">left</a-radio-button>
           <a-radio-button :value="'right'">right</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置弹出框标题（内容）文本</span>
           <a-input style="width: 200px" v-model="popconfirmTitle" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置确定按钮文本</span>
           <a-input style="width: 100px" v-model="popconfirmOkText" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置取消按钮文本</span>
           <a-input style="width: 100px" v-model="popconfirmCancelText" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置图标（插槽）</span>
           <a-input style="width: 200px" v-model="popconfirmIcon" />
         </div>
@@ -45,31 +45,31 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 弹出确认框">
-      <div class="control-box">
-        <div class="string-set">
+    <a-card class="my-5" title="ElementUI 弹出确认框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置弹出框标题（内容）文本</span>
           <a-input style="width: 200px" v-model="popconfirmTitleE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置确定按钮文本</span>
           <a-input
             style="width: 100px"
             v-model="popconfirmConfirmButtonTextE"
           />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置确定按钮类型</span>
           <a-input
             style="width: 100px"
             v-model="popconfirmConfirmButtonTypeE"
           />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置取消按钮文本</span>
           <a-input style="width: 100px" v-model="popconfirmCancelButtonTextE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置取消按钮类型</span>
           <a-input style="width: 100px" v-model="popconfirmCancelButtonTypeE" />
         </div>
@@ -77,11 +77,11 @@
           <a-radio-button :value="true">隐藏图标</a-radio-button>
           <a-radio-button :value="false">显示图标</a-radio-button>
         </a-radio-group>
-        <div v-show="!popconfirmHideIconE" class="string-set">
+        <div v-show="!popconfirmHideIconE" class="my-2 mr-5">
           <span style="margin-right: 5px">设置图标</span>
           <a-input style="width: 200px" v-model="popconfirmIconE" />
         </div>
-        <div v-show="!popconfirmHideIconE" class="string-set">
+        <div v-show="!popconfirmHideIconE" class="my-2 mr-5">
           <span style="margin-right: 5px">设置图标颜色</span>
           <a-input style="width: 200px" v-model="popconfirmIconColorE" />
         </div>
@@ -102,12 +102,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 弹出确认框">
-      <div class="c-f5222d">AtUI框架没有弹出确认框</div>
+    <a-card class="my-5" title="AtUI 弹出确认框">
+      <div class="text-red-500">AtUI框架没有弹出确认框</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 弹出确认框">
-      <div class="c-f5222d">ViewUI框架没有弹出确认框</div>
+    <a-card class="my-5" title="ViewUI 弹出确认框">
+      <div class="text-red-500">ViewUI框架没有弹出确认框</div>
     </a-card>
   </div>
 </template>

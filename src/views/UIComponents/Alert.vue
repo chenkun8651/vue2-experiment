@@ -2,8 +2,8 @@
   <!-- 警告提示 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 警告提示">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 警告提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="alertType">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -18,7 +18,7 @@
           <a-radio-button :value="true">显示图标</a-radio-button>
           <a-radio-button :value="false">隐藏图标</a-radio-button>
         </a-radio-group>
-        <div v-show="alertShowIcon" class="string-set">
+        <div v-show="alertShowIcon" class="my-2 mr-5">
           <span style="margin-right: 5px">自定义图标</span>
           <a-input style="width: 100px" v-model="alertIcon" />
         </div>
@@ -26,15 +26,15 @@
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div v-show="alertClosable" class="string-set">
+        <div v-show="alertClosable" class="my-2 mr-5">
           <span style="margin-right: 5px">自定义关闭文本</span>
           <a-input style="width: 100px" v-model="alertCloseText" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标题</span>
           <a-input style="width: 200px" v-model="alertMessage" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置辅助内容</span>
           <a-input style="width: 200px" v-model="alertDescription" />
         </div>
@@ -54,8 +54,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 警告提示">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 警告提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="alertEffectE">
           <a-radio-button :value="'light'">light</a-radio-button>
           <a-radio-button :value="'dark'">dark</a-radio-button>
@@ -78,15 +78,15 @@
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div v-show="alertClosableE" class="string-set">
+        <div v-show="alertClosableE" class="my-2 mr-5">
           <span style="margin-right: 5px">自定义关闭文本</span>
           <a-input style="width: 100px" v-model="alertCloseTextE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标题</span>
           <a-input style="width: 200px" v-model="alertTitleE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置辅助内容</span>
           <a-input style="width: 200px" v-model="alertDescriptionE" />
         </div>
@@ -106,8 +106,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 警告提示">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 警告提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="alertTypeA">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -118,7 +118,7 @@
           <a-radio-button :value="true">显示图标</a-radio-button>
           <a-radio-button :value="false">隐藏图标</a-radio-button>
         </a-radio-group>
-        <div v-show="alertShowIconA" class="string-set">
+        <div v-show="alertShowIconA" class="my-2 mr-5">
           <span style="margin-right: 5px">自定义图标</span>
           <a-input style="width: 100px" v-model="alertIconA" />
         </div>
@@ -126,15 +126,15 @@
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div v-show="alertClosableA" class="string-set">
+        <div v-show="alertClosableA" class="my-2 mr-5">
           <span style="margin-right: 5px">自定义关闭文本</span>
           <a-input style="width: 100px" v-model="alertCloseTextA" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标题</span>
           <a-input style="width: 200px" v-model="alertMessageA" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置辅助内容</span>
           <a-input style="width: 200px" v-model="alertDescriptionA" />
         </div>
@@ -153,8 +153,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 警告提示">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 警告提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="alertTypeV">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -169,11 +169,11 @@
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标题</span>
           <a-input style="width: 200px" v-model="alertMessageV" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置辅助内容</span>
           <a-input style="width: 200px" v-model="alertDescriptionV" />
         </div>

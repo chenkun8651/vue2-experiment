@@ -2,8 +2,8 @@
   <!-- 开关 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 开关">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 开关">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AntDesignVue.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -16,14 +16,14 @@
           <a-radio-button :value="true">开启加载</a-radio-button>
           <a-radio-button :value="false">关闭加载</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置打开时文本</span>
           <a-input
             style="width: 100px"
             v-model="AntDesignVue.checkedChildren"
           />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置关闭时文本</span>
           <a-input
             style="width: 100px"
@@ -44,25 +44,25 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 开关">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 开关">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ElementUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置打开时文本</span>
           <a-input style="width: 100px" v-model="ElementUI.activeText" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置关闭时文本</span>
           <a-input style="width: 100px" v-model="ElementUI.inactiveText" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置打开时颜色</span>
           <a-input style="width: 100px" v-model="ElementUI.activeColor" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置关闭时颜色</span>
           <a-input style="width: 100px" v-model="ElementUI.inactiveColor" />
         </div>
@@ -80,8 +80,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 开关">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 开关">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AtUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -91,11 +91,11 @@
           <a-radio-button :value="'normal'">normal</a-radio-button>
           <a-radio-button :value="'small'">small</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置打开时文本</span>
           <a-input style="width: 100px" v-model="AtUI.checkedText" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置关闭时文本</span>
           <a-input style="width: 100px" v-model="AtUI.unCheckedText" />
         </div>
@@ -112,8 +112,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 开关">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 开关">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ViewUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -127,11 +127,11 @@
           <a-radio-button :value="true">开启加载</a-radio-button>
           <a-radio-button :value="false">关闭加载</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置打开时颜色</span>
           <a-input style="width: 100px" v-model="ViewUI.trueColor" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置关闭时颜色</span>
           <a-input style="width: 100px" v-model="ViewUI.falseColor" />
         </div>

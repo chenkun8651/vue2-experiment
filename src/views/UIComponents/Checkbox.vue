@@ -2,8 +2,8 @@
   <!-- 多选框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 多选框">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 多选框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="checkboxDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -28,8 +28,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 多选框">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 多选框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="checkboxDisabledE">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -74,8 +74,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 多选框">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 多选框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="checkboxDisabledA">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -95,8 +95,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 多选框">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 多选框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="checkboxDisabledV">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>

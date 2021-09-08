@@ -2,8 +2,8 @@
   <!-- 分割线 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 分割线">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 分割线">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="dividerType">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -20,8 +20,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 分割线">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 分割线">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="dividerDirectionE">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -34,12 +34,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 分割线">
-      <div class="c-f5222d">AtUI框架没有分割线</div>
+    <a-card class="my-5" title="AtUI 分割线">
+      <div class="text-red-500">AtUI框架没有分割线</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 分割线">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 分割线">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="dividerTypeV">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>

@@ -2,8 +2,8 @@
   <!-- 走马灯 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 走马灯">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 走马灯">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="carouselAutoplay">
           <a-radio-button :value="true">开启自动播放</a-radio-button>
           <a-radio-button :value="false">关闭自动播放</a-radio-button>
@@ -48,8 +48,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 走马灯">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 走马灯">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="carouselDirectionE">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -62,7 +62,7 @@
           <a-radio-button :value="true">开启自动播放</a-radio-button>
           <a-radio-button :value="false">关闭自动播放</a-radio-button>
         </a-radio-group>
-        <div v-show="carouselAutoplayE" class="number-set">
+        <div v-show="carouselAutoplayE" class="my-2 mr-5">
           <span style="margin-right: 5px">设置自动播放时间间隔（毫秒）</span>
           <a-input-number style="width: 100px" v-model="carouselIntervalE" />
         </div>
@@ -104,17 +104,17 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 走马灯">
-      <div class="c-f5222d">AtUI框架没有走马灯</div>
+    <a-card class="my-5" title="AtUI 走马灯">
+      <div class="text-red-500">AtUI框架没有走马灯</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 走马灯">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 走马灯">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="carouselAutoplayV">
           <a-radio-button :value="true">开启自动播放</a-radio-button>
           <a-radio-button :value="false">关闭自动播放</a-radio-button>
         </a-radio-group>
-        <div v-show="carouselAutoplayV" class="number-set">
+        <div v-show="carouselAutoplayV" class="my-2 mr-5">
           <span style="margin-right: 5px">设置自动播放时间间隔（毫秒）</span>
           <a-input-number
             style="width: 100px"

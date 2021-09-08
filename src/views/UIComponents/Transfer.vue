@@ -2,8 +2,8 @@
   <!-- 穿梭框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 穿梭框">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 穿梭框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="transferDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -29,8 +29,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 穿梭框">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 穿梭框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="transferFilterableE">
           <a-radio-button :value="true">开启搜索框</a-radio-button>
           <a-radio-button :value="false">关闭搜索框</a-radio-button>
@@ -48,12 +48,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 穿梭框">
-      <div class="c-f5222d">AtUI框架没有穿梭框</div>
+    <a-card class="my-5" title="AtUI 穿梭框">
+      <div class="text-red-500">AtUI框架没有穿梭框</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 穿梭框">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 穿梭框">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="transferReverseOperationV">
           <a-radio-button :value="false">正常按钮顺序</a-radio-button>
           <a-radio-button :value="true">反正按钮顺序</a-radio-button>
@@ -62,7 +62,7 @@
           <a-radio-button :value="true">开启搜索框</a-radio-button>
           <a-radio-button :value="false">关闭搜索框</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置列表为空的提示文本</span>
           <a-input style="width: 100px" v-model="transferNotFoundTextV" />
         </div>

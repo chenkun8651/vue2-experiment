@@ -2,21 +2,21 @@
   <!-- 头像 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 头像">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 头像">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="avatarShape">
           <a-radio-button :value="'circle'">圆形</a-radio-button>
           <a-radio-button :value="'square'">方形</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置头像大小</span>
           <a-input-number style="width: 100px" v-model="avatarSize" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置头像图标</span>
           <a-input style="width: 150px" v-model="avatarIcon" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置链接图片</span>
           <a-input style="width: 200px" v-model="avatarSrc" />
         </div>
@@ -32,8 +32,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 头像">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 头像">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="avatarShapeE">
           <a-radio-button :value="'circle'">圆形</a-radio-button>
           <a-radio-button :value="'square'">方形</a-radio-button>
@@ -43,7 +43,7 @@
           <a-radio-button :value="'medium'">medium</a-radio-button>
           <a-radio-button :value="'small'">small</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置头像大小</span>
           <a-input-number
             style="width: 100px"
@@ -51,11 +51,11 @@
             @focus="focusAvatarSize"
           />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置头像图标</span>
           <a-input style="width: 150px" v-model="avatarIconE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置链接图片</span>
           <a-input style="width: 200px" v-model="avatarSrcE" />
         </div>
@@ -79,12 +79,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 头像">
-      <div class="c-f5222d">AtUI框架没有头像</div>
+    <a-card class="my-5" title="AtUI 头像">
+      <div class="text-red-500">AtUI框架没有头像</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 头像">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 头像">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="avatarShapeV">
           <a-radio-button :value="'circle'">圆形</a-radio-button>
           <a-radio-button :value="'square'">方形</a-radio-button>
@@ -94,7 +94,7 @@
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'small'">small</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置头像大小</span>
           <a-input-number
             style="width: 100px"
@@ -102,11 +102,11 @@
             @focus="focusAvatarSize"
           />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置头像图标</span>
           <a-input style="width: 150px" v-model="avatarIconV" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置链接图片</span>
           <a-input style="width: 200px" v-model="avatarSrcV" />
         </div>

@@ -2,8 +2,8 @@
   <!-- 卡片 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 卡片">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 卡片">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="cardLoading">
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>
@@ -87,8 +87,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 卡片">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 卡片">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="cardShadowE">
           <a-radio-button :value="'always'">always</a-radio-button>
           <a-radio-button :value="'hover'">hover</a-radio-button>
@@ -110,8 +110,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 卡片">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 卡片">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="cardBorderedA">
           <a-radio-button :value="true">有边框</a-radio-button>
           <a-radio-button :value="false">无边框</a-radio-button>
@@ -141,8 +141,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 卡片">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 卡片">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="cardBorderedV">
           <a-radio-button :value="true">有边框</a-radio-button>
           <a-radio-button :value="false">无边框</a-radio-button>
@@ -155,7 +155,7 @@
           <a-radio-button :value="true">显示卡片阴影</a-radio-button>
           <a-radio-button :value="false">隐藏卡片阴影</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置卡片内边距</span>
           <a-input-number style="width: 100px" v-model="cardPaddingV" />
         </div>

@@ -2,8 +2,8 @@
   <!-- 标签 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 标签">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 标签">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tagVisible">
           <a-radio-button :value="true">显示标签</a-radio-button>
           <a-radio-button :value="false">隐藏标签</a-radio-button>
@@ -12,7 +12,7 @@
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标签颜色（十六进制码）</span>
           <a-input style="width: 100px" v-model="tagColor" />
         </div>
@@ -24,8 +24,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 标签">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 标签">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tagDisableTransitionsE">
           <a-radio-button :value="true">开启渐变动画</a-radio-button>
           <a-radio-button :value="false">关闭渐变动画</a-radio-button>
@@ -56,7 +56,7 @@
           <a-radio-button :value="true">显示边框描线</a-radio-button>
           <a-radio-button :value="false">隐藏边框描线</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标签背景色（十六进制码）</span>
           <a-input style="width: 100px" v-model="tagColorE" />
         </div>
@@ -76,8 +76,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 标签">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 标签">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tagColorA">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'primary'">primary</a-radio-button>
@@ -90,7 +90,7 @@
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标签颜色（十六进制码）</span>
           <a-input style="width: 100px" v-model="tagColorA" />
         </div>
@@ -100,8 +100,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 标签">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 标签">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="TagFadeV">
           <a-radio-button :value="true">开启渐变动画</a-radio-button>
           <a-radio-button :value="false">关闭渐变动画</a-radio-button>
@@ -135,7 +135,7 @@
           <a-radio-button :value="true">选中标签状态</a-radio-button>
           <a-radio-button :value="false">未选中标签状态</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置标签颜色（十六进制码）</span>
           <a-input style="width: 100px" v-model="TagColorV" />
         </div>

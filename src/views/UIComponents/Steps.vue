@@ -2,8 +2,8 @@
   <!-- 步骤条 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 步骤条">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 步骤条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AntDesignVue.direction">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -26,7 +26,7 @@
           <a-radio-button :value="'finish'">finish</a-radio-button>
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置步骤条进度</span>
           <a-input-number
             style="width: 100px"
@@ -64,8 +64,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 步骤条">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 步骤条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ElementUI.simple">
           <a-radio-button :value="true">简洁风格</a-radio-button>
           <a-radio-button :value="false">普通风格</a-radio-button>
@@ -92,7 +92,7 @@
           <a-radio-button :value="'error'">error</a-radio-button>
           <a-radio-button :value="'success'">success</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置步骤条进度</span>
           <a-input-number
             style="width: 100px"
@@ -134,8 +134,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 步骤条">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 步骤条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AtUI.direction">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -150,7 +150,7 @@
           <a-radio-button :value="'finish'">finish</a-radio-button>
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置步骤条进度</span>
           <a-input-number
             style="width: 100px"
@@ -175,8 +175,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 步骤条">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 步骤条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ViewUI.direction">
           <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
           <a-radio-button :value="'vertical'">vertical</a-radio-button>
@@ -191,7 +191,7 @@
           <a-radio-button :value="'finish'">finish</a-radio-button>
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置步骤条进度</span>
           <a-input-number
             style="width: 100px"

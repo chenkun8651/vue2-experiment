@@ -1,8 +1,8 @@
 <template>
   <!-- 进度条 -->
   <div>
-    <a-card class="mtb-20" title="AntDesignVue 进度条">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 进度条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="progressType">
           <a-radio-button :value="'line'">line</a-radio-button>
           <a-radio-button :value="'circle'">circle</a-radio-button>
@@ -12,26 +12,26 @@
           <a-radio-button :value="true">显示数值或图标</a-radio-button>
           <a-radio-button :value="false">隐藏数值或图标</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置进度条百分比</span>
           <a-input-number style="width: 100px" v-model="progressPercent" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置已完成百分比</span>
           <a-input-number
             style="width: 100px"
             v-model="progressSuccessPercent"
           />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置进度条线条宽度</span>
           <a-input-number style="width: 100px" v-model="progressStrokeWidth" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置进度条渐变起始颜色</span>
           <a-input style="width: 100px" v-model="progressStrokeColor['0%']" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置进度条渐变末尾颜色</span>
           <a-input style="width: 100px" v-model="progressStrokeColor['100%']" />
         </div>
@@ -43,12 +43,12 @@
         </a-radio-group>
         <div
           v-if="progressType === 'circle' || progressType === 'dashboard'"
-          class="number-set"
+          class="my-2 mr-5"
         >
           <span style="margin-right: 5px">设置进度条画布宽度</span>
           <a-input-number style="width: 100px" v-model="progressWidth" />
         </div>
-        <div v-if="progressType === 'dashboard'" class="number-set">
+        <div v-if="progressType === 'dashboard'" class="my-2 mr-5">
           <span style="margin-right: 5px">设置仪表盘进度条缺口所占角度</span>
           <a-input-number
             style="width: 100px"
@@ -84,8 +84,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 进度条">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 进度条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="progressTypeE">
           <a-radio-button :value="'line'">line</a-radio-button>
           <a-radio-button :value="'circle'">circle</a-radio-button>
@@ -95,17 +95,17 @@
           <a-radio-button :value="true">显示数值或图标</a-radio-button>
           <a-radio-button :value="false">隐藏数值或图标</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置进度条百分比</span>
           <a-input-number style="width: 100px" v-model="progressPercentageE" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置进度条线条宽度</span>
           <a-input-number style="width: 100px" v-model="progressStrokeWidthE" />
         </div>
         <div
           v-show="progressTypeE === 'circle' || progressTypeE === 'dashboard'"
-          class="number-set"
+          class="my-2 mr-5"
         >
           <span style="margin-right: 5px">设置进度条画布宽度</span>
           <a-input-number style="width: 100px" v-model="progressWidthE" />
@@ -146,9 +146,9 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 进度条">
-      <div class="control-box">
-        <div class="number-set">
+    <a-card class="my-5" title="AtUI 进度条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置进度条百分比</span>
           <a-input-number style="width: 100px" v-model="progressPercentA" />
         </div>
@@ -156,7 +156,7 @@
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置进度条线条宽度</span>
           <a-input-number style="width: 100px" v-model="progressStrokeWidthA" />
         </div>
@@ -171,8 +171,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 进度条">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 进度条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="progressVerticalV">
           <a-radio-button :value="true">垂直</a-radio-button>
           <a-radio-button :value="false">水平</a-radio-button>
@@ -181,11 +181,11 @@
           <a-radio-button :value="true">显示数值或图标</a-radio-button>
           <a-radio-button :value="false">隐藏数值或图标</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置进度条百分比</span>
           <a-input-number style="width: 100px" v-model="progressPercentV" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置已完成百分比</span>
           <a-input-number
             style="width: 100px"
@@ -198,7 +198,7 @@
           <a-radio-button :value="'wrong'">wrong</a-radio-button>
           <a-radio-button :value="'success'">success</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置进度条线条宽度</span>
           <a-input-number style="width: 100px" v-model="progressStrokeWidthV" />
         </div>

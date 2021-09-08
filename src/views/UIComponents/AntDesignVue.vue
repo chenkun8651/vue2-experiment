@@ -2,7 +2,7 @@
   <!-- AntDesignVue特色 -->
   <div>
     <!-- 评论组件 -->
-    <a-card class="mtb-20" title="AntDesignVue 评论">
+    <a-card class="my-5" title="AntDesignVue 评论">
       <div>
         <a-comment>
           <!-- 评论人 -->
@@ -55,28 +55,28 @@
       </div>
     </a-card>
     <!-- 统计数值组件 -->
-    <a-card class="mtb-20" title="AntDesignVue 统计数值">
-      <div class="control-box">
-        <div class="string-set">
+    <a-card class="my-5" title="AntDesignVue 统计数值">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置千分位标识符</span>
           <a-input style="width: 100px" v-model="statisticGroupSeparator">
           </a-input>
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置小数点</span>
           <a-input style="width: 100px" v-model="statisticDecimalSeparator">
           </a-input>
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置数值精度</span>
           <a-input-number style="width: 100px" v-model="statisticPrecision">
           </a-input-number>
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置数值前缀</span>
           <a-input style="width: 100px" v-model="statisticPrefix"> </a-input>
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置数值后缀</span>
           <a-input style="width: 100px" v-model="statisticSuffix"> </a-input>
         </div>
@@ -95,9 +95,9 @@
       </div>
     </a-card>
     <!-- 倒计时组件 -->
-    <a-card class="mtb-20" title="AntDesignVue 倒计时">
-      <div class="control-box">
-        <div class="string-set">
+    <a-card class="my-5" title="AntDesignVue 倒计时">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置时间格式化</span>
           <a-input style="width: 200px" v-model="statisticFormat"> </a-input>
         </div>

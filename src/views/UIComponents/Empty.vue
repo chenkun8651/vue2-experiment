@@ -2,13 +2,13 @@
   <!-- 空状态 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 空状态">
-      <div class="control-box">
-        <div class="string-set">
+    <a-card class="my-5" title="AntDesignVue 空状态">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置图片链接</span>
           <a-input style="width: 200px" v-model="emptyImage" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置描述内容</span>
           <a-input style="width: 100px" v-model="emptyDescription" />
         </div>
@@ -18,13 +18,13 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 空状态">
-      <div class="control-box">
-        <div class="string-set">
+    <a-card class="my-5" title="ElementUI 空状态">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置图片链接</span>
           <a-input style="width: 200px" v-model="emptyImageE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置描述内容</span>
           <a-input style="width: 100px" v-model="emptyDescriptionE" />
         </div>
@@ -35,12 +35,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 空状态">
-      <div class="c-f5222d">AtUI框架没有空状态</div>
+    <a-card class="my-5" title="AtUI 空状态">
+      <div class="text-red-500">AtUI框架没有空状态</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 空状态">
-      <div class="c-f5222d">ViewUI框架没有空状态</div>
+    <a-card class="my-5" title="ViewUI 空状态">
+      <div class="text-red-500">ViewUI框架没有空状态</div>
     </a-card>
   </div>
 </template>

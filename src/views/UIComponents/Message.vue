@@ -2,8 +2,8 @@
   <!-- 消息提示 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 消息提示">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 消息提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="messageType">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -11,11 +11,11 @@
           <a-radio-button :value="'error'">error</a-radio-button>
           <a-radio-button :value="'loading'">loading</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置自动关闭的延时（秒）</span>
           <a-input-number style="width: 100px" v-model="messageDuration" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置消息内容</span>
           <a-input style="width: 200px" v-model="messageContent" />
         </div>
@@ -25,8 +25,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 消息提示">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 消息提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="messageTypeE">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -41,15 +41,15 @@
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置自动关闭的延时（毫秒）</span>
           <a-input-number style="width: 100px" v-model="messageDurationE" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置消息提示离顶部的偏移</span>
           <a-input-number style="width: 100px" v-model="messageOffsetE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置消息内容</span>
           <a-input style="width: 200px" v-model="messageMessageE" />
         </div>
@@ -59,19 +59,19 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 消息提示">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 消息提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="messageTypeA">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
           <a-radio-button :value="'warning'">warning</a-radio-button>
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置自动关闭的延时（毫秒）</span>
           <a-input-number style="width: 100px" v-model="messageDurationA" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置消息内容</span>
           <a-input style="width: 200px" v-model="messageMessageA" />
         </div>
@@ -81,8 +81,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 消息提示">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 消息提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="messageTypeV">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'info'">info</a-radio-button>
@@ -98,11 +98,11 @@
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置自动关闭的延时（秒）</span>
           <a-input-number style="width: 100px" v-model="messageDurationV" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置消息内容</span>
           <a-input style="width: 200px" v-model="messageContentV" />
         </div>

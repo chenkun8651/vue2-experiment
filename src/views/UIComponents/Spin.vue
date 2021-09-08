@@ -2,8 +2,8 @@
   <!-- 加载 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 加载">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 加载">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="spinSpinning">
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>
@@ -13,11 +13,11 @@
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'small'">small</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px"> 设置延迟显示加载时间（毫秒） </span>
           <a-input-number style="width: 100px" v-model="spinDelay" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置加载描述文案</span>
           <a-input style="width: 100px" v-model="spinTip" />
         </div>
@@ -34,21 +34,21 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 加载">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 加载">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="spinStatusE" @change="changeLoading">
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置加载图标</span>
           <a-input style="width: 150px" v-model="spinSpinnerE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置加载背景色</span>
           <a-input style="width: 150px" v-model="spinBackgroundE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置加载描述文案</span>
           <a-input style="width: 150px" v-model="spinTextE" />
         </div>
@@ -59,11 +59,11 @@
     </a-card>
     <!-- AtUI -->
     <a-card class="card-AtUI" title="AtUI 加载">
-      <div class="c-f5222d">AtUI框架没有加载</div>
+      <div class="text-red-500">AtUI框架没有加载</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 加载">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 加载">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="spinSpinningV">
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>

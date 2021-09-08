@@ -2,8 +2,8 @@
   <!-- 文字提示 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 文字提示">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 文字提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tooltipArrowPointAtCenter">
           <a-radio-button :value="true">开启箭头指向元素中心</a-radio-button>
           <a-radio-button :value="false">关闭箭头指向元素中心</a-radio-button>
@@ -28,14 +28,14 @@
           <a-radio-button :value="'click'">click</a-radio-button>
           <a-radio-button :value="'contextmenu'">contextmenu</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">鼠标移入的延迟显示时间（秒）</span>
           <a-input-number
             style="width: 100px"
             v-model="tooltipMouseEnterDelay"
           />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">鼠标移出的延迟显示时间（秒）</span>
           <a-input-number
             style="width: 100px"
@@ -58,8 +58,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 文字提示">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 文字提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tooltipDisabledE">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -78,19 +78,19 @@
           <a-radio-button :value="true">显示箭头</a-radio-button>
           <a-radio-button :value="false">隐藏箭头</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置文字提示偏移量</span>
           <a-input-number style="width: 100px" v-model="tooltipOffsetE" />
         </div>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置文字提示渐变动画</span>
           <a-input style="width: 150px" v-model="tooltipTransitionE" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置延迟出现时间（毫秒）</span>
           <a-input-number style="width: 100px" v-model="tooltipOpenDelayE" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置自动隐藏时间（毫秒）</span>
           <a-input-number style="width: 100px" v-model="tooltipHideAfterE" />
         </div>
@@ -112,8 +112,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 文字提示">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 文字提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tooltipPlacementA">
           <a-radio-button :value="'top'">top</a-radio-button>
           <a-radio-button :value="'bottom'">bottom</a-radio-button>
@@ -131,8 +131,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 文字提示">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 文字提示">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="tooltipDisabledV">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -151,15 +151,15 @@
           <a-radio-button :value="'left'">left</a-radio-button>
           <a-radio-button :value="'right'">right</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置文字提示偏移量</span>
           <a-input-number style="width: 100px" v-model="tooltipOffsetV" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置最大宽度</span>
           <a-input-number style="width: 100px" v-model="tooltipMaxWidthV" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置延迟出现时间（毫秒）</span>
           <a-input-number style="width: 100px" v-model="tooltipDelayV" />
         </div>

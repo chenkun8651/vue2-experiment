@@ -2,8 +2,8 @@
   <!-- 抽屉 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 抽屉">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 抽屉">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="drawerVisible">
           <a-radio-button :value="true">打开抽屉</a-radio-button>
           <a-radio-button :value="false">关闭抽屉</a-radio-button>
@@ -14,7 +14,7 @@
           <a-radio-button :value="'left'">left</a-radio-button>
           <a-radio-button :value="'right'">right</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置抽屉标题文本</span>
           <a-input style="width: 100px" v-model="drawerTitle" />
         </div>
@@ -44,14 +44,14 @@
         </a-radio-group>
         <div
           v-if="drawerPlacement === 'left' || drawerPlacement === 'right'"
-          class="number-set"
+          class="my-2 mr-5"
         >
           <span style="margin-right: 5px">设置抽屉宽度</span>
           <a-input-number style="width: 100px" v-model="drawerWidth" />
         </div>
         <div
           v-if="drawerPlacement === 'top' || drawerPlacement === 'bottom'"
-          class="number-set"
+          class="my-2 mr-5"
         >
           <span style="margin-right: 5px">设置抽屉高度</span>
           <a-input-number style="width: 100px" v-model="drawerHeight" />
@@ -77,8 +77,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 抽屉">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 抽屉">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="drawerVisibleE">
           <a-radio-button :value="true">打开抽屉</a-radio-button>
           <a-radio-button :value="false">关闭抽屉</a-radio-button>
@@ -93,7 +93,7 @@
           <a-radio-button :value="true">显示标题</a-radio-button>
           <a-radio-button :value="false">隐藏标题</a-radio-button>
         </a-radio-group>
-        <div v-if="drawerWithHeaderE" class="string-set">
+        <div v-if="drawerWithHeaderE" class="my-2 mr-5">
           <span style="margin-right: 5px">设置抽屉标题文本</span>
           <a-input style="width: 100px" v-model="drawerTitleE" />
         </div>
@@ -121,7 +121,7 @@
             关闭按ESC键关闭抽屉功能
           </a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置抽屉大小</span>
           <a-input style="width: 100px" v-model="drawerSizeE" />
         </div>
@@ -145,12 +145,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 抽屉">
-      <div class="c-f5222d">AtUI框架没有抽屉</div>
+    <a-card class="my-5" title="AtUI 抽屉">
+      <div class="text-red-500">AtUI框架没有抽屉</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 抽屉">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 抽屉">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="drawerVisibleV">
           <a-radio-button :value="true">打开抽屉</a-radio-button>
           <a-radio-button :value="false">关闭抽屉</a-radio-button>
@@ -161,7 +161,7 @@
           <a-radio-button :value="'left'">left</a-radio-button>
           <a-radio-button :value="'right'">right</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置抽屉标题文本</span>
           <a-input style="width: 100px" v-model="drawerTitleV" />
         </div>
@@ -187,14 +187,14 @@
         </a-radio-group>
         <div
           v-if="drawerPlacementV === 'left' || drawerPlacementV === 'right'"
-          class="number-set"
+          class="my-2 mr-5"
         >
           <span style="margin-right: 5px">设置抽屉宽度</span>
           <a-input-number style="width: 100px" v-model="drawerWidthV" />
         </div>
         <div
           v-if="drawerPlacementV === 'top' || drawerPlacementV === 'bottom'"
-          class="number-set"
+          class="my-2 mr-5"
         >
           <span style="margin-right: 5px">设置抽屉高度</span>
           <a-input-number style="width: 100px" v-model="drawerHeightV" />

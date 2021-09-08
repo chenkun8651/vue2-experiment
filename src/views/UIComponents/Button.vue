@@ -2,8 +2,8 @@
   <!-- 按钮 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 按钮">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 按钮">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="buttonType">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'primary'">primary</a-radio-button>
@@ -37,7 +37,7 @@
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置按钮图标</span>
           <a-input style="width: 120px" v-model="buttonIcon" />
         </div>
@@ -58,8 +58,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 按钮">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 按钮">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="buttonTypeE">
           <a-radio-button :value="null">default</a-radio-button>
           <a-radio-button :value="'primary'">primary</a-radio-button>
@@ -95,7 +95,7 @@
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置按钮图标</span>
           <a-input style="width: 120px" v-model="buttonIconE" />
         </div>
@@ -116,8 +116,8 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 按钮">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 按钮">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="buttonTypeA">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'primary'">primary</a-radio-button>
@@ -145,7 +145,7 @@
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置按钮图标</span>
           <a-input style="width: 120px" v-model="buttonIconA" />
         </div>
@@ -164,8 +164,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 按钮">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 按钮">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="buttonTypeV">
           <a-radio-button :value="'default'">default</a-radio-button>
           <a-radio-button :value="'primary'">primary</a-radio-button>
@@ -201,7 +201,7 @@
           <a-radio-button :value="true">加载</a-radio-button>
           <a-radio-button :value="false">完成</a-radio-button>
         </a-radio-group>
-        <div class="string-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置按钮图标</span>
           <a-input style="width: 120px" v-model="buttonIconV" />
         </div>

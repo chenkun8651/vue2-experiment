@@ -2,8 +2,8 @@
   <!-- 日历 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 日历">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 日历">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="calendarFullscreen">
           <a-radio-button :value="true">全屏模式</a-radio-button>
           <a-radio-button :value="false">卡片模式</a-radio-button>
@@ -19,9 +19,9 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 日历">
-      <div class="control-box">
-        <div class="number-set">
+    <a-card class="my-5" title="ElementUI 日历">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置日历起始周期</span>
           <a-input-number
             style="width: 100px"
@@ -32,16 +32,16 @@
         </div>
       </div>
       <div>
-        <el-calendar :first-day-of-week="calendarFirstDayOfWeek"> </el-calendar>
+        <el-calendar :first-day-of-week="calendarFirstDayOfWeek"></el-calendar>
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 日历">
-      <div class="c-f5222d">AtUI框架没有日历</div>
+    <a-card class="my-5" title="AtUI 日历">
+      <div class="text-red-500">AtUI框架没有日历</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 日历">
-      <div class="c-faad14">ViewUI框架的日历需要付费使用</div>
+    <a-card class="my-5" title="ViewUI 日历">
+      <div class="text-yellow-500">ViewUI框架的日历需要付费使用</div>
     </a-card>
   </div>
 </template>

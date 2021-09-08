@@ -2,8 +2,8 @@
   <!-- 树形控件 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 树形控件">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 树形控件">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="treeDisabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -38,8 +38,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 树形控件">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 树形控件">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="treeShowCheckboxE">
           <a-radio-button :value="true">开启节点复选功能</a-radio-button>
           <a-radio-button :value="false">关闭节点复选功能</a-radio-button>
@@ -59,12 +59,12 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 树形控件">
-      <div class="c-f5222d">AtUI框架没有树形控件</div>
+    <a-card class="my-5" title="AtUI 树形控件">
+      <div class="text-red-500">AtUI框架没有树形控件</div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 树形控件">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 树形控件">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="treeShowCheckboxV">
           <a-radio-button :value="true">开启节点复选功能</a-radio-button>
           <a-radio-button :value="false">关闭节点复选功能</a-radio-button>

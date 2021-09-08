@@ -2,8 +2,8 @@
   <!-- 滑动输入条 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 滑动输入条">
-      <div class="control-box">
+    <a-card class="my-5" title="AntDesignVue 滑动输入条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AntDesignVue.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -32,7 +32,7 @@
           <a-radio-button :value="'top'">top</a-radio-button>
           <a-radio-button :value="'bottom'">bottom</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条最大值</span>
           <a-input-number
             style="width: 100px"
@@ -41,7 +41,7 @@
             :min="AntDesignVue.min"
           />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条最小值</span>
           <a-input-number
             style="width: 100px"
@@ -69,8 +69,8 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 滑动输入条">
-      <div class="control-box">
+    <a-card class="my-5" title="ElementUI 滑动输入条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ElementUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -91,7 +91,7 @@
           <a-radio-button :value="true">显示提示</a-radio-button>
           <a-radio-button :value="false">隐藏提示</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条步数</span>
           <a-input-number
             style="width: 100px"
@@ -99,7 +99,7 @@
             :min="1"
           />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条最大值</span>
           <a-input-number
             style="width: 100px"
@@ -108,7 +108,7 @@
             :min="ElementUI.min"
           />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条最小值</span>
           <a-input-number
             style="width: 100px"
@@ -136,17 +136,17 @@
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 滑动输入条">
-      <div class="control-box">
+    <a-card class="my-5" title="AtUI 滑动输入条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="AtUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条步数</span>
           <a-input-number style="width: 100px" v-model="AtUI.step" :min="1" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条最大值</span>
           <a-input-number
             style="width: 100px"
@@ -155,7 +155,7 @@
             :min="AtUI.min"
           />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条最小值</span>
           <a-input-number
             style="width: 100px"
@@ -178,8 +178,8 @@
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 滑动输入条">
-      <div class="control-box">
+    <a-card class="my-5" title="ViewUI 滑动输入条">
+      <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <a-radio-group v-model="ViewUI.disabled">
           <a-radio-button :value="true">禁用</a-radio-button>
           <a-radio-button :value="false">启用</a-radio-button>
@@ -197,11 +197,11 @@
           <a-radio-button :value="'always'">always</a-radio-button>
           <a-radio-button :value="'never'">never</a-radio-button>
         </a-radio-group>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条步数</span>
           <a-input-number style="width: 100px" v-model="ViewUI.step" :min="1" />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条最大值</span>
           <a-input-number
             style="width: 100px"
@@ -210,7 +210,7 @@
             :min="ViewUI.min"
           />
         </div>
-        <div class="number-set">
+        <div class="my-2 mr-5">
           <span style="margin-right: 5px">设置输入条最小值</span>
           <a-input-number
             style="width: 100px"

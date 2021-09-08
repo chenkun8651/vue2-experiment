@@ -2,11 +2,11 @@
   <!-- 选择框 -->
   <div>
     <!-- AntDesignVue -->
-    <a-card class="mtb-20" title="AntDesignVue 选择框">
+    <a-card class="my-5" title="AntDesignVue 选择框">
       <!-- 通用API -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>通用API</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="AntDesignVue.selectDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -27,9 +27,9 @@
         </div>
       </div>
       <!-- 标准选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>标准选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="AntDesignVue.selectMode">
             <a-radio-button :value="'default'">default</a-radio-button>
             <a-radio-button :value="'multiple'">multiple</a-radio-button>
@@ -47,7 +47,7 @@
             <a-radio-button :value="true">开启选项和菜单同宽</a-radio-button>
             <a-radio-button :value="false">关闭选项和菜单同宽</a-radio-button>
           </a-radio-group>
-          <div class="number-set">
+          <div class="my-2 mr-5">
             <span style="margin-right: 5px">设置最多显示tag数</span>
             <a-input-number
               style="width: 100px"
@@ -55,7 +55,7 @@
               :min="0"
             />
           </div>
-          <div class="number-set">
+          <div class="my-2 mr-5">
             <span style="margin-right: 5px">设置最大显示tag的文本长度</span>
             <a-input-number
               style="width: 100px"
@@ -94,9 +94,9 @@
         </div>
       </div>
       <!-- 级联选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>级联选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="AntDesignVue.cascaderExpandTrigger">
             <a-radio-button :value="'click'">click</a-radio-button>
             <a-radio-button :value="'hover'">hover</a-radio-button>
@@ -117,9 +117,9 @@
         </div>
       </div>
       <!-- 树状选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>树状选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="AntDesignVue.treeSelectTreeCheckable">
             <a-radio-button :value="true">开启多选</a-radio-button>
             <a-radio-button :value="false">关闭多选</a-radio-button>
@@ -142,11 +142,11 @@
       </div>
     </a-card>
     <!-- ElementUI -->
-    <a-card class="mtb-20" title="ElementUI 选择框">
+    <a-card class="my-5" title="ElementUI 选择框">
       <!-- 通用API -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>通用API</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ElementUI.selectDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -163,9 +163,9 @@
         </div>
       </div>
       <!-- 标准选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>标准选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ElementUI.selectFilterable">
             <a-radio-button :value="true">开启搜索</a-radio-button>
             <a-radio-button :value="false">关闭搜索</a-radio-button>
@@ -177,7 +177,7 @@
             <a-radio-button :value="true">开启多选</a-radio-button>
             <a-radio-button :value="false">关闭多选</a-radio-button>
           </a-radio-group>
-          <div class="number-set">
+          <div class="my-2 mr-5">
             <span style="margin-right: 5px">设置最多可以选择的项目数</span>
             <a-input-number
               style="width: 100px"
@@ -208,14 +208,14 @@
         </div>
       </div>
       <!-- 级联选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>级联选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ElementUI.cascaderShowAllLevels">
             <a-radio-button :value="true">显示选中值的完整路径</a-radio-button>
             <a-radio-button :value="false">隐藏选中值的完整路径</a-radio-button>
           </a-radio-group>
-          <div class="string-set">
+          <div class="my-2 mr-5">
             <span style="margin-right: 5px">设置选项分隔符</span>
             <a-input
               style="width: 100px"
@@ -239,16 +239,16 @@
         </div>
       </div>
       <!-- 树状选择框 -->
-      <div class="card-item">
-        <div class="c-f5222d">ElementUI框架没有树状选择框</div>
+      <div class="mx-5 mt-3 pb-5 border-b">
+        <div class="text-red-500">ElementUI框架没有树状选择框</div>
       </div>
     </a-card>
     <!-- AtUI -->
-    <a-card class="mtb-20" title="AtUI 选择框">
+    <a-card class="my-5" title="AtUI 选择框">
       <!-- 标准选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>标准选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="AtUI.selectDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -300,20 +300,20 @@
         </div>
       </div>
       <!-- 级联选择框 -->
-      <div class="card-item">
-        <div class="c-f5222d">AtUI框架没有级联选择框</div>
+      <div class="mx-5 mt-3 pb-5 border-b">
+        <div class="text-red-500">AtUI框架没有级联选择框</div>
       </div>
       <!-- 树状选择框 -->
-      <div class="card-item">
-        <div class="c-f5222d">AtUI框架没有树状选择框</div>
+      <div class="mx-5 mt-3 pb-5 border-b">
+        <div class="text-red-500">AtUI框架没有树状选择框</div>
       </div>
     </a-card>
     <!-- ViewUI -->
-    <a-card class="mtb-20" title="ViewUI 选择框">
+    <a-card class="my-5" title="ViewUI 选择框">
       <!-- 通用API -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>通用API</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ViewUI.selectDisabled">
             <a-radio-button :value="true">禁用</a-radio-button>
             <a-radio-button :value="false">启用</a-radio-button>
@@ -334,9 +334,9 @@
         </div>
       </div>
       <!-- 标准选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>标准选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ViewUI.selectMultiple">
             <a-radio-button :value="true">开启多选</a-radio-button>
             <a-radio-button :value="false">关闭多选</a-radio-button>
@@ -368,9 +368,9 @@
         </div>
       </div>
       <!-- 级联选择框 -->
-      <div class="card-item">
+      <div class="mx-5 mt-3 pb-5 border-b">
         <h3>级联选择框</h3>
-        <div class="control-box">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <a-radio-group v-model="ViewUI.cascaderTrigger">
             <a-radio-button :value="'click'">click</a-radio-button>
             <a-radio-button :value="'hover'">hover</a-radio-button>
@@ -391,8 +391,8 @@
         </div>
       </div>
       <!-- 树状选择框 -->
-      <div class="card-item">
-        <div class="c-faad14">ViewUI框架的树状选择框需要付费使用</div>
+      <div class="mx-5 mt-3 pb-5 border-b">
+        <div class="text-yellow-500">ViewUI框架的树状选择框需要付费使用</div>
       </div>
     </a-card>
   </div>
