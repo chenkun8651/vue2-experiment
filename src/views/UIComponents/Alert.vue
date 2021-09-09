@@ -1,194 +1,211 @@
 <template>
-  <!-- 警告提示 -->
-  <div>
-    <!-- AntDesignVue -->
-    <a-card class="my-5" title="AntDesignVue 警告提示">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="alertType">
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'info'">info</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-          <a-radio-button :value="'error'">error</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="alertBanner">
-          <a-radio-button :value="false">显示边框</a-radio-button>
-          <a-radio-button :value="true">隐藏边框</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="alertShowIcon">
-          <a-radio-button :value="true">显示图标</a-radio-button>
-          <a-radio-button :value="false">隐藏图标</a-radio-button>
-        </a-radio-group>
-        <div v-show="alertShowIcon" class="my-2 mr-5">
-          <span style="margin-right: 5px">自定义图标</span>
-          <a-input style="width: 100px" v-model="alertIcon" />
+  <div class="flex" ref="box">
+    <!-- 警告提示 -->
+    <div class="w-9/12">
+      <!-- AntDesignVue -->
+      <a-card id="1" class="my-5" title="AntDesignVue 警告提示">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示边框</span>
+            <a-switch v-model="AntDesignVue.banner" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示图标</span>
+            <a-switch v-model="AntDesignVue.showIcon" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示关闭按钮</span>
+            <a-switch v-model="AntDesignVue.closable" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置警告提示类型</span>
+            <a-select class="w-40" v-model="AntDesignVue.type">
+              <a-select-option :value="'success'">success</a-select-option>
+              <a-select-option :value="'info'">info</a-select-option>
+              <a-select-option :value="'warning'">warning</a-select-option>
+              <a-select-option :value="'error'">error</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">自定义图标</span>
+            <a-input class="w-24" v-model="AntDesignVue.icon" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">自定义关闭文本</span>
+            <a-input class="w-24" v-model="AntDesignVue.closeText" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标题</span>
+            <a-input class="w-48" v-model="AntDesignVue.message" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置辅助内容</span>
+            <a-input class="w-48" v-model="AntDesignVue.description" />
+          </div>
         </div>
-        <a-radio-group v-model="alertClosable">
-          <a-radio-button :value="true">显示关闭按钮</a-radio-button>
-          <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
-        </a-radio-group>
-        <div v-show="alertClosable" class="my-2 mr-5">
-          <span style="margin-right: 5px">自定义关闭文本</span>
-          <a-input style="width: 100px" v-model="alertCloseText" />
+        <div>
+          <a-alert
+            :banner="AntDesignVue.banner"
+            :show-icon="AntDesignVue.showIcon"
+            :closable="AntDesignVue.closable"
+            :type="AntDesignVue.type"
+            :icon="AntDesignVue.icon"
+            :close-text="AntDesignVue.closeText"
+            :message="AntDesignVue.message"
+            :description="AntDesignVue.description"
+          >
+          </a-alert>
         </div>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标题</span>
-          <a-input style="width: 200px" v-model="alertMessage" />
+      </a-card>
+      <!-- ElementUI -->
+      <a-card id="2" class="my-5" title="ElementUI 警告提示">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示图标</span>
+            <a-switch v-model="ElementUI.showIcon" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示关闭按钮</span>
+            <a-switch v-model="ElementUI.closable" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否文本居中</span>
+            <a-switch v-model="ElementUI.center" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置警告提示主题</span>
+            <a-select class="w-40" v-model="ElementUI.effect">
+              <a-select-option :value="'light'">light</a-select-option>
+              <a-select-option :value="'dark'">dark</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置警告提示类型</span>
+            <a-select class="w-40" v-model="ElementUI.type">
+              <a-select-option :value="'success'">success</a-select-option>
+              <a-select-option :value="'info'">info</a-select-option>
+              <a-select-option :value="'warning'">warning</a-select-option>
+              <a-select-option :value="'error'">error</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">自定义关闭文本</span>
+            <a-input class="w-24" v-model="ElementUI.closeText" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标题</span>
+            <a-input class="w-48" v-model="ElementUI.title" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置辅助内容</span>
+            <a-input class="w-48" v-model="ElementUI.description" />
+          </div>
         </div>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置辅助内容</span>
-          <a-input style="width: 200px" v-model="alertDescription" />
+        <div>
+          <el-alert
+            :show-icon="ElementUI.showIcon"
+            :closable="ElementUI.closable"
+            :center="ElementUI.center"
+            :effect="ElementUI.effect"
+            :type="ElementUI.type"
+            :close-text="ElementUI.closeText"
+            :title="ElementUI.title"
+            :description="ElementUI.description"
+          >
+          </el-alert>
         </div>
-      </div>
-      <div>
-        <a-alert
-          :type="alertType"
-          :banner="alertBanner"
-          :show-icon="alertShowIcon"
-          :icon="alertIcon"
-          :closable="alertClosable"
-          :close-text="alertCloseText"
-          :message="alertMessage"
-          :description="alertDescription"
-        >
-        </a-alert>
-      </div>
-    </a-card>
-    <!-- ElementUI -->
-    <a-card class="my-5" title="ElementUI 警告提示">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="alertEffectE">
-          <a-radio-button :value="'light'">light</a-radio-button>
-          <a-radio-button :value="'dark'">dark</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="alertTypeE">
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'info'">info</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-          <a-radio-button :value="'error'">error</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="alertCenterE">
-          <a-radio-button :value="true">显示文本居中</a-radio-button>
-          <a-radio-button :value="false">隐藏文本居中</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="alertShowIconE">
-          <a-radio-button :value="true">显示图标</a-radio-button>
-          <a-radio-button :value="false">隐藏图标</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="alertClosableE">
-          <a-radio-button :value="true">显示关闭按钮</a-radio-button>
-          <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
-        </a-radio-group>
-        <div v-show="alertClosableE" class="my-2 mr-5">
-          <span style="margin-right: 5px">自定义关闭文本</span>
-          <a-input style="width: 100px" v-model="alertCloseTextE" />
+      </a-card>
+      <!-- AtUI -->
+      <a-card class="my-5" title="AtUI 警告提示">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示图标</span>
+            <a-switch v-model="AtUI.showIcon" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示关闭按钮</span>
+            <a-switch v-model="AtUI.closable" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置警告提示类型</span>
+            <a-select class="w-40" v-model="AtUI.type">
+              <a-select-option :value="'success'">success</a-select-option>
+              <a-select-option :value="'info'">info</a-select-option>
+              <a-select-option :value="'warning'">warning</a-select-option>
+              <a-select-option :value="'error'">error</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">自定义图标</span>
+            <a-input class="w-24" v-model="AtUI.icon" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">自定义关闭文本</span>
+            <a-input class="w-24" v-model="AtUI.closeText" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标题</span>
+            <a-input class="w-48" v-model="AtUI.message" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置辅助内容</span>
+            <a-input class="w-48" v-model="AtUI.description" />
+          </div>
         </div>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标题</span>
-          <a-input style="width: 200px" v-model="alertTitleE" />
+        <div>
+          <at-alert
+            :show-icon="AtUI.showIcon"
+            :closable="AtUI.closable"
+            :type="AtUI.type"
+            :icon="AtUI.icon"
+            :close-text="AtUI.closeText"
+            :message="AtUI.message"
+            :description="AtUI.description"
+          >
+          </at-alert>
         </div>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置辅助内容</span>
-          <a-input style="width: 200px" v-model="alertDescriptionE" />
+      </a-card>
+      <!-- ViewUI -->
+      <a-card class="my-5" title="ViewUI 警告提示">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示图标</span>
+            <a-switch v-model="ViewUI.showIcon" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示关闭按钮</span>
+            <a-switch v-model="ViewUI.closable" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置警告提示类型</span>
+            <a-select class="w-40" v-model="ViewUI.type">
+              <a-select-option :value="'success'">success</a-select-option>
+              <a-select-option :value="'info'">info</a-select-option>
+              <a-select-option :value="'warning'">warning</a-select-option>
+              <a-select-option :value="'error'">error</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标题</span>
+            <a-input class="w-48" v-model="ViewUI.message" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置辅助内容</span>
+            <a-input class="w-48" v-model="ViewUI.description" />
+          </div>
         </div>
-      </div>
-      <div>
-        <el-alert
-          :effect="alertEffectE"
-          :type="alertTypeE"
-          :center="alertCenterE"
-          :show-icon="alertShowIconE"
-          :closable="alertClosableE"
-          :close-text="alertCloseTextE"
-          :title="alertTitleE"
-          :description="alertDescriptionE"
-        >
-        </el-alert>
-      </div>
-    </a-card>
-    <!-- AtUI -->
-    <a-card class="my-5" title="AtUI 警告提示">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="alertTypeA">
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'info'">info</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-          <a-radio-button :value="'error'">error</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="alertShowIconA">
-          <a-radio-button :value="true">显示图标</a-radio-button>
-          <a-radio-button :value="false">隐藏图标</a-radio-button>
-        </a-radio-group>
-        <div v-show="alertShowIconA" class="my-2 mr-5">
-          <span style="margin-right: 5px">自定义图标</span>
-          <a-input style="width: 100px" v-model="alertIconA" />
+        <div>
+          <Alert
+            :show-icon="ViewUI.showIcon"
+            :closable="ViewUI.closable"
+            :type="ViewUI.type"
+          >
+            {{ ViewUI.message }}
+            <span slot="desc">{{ ViewUI.description }}</span>
+          </Alert>
         </div>
-        <a-radio-group v-model="alertClosableA">
-          <a-radio-button :value="true">显示关闭按钮</a-radio-button>
-          <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
-        </a-radio-group>
-        <div v-show="alertClosableA" class="my-2 mr-5">
-          <span style="margin-right: 5px">自定义关闭文本</span>
-          <a-input style="width: 100px" v-model="alertCloseTextA" />
-        </div>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标题</span>
-          <a-input style="width: 200px" v-model="alertMessageA" />
-        </div>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置辅助内容</span>
-          <a-input style="width: 200px" v-model="alertDescriptionA" />
-        </div>
-      </div>
-      <div>
-        <at-alert
-          :type="alertTypeA"
-          :show-icon="alertShowIconA"
-          :icon="alertIconA"
-          :closable="alertClosableA"
-          :close-text="alertCloseTextA"
-          :message="alertMessageA"
-          :description="alertDescriptionA"
-        >
-        </at-alert>
-      </div>
-    </a-card>
-    <!-- ViewUI -->
-    <a-card class="my-5" title="ViewUI 警告提示">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="alertTypeV">
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'info'">info</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-          <a-radio-button :value="'error'">error</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="alertShowIconV">
-          <a-radio-button :value="true">显示图标</a-radio-button>
-          <a-radio-button :value="false">隐藏图标</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="alertClosableV">
-          <a-radio-button :value="true">显示关闭按钮</a-radio-button>
-          <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标题</span>
-          <a-input style="width: 200px" v-model="alertMessageV" />
-        </div>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置辅助内容</span>
-          <a-input style="width: 200px" v-model="alertDescriptionV" />
-        </div>
-      </div>
-      <div>
-        <Alert
-          :type="alertTypeV"
-          :show-icon="alertShowIconV"
-          :closable="alertClosableV"
-        >
-          {{ alertMessageV }}
-          <span slot="desc">{{ alertDescriptionV }}</span>
-        </Alert>
-      </div>
-    </a-card>
+      </a-card>
+    </div>
   </div>
 </template>
 
@@ -196,38 +213,42 @@
 export default {
   data() {
     return {
-      // AntDesignVue
-      alertType: "success",
-      alertBanner: false,
-      alertShowIcon: false,
-      alertIcon: "",
-      alertClosable: false,
-      alertCloseText: "",
-      alertMessage: "警告提示标题",
-      alertDescription: "警告提示辅助内容",
-      // ElementUI
-      alertEffectE: "light",
-      alertTypeE: "success",
-      alertCenterE: false,
-      alertShowIconE: false,
-      alertClosableE: false,
-      alertCloseTextE: "",
-      alertTitleE: "警告提示标题",
-      alertDescriptionE: "警告提示辅助内容",
-      // AtUI
-      alertTypeA: "success",
-      alertShowIconA: false,
-      alertIconA: "",
-      alertClosableA: false,
-      alertCloseTextA: "",
-      alertMessageA: "警告提示标题",
-      alertDescriptionA: "警告提示辅助内容",
-      // ViewUI
-      alertTypeV: "success",
-      alertShowIconV: false,
-      alertClosableV: false,
-      alertMessageV: "警告提示标题",
-      alertDescriptionV: "警告提示辅助内容",
+      AntDesignVue: {
+        banner: false,
+        showIcon: false,
+        closable: false,
+        type: "success",
+        icon: "",
+        closeText: "",
+        message: "警告提示标题",
+        description: "警告提示辅助内容",
+      },
+      ElementUI: {
+        showIcon: false,
+        closable: false,
+        center: false,
+        effect: "light",
+        type: "success",
+        closeText: "",
+        title: "警告提示标题",
+        description: "警告提示辅助内容",
+      },
+      AtUI: {
+        showIcon: false,
+        closable: false,
+        type: "success",
+        icon: "",
+        closeText: "",
+        message: "警告提示标题",
+        description: "警告提示辅助内容",
+      },
+      ViewUI: {
+        showIcon: false,
+        closable: false,
+        type: "success",
+        message: "警告提示标题",
+        description: "警告提示辅助内容",
+      },
     };
   },
   methods: {},

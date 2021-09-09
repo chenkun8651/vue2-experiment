@@ -1,6 +1,6 @@
 <template>
-  <!-- 输入框 -->
   <div class="flex" ref="box">
+    <!-- 输入框 -->
     <div class="w-9/12">
       <!-- AntDesignVue -->
       <a-card id="1" class="my-5" title="AntDesignVue 输入框">

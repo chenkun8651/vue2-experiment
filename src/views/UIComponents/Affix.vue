@@ -1,9 +1,9 @@
 <template>
-  <!-- 固钉 -->
-  <div>
-    <div>
+  <div class="flex" ref="box">
+    <!-- 固钉 -->
+    <div class="w-9/12">
       <!-- AntDesignVue -->
-      <a-card class="my-5" title="AntDesignVue 固钉">
+      <a-card id="1" class="my-5" title="AntDesignVue 固钉">
         <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <div class="my-2 mr-5">
             <span class="mr-2">设置顶部触发偏移量</span>
@@ -17,19 +17,15 @@
         </div>
       </a-card>
       <!-- ElementUI -->
-      <a-card
-        class="my-5"
-        title="ElementUI 固钉"
-        name="#components-anchor-demo-basic"
-      >
+      <a-card id="2" class="my-5" title="ElementUI 固钉">
         <div class="text-red-500">ElementUI框架没有固钉</div>
       </a-card>
       <!-- AtUI -->
-      <a-card class="my-5" title="AtUI 固钉">
+      <a-card id="3" class="my-5" title="AtUI 固钉">
         <div class="text-red-500">AtUI框架没有固钉</div>
       </a-card>
       <!-- ViewUI -->
-      <a-card class="my-5" title="ViewUI 固钉">
+      <a-card id="4" class="my-5" title="ViewUI 固钉">
         <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <div class="my-2 mr-5">
             <span style="margin-right: 5px">设置顶部触发偏移量</span>
@@ -42,6 +38,20 @@
           </Affix>
         </div>
       </a-card>
+    </div>
+    <!-- 查询锚点 -->
+    <div class="w-3/12 pl-5">
+      <a-anchor
+        :offsetTop="60"
+        :affix="true"
+        :showInkInFixed="true"
+        :getContainer="() => this.$refs.box"
+      >
+        <a-anchor-link href="#1" title="AntDesignVue 固钉"></a-anchor-link>
+        <a-anchor-link href="#2" title="ElementUI 固钉"></a-anchor-link>
+        <a-anchor-link href="#3" title="AtUI 固钉"></a-anchor-link>
+        <a-anchor-link href="#4" title="ViewUI 固钉"></a-anchor-link>
+      </a-anchor>
     </div>
   </div>
 </template>
