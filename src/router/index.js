@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import { UIComponentsMenu } from "./menu"
+import { UIComponentsMenu } from "../data/menu"
 
 Vue.use(VueRouter)
 
@@ -18,8 +18,8 @@ const routes = [
     path: '/UIComponents',
     name: 'UIComponents',
     redirect: '/UIComponents/button',
-    children: UIComponentsMenu,
     component: () => import('../views/UIComponents.vue'),
+    children: UIComponentsMenu,
   },
 ]
 

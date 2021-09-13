@@ -40,19 +40,11 @@
       </a-card>
     </div>
     <!-- 查询锚点 -->
-    <div class="w-3/12 pl-5">
-      <a-anchor
-        :offsetTop="60"
-        :affix="true"
-        :showInkInFixed="true"
-        :getContainer="() => this.$refs.box"
-      >
-        <a-anchor-link href="#1" title="AntDesignVue 固钉"></a-anchor-link>
-        <a-anchor-link href="#2" title="ElementUI 固钉"></a-anchor-link>
-        <a-anchor-link href="#3" title="AtUI 固钉"></a-anchor-link>
-        <a-anchor-link href="#4" title="ViewUI 固钉"></a-anchor-link>
-      </a-anchor>
-    </div>
+    <BasicAnchor
+      :parentList="this.AnchorInfo.affixAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 
@@ -61,10 +53,10 @@ export default {
   data() {
     return {
       AntDesignVue: {
-        offsetTop: 250,
+        offsetTop: 200,
       },
       ViewUI: {
-        offsetTop: 750,
+        offsetTop: 700,
       },
     };
   },

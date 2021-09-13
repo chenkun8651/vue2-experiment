@@ -14,6 +14,7 @@ import 'at-ui-style'
 import 'view-design/dist/styles/iview.css'
 
 import App from './App.vue'
+
 import router from './router/index.js'
 import './assets/style/tailwind.css'
 import './assets/style/global.css'
@@ -23,6 +24,14 @@ Vue.use(AntDesignVue)
 Vue.use(ElementUI)
 Vue.use(AtUI)
 Vue.use(ViewDesign)
+// 全局组件
+import BasicAnchor from "./components/BasicAnchor.vue"
+Vue.component("BasicAnchor", BasicAnchor);
+// 全局变量
+import { AnchorInfo } from "./data/data";
+Vue.prototype.AnchorInfo = AnchorInfo;
+import { UIComponentsMenu } from "./data/menu";
+Vue.prototype.UIComponentsMenu = UIComponentsMenu;
 
 // 设置中文
 Vue.use(VueI18n)

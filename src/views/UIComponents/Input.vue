@@ -758,43 +758,11 @@
       </a-card>
     </div>
     <!-- 查询锚点 -->
-    <div class="w-3/12 pl-5">
-      <a-anchor
-        :offsetTop="60"
-        :affix="true"
-        :showInkInFixed="true"
-        :getContainer="() => this.$refs.box"
-      >
-        <a-anchor-link href="#1" title="AntDesignVue 输入框">
-          <a-anchor-link href="#1-1" title="通用API"></a-anchor-link>
-          <a-anchor-link href="#1-2" title="标准输入框"></a-anchor-link>
-          <a-anchor-link href="#1-3" title="文本域输入框"></a-anchor-link>
-          <a-anchor-link href="#1-4" title="密码输入框"></a-anchor-link>
-          <a-anchor-link href="#1-5" title="数字输入框"></a-anchor-link>
-          <a-anchor-link href="#1-6" title="搜索输入框"></a-anchor-link>
-          <a-anchor-link href="#1-7" title="提及输入框"></a-anchor-link>
-          <a-anchor-link href="#1-8" title="联想输入框"></a-anchor-link>
-        </a-anchor-link>
-        <a-anchor-link href="#2" title="ElementUI 输入框">
-          <a-anchor-link href="#2-1" title="通用API"></a-anchor-link>
-          <a-anchor-link href="#2-2" title="标准输入框"></a-anchor-link>
-          <a-anchor-link href="#2-3" title="数字输入框"></a-anchor-link>
-          <a-anchor-link href="#2-4" title="联想输入框"></a-anchor-link>
-        </a-anchor-link>
-        <a-anchor-link href="#3" title="AtUI 输入框">
-          <a-anchor-link href="#3-1" title="通用API"></a-anchor-link>
-          <a-anchor-link href="#3-2" title="标准输入框"></a-anchor-link>
-          <a-anchor-link href="#3-3" title="数字输入框"></a-anchor-link>
-          <a-anchor-link href="#3-4" title="文本域输入框"></a-anchor-link>
-        </a-anchor-link>
-        <a-anchor-link href="#4" title="ViewUI 输入框">
-          <a-anchor-link href="#4-1" title="通用API"></a-anchor-link>
-          <a-anchor-link href="#4-2" title="标准输入框"></a-anchor-link>
-          <a-anchor-link href="#4-3" title="数字输入框"></a-anchor-link>
-          <a-anchor-link href="#4-4" title="联想输入框"></a-anchor-link>
-        </a-anchor-link>
-      </a-anchor>
-    </div>
+    <BasicAnchor
+      :parentList="this.AnchorInfo.inputAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 
@@ -802,6 +770,12 @@
 export default {
   data() {
     return {
+      data: [
+        { value: "三全鲜食", address: "长宁区新渔路144号" },
+        { value: "首尔炸鸡", address: "上海市长宁区淞虹路61号" },
+        { value: "新旺角茶餐厅", address: "上海市普陀区创邑金沙谷6号楼113" },
+      ],
+      timeout: null,
       AntDesignVue: {
         disabled: false,
         allowClear: false,
@@ -891,12 +865,6 @@ export default {
         data: [],
         placement: "top",
       },
-      data: [
-        { value: "三全鲜食", address: "长宁区新渔路144号" },
-        { value: "首尔炸鸡", address: "上海市长宁区淞虹路61号" },
-        { value: "新旺角茶餐厅", address: "上海市普陀区创邑金沙谷6号楼113" },
-      ],
-      timeout: null,
     };
   },
   methods: {

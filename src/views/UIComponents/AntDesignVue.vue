@@ -103,6 +103,12 @@
         </div>
       </a-card>
     </div>
+    <!-- 查询锚点 -->
+    <BasicAnchor
+      :parentList="this.AnchorInfo.antDesignVueAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 

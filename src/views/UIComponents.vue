@@ -9,7 +9,7 @@
       }"
     >
       <div
-        v-for="item in UIComponentsMenu"
+        v-for="item in this.UIComponentsMenu"
         :key="item.key"
         class="w-full h-12 leading-12 hover:text-blue-500 cursor-pointer"
         :class="{
@@ -29,12 +29,9 @@
 </template>
 
 <script>
-import { UIComponentsMenu } from "../router/menu";
-
 export default {
   data() {
     return {
-      UIComponentsMenu: UIComponentsMenu,
       activation: null,
       mousePostion: "menu",
     };
@@ -54,7 +51,7 @@ export default {
   filters: {
     keyToName: function (value) {
       if (value.length > 0) {
-        return UIComponentsMenu.find((i) => i.key === value[0]).name;
+        return this.UIComponentsMenu.find((i) => i.key === value[0]).name;
       }
     },
   },

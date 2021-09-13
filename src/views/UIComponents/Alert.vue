@@ -207,19 +207,11 @@
       </a-card>
     </div>
     <!-- 查询锚点 -->
-    <div class="w-3/12 pl-5">
-      <a-anchor
-        :offsetTop="60"
-        :affix="true"
-        :showInkInFixed="true"
-        :getContainer="() => this.$refs.box"
-      >
-        <a-anchor-link href="#1" title="AntDesignVue 警告提示"></a-anchor-link>
-        <a-anchor-link href="#2" title="ElementUI 警告提示"></a-anchor-link>
-        <a-anchor-link href="#3" title="AtUI 警告提示"></a-anchor-link>
-        <a-anchor-link href="#4" title="ViewUI 警告提示"></a-anchor-link>
-      </a-anchor>
-    </div>
+    <BasicAnchor
+      :parentList="this.AnchorInfo.alertAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 
