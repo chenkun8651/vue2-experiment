@@ -33,18 +33,18 @@
           <a-radio-button :value="'bottom'">bottom</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条最大值</span>
+          <span class="mr-2">设置输入条最大值</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="AntDesignVue.max"
             :max="500"
             :min="AntDesignVue.min"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条最小值</span>
+          <span class="mr-2">设置输入条最小值</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="AntDesignVue.min"
             :max="AntDesignVue.max"
             :min="0"
@@ -92,26 +92,26 @@
           <a-radio-button :value="false">隐藏提示</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条步数</span>
+          <span class="mr-2">设置输入条步数</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="ElementUI.step"
             :min="1"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条最大值</span>
+          <span class="mr-2">设置输入条最大值</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="ElementUI.max"
             :max="500"
             :min="ElementUI.min"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条最小值</span>
+          <span class="mr-2">设置输入条最小值</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="ElementUI.min"
             :max="ElementUI.max"
             :min="0"
@@ -143,22 +143,22 @@
           <a-radio-button :value="false">启用</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条步数</span>
-          <a-input-number style="width: 100px" v-model="AtUI.step" :min="1" />
+          <span class="mr-2">设置输入条步数</span>
+          <a-input-number class="w-24" v-model="AtUI.step" :min="1" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条最大值</span>
+          <span class="mr-2">设置输入条最大值</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="AtUI.max"
             :max="500"
             :min="AtUI.min"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条最小值</span>
+          <span class="mr-2">设置输入条最小值</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="AtUI.min"
             :max="AtUI.max"
             :min="0"
@@ -198,22 +198,22 @@
           <a-radio-button :value="'never'">never</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条步数</span>
-          <a-input-number style="width: 100px" v-model="ViewUI.step" :min="1" />
+          <span class="mr-2">设置输入条步数</span>
+          <a-input-number class="w-24" v-model="ViewUI.step" :min="1" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条最大值</span>
+          <span class="mr-2">设置输入条最大值</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="ViewUI.max"
             :max="500"
             :min="ViewUI.min"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置输入条最小值</span>
+          <span class="mr-2">设置输入条最小值</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="ViewUI.min"
             :max="ViewUI.max"
             :min="0"

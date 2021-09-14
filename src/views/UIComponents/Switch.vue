@@ -17,16 +17,16 @@
           <a-radio-button :value="false">关闭加载</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置打开时文本</span>
+          <span class="mr-2">设置打开时文本</span>
           <a-input
-            style="width: 100px"
+            class="w-24"
             v-model="AntDesignVue.checkedChildren"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置关闭时文本</span>
+          <span class="mr-2">设置关闭时文本</span>
           <a-input
-            style="width: 100px"
+            class="w-24"
             v-model="AntDesignVue.unCheckedChildren"
           />
         </div>
@@ -51,20 +51,20 @@
           <a-radio-button :value="false">启用</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置打开时文本</span>
-          <a-input style="width: 100px" v-model="ElementUI.activeText" />
+          <span class="mr-2">设置打开时文本</span>
+          <a-input class="w-24" v-model="ElementUI.activeText" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置关闭时文本</span>
-          <a-input style="width: 100px" v-model="ElementUI.inactiveText" />
+          <span class="mr-2">设置关闭时文本</span>
+          <a-input class="w-24" v-model="ElementUI.inactiveText" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置打开时颜色</span>
-          <a-input style="width: 100px" v-model="ElementUI.activeColor" />
+          <span class="mr-2">设置打开时颜色</span>
+          <a-input class="w-24" v-model="ElementUI.activeColor" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置关闭时颜色</span>
-          <a-input style="width: 100px" v-model="ElementUI.inactiveColor" />
+          <span class="mr-2">设置关闭时颜色</span>
+          <a-input class="w-24" v-model="ElementUI.inactiveColor" />
         </div>
       </div>
       <div>
@@ -92,12 +92,12 @@
           <a-radio-button :value="'small'">small</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置打开时文本</span>
-          <a-input style="width: 100px" v-model="AtUI.checkedText" />
+          <span class="mr-2">设置打开时文本</span>
+          <a-input class="w-24" v-model="AtUI.checkedText" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置关闭时文本</span>
-          <a-input style="width: 100px" v-model="AtUI.unCheckedText" />
+          <span class="mr-2">设置关闭时文本</span>
+          <a-input class="w-24" v-model="AtUI.unCheckedText" />
         </div>
       </div>
       <div>
@@ -128,12 +128,12 @@
           <a-radio-button :value="false">关闭加载</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置打开时颜色</span>
-          <a-input style="width: 100px" v-model="ViewUI.trueColor" />
+          <span class="mr-2">设置打开时颜色</span>
+          <a-input class="w-24" v-model="ViewUI.trueColor" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置关闭时颜色</span>
-          <a-input style="width: 100px" v-model="ViewUI.falseColor" />
+          <span class="mr-2">设置关闭时颜色</span>
+          <a-input class="w-24" v-model="ViewUI.falseColor" />
         </div>
       </div>
       <div>

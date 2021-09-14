@@ -63,8 +63,8 @@
           <a-radio-button :value="false">关闭搜索框</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置列表为空的提示文本</span>
-          <a-input style="width: 100px" v-model="transferNotFoundTextV" />
+          <span class="mr-2">设置列表为空的提示文本</span>
+          <a-input class="w-24" v-model="transferNotFoundTextV" />
         </div>
       </div>
       <div>

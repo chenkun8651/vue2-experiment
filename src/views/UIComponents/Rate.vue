@@ -17,15 +17,15 @@
           <a-radio-button :value="false">关闭清除</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置评分数</span>
+          <span class="mr-2">设置评分数</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="AntDesignVue.rateCount"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置评分图标</span>
-          <a-input style="width: 100px" v-model="AntDesignVue.rateIcon" />
+          <span class="mr-2">设置评分图标</span>
+          <a-input class="w-24" v-model="AntDesignVue.rateIcon" />
         </div>
       </div>
       <div>
@@ -52,8 +52,8 @@
           <a-radio-button :value="false">关闭半选</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置评分数</span>
-          <a-input-number style="width: 100px" v-model="ElementUI.rateMax" />
+          <span class="mr-2">设置评分数</span>
+          <a-input-number class="w-24" v-model="ElementUI.rateMax" />
         </div>
       </div>
       <div>
@@ -82,12 +82,12 @@
           <a-radio-button :value="false">隐藏辅助文字</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置评分数</span>
-          <a-input-number style="width: 100px" v-model="AtUI.rateCount" />
+          <span class="mr-2">设置评分数</span>
+          <a-input-number class="w-24" v-model="AtUI.rateCount" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置评分图标</span>
-          <a-input style="width: 100px" v-model="AtUI.rateIcon" />
+          <span class="mr-2">设置评分图标</span>
+          <a-input class="w-24" v-model="AtUI.rateIcon" />
         </div>
       </div>
       <div>
@@ -122,8 +122,8 @@
           <a-radio-button :value="false">隐藏辅助文字</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置评分数</span>
-          <a-input-number style="width: 100px" v-model="ViewUI.rateCount" />
+          <span class="mr-2">设置评分数</span>
+          <a-input-number class="w-24" v-model="ViewUI.rateCount" />
         </div>
       </div>
       <div>

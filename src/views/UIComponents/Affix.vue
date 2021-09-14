@@ -28,7 +28,7 @@
       <a-card id="4" class="my-5" title="ViewUI 固钉">
         <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <div class="my-2 mr-5">
-            <span style="margin-right: 5px">设置顶部触发偏移量</span>
+            <span class="mr-2">设置顶部触发偏移量</span>
             <a-input-number class="w-24" v-model="ViewUI.offsetTop" />
           </div>
         </div>

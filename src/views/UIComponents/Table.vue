@@ -138,8 +138,8 @@
           <a-radio-button :value="false">关闭分页</a-radio-button>
         </a-radio-group>
         <div v-show="tablePaginationA" class="my-2 mr-5">
-          <span style="margin-right: 5px">设置分页条数</span>
-          <a-input-number style="width: 100px" v-model="tablePageSizeA" />
+          <span class="mr-2">设置分页条数</span>
+          <a-input-number class="w-24" v-model="tablePageSizeA" />
         </div>
         <a-radio-group v-show="tablePaginationA" v-model="tableShowPageTotalA">
           <a-radio-button :value="true">显示总条数</a-radio-button>

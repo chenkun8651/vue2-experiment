@@ -15,8 +15,8 @@
           <a-radio-button :value="'right'">right</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置抽屉标题文本</span>
-          <a-input style="width: 100px" v-model="drawerTitle" />
+          <span class="mr-2">设置抽屉标题文本</span>
+          <a-input class="w-24" v-model="drawerTitle" />
         </div>
         <a-radio-group v-model="drawerClosable">
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
@@ -46,15 +46,15 @@
           v-if="drawerPlacement === 'left' || drawerPlacement === 'right'"
           class="my-2 mr-5"
         >
-          <span style="margin-right: 5px">设置抽屉宽度</span>
-          <a-input-number style="width: 100px" v-model="drawerWidth" />
+          <span class="mr-2">设置抽屉宽度</span>
+          <a-input-number class="w-24" v-model="drawerWidth" />
         </div>
         <div
           v-if="drawerPlacement === 'top' || drawerPlacement === 'bottom'"
           class="my-2 mr-5"
         >
-          <span style="margin-right: 5px">设置抽屉高度</span>
-          <a-input-number style="width: 100px" v-model="drawerHeight" />
+          <span class="mr-2">设置抽屉高度</span>
+          <a-input-number class="w-24" v-model="drawerHeight" />
         </div>
       </div>
       <div>
@@ -94,8 +94,8 @@
           <a-radio-button :value="false">隐藏标题</a-radio-button>
         </a-radio-group>
         <div v-if="drawerWithHeaderE" class="my-2 mr-5">
-          <span style="margin-right: 5px">设置抽屉标题文本</span>
-          <a-input style="width: 100px" v-model="drawerTitleE" />
+          <span class="mr-2">设置抽屉标题文本</span>
+          <a-input class="w-24" v-model="drawerTitleE" />
         </div>
         <a-radio-group v-model="drawerShowCloseE">
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
@@ -122,8 +122,8 @@
           </a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置抽屉大小</span>
-          <a-input style="width: 100px" v-model="drawerSizeE" />
+          <span class="mr-2">设置抽屉大小</span>
+          <a-input class="w-24" v-model="drawerSizeE" />
         </div>
       </div>
       <div>
@@ -162,8 +162,8 @@
           <a-radio-button :value="'right'">right</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置抽屉标题文本</span>
-          <a-input style="width: 100px" v-model="drawerTitleV" />
+          <span class="mr-2">设置抽屉标题文本</span>
+          <a-input class="w-24" v-model="drawerTitleV" />
         </div>
         <a-radio-group v-model="drawerClosableV">
           <a-radio-button :value="true">显示关闭按钮</a-radio-button>
@@ -189,15 +189,15 @@
           v-if="drawerPlacementV === 'left' || drawerPlacementV === 'right'"
           class="my-2 mr-5"
         >
-          <span style="margin-right: 5px">设置抽屉宽度</span>
-          <a-input-number style="width: 100px" v-model="drawerWidthV" />
+          <span class="mr-2">设置抽屉宽度</span>
+          <a-input-number class="w-24" v-model="drawerWidthV" />
         </div>
         <div
           v-if="drawerPlacementV === 'top' || drawerPlacementV === 'bottom'"
           class="my-2 mr-5"
         >
-          <span style="margin-right: 5px">设置抽屉高度</span>
-          <a-input-number style="width: 100px" v-model="drawerHeightV" />
+          <span class="mr-2">设置抽屉高度</span>
+          <a-input-number class="w-24" v-model="drawerHeightV" />
         </div>
       </div>
       <div>

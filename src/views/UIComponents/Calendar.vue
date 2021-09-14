@@ -22,9 +22,9 @@
     <a-card class="my-5" title="ElementUI 日历">
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置日历起始周期</span>
+          <span class="mr-2">设置日历起始周期</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="calendarFirstDayOfWeek"
             :max="7"
             :min="1"

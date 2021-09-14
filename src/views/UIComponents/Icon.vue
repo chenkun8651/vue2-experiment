@@ -9,8 +9,8 @@
           <a-radio-button :value="false">关闭旋转动画</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标初始旋转角度</span>
-          <a-input-number style="width: 100px" v-model="iconRotate" />
+          <span class="mr-2">设置图标初始旋转角度</span>
+          <a-input-number class="w-24" v-model="iconRotate" />
         </div>
         <a-radio-group v-model="iconTheme">
           <a-radio-button :value="'filled'">实心图标</a-radio-button>
@@ -18,23 +18,23 @@
           <a-radio-button :value="'twoTone'">双色图标</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标名称</span>
+          <span class="mr-2">设置图标名称</span>
           <a-input style="width: 150px" v-model="iconName" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标大小</span>
-          <a-input-number style="width: 100px" v-model="iconSize" />
+          <span class="mr-2">设置图标大小</span>
+          <a-input-number class="w-24" v-model="iconSize" />
         </div>
         <div
           v-show="iconTheme === 'filled' || iconTheme === 'outlined'"
           class="my-2 mr-5"
         >
-          <span style="margin-right: 5px">设置实心（描线）图标颜色</span>
-          <a-input style="width: 100px" v-model="iconColor" />
+          <span class="mr-2">设置实心（描线）图标颜色</span>
+          <a-input class="w-24" v-model="iconColor" />
         </div>
         <div v-show="iconTheme === 'twoTone'" class="my-2 mr-5">
-          <span style="margin-right: 5px">设置双色图标颜色</span>
-          <a-input style="width: 100px" v-model="iconRotatTwoToneColor" />
+          <span class="mr-2">设置双色图标颜色</span>
+          <a-input class="w-24" v-model="iconRotatTwoToneColor" />
         </div>
       </div>
       <div>
@@ -90,16 +90,16 @@
     <a-card class="my-5" title="ElementUI 图标">
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标名称</span>
+          <span class="mr-2">设置图标名称</span>
           <a-input style="width: 150px" v-model="iconNameE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标大小</span>
-          <a-input-number style="width: 100px" v-model="iconSizeE" />
+          <span class="mr-2">设置图标大小</span>
+          <a-input-number class="w-24" v-model="iconSizeE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标颜色</span>
-          <a-input style="width: 100px" v-model="iconColorE" />
+          <span class="mr-2">设置图标颜色</span>
+          <a-input class="w-24" v-model="iconColorE" />
         </div>
       </div>
       <div>
@@ -114,16 +114,16 @@
     <a-card class="my-5" title="AtUI 图标">
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标名称</span>
+          <span class="mr-2">设置图标名称</span>
           <a-input style="width: 150px" v-model="iconNameA" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标大小</span>
-          <a-input-number style="width: 100px" v-model="iconSizeA" />
+          <span class="mr-2">设置图标大小</span>
+          <a-input-number class="w-24" v-model="iconSizeA" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标颜色</span>
-          <a-input style="width: 100px" v-model="iconColorA" />
+          <span class="mr-2">设置图标颜色</span>
+          <a-input class="w-24" v-model="iconColorA" />
         </div>
       </div>
       <div>
@@ -138,15 +138,15 @@
     <a-card class="my-5" title="ViewUI 图标">
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标名称</span>
+          <span class="mr-2">设置图标名称</span>
           <a-input style="width: 150px" v-model="iconNameV" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标大小</span>
+          <span class="mr-2">设置图标大小</span>
           <a-input-number style="width: 150px" v-model="iconSizeV" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标颜色</span>
+          <span class="mr-2">设置图标颜色</span>
           <a-input style="width: 150px" v-model="iconColorV" />
         </div>
       </div>

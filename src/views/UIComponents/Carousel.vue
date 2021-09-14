@@ -63,8 +63,8 @@
           <a-radio-button :value="false">关闭自动播放</a-radio-button>
         </a-radio-group>
         <div v-show="carouselAutoplayE" class="my-2 mr-5">
-          <span style="margin-right: 5px">设置自动播放时间间隔（毫秒）</span>
-          <a-input-number style="width: 100px" v-model="carouselIntervalE" />
+          <span class="mr-2">设置自动播放时间间隔（毫秒）</span>
+          <a-input-number class="w-24" v-model="carouselIntervalE" />
         </div>
         <a-radio-group v-model="carouselLoopE">
           <a-radio-button :value="true">开启循环</a-radio-button>
@@ -115,9 +115,9 @@
           <a-radio-button :value="false">关闭自动播放</a-radio-button>
         </a-radio-group>
         <div v-show="carouselAutoplayV" class="my-2 mr-5">
-          <span style="margin-right: 5px">设置自动播放时间间隔（毫秒）</span>
+          <span class="mr-2">设置自动播放时间间隔（毫秒）</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="carouselAutoplaySpeedV"
           />
         </div>

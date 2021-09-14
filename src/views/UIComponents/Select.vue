@@ -48,17 +48,17 @@
             <a-radio-button :value="false">关闭选项和菜单同宽</a-radio-button>
           </a-radio-group>
           <div class="my-2 mr-5">
-            <span style="margin-right: 5px">设置最多显示tag数</span>
+            <span class="mr-2">设置最多显示tag数</span>
             <a-input-number
-              style="width: 100px"
+              class="w-24"
               v-model="AntDesignVue.selectMaxTagCount"
               :min="0"
             />
           </div>
           <div class="my-2 mr-5">
-            <span style="margin-right: 5px">设置最大显示tag的文本长度</span>
+            <span class="mr-2">设置最大显示tag的文本长度</span>
             <a-input-number
-              style="width: 100px"
+              class="w-24"
               v-model="AntDesignVue.selectMaxTagTextLength"
               :min="0"
             />
@@ -178,9 +178,9 @@
             <a-radio-button :value="false">关闭多选</a-radio-button>
           </a-radio-group>
           <div class="my-2 mr-5">
-            <span style="margin-right: 5px">设置最多可以选择的项目数</span>
+            <span class="mr-2">设置最多可以选择的项目数</span>
             <a-input-number
-              style="width: 100px"
+              class="w-24"
               v-model="ElementUI.selectMultipleLimit"
               :min="0"
             />
@@ -216,9 +216,9 @@
             <a-radio-button :value="false">隐藏选中值的完整路径</a-radio-button>
           </a-radio-group>
           <div class="my-2 mr-5">
-            <span style="margin-right: 5px">设置选项分隔符</span>
+            <span class="mr-2">设置选项分隔符</span>
             <a-input
-              style="width: 100px"
+              class="w-24"
               v-model="ElementUI.cascaderSeparator"
             />
           </div>

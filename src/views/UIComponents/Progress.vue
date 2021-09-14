@@ -13,27 +13,27 @@
           <a-radio-button :value="false">隐藏数值或图标</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置进度条百分比</span>
-          <a-input-number style="width: 100px" v-model="progressPercent" />
+          <span class="mr-2">设置进度条百分比</span>
+          <a-input-number class="w-24" v-model="progressPercent" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置已完成百分比</span>
+          <span class="mr-2">设置已完成百分比</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="progressSuccessPercent"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置进度条线条宽度</span>
-          <a-input-number style="width: 100px" v-model="progressStrokeWidth" />
+          <span class="mr-2">设置进度条线条宽度</span>
+          <a-input-number class="w-24" v-model="progressStrokeWidth" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置进度条渐变起始颜色</span>
-          <a-input style="width: 100px" v-model="progressStrokeColor['0%']" />
+          <span class="mr-2">设置进度条渐变起始颜色</span>
+          <a-input class="w-24" v-model="progressStrokeColor['0%']" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置进度条渐变末尾颜色</span>
-          <a-input style="width: 100px" v-model="progressStrokeColor['100%']" />
+          <span class="mr-2">设置进度条渐变末尾颜色</span>
+          <a-input class="w-24" v-model="progressStrokeColor['100%']" />
         </div>
         <a-radio-group v-show="progressShowInfo" v-model="progressStatus">
           <a-radio-button :value="'success'">success</a-radio-button>
@@ -45,13 +45,13 @@
           v-if="progressType === 'circle' || progressType === 'dashboard'"
           class="my-2 mr-5"
         >
-          <span style="margin-right: 5px">设置进度条画布宽度</span>
-          <a-input-number style="width: 100px" v-model="progressWidth" />
+          <span class="mr-2">设置进度条画布宽度</span>
+          <a-input-number class="w-24" v-model="progressWidth" />
         </div>
         <div v-if="progressType === 'dashboard'" class="my-2 mr-5">
-          <span style="margin-right: 5px">设置仪表盘进度条缺口所占角度</span>
+          <span class="mr-2">设置仪表盘进度条缺口所占角度</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="progressGapDegree"
             :max="360"
             :min="0"
@@ -96,19 +96,19 @@
           <a-radio-button :value="false">隐藏数值或图标</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置进度条百分比</span>
-          <a-input-number style="width: 100px" v-model="progressPercentageE" />
+          <span class="mr-2">设置进度条百分比</span>
+          <a-input-number class="w-24" v-model="progressPercentageE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置进度条线条宽度</span>
-          <a-input-number style="width: 100px" v-model="progressStrokeWidthE" />
+          <span class="mr-2">设置进度条线条宽度</span>
+          <a-input-number class="w-24" v-model="progressStrokeWidthE" />
         </div>
         <div
           v-show="progressTypeE === 'circle' || progressTypeE === 'dashboard'"
           class="my-2 mr-5"
         >
-          <span style="margin-right: 5px">设置进度条画布宽度</span>
-          <a-input-number style="width: 100px" v-model="progressWidthE" />
+          <span class="mr-2">设置进度条画布宽度</span>
+          <a-input-number class="w-24" v-model="progressWidthE" />
         </div>
         <a-radio-group v-show="progressShowTextE" v-model="progressStatusE">
           <a-radio-button :value="'success'">success</a-radio-button>
@@ -149,16 +149,16 @@
     <a-card class="my-5" title="AtUI 进度条">
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置进度条百分比</span>
-          <a-input-number style="width: 100px" v-model="progressPercentA" />
+          <span class="mr-2">设置进度条百分比</span>
+          <a-input-number class="w-24" v-model="progressPercentA" />
         </div>
         <a-radio-group v-model="progressStatusA">
           <a-radio-button :value="'success'">success</a-radio-button>
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置进度条线条宽度</span>
-          <a-input-number style="width: 100px" v-model="progressStrokeWidthA" />
+          <span class="mr-2">设置进度条线条宽度</span>
+          <a-input-number class="w-24" v-model="progressStrokeWidthA" />
         </div>
       </div>
       <div>
@@ -182,13 +182,13 @@
           <a-radio-button :value="false">隐藏数值或图标</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置进度条百分比</span>
-          <a-input-number style="width: 100px" v-model="progressPercentV" />
+          <span class="mr-2">设置进度条百分比</span>
+          <a-input-number class="w-24" v-model="progressPercentV" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置已完成百分比</span>
+          <span class="mr-2">设置已完成百分比</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="progressSuccessPercentV"
           />
         </div>
@@ -199,8 +199,8 @@
           <a-radio-button :value="'success'">success</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置进度条线条宽度</span>
-          <a-input-number style="width: 100px" v-model="progressStrokeWidthV" />
+          <span class="mr-2">设置进度条线条宽度</span>
+          <a-input-number class="w-24" v-model="progressStrokeWidthV" />
         </div>
         <a-radio-group v-model="progressTextInsideV">
           <a-radio-button :value="true">显示进度条内置的文字</a-radio-button>

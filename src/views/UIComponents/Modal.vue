@@ -33,20 +33,20 @@
           </a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标题文本</span>
-          <a-input style="width: 100px" v-model="modalTitle" />
+          <span class="mr-2">设置标题文本</span>
+          <a-input class="w-24" v-model="modalTitle" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置确定按钮文本</span>
-          <a-input style="width: 100px" v-model="modalOkText" />
+          <span class="mr-2">设置确定按钮文本</span>
+          <a-input class="w-24" v-model="modalOkText" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置取消按钮文本</span>
-          <a-input style="width: 100px" v-model="modalCancelText" />
+          <span class="mr-2">设置取消按钮文本</span>
+          <a-input class="w-24" v-model="modalCancelText" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置对话框宽度</span>
-          <a-input style="width: 100px" v-model="modalWidth" />
+          <span class="mr-2">设置对话框宽度</span>
+          <a-input class="w-24" v-model="modalWidth" />
         </div>
       </div>
       <div>
@@ -106,16 +106,16 @@
           </a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标题文本</span>
-          <a-input style="width: 100px" v-model="modalTitleE" />
+          <span class="mr-2">设置标题文本</span>
+          <a-input class="w-24" v-model="modalTitleE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置对话框宽度</span>
-          <a-input style="width: 100px" v-model="modalWidthE" />
+          <span class="mr-2">设置对话框宽度</span>
+          <a-input class="w-24" v-model="modalWidthE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置对话框到顶部的距离</span>
-          <a-input style="width: 100px" v-model="modalTopE" />
+          <span class="mr-2">设置对话框到顶部的距离</span>
+          <a-input class="w-24" v-model="modalTopE" />
         </div>
       </div>
       <div>
@@ -190,20 +190,20 @@
           </a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标题文本</span>
-          <a-input style="width: 100px" v-model="modalTitleV" />
+          <span class="mr-2">设置标题文本</span>
+          <a-input class="w-24" v-model="modalTitleV" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置确定按钮文本</span>
-          <a-input style="width: 100px" v-model="modalOkTextV" />
+          <span class="mr-2">设置确定按钮文本</span>
+          <a-input class="w-24" v-model="modalOkTextV" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置取消按钮文本</span>
-          <a-input style="width: 100px" v-model="modalCancelTextV" />
+          <span class="mr-2">设置取消按钮文本</span>
+          <a-input class="w-24" v-model="modalCancelTextV" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置对话框宽度</span>
-          <a-input style="width: 100px" v-model="modalWidthV" />
+          <span class="mr-2">设置对话框宽度</span>
+          <a-input class="w-24" v-model="modalWidthV" />
         </div>
       </div>
       <div>

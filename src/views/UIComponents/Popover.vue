@@ -54,32 +54,32 @@
           <a-radio-button :value="false">隐藏箭头</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置弹出框宽度</span>
+          <span class="mr-2">设置弹出框宽度</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="popoverWidthE"
             :min="150"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置弹出框偏移量</span>
+          <span class="mr-2">设置弹出框偏移量</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="popoverOffsetE"
             :min="0"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置弹出动画</span>
-          <a-input style="width: 100px" v-model="popoverTransitionE" />
+          <span class="mr-2">设置弹出动画</span>
+          <a-input class="w-24" v-model="popoverTransitionE" />
         </div>
         <div
           v-show="popoverTriggerE === 'hover' || popoverTriggerE === 'manual'"
           class="my-2 mr-5"
         >
-          <span style="margin-right: 5px">设置打开显示延迟时间（毫秒）</span>
+          <span class="mr-2">设置打开显示延迟时间（毫秒）</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="popoverOpenDelayE"
             :min="0"
           />
@@ -88,9 +88,9 @@
           v-show="popoverTriggerE === 'hover' || popoverTriggerE === 'manual'"
           class="my-2 mr-5"
         >
-          <span style="margin-right: 5px">设置关闭显示延迟时间（毫秒）</span>
+          <span class="mr-2">设置关闭显示延迟时间（毫秒）</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="popoverCloseDelayE"
             :min="0"
           />
@@ -167,17 +167,17 @@
           <a-radio-button :value="false">关闭对话模式</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置弹出框宽度</span>
+          <span class="mr-2">设置弹出框宽度</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="popoverWidthV"
             :min="150"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置弹出框偏移量</span>
+          <span class="mr-2">设置弹出框偏移量</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="popoverOffsetV"
             :min="0"
           />

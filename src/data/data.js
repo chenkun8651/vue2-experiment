@@ -87,26 +87,49 @@ export const AnchorInfo = {
             children: null,
         },
     ],
-    // 徽标数锚点
-    badgeAnchor: [
+    // 面包屑锚点
+    breadcrumbAnchor: [
         {
             href: "#1",
-            title: "AntDesignVue 徽标数",
+            title: "AntDesignVue 头像",
             children: null,
         },
         {
             href: "#2",
-            title: "ElementUI 徽标数",
+            title: "ElementUI 头像",
             children: null,
         },
         {
             href: "#3",
-            title: "AtUI 徽标数",
+            title: "AtUI 头像",
             children: null,
         },
         {
             href: "#4",
-            title: "ViewUI 徽标数",
+            title: "ViewUI 头像",
+            children: null,
+        },
+    ],
+    // 按钮锚点
+    buttonAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 按钮",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 按钮",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 按钮",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 按钮",
             children: null,
         },
     ],

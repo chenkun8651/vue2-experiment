@@ -15,19 +15,19 @@
           <a-radio-button :value="'right'">right</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置弹出框标题（内容）文本</span>
+          <span class="mr-2">设置弹出框标题（内容）文本</span>
           <a-input style="width: 200px" v-model="popconfirmTitle" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置确定按钮文本</span>
-          <a-input style="width: 100px" v-model="popconfirmOkText" />
+          <span class="mr-2">设置确定按钮文本</span>
+          <a-input class="w-24" v-model="popconfirmOkText" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置取消按钮文本</span>
-          <a-input style="width: 100px" v-model="popconfirmCancelText" />
+          <span class="mr-2">设置取消按钮文本</span>
+          <a-input class="w-24" v-model="popconfirmCancelText" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标（插槽）</span>
+          <span class="mr-2">设置图标（插槽）</span>
           <a-input style="width: 200px" v-model="popconfirmIcon" />
         </div>
       </div>
@@ -48,41 +48,41 @@
     <a-card class="my-5" title="ElementUI 弹出确认框">
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置弹出框标题（内容）文本</span>
+          <span class="mr-2">设置弹出框标题（内容）文本</span>
           <a-input style="width: 200px" v-model="popconfirmTitleE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置确定按钮文本</span>
+          <span class="mr-2">设置确定按钮文本</span>
           <a-input
-            style="width: 100px"
+            class="w-24"
             v-model="popconfirmConfirmButtonTextE"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置确定按钮类型</span>
+          <span class="mr-2">设置确定按钮类型</span>
           <a-input
-            style="width: 100px"
+            class="w-24"
             v-model="popconfirmConfirmButtonTypeE"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置取消按钮文本</span>
-          <a-input style="width: 100px" v-model="popconfirmCancelButtonTextE" />
+          <span class="mr-2">设置取消按钮文本</span>
+          <a-input class="w-24" v-model="popconfirmCancelButtonTextE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置取消按钮类型</span>
-          <a-input style="width: 100px" v-model="popconfirmCancelButtonTypeE" />
+          <span class="mr-2">设置取消按钮类型</span>
+          <a-input class="w-24" v-model="popconfirmCancelButtonTypeE" />
         </div>
         <a-radio-group v-model="popconfirmHideIconE">
           <a-radio-button :value="true">隐藏图标</a-radio-button>
           <a-radio-button :value="false">显示图标</a-radio-button>
         </a-radio-group>
         <div v-show="!popconfirmHideIconE" class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标</span>
+          <span class="mr-2">设置图标</span>
           <a-input style="width: 200px" v-model="popconfirmIconE" />
         </div>
         <div v-show="!popconfirmHideIconE" class="my-2 mr-5">
-          <span style="margin-right: 5px">设置图标颜色</span>
+          <span class="mr-2">设置图标颜色</span>
           <a-input style="width: 200px" v-model="popconfirmIconColorE" />
         </div>
       </div>

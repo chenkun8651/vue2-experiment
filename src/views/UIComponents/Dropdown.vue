@@ -100,12 +100,12 @@
           <a-radio-button :value="'mini'">mini</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置展开下拉菜单的延时（毫秒）</span>
-          <a-input-number style="width: 100px" v-model="dropdownShowTimeoutE" />
+          <span class="mr-2">设置展开下拉菜单的延时（毫秒）</span>
+          <a-input-number class="w-24" v-model="dropdownShowTimeoutE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置收起下拉菜单的延时（毫秒）</span>
-          <a-input-number style="width: 100px" v-model="dropdownHideTimeoutE" />
+          <span class="mr-2">设置收起下拉菜单的延时（毫秒）</span>
+          <a-input-number class="w-24" v-model="dropdownHideTimeoutE" />
         </div>
       </div>
       <div>

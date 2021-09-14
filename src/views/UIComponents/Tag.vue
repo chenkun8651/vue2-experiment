@@ -13,8 +13,8 @@
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标签颜色（十六进制码）</span>
-          <a-input style="width: 100px" v-model="tagColor" />
+          <span class="mr-2">设置标签颜色（十六进制码）</span>
+          <a-input class="w-24" v-model="tagColor" />
         </div>
       </div>
       <div>
@@ -57,8 +57,8 @@
           <a-radio-button :value="false">隐藏边框描线</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标签背景色（十六进制码）</span>
-          <a-input style="width: 100px" v-model="tagColorE" />
+          <span class="mr-2">设置标签背景色（十六进制码）</span>
+          <a-input class="w-24" v-model="tagColorE" />
         </div>
       </div>
       <div>
@@ -91,8 +91,8 @@
           <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标签颜色（十六进制码）</span>
-          <a-input style="width: 100px" v-model="tagColorA" />
+          <span class="mr-2">设置标签颜色（十六进制码）</span>
+          <a-input class="w-24" v-model="tagColorA" />
         </div>
       </div>
       <div>
@@ -136,8 +136,8 @@
           <a-radio-button :value="false">未选中标签状态</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置标签颜色（十六进制码）</span>
-          <a-input style="width: 100px" v-model="TagColorV" />
+          <span class="mr-2">设置标签颜色（十六进制码）</span>
+          <a-input class="w-24" v-model="TagColorV" />
         </div>
       </div>
       <div>

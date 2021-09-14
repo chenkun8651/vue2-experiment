@@ -49,18 +49,18 @@
           <a-radio-button :value="false">隐藏动画效果</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置渲染template数量</span>
-          <a-input-number style="width: 100px" v-model="skeletonCountE" />
+          <span class="mr-2">设置渲染template数量</span>
+          <a-input-number class="w-24" v-model="skeletonCountE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置骨架屏段落数量</span>
-          <a-input-number style="width: 100px" v-model="skeletonRowsE" />
+          <span class="mr-2">设置骨架屏段落数量</span>
+          <a-input-number class="w-24" v-model="skeletonRowsE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">
+          <span class="mr-2">
             设置延迟占位DOM渲染的时间（毫秒）
           </span>
-          <a-input-number style="width: 100px" v-model="skeletonThrottleE" />
+          <a-input-number class="w-24" v-model="skeletonThrottleE" />
         </div>
       </div>
       <div>

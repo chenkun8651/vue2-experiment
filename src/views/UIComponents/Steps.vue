@@ -27,9 +27,9 @@
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置步骤条进度</span>
+          <span class="mr-2">设置步骤条进度</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="AntDesignVue.current"
             :max="2"
             :min="0"
@@ -93,9 +93,9 @@
           <a-radio-button :value="'success'">success</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置步骤条进度</span>
+          <span class="mr-2">设置步骤条进度</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="ElementUI.active"
             :max="2"
             :min="0"
@@ -151,9 +151,9 @@
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置步骤条进度</span>
+          <span class="mr-2">设置步骤条进度</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="AtUI.current"
             :max="2"
             :min="0"
@@ -192,9 +192,9 @@
           <a-radio-button :value="'error'">error</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置步骤条进度</span>
+          <span class="mr-2">设置步骤条进度</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="ViewUI.current"
             :max="2"
             :min="0"

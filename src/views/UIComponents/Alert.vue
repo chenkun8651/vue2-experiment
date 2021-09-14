@@ -19,7 +19,7 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置警告提示类型</span>
-            <a-select class="w-40" v-model="AntDesignVue.type">
+            <a-select class="w-48" v-model="AntDesignVue.type">
               <a-select-option :value="'success'">success</a-select-option>
               <a-select-option :value="'info'">info</a-select-option>
               <a-select-option :value="'warning'">warning</a-select-option>
@@ -74,14 +74,14 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置警告提示主题</span>
-            <a-select class="w-40" v-model="ElementUI.effect">
+            <a-select class="w-48" v-model="ElementUI.effect">
               <a-select-option :value="'light'">light</a-select-option>
               <a-select-option :value="'dark'">dark</a-select-option>
             </a-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置警告提示类型</span>
-            <a-select class="w-40" v-model="ElementUI.type">
+            <a-select class="w-48" v-model="ElementUI.type">
               <a-select-option :value="'success'">success</a-select-option>
               <a-select-option :value="'info'">info</a-select-option>
               <a-select-option :value="'warning'">warning</a-select-option>
@@ -128,7 +128,7 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置警告提示类型</span>
-            <a-select class="w-40" v-model="AtUI.type">
+            <a-select class="w-48" v-model="AtUI.type">
               <a-select-option :value="'success'">success</a-select-option>
               <a-select-option :value="'info'">info</a-select-option>
               <a-select-option :value="'warning'">warning</a-select-option>
@@ -178,7 +178,7 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置警告提示类型</span>
-            <a-select class="w-40" v-model="ViewUI.type">
+            <a-select class="w-48" v-model="ViewUI.type">
               <a-select-option :value="'success'">success</a-select-option>
               <a-select-option :value="'info'">info</a-select-option>
               <a-select-option :value="'warning'">warning</a-select-option>

@@ -156,8 +156,8 @@
           <a-radio-button :value="false">隐藏卡片阴影</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置卡片内边距</span>
-          <a-input-number style="width: 100px" v-model="cardPaddingV" />
+          <span class="mr-2">设置卡片内边距</span>
+          <a-input-number class="w-24" v-model="cardPaddingV" />
         </div>
       </div>
       <div>

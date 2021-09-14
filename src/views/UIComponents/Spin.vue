@@ -14,12 +14,12 @@
           <a-radio-button :value="'small'">small</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px"> 设置延迟显示加载时间（毫秒） </span>
-          <a-input-number style="width: 100px" v-model="spinDelay" />
+          <span class="mr-2"> 设置延迟显示加载时间（毫秒） </span>
+          <a-input-number class="w-24" v-model="spinDelay" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置加载描述文案</span>
-          <a-input style="width: 100px" v-model="spinTip" />
+          <span class="mr-2">设置加载描述文案</span>
+          <a-input class="w-24" v-model="spinTip" />
         </div>
       </div>
       <div>
@@ -41,15 +41,15 @@
           <a-radio-button :value="false">完成</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置加载图标</span>
+          <span class="mr-2">设置加载图标</span>
           <a-input style="width: 150px" v-model="spinSpinnerE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置加载背景色</span>
+          <span class="mr-2">设置加载背景色</span>
           <a-input style="width: 150px" v-model="spinBackgroundE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置加载描述文案</span>
+          <span class="mr-2">设置加载描述文案</span>
           <a-input style="width: 150px" v-model="spinTextE" />
         </div>
       </div>

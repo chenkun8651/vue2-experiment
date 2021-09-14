@@ -79,9 +79,9 @@
           <a-radio-button :value="false">关闭多选</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置上传限制数量</span>
+          <span class="mr-2">设置上传限制数量</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="ElementUI.limit"
             :max="10"
             :min="0"

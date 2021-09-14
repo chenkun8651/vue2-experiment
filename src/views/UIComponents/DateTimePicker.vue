@@ -251,8 +251,8 @@
             <a-radio-button :value="'timerange'">timerange</a-radio-button>
           </a-radio-group>
           <div class="my-2 mr-5">
-            <span style="margin-right: 5px">设置两个时间的分隔符</span>
-            <a-input style="width: 100px" v-model="ViewUI.separator" />
+            <span class="mr-2">设置两个时间的分隔符</span>
+            <a-input class="w-24" v-model="ViewUI.separator" />
           </div>
         </div>
         <div>

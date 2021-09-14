@@ -29,16 +29,16 @@
           <a-radio-button :value="'contextmenu'">contextmenu</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">鼠标移入的延迟显示时间（秒）</span>
+          <span class="mr-2">鼠标移入的延迟显示时间（秒）</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="tooltipMouseEnterDelay"
           />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">鼠标移出的延迟显示时间（秒）</span>
+          <span class="mr-2">鼠标移出的延迟显示时间（秒）</span>
           <a-input-number
-            style="width: 100px"
+            class="w-24"
             v-model="tooltipMouseLeaveDelay"
           />
         </div>
@@ -79,20 +79,20 @@
           <a-radio-button :value="false">隐藏箭头</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置文字提示偏移量</span>
-          <a-input-number style="width: 100px" v-model="tooltipOffsetE" />
+          <span class="mr-2">设置文字提示偏移量</span>
+          <a-input-number class="w-24" v-model="tooltipOffsetE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置文字提示渐变动画</span>
+          <span class="mr-2">设置文字提示渐变动画</span>
           <a-input style="width: 150px" v-model="tooltipTransitionE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置延迟出现时间（毫秒）</span>
-          <a-input-number style="width: 100px" v-model="tooltipOpenDelayE" />
+          <span class="mr-2">设置延迟出现时间（毫秒）</span>
+          <a-input-number class="w-24" v-model="tooltipOpenDelayE" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置自动隐藏时间（毫秒）</span>
-          <a-input-number style="width: 100px" v-model="tooltipHideAfterE" />
+          <span class="mr-2">设置自动隐藏时间（毫秒）</span>
+          <a-input-number class="w-24" v-model="tooltipHideAfterE" />
         </div>
       </div>
       <div>
@@ -152,16 +152,16 @@
           <a-radio-button :value="'right'">right</a-radio-button>
         </a-radio-group>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置文字提示偏移量</span>
-          <a-input-number style="width: 100px" v-model="tooltipOffsetV" />
+          <span class="mr-2">设置文字提示偏移量</span>
+          <a-input-number class="w-24" v-model="tooltipOffsetV" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置最大宽度</span>
-          <a-input-number style="width: 100px" v-model="tooltipMaxWidthV" />
+          <span class="mr-2">设置最大宽度</span>
+          <a-input-number class="w-24" v-model="tooltipMaxWidthV" />
         </div>
         <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置延迟出现时间（毫秒）</span>
-          <a-input-number style="width: 100px" v-model="tooltipDelayV" />
+          <span class="mr-2">设置延迟出现时间（毫秒）</span>
+          <a-input-number class="w-24" v-model="tooltipDelayV" />
         </div>
       </div>
       <div>

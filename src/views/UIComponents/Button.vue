@@ -1,226 +1,259 @@
 <template>
-  <!-- 按钮 -->
-  <div>
-    <!-- AntDesignVue -->
-    <a-card class="my-5" title="AntDesignVue 按钮">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="buttonType">
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'primary'">primary</a-radio-button>
-          <a-radio-button :value="'dashed'">dashed</a-radio-button>
-          <a-radio-button :value="'danger'">danger</a-radio-button>
-          <a-radio-button :value="'link'">link</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonSize">
-          <a-radio-button :value="'large'">large</a-radio-button>
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonShape">
-          <a-radio-button :value="null">方形按钮</a-radio-button>
-          <a-radio-button :value="'circle'">圆形按钮</a-radio-button>
-          <a-radio-button :value="'round'">圆角按钮</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonGhost">
-          <a-radio-button :value="true">显示背景透明</a-radio-button>
-          <a-radio-button :value="false">隐藏背景透明</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonBlock">
-          <a-radio-button :value="true">撑满宽度</a-radio-button>
-          <a-radio-button :value="false">不撑满宽度</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonDisabled">
-          <a-radio-button :value="true">禁用</a-radio-button>
-          <a-radio-button :value="false">启用</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonLoading">
-          <a-radio-button :value="true">加载</a-radio-button>
-          <a-radio-button :value="false">完成</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置按钮图标</span>
-          <a-input style="width: 120px" v-model="buttonIcon" />
+  <div class="flex" ref="box">
+    <!-- 按钮 -->
+    <div class="w-9/12">
+      <!-- AntDesignVue -->
+      <a-card id="1" class="my-5" title="AntDesignVue 按钮">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">禁用按钮</span>
+            <a-switch v-model="AntDesignVue.disabled" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">加载按钮</span>
+            <a-switch v-model="AntDesignVue.loading" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">按钮填充色是否透明</span>
+            <a-switch v-model="AntDesignVue.ghost" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">按钮是否撑满父级宽度</span>
+            <a-switch v-model="AntDesignVue.block" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮类型</span>
+            <a-select class="w-36" v-model="AntDesignVue.type">
+              <a-select-option :value="'default'">default</a-select-option>
+              <a-select-option :value="'primary'">primary</a-select-option>
+              <a-select-option :value="'danger'">danger</a-select-option>
+              <a-select-option :value="'dashed'">dashed</a-select-option>
+              <a-select-option :value="'link'">link</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮形状</span>
+            <a-select class="w-36" v-model="AntDesignVue.shape">
+              <a-select-option :value="'circle'">圆形</a-select-option>
+              <a-select-option :value="'round'">圆角</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮大小</span>
+            <a-select class="w-36" v-model="AntDesignVue.size">
+              <a-select-option :value="'large'">large</a-select-option>
+              <a-select-option :value="'default'">default</a-select-option>
+              <a-select-option :value="'small'">small</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮图标</span>
+            <a-input class="w-36" v-model="AntDesignVue.icon" />
+          </div>
         </div>
-      </div>
-      <div>
-        <a-button
-          :type="buttonType"
-          :ghost="buttonGhost"
-          :icon="buttonIcon"
-          :shape="buttonShape"
-          :size="buttonSize"
-          :block="buttonBlock"
-          :disabled="buttonDisabled"
-          :loading="buttonLoading"
-        >
-          默认按钮
-        </a-button>
-      </div>
-    </a-card>
-    <!-- ElementUI -->
-    <a-card class="my-5" title="ElementUI 按钮">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="buttonTypeE">
-          <a-radio-button :value="null">default</a-radio-button>
-          <a-radio-button :value="'primary'">primary</a-radio-button>
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-          <a-radio-button :value="'danger'">danger</a-radio-button>
-          <a-radio-button :value="'info'">info</a-radio-button>
-          <a-radio-button :value="'text'">text</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonSizeE">
-          <a-radio-button :value="null">large</a-radio-button>
-          <a-radio-button :value="'medium'">medium</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-          <a-radio-button :value="'mini'">mini</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonPlainE">
-          <a-radio-button :value="true">显示简洁</a-radio-button>
-          <a-radio-button :value="false">隐藏简洁</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonRoundE">
-          <a-radio-button :value="true">显示圆角</a-radio-button>
-          <a-radio-button :value="false">隐藏圆角</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonCircleE">
-          <a-radio-button :value="true">显示圆形</a-radio-button>
-          <a-radio-button :value="false">隐藏圆形</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonDisabledE">
-          <a-radio-button :value="true">禁用</a-radio-button>
-          <a-radio-button :value="false">启用</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonLoadingE">
-          <a-radio-button :value="true">加载</a-radio-button>
-          <a-radio-button :value="false">完成</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置按钮图标</span>
-          <a-input style="width: 120px" v-model="buttonIconE" />
+        <div>
+          <a-button
+            :type="AntDesignVue.type"
+            :ghost="AntDesignVue.ghost"
+            :icon="AntDesignVue.icon"
+            :shape="AntDesignVue.shape"
+            :size="AntDesignVue.size"
+            :block="AntDesignVue.block"
+            :disabled="AntDesignVue.disabled"
+            :loading="AntDesignVue.loading"
+          >
+            默认按钮
+          </a-button>
         </div>
-      </div>
-      <div>
-        <el-button
-          :type="buttonTypeE"
-          :icon="buttonIconE"
-          :plain="buttonPlainE"
-          :round="buttonRoundE"
-          :circle="buttonCircleE"
-          :size="buttonSizeE"
-          :disabled="buttonDisabledE"
-          :loading="buttonLoadingE"
-        >
-          默认按钮
-        </el-button>
-      </div>
-    </a-card>
-    <!-- AtUI -->
-    <a-card class="my-5" title="AtUI 按钮">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="buttonTypeA">
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'primary'">primary</a-radio-button>
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-          <a-radio-button :value="'error'">error</a-radio-button>
-          <a-radio-button :value="'info'">info</a-radio-button>
-          <a-radio-button :value="'text'">text</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonSizeA">
-          <a-radio-button :value="'large'">large</a-radio-button>
-          <a-radio-button :value="null">medium</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-          <a-radio-button :value="'smaller'">smaller</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonHollowA">
-          <a-radio-button :value="true">显示背景透明</a-radio-button>
-          <a-radio-button :value="false">隐藏背景透明</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonDisabledA">
-          <a-radio-button :value="true">禁用</a-radio-button>
-          <a-radio-button :value="false">启用</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonLoadingA">
-          <a-radio-button :value="true">加载</a-radio-button>
-          <a-radio-button :value="false">完成</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置按钮图标</span>
-          <a-input style="width: 120px" v-model="buttonIconA" />
+      </a-card>
+      <!-- ElementUI -->
+      <a-card id="2" class="my-5" title="ElementUI 按钮">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">禁用按钮</span>
+            <a-switch v-model="ElementUI.disabled" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">加载按钮</span>
+            <a-switch v-model="ElementUI.loading" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否为简洁按钮</span>
+            <a-switch v-model="ElementUI.plain" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否为圆角按钮</span>
+            <a-switch v-model="ElementUI.round" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否为圆形按钮</span>
+            <a-switch v-model="ElementUI.circle" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮类型</span>
+            <a-select class="w-36" v-model="ElementUI.type">
+              <a-select-option :value="'primary'">primary</a-select-option>
+              <a-select-option :value="'success'">success</a-select-option>
+              <a-select-option :value="'warning'">warning</a-select-option>
+              <a-select-option :value="'danger'">danger</a-select-option>
+              <a-select-option :value="'info'">info</a-select-option>
+              <a-select-option :value="'text'">text</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮大小</span>
+            <a-select class="w-36" v-model="ElementUI.size">
+              <a-select-option :value="'medium'">medium</a-select-option>
+              <a-select-option :value="'small'">small</a-select-option>
+              <a-select-option :value="'mini'">mini</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮图标</span>
+            <a-input class="w-36" v-model="ElementUI.icon" />
+          </div>
         </div>
-      </div>
-      <div>
-        <at-button
-          :type="buttonTypeA"
-          :icon="buttonIconA"
-          :hollow="buttonHollowA"
-          :size="buttonSizeA"
-          :disabled="buttonDisabledA"
-          :loading="buttonLoadingA"
-        >
-          默认按钮
-        </at-button>
-      </div>
-    </a-card>
-    <!-- ViewUI -->
-    <a-card class="my-5" title="ViewUI 按钮">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="buttonTypeV">
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'primary'">primary</a-radio-button>
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-          <a-radio-button :value="'error'">error</a-radio-button>
-          <a-radio-button :value="'dashed'">dashed</a-radio-button>
-          <a-radio-button :value="'info'">info</a-radio-button>
-          <a-radio-button :value="'text'">text</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonSizeV">
-          <a-radio-button :value="'large'">large</a-radio-button>
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonShapeV">
-          <a-radio-button :value="null">方形按钮</a-radio-button>
-          <a-radio-button :value="'circle'">圆角按钮</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonGhostV">
-          <a-radio-button :value="true">显示背景透明</a-radio-button>
-          <a-radio-button :value="false">隐藏背景透明</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonLongV">
-          <a-radio-button :value="true">撑满宽度</a-radio-button>
-          <a-radio-button :value="false">不撑满宽度</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonDisabledV">
-          <a-radio-button :value="true">禁用</a-radio-button>
-          <a-radio-button :value="false">启用</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="buttonLoadingV">
-          <a-radio-button :value="true">加载</a-radio-button>
-          <a-radio-button :value="false">完成</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span style="margin-right: 5px">设置按钮图标</span>
-          <a-input style="width: 120px" v-model="buttonIconV" />
+        <div>
+          <el-button
+            :type="ElementUI.type"
+            :size="ElementUI.size"
+            :icon="ElementUI.icon"
+            :plain="ElementUI.plain"
+            :round="ElementUI.round"
+            :circle="ElementUI.circle"
+            :disabled="ElementUI.disabled"
+            :loading="ElementUI.loading"
+          >
+            默认按钮
+          </el-button>
         </div>
-      </div>
-      <div>
-        <Button
-          :type="buttonTypeV"
-          :ghost="buttonGhostV"
-          :icon="buttonIconV"
-          :shape="buttonShapeV"
-          :size="buttonSizeV"
-          :long="buttonLongV"
-          :disabled="buttonDisabledV"
-          :loading="buttonLoadingV"
-        >
-          默认按钮
-        </Button>
-      </div>
-    </a-card>
+      </a-card>
+      <!-- AtUI -->
+      <a-card id="3" class="my-5" title="AtUI 按钮">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">禁用按钮</span>
+            <a-switch v-model="AtUI.disabled" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">加载按钮</span>
+            <a-switch v-model="AtUI.loading" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">按钮填充色是否透明</span>
+            <a-switch v-model="AtUI.hollow" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮类型</span>
+            <a-select class="w-36" v-model="AtUI.type">
+              <a-select-option :value="'default'">default</a-select-option>
+              <a-select-option :value="'primary'">primary</a-select-option>
+              <a-select-option :value="'success'">success</a-select-option>
+              <a-select-option :value="'warning'">warning</a-select-option>
+              <a-select-option :value="'error'">error</a-select-option>
+              <a-select-option :value="'info'">info</a-select-option>
+              <a-select-option :value="'text'">text</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮大小</span>
+            <a-select class="w-36" v-model="AtUI.size">
+              <a-select-option :value="'large'">large</a-select-option>
+              <a-select-option :value="'small'">small</a-select-option>
+              <a-select-option :value="'smaller'">smaller</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮图标</span>
+            <a-input class="w-36" v-model="AtUI.icon" />
+          </div>
+        </div>
+        <div>
+          <at-button
+            :disabled="AtUI.disabled"
+            :loading="AtUI.loading"
+            :hollow="AtUI.hollow"
+            :type="AtUI.type"
+            :size="AtUI.size"
+            :icon="AtUI.icon"
+          >
+            默认按钮
+          </at-button>
+        </div>
+      </a-card>
+      <!-- ViewUI -->
+      <a-card id="4" class="my-5" title="ViewUI 按钮">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">禁用按钮</span>
+            <a-switch v-model="ViewUI.disabled" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">加载按钮</span>
+            <a-switch v-model="ViewUI.loading" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">按钮填充色是否透明</span>
+            <a-switch v-model="ViewUI.ghost" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">按钮是否撑满父级宽度</span>
+            <a-switch v-model="ViewUI.long" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮类型</span>
+            <a-select class="w-36" v-model="ViewUI.type">
+              <a-select-option :value="'default'">default</a-select-option>
+              <a-select-option :value="'primary'">primary</a-select-option>
+              <a-select-option :value="'success'">success</a-select-option>
+              <a-select-option :value="'warning'">warning</a-select-option>
+              <a-select-option :value="'error'">error</a-select-option>
+              <a-select-option :value="'dashed'">dashed</a-select-option>
+              <a-select-option :value="'info'">info</a-select-option>
+              <a-select-option :value="'text'">text</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮形状</span>
+            <a-select class="w-36" v-model="ViewUI.shape">
+              <a-select-option :value="'circle'">circle</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮大小</span>
+            <a-select class="w-36" v-model="ViewUI.size">
+              <a-select-option :value="'large'">large</a-select-option>
+              <a-select-option :value="'default'">default</a-select-option>
+              <a-select-option :value="'small'">small</a-select-option>
+            </a-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置按钮图标</span>
+            <a-input class="w-36" v-model="ViewUI.icon" />
+          </div>
+        </div>
+        <div>
+          <Button
+            :disabled="ViewUI.disabled"
+            :loading="ViewUI.loading"
+            :ghost="ViewUI.ghost"
+            :long="ViewUI.long"
+            :type="ViewUI.type"
+            :shape="ViewUI.shape"
+            :size="ViewUI.size"
+            :icon="ViewUI.icon"
+          >
+            默认按钮
+          </Button>
+        </div>
+      </a-card>
+    </div>
+    <!-- 查询锚点 -->
+    <BasicAnchor
+      :parentList="this.AnchorInfo.buttonAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 
@@ -228,40 +261,44 @@
 export default {
   data() {
     return {
-      // AntDesignVue
-      buttonType: "default",
-      buttonSize: "default",
-      buttonShape: null,
-      buttonGhost: false,
-      buttonBlock: false,
-      buttonDisabled: false,
-      buttonLoading: false,
-      buttonIcon: "search",
-      // ElementUI
-      buttonTypeE: null,
-      buttonSizeE: "medium",
-      buttonPlainE: false,
-      buttonRoundE: false,
-      buttonCircleE: false,
-      buttonDisabledE: false,
-      buttonLoadingE: false,
-      buttonIconE: "el-icon-search",
-      // AtUI
-      buttonTypeA: "default",
-      buttonSizeA: null,
-      buttonHollowA: false,
-      buttonDisabledA: false,
-      buttonLoadingA: false,
-      buttonIconA: "icon-search",
-      // ViewUI
-      buttonTypeV: "default",
-      buttonSizeV: "default",
-      buttonShapeV: null,
-      buttonGhostV: false,
-      buttonLongV: false,
-      buttonDisabledV: false,
-      buttonLoadingV: false,
-      buttonIconV: "ios-search",
+      AntDesignVue: {
+        disabled: false,
+        loading: false,
+        ghost: false,
+        block: false,
+        type: "primary",
+        shape: "round",
+        size: "default",
+        icon: "search",
+      },
+      ElementUI: {
+        disabled: false,
+        loading: false,
+        plain: false,
+        round: false,
+        circle: false,
+        type: "primary",
+        size: "medium",
+        icon: "el-icon-search",
+      },
+      AtUI: {
+        disabled: false,
+        loading: false,
+        hollow: false,
+        type: "primary",
+        size: "large",
+        icon: "icon-search",
+      },
+      ViewUI: {
+        disabled: false,
+        loading: false,
+        ghost: false,
+        long: false,
+        type: "primary",
+        shape: "circle",
+        size: "default",
+        icon: "ios-search",
+      },
     };
   },
   methods: {},

@@ -20,7 +20,7 @@
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框大小</span>
-              <a-select class="w-40" v-model="AntDesignVue.size">
+              <a-select class="w-48" v-model="AntDesignVue.size">
                 <a-select-option :value="'large'">large</a-select-option>
                 <a-select-option :value="'default'">default</a-select-option>
                 <a-select-option :value="'small'">small</a-select-option>
@@ -224,7 +224,7 @@
           >
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框选项弹出位置</span>
-              <a-select class="w-40" v-model="AntDesignVue.placement">
+              <a-select class="w-48" v-model="AntDesignVue.placement">
                 <a-select-option :value="'top'">top</a-select-option>
                 <a-select-option :value="'bottom'">bottom</a-select-option>
               </a-select>
@@ -289,7 +289,7 @@
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框大小</span>
-              <a-select class="w-40" v-model="ElementUI.size">
+              <a-select class="w-48" v-model="ElementUI.size">
                 <a-select-option :value="'medium'">medium</a-select-option>
                 <a-select-option :value="'small'">small</a-select-option>
                 <a-select-option :value="'mini'">mini</a-select-option>
@@ -321,7 +321,7 @@
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框类型</span>
-              <a-select class="w-40" v-model="ElementUI.type">
+              <a-select class="w-48" v-model="ElementUI.type">
                 <a-select-option :value="'text'">text</a-select-option>
                 <a-select-option :value="'textarea'">textarea</a-select-option>
                 <a-select-option :value="'password'">password</a-select-option>
@@ -329,7 +329,7 @@
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框缩放方式</span>
-              <a-select class="w-40" v-model="ElementUI.resize">
+              <a-select class="w-48" v-model="ElementUI.resize">
                 <a-select-option :value="'none'">none</a-select-option>
                 <a-select-option :value="'both'">both</a-select-option>
                 <a-select-option :value="'horizontal'">
@@ -378,7 +378,7 @@
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置控制按钮的位置</span>
-              <a-select class="w-40" v-model="ElementUI.controlsPosition">
+              <a-select class="w-48" v-model="ElementUI.controlsPosition">
                 <a-select-option :value="null">default</a-select-option>
                 <a-select-option :value="'right'">right</a-select-option>
               </a-select>
@@ -428,7 +428,7 @@
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置联想选项出现位置</span>
-              <a-select class="w-40" v-model="ElementUI.placement">
+              <a-select class="w-48" v-model="ElementUI.placement">
                 <a-select-option :value="'top'">top</a-select-option>
                 <a-select-option :value="'bottom'">bottom</a-select-option>
               </a-select>
@@ -469,7 +469,7 @@
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框大小</span>
-              <a-select class="w-40" v-model="AtUI.size">
+              <a-select class="w-48" v-model="AtUI.size">
                 <a-select-option :value="'large'">large</a-select-option>
                 <a-select-option :value="'normal'">normal</a-select-option>
                 <a-select-option :value="'small'">small</a-select-option>
@@ -485,14 +485,14 @@
           >
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框大小</span>
-              <a-select class="w-40" v-model="AtUI.type">
+              <a-select class="w-48" v-model="AtUI.type">
                 <a-select-option :value="'text'">text</a-select-option>
                 <a-select-option :value="'password'">password</a-select-option>
               </a-select>
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框状态</span>
-              <a-select class="w-40" v-model="AtUI.status">
+              <a-select class="w-48" v-model="AtUI.status">
                 <a-select-option :value="null">null</a-select-option>
                 <a-select-option :value="'success'">success</a-select-option>
                 <a-select-option :value="'error'">error</a-select-option>
@@ -564,7 +564,7 @@
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框缩放方式</span>
-              <a-select class="w-40" v-model="AtUI.resize">
+              <a-select class="w-48" v-model="AtUI.resize">
                 <a-select-option :value="'none'">none</a-select-option>
                 <a-select-option :value="'both'">both</a-select-option>
                 <a-select-option :value="'vertical'">vertical</a-select-option>
@@ -609,7 +609,7 @@
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框大小</span>
-              <a-select class="w-40" v-model="ViewUI.size">
+              <a-select class="w-48" v-model="ViewUI.size">
                 <a-select-option :value="'large'">large</a-select-option>
                 <a-select-option :value="'default'">default</a-select-option>
                 <a-select-option :value="'small'">small</a-select-option>
@@ -649,7 +649,7 @@
             </div>
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框类型</span>
-              <a-select class="w-40" v-model="ViewUI.type">
+              <a-select class="w-48" v-model="ViewUI.type">
                 <a-select-option :value="'text'">text</a-select-option>
                 <a-select-option :value="'textarea'">textarea</a-select-option>
                 <a-select-option :value="'password'">password</a-select-option>
@@ -735,7 +735,7 @@
           >
             <div class="my-2 mr-5">
               <span class="mr-2">设置输入框选项弹出位置</span>
-              <a-select class="w-40" v-model="ViewUI.placement">
+              <a-select class="w-48" v-model="ViewUI.placement">
                 <a-select-option :value="'top'">top</a-select-option>
                 <a-select-option :value="'bottom'">bottom</a-select-option>
               </a-select>

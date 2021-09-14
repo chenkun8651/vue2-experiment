@@ -28,13 +28,6 @@ export const UIComponentsMenu = [
         component: () => import("../views/UIComponents/Avatar.vue"),
     },
     {
-        key: "badge",
-        name: "徽标数",
-        icon: "inbox",
-        path: "/UIComponents/badge",
-        component: () => import("../views/UIComponents/Badge.vue"),
-    },
-    {
         key: "breadcrumb",
         name: "面包屑",
         icon: "inbox",
