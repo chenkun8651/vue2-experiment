@@ -1,6 +1,5 @@
 
 export const AnchorInfo = {
-    // AntDesignVue特色锚点
     antDesignVueAnchor: [
         {
             href: "#1",
@@ -18,7 +17,6 @@ export const AnchorInfo = {
             children: null,
         },
     ],
-    // 固定按钮锚点
     affixAnchor: [
         {
             href: "#1",
@@ -41,7 +39,6 @@ export const AnchorInfo = {
             children: null,
         },
     ],
-    // 警告提示锚点
     alertAnchor: [
         {
             href: "#1",
@@ -64,7 +61,6 @@ export const AnchorInfo = {
             children: null,
         },
     ],
-    // 头像锚点
     avatarAnchor: [
         {
             href: "#1",
@@ -87,7 +83,6 @@ export const AnchorInfo = {
             children: null,
         },
     ],
-    // 面包屑锚点
     breadcrumbAnchor: [
         {
             href: "#1",
@@ -110,7 +105,6 @@ export const AnchorInfo = {
             children: null,
         },
     ],
-    // 按钮锚点
     buttonAnchor: [
         {
             href: "#1",
@@ -133,7 +127,189 @@ export const AnchorInfo = {
             children: null,
         },
     ],
-    // 输入框锚点
+    calendarAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 日历",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 日历",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 日历",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 日历",
+            children: null,
+        },
+    ],
+    cardAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 卡片",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 卡片",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 卡片",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 卡片",
+            children: null,
+        },
+    ],
+    carouselAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 走马灯",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 走马灯",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 走马灯",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 走马灯",
+            children: null,
+        },
+    ],
+    checkboxAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 多选框",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 多选框",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 多选框",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 多选框",
+            children: null,
+        },
+    ],
+    collapseAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 折叠面板",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 折叠面板",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 折叠面板",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 折叠面板",
+            children: null,
+        },
+    ],
+    datePickerAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 日期（时间）选择框",
+            children: [
+                {
+                    href: "#1-1",
+                    title: "通用API",
+                },
+                {
+                    href: "#1-2",
+                    title: "日期选择框",
+                },
+                {
+                    href: "#1-3",
+                    title: "范围日期选择框",
+                },
+                {
+                    href: "#1-4",
+                    title: "日期（周）选择框",
+                },
+                {
+                    href: "#1-5",
+                    title: "日期（月）选择框",
+                },
+                {
+                    href: "#1-6",
+                    title: "时间选择框",
+                },
+            ],
+        },
+        {
+            href: "#2",
+            title: "ElementUI 日期（时间）选择框",
+            children: [
+                {
+                    href: "#2-1",
+                    title: "通用API",
+                },
+                {
+                    href: "#2-2",
+                    title: "日期选择框",
+                },
+                {
+                    href: "#2-3",
+                    title: "时间选择框",
+                },
+            ],
+        },
+        {
+            href: "#3",
+            title: "AtUI 日期（时间）选择框",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 日期（时间）选择框",
+            children: [
+                {
+                    href: "#4-1",
+                    title: "通用API",
+                },
+                {
+                    href: "#4-2",
+                    title: "日期选择框",
+                },
+                {
+                    href: "#4-3",
+                    title: "时间选择框",
+                },
+            ],
+        },
+    ],
     inputAnchor: [
         {
             href: "#1",

@@ -6,7 +6,7 @@
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <div class="my-2 mr-5">
           <span class="mr-2">设置图片链接</span>
-          <a-input style="width: 200px" v-model="emptyImage" />
+          <a-input class="w-60" v-model="emptyImage" />
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置描述内容</span>
@@ -22,7 +22,7 @@
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <div class="my-2 mr-5">
           <span class="mr-2">设置图片链接</span>
-          <a-input style="width: 200px" v-model="emptyImageE" />
+          <a-input class="w-60" v-model="emptyImageE" />
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置描述内容</span>

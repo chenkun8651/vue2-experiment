@@ -22,11 +22,11 @@
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置标题</span>
-          <a-input style="width: 200px" v-model="notificationMessage" />
+          <a-input class="w-60" v-model="notificationMessage" />
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置内容</span>
-          <a-input style="width: 200px" v-model="notificationDescription" />
+          <a-input class="w-60" v-model="notificationDescription" />
         </div>
         <div
           v-if="
@@ -36,7 +36,7 @@
           class="my-2 mr-5"
         >
           <span class="mr-2">设置弹出时通知框离顶部的距离</span>
-          <a-input style="width: 200px" v-model="notificationTop" />
+          <a-input class="w-60" v-model="notificationTop" />
         </div>
         <div
           v-if="
@@ -46,7 +46,7 @@
           class="my-2 mr-5"
         >
           <span class="mr-2">设置弹出时通知框离底部的距离</span>
-          <a-input style="width: 200px" v-model="notificationBottom" />
+          <a-input class="w-60" v-model="notificationBottom" />
         </div>
       </div>
       <div>
@@ -74,22 +74,19 @@
         </a-radio-group>
         <div class="my-2 mr-5">
           <span class="mr-2">设置自动关闭的延时（毫秒）</span>
-          <a-input-number
-            class="w-24"
-            v-model="notificationDurationE"
-          />
+          <a-input-number class="w-24" v-model="notificationDurationE" />
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置标题</span>
-          <a-input style="width: 200px" v-model="notificationTitleE" />
+          <a-input class="w-60" v-model="notificationTitleE" />
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置内容</span>
-          <a-input style="width: 200px" v-model="notificationMessageE" />
+          <a-input class="w-60" v-model="notificationMessageE" />
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置提示偏移距离</span>
-          <a-input-number style="width: 200px" v-model="notificationOffsetE" />
+          <a-input-number class="w-60" v-model="notificationOffsetE" />
         </div>
       </div>
       <div>
@@ -111,18 +108,15 @@
         </a-radio-group>
         <div class="my-2 mr-5">
           <span class="mr-2">设置自动关闭的延时（毫秒）</span>
-          <a-input-number
-            class="w-24"
-            v-model="notificationDurationA"
-          />
+          <a-input-number class="w-24" v-model="notificationDurationA" />
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置标题</span>
-          <a-input style="width: 200px" v-model="notificationTitleA" />
+          <a-input class="w-60" v-model="notificationTitleA" />
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置内容</span>
-          <a-input style="width: 200px" v-model="notificationMessageA" />
+          <a-input class="w-60" v-model="notificationMessageA" />
         </div>
       </div>
       <div>

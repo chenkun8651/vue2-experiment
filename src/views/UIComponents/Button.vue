@@ -23,28 +23,28 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮类型</span>
-            <a-select class="w-36" v-model="AntDesignVue.type">
-              <a-select-option :value="'default'">default</a-select-option>
-              <a-select-option :value="'primary'">primary</a-select-option>
-              <a-select-option :value="'danger'">danger</a-select-option>
-              <a-select-option :value="'dashed'">dashed</a-select-option>
-              <a-select-option :value="'link'">link</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-36" v-model="AntDesignVue.type">
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'primary'">primary</el-option>
+              <el-option :value="'danger'">danger</el-option>
+              <el-option :value="'dashed'">dashed</el-option>
+              <el-option :value="'link'">link</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮形状</span>
-            <a-select class="w-36" v-model="AntDesignVue.shape">
-              <a-select-option :value="'circle'">圆形</a-select-option>
-              <a-select-option :value="'round'">圆角</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-36" v-model="AntDesignVue.shape">
+              <el-option :value="'circle'">圆形</el-option>
+              <el-option :value="'round'">圆角</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮大小</span>
-            <a-select class="w-36" v-model="AntDesignVue.size">
-              <a-select-option :value="'large'">large</a-select-option>
-              <a-select-option :value="'default'">default</a-select-option>
-              <a-select-option :value="'small'">small</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-36" v-model="AntDesignVue.size">
+              <el-option :value="'large'">large</el-option>
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'small'">small</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮图标</span>
@@ -91,22 +91,22 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮类型</span>
-            <a-select class="w-36" v-model="ElementUI.type">
-              <a-select-option :value="'primary'">primary</a-select-option>
-              <a-select-option :value="'success'">success</a-select-option>
-              <a-select-option :value="'warning'">warning</a-select-option>
-              <a-select-option :value="'danger'">danger</a-select-option>
-              <a-select-option :value="'info'">info</a-select-option>
-              <a-select-option :value="'text'">text</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-36" v-model="ElementUI.type">
+              <el-option :value="'primary'">primary</el-option>
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'warning'">warning</el-option>
+              <el-option :value="'danger'">danger</el-option>
+              <el-option :value="'info'">info</el-option>
+              <el-option :value="'text'">text</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮大小</span>
-            <a-select class="w-36" v-model="ElementUI.size">
-              <a-select-option :value="'medium'">medium</a-select-option>
-              <a-select-option :value="'small'">small</a-select-option>
-              <a-select-option :value="'mini'">mini</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-36" v-model="ElementUI.size">
+              <el-option :value="'medium'">medium</el-option>
+              <el-option :value="'small'">small</el-option>
+              <el-option :value="'mini'">mini</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮图标</span>
@@ -145,23 +145,23 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮类型</span>
-            <a-select class="w-36" v-model="AtUI.type">
-              <a-select-option :value="'default'">default</a-select-option>
-              <a-select-option :value="'primary'">primary</a-select-option>
-              <a-select-option :value="'success'">success</a-select-option>
-              <a-select-option :value="'warning'">warning</a-select-option>
-              <a-select-option :value="'error'">error</a-select-option>
-              <a-select-option :value="'info'">info</a-select-option>
-              <a-select-option :value="'text'">text</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-36" v-model="AtUI.type">
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'primary'">primary</el-option>
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'warning'">warning</el-option>
+              <el-option :value="'error'">error</el-option>
+              <el-option :value="'info'">info</el-option>
+              <el-option :value="'text'">text</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮大小</span>
-            <a-select class="w-36" v-model="AtUI.size">
-              <a-select-option :value="'large'">large</a-select-option>
-              <a-select-option :value="'small'">small</a-select-option>
-              <a-select-option :value="'smaller'">smaller</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-36" v-model="AtUI.size">
+              <el-option :value="'large'">large</el-option>
+              <el-option :value="'small'">small</el-option>
+              <el-option :value="'smaller'">smaller</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮图标</span>
@@ -202,30 +202,30 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮类型</span>
-            <a-select class="w-36" v-model="ViewUI.type">
-              <a-select-option :value="'default'">default</a-select-option>
-              <a-select-option :value="'primary'">primary</a-select-option>
-              <a-select-option :value="'success'">success</a-select-option>
-              <a-select-option :value="'warning'">warning</a-select-option>
-              <a-select-option :value="'error'">error</a-select-option>
-              <a-select-option :value="'dashed'">dashed</a-select-option>
-              <a-select-option :value="'info'">info</a-select-option>
-              <a-select-option :value="'text'">text</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-36" v-model="ViewUI.type">
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'primary'">primary</el-option>
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'warning'">warning</el-option>
+              <el-option :value="'error'">error</el-option>
+              <el-option :value="'dashed'">dashed</el-option>
+              <el-option :value="'info'">info</el-option>
+              <el-option :value="'text'">text</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮形状</span>
-            <a-select class="w-36" v-model="ViewUI.shape">
-              <a-select-option :value="'circle'">circle</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-36" v-model="ViewUI.shape">
+              <el-option :value="'circle'">circle</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮大小</span>
-            <a-select class="w-36" v-model="ViewUI.size">
-              <a-select-option :value="'large'">large</a-select-option>
-              <a-select-option :value="'default'">default</a-select-option>
-              <a-select-option :value="'small'">small</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-36" v-model="ViewUI.size">
+              <el-option :value="'large'">large</el-option>
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'small'">small</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置按钮图标</span>

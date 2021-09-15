@@ -65,13 +65,13 @@
           </div>
         </div>
         <div>
-          <a-select
+          <el-select
             :disabled="AntDesignVue.selectDisabled"
             :allow-clear="AntDesignVue.selectAllowClear"
             :show-search="AntDesignVue.selectShowSearch"
             :size="AntDesignVue.selectSize"
             v-model="AntDesignVue.selectValue"
-            style="width: 200px"
+            class="w-60"
             :mode="AntDesignVue.selectMode"
             :show-arrow="AntDesignVue.selectShowArrow"
             :default-active-first-option="
@@ -83,14 +83,14 @@
             :max-tag-count="AntDesignVue.selectMaxTagCount"
             :max-tag-text-length="AntDesignVue.selectMaxTagTextLength"
           >
-            <a-select-option
+            <el-option
               v-for="(item, index) in selectOptions"
               :key="index"
               :value="item.value"
             >
               {{ item.label }}
-            </a-select-option>
-          </a-select>
+            </el-option>
+          </el-select>
         </div>
       </div>
       <!-- 级联选择框 -->
@@ -109,7 +109,7 @@
             :show-search="AntDesignVue.selectShowSearch"
             :size="AntDesignVue.selectSize"
             v-model="AntDesignVue.cascaderValue"
-            style="width: 200px"
+            class="w-60"
             :options="cascaderOptions"
             :expand-trigger="AntDesignVue.cascaderExpandTrigger"
           >
@@ -132,7 +132,7 @@
             :show-search="AntDesignVue.selectShowSearch"
             :size="AntDesignVue.selectSize"
             v-model="AntDesignVue.treeSelectValue"
-            style="width: 200px"
+            class="w-60"
             :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
             :tree-data="treeSelectOptions"
             :tree-checkable="AntDesignVue.treeSelectTreeCheckable"
@@ -193,7 +193,7 @@
             :filterable="ElementUI.selectFilterable"
             :size="ElementUI.selectSize"
             v-model="ElementUI.selectValue"
-            style="width: 200px"
+            class="w-60"
             :multiple="ElementUI.selectMultiple"
             :multiple-limit="ElementUI.selectMultipleLimit"
           >
@@ -217,10 +217,7 @@
           </a-radio-group>
           <div class="my-2 mr-5">
             <span class="mr-2">设置选项分隔符</span>
-            <a-input
-              class="w-24"
-              v-model="ElementUI.cascaderSeparator"
-            />
+            <a-input class="w-24" v-model="ElementUI.cascaderSeparator" />
           </div>
         </div>
         <div>
@@ -229,7 +226,7 @@
             :clearable="ElementUI.selectClearable"
             :filterable="ElementUI.selectFilterable"
             :size="ElementUI.selectSize"
-            style="width: 200px"
+            class="w-60"
             v-model="ElementUI.cascaderValue"
             :options="cascaderOptions"
             :show-all-levels="ElementUI.cascaderShowAllLevels"
@@ -280,7 +277,7 @@
         </div>
         <div>
           <at-select
-            style="width: 200px"
+            class="w-60"
             v-model="AtUI.selectValue"
             :disabled="AtUI.selectDisabled"
             :clearable="AtUI.selectClearable"
@@ -352,7 +349,7 @@
             :clearable="ViewUI.selectClearable"
             :filterable="ViewUI.selectFilterable"
             :size="ViewUI.selectSize"
-            style="width: 200px"
+            class="w-60"
             v-model="ViewUI.selectValue"
             :multiple="ViewUI.selectMultiple"
             :placement="ViewUI.selectPlacement"
@@ -382,7 +379,7 @@
             :clearable="ViewUI.selectClearable"
             :filterable="ViewUI.selectFilterable"
             :size="ViewUI.selectSize"
-            style="width: 200px"
+            class="w-60"
             v-model="ViewUI.cascaderValue"
             :data="cascaderOptions"
             :trigger="ViewUI.cascaderTrigger"

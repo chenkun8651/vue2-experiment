@@ -49,15 +49,15 @@ export default {
       default: 2,
     },
   },
-  data: () => ({
-    timer: null,
-    showAnimate: true,
-  }),
   watch: {
     i() {
       this.showAnimate = true;
     },
   },
+  data: () => ({
+    timer: null,
+    showAnimate: true,
+  }),
   mounted() {
     const ua = navigator.userAgent.toLowerCase();
     const testUA = (regexp) => regexp.test(ua);

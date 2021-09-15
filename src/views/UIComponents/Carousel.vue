@@ -1,166 +1,209 @@
 <template>
-  <!-- 走马灯 -->
-  <div>
-    <!-- AntDesignVue -->
-    <a-card class="my-5" title="AntDesignVue 走马灯">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="carouselAutoplay">
-          <a-radio-button :value="true">开启自动播放</a-radio-button>
-          <a-radio-button :value="false">关闭自动播放</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselArrowst">
-          <a-radio-button :value="true">显示左右按钮</a-radio-button>
-          <a-radio-button :value="false">隐藏左右按钮</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselDots">
-          <a-radio-button :value="true">显示指示点</a-radio-button>
-          <a-radio-button :value="false">隐藏指示点</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-show="carouselDots" v-model="carouselDotPosition">
-          <a-radio-button :value="'top'">top</a-radio-button>
-          <a-radio-button :value="'bottom'">bottom</a-radio-button>
-          <a-radio-button :value="'left'">left</a-radio-button>
-          <a-radio-button :value="'right'">right</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselEffect">
-          <a-radio-button :value="'scrollx'">scrollx</a-radio-button>
-          <a-radio-button :value="'fade'">fade</a-radio-button>
-        </a-radio-group>
-      </div>
-      <div>
-        <a-carousel
-          :autoplay="carouselAutoplay"
-          :arrows="carouselArrowst"
-          :dots="carouselDots"
-          :dotPosition="carouselDotPosition"
-          :effect="carouselEffect"
-        >
-          <div slot="prevArrow" class="custom-slick-arrow left-icon">
-            <a-icon type="left-circle" />
+  <div class="flex" ref="box">
+    <!-- 走马灯 -->
+    <div class="w-9/12">
+      <!-- AntDesignVue -->
+      <a-card id="1" class="my-5" title="AntDesignVue 走马灯">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启自动播放</span>
+            <a-switch v-model="AntDesignVue.autoplay" />
           </div>
-          <div slot="nextArrow" class="custom-slick-arrow right-icon">
-            <a-icon type="right-circle" />
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示左右按钮</span>
+            <a-switch v-model="AntDesignVue.arrows" />
           </div>
-          <div v-for="item in 4" :key="item">
-            <h3>{{ item }}</h3>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示指示点</span>
+            <a-switch v-model="AntDesignVue.dots" />
           </div>
-        </a-carousel>
-      </div>
-    </a-card>
-    <!-- ElementUI -->
-    <a-card class="my-5" title="ElementUI 走马灯">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="carouselDirectionE">
-          <a-radio-button :value="'horizontal'">horizontal</a-radio-button>
-          <a-radio-button :value="'vertical'">vertical</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselTypeE">
-          <a-radio-button :value="null">普通走马灯</a-radio-button>
-          <a-radio-button :value="'card'">卡片走马灯</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselAutoplayE">
-          <a-radio-button :value="true">开启自动播放</a-radio-button>
-          <a-radio-button :value="false">关闭自动播放</a-radio-button>
-        </a-radio-group>
-        <div v-show="carouselAutoplayE" class="my-2 mr-5">
-          <span class="mr-2">设置自动播放时间间隔（毫秒）</span>
-          <a-input-number class="w-24" v-model="carouselIntervalE" />
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置指示点位置</span>
+            <el-select
+              size="small"
+              class="w-36"
+              v-model="AntDesignVue.dotPosition"
+            >
+              <el-option :value="'top'">top</el-option>
+              <el-option :value="'bottom'">bottom</el-option>
+              <el-option :value="'left'">left</el-option>
+              <el-option :value="'right'">right</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置翻动页面效果</span>
+            <el-select size="small" class="w-36" v-model="AntDesignVue.effect">
+              <el-option :value="'scrollx'">scrollx</el-option>
+              <el-option :value="'fade'">fade</el-option>
+            </el-select>
+          </div>
         </div>
-        <a-radio-group v-model="carouselLoopE">
-          <a-radio-button :value="true">开启循环</a-radio-button>
-          <a-radio-button :value="false">关闭循环</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselTriggerE">
-          <a-radio-button :value="'hover'">指示点悬停切换</a-radio-button>
-          <a-radio-button :value="'click'">指示点点击切换</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselIndicatorPositionE">
-          <a-radio-button :value="null">内部显示指示点</a-radio-button>
-          <a-radio-button :value="'outside'">外部显示指示点</a-radio-button>
-          <a-radio-button :value="'none'">不显示指示点</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselArrowE">
-          <a-radio-button :value="'hover'">箭头悬停显示</a-radio-button>
-          <a-radio-button :value="'always'">箭头常显示</a-radio-button>
-          <a-radio-button :value="'never'">箭头不显示</a-radio-button>
-        </a-radio-group>
-      </div>
-      <div>
-        <el-carousel
-          :initial-index="0"
-          :direction="carouselDirectionE"
-          :type="carouselTypeE"
-          :autoplay="carouselAutoplayE"
-          :interval="carouselIntervalE"
-          :loop="carouselLoopE"
-          :trigger="carouselTriggerE"
-          :indicator-position="carouselIndicatorPositionE"
-          :arrow="carouselArrowE"
-        >
-          <el-carousel-item v-for="item in 4" :key="item">
-            <h3>{{ item }}</h3>
-          </el-carousel-item>
-        </el-carousel>
-      </div>
-    </a-card>
-    <!-- AtUI -->
-    <a-card class="my-5" title="AtUI 走马灯">
-      <div class="text-red-500">AtUI框架没有走马灯</div>
-    </a-card>
-    <!-- ViewUI -->
-    <a-card class="my-5" title="ViewUI 走马灯">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="carouselAutoplayV">
-          <a-radio-button :value="true">开启自动播放</a-radio-button>
-          <a-radio-button :value="false">关闭自动播放</a-radio-button>
-        </a-radio-group>
-        <div v-show="carouselAutoplayV" class="my-2 mr-5">
-          <span class="mr-2">设置自动播放时间间隔（毫秒）</span>
-          <a-input-number
-            class="w-24"
-            v-model="carouselAutoplaySpeedV"
-          />
+        <div>
+          <a-carousel
+            :autoplay="AntDesignVue.autoplay"
+            :arrows="AntDesignVue.arrows"
+            :dots="AntDesignVue.dots"
+            :dotPosition="AntDesignVue.dotPosition"
+            :effect="AntDesignVue.effect"
+          >
+            <div slot="prevArrow" class="custom-slick-arrow left-icon">
+              <a-icon type="left-circle" />
+            </div>
+            <div slot="nextArrow" class="custom-slick-arrow right-icon">
+              <a-icon type="right-circle" />
+            </div>
+            <div v-for="item in 4" :key="item">
+              <h3>{{ item }}</h3>
+            </div>
+          </a-carousel>
         </div>
-        <a-radio-group v-model="carouselLoopV">
-          <a-radio-button :value="true">开启循环</a-radio-button>
-          <a-radio-button :value="false">关闭循环</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselRadiusDotV">
-          <a-radio-button :value="true">圆点指示点</a-radio-button>
-          <a-radio-button :value="false">宽点指示点</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselTriggerV">
-          <a-radio-button :value="'hover'">指示点悬停切换</a-radio-button>
-          <a-radio-button :value="'click'">指示点点击切换</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselDotsV">
-          <a-radio-button :value="'inside'">内部显示指示点</a-radio-button>
-          <a-radio-button :value="'outside'">外部显示指示点</a-radio-button>
-          <a-radio-button :value="'none'">不显示指示点</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="carouselArrowV">
-          <a-radio-button :value="'hover'">箭头悬停显示</a-radio-button>
-          <a-radio-button :value="'always'">箭头常显示</a-radio-button>
-          <a-radio-button :value="'never'">箭头不显示</a-radio-button>
-        </a-radio-group>
-      </div>
-      <div>
-        <Carousel
-          :value="0"
-          :autoplay="carouselAutoplayV"
-          :autoplay-speed="carouselAutoplaySpeedV"
-          :loop="carouselLoopV"
-          :radius-dot="carouselRadiusDotV"
-          :trigger="carouselTriggerV"
-          :dots="carouselDotsV"
-          :arrow="carouselArrowV"
-        >
-          <CarouselItem class="carousel-item" v-for="item in 4" :key="item">
-            <h3>{{ item }}</h3>
-          </CarouselItem>
-        </Carousel>
-      </div>
-    </a-card>
+      </a-card>
+      <!-- ElementUI -->
+      <a-card id="2" class="my-5" title="ElementUI 走马灯">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启自动播放</span>
+            <a-switch v-model="ElementUI.autoplay" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启循环</span>
+            <a-switch v-model="ElementUI.loop" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置走马灯方向</span>
+            <el-select size="small" class="w-36" v-model="ElementUI.direction">
+              <el-option :value="'horizontal'">横向</el-option>
+              <el-option :value="'vertical'">竖向</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置走马灯类型</span>
+            <el-select size="small" class="w-36" v-model="ElementUI.type">
+              <el-option :value="null">普通走马灯</el-option>
+              <el-option :value="'card'">卡片走马灯</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置指示点显示位置</span>
+            <el-select
+              size="small"
+              class="w-36"
+              v-model="ElementUI.indicatorPosition"
+            >
+              <el-option :value="null">inside</el-option>
+              <el-option :value="'outside'">outside</el-option>
+              <el-option :value="'none'">none</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">显示指示点的触发方式</span>
+            <el-select size="small" class="w-36" v-model="ElementUI.trigger">
+              <el-option :value="'hover'">hover</el-option>
+              <el-option :value="'click'">click</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">显示切换箭头的触发方式</span>
+            <el-select size="small" class="w-36" v-model="ElementUI.arrow">
+              <el-option :value="'hover'">hover</el-option>
+              <el-option :value="'always'">always</el-option>
+              <el-option :value="'never'">never</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置自动播放时间间隔（毫秒）</span>
+            <a-input-number class="w-24" v-model="ElementUI.interval" />
+          </div>
+        </div>
+        <div>
+          <el-carousel
+            :initial-index="0"
+            :autoplay="ElementUI.autoplay"
+            :loop="ElementUI.loop"
+            :direction="ElementUI.direction"
+            :type="ElementUI.type"
+            :indicator-position="ElementUI.indicatorPosition"
+            :trigger="ElementUI.trigger"
+            :arrow="ElementUI.arrow"
+            :interval="ElementUI.interval"
+          >
+            <el-carousel-item v-for="item in 4" :key="item">
+              <h3>{{ item }}</h3>
+            </el-carousel-item>
+          </el-carousel>
+        </div>
+      </a-card>
+      <!-- AtUI -->
+      <a-card id="3" class="my-5" title="AtUI 走马灯">
+        <div class="text-red-500">AtUI框架没有走马灯</div>
+      </a-card>
+      <!-- ViewUI -->
+      <a-card id="4" class="my-5" title="ViewUI 走马灯">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启自动播放</span>
+            <a-switch v-model="ViewUI.autoplay" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启循环</span>
+            <a-switch v-model="ViewUI.loop" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示圆点指示点</span>
+            <a-switch v-model="ViewUI.radiusDot" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置指示点显示位置</span>
+            <el-select size="small" class="w-36" v-model="ViewUI.dots">
+              <el-option :value="'inside'">inside</el-option>
+              <el-option :value="'outside'">outside</el-option>
+              <el-option :value="'none'">none</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">显示指示点的触发方式</span>
+            <el-select size="small" class="w-36" v-model="ViewUI.trigger">
+              <el-option :value="'hover'">hover</el-option>
+              <el-option :value="'click'">click</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">显示切换箭头的触发方式</span>
+            <el-select size="small" class="w-36" v-model="ViewUI.arrow">
+              <el-option :value="'hover'">hover</el-option>
+              <el-option :value="'always'">always</el-option>
+              <el-option :value="'never'">never</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置自动播放时间间隔（毫秒）</span>
+            <a-input-number class="w-24" v-model="ViewUI.autoplaySpeed" />
+          </div>
+        </div>
+        <div>
+          <Carousel
+            :value="0"
+            :autoplay="ViewUI.autoplay"
+            :loop="ViewUI.loop"
+            :radius-dot="ViewUI.radiusDot"
+            :dots="ViewUI.dots"
+            :trigger="ViewUI.trigger"
+            :arrow="ViewUI.arrow"
+            :autoplay-speed="ViewUI.autoplaySpeed"
+          >
+            <CarouselItem class="carousel-item" v-for="item in 4" :key="item">
+              <h3>{{ item }}</h3>
+            </CarouselItem>
+          </Carousel>
+        </div>
+      </a-card>
+    </div>
+    <!-- 查询锚点 -->
+    <BasicAnchor
+      :parentList="this.AnchorInfo.carouselAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 
@@ -168,29 +211,32 @@
 export default {
   data() {
     return {
-      // AntDesignVue
-      carouselAutoplay: false,
-      carouselArrowst: true,
-      carouselDots: true,
-      carouselDotPosition: "bottom",
-      carouselEffect: "scrollx",
-      // ElementUI
-      carouselDirectionE: "horizontal",
-      carouselTypeE: null,
-      carouselAutoplayE: false,
-      carouselIntervalE: 3000,
-      carouselLoopE: true,
-      carouselTriggerE: "hover",
-      carouselIndicatorPositionE: null,
-      carouselArrowE: "hover",
-      // ViewUI
-      carouselAutoplayV: false,
-      carouselAutoplaySpeedV: 3000,
-      carouselLoopV: false,
-      carouselRadiusDotV: false,
-      carouselTriggerV: "hover",
-      carouselDotsV: "inside",
-      carouselArrowV: "hover",
+      AntDesignVue: {
+        autoplay: false,
+        arrows: false,
+        dots: false,
+        dotPosition: "bottom",
+        effect: "scrollx",
+      },
+      ElementUI: {
+        autoplay: false,
+        loop: false,
+        direction: "horizontal",
+        type: null,
+        indicatorPosition: null,
+        trigger: "hover",
+        arrow: "hover",
+        interval: 3000,
+      },
+      ViewUI: {
+        autoplay: false,
+        loop: false,
+        radiusDot: false,
+        dots: "inside",
+        trigger: "hover",
+        arrow: "hover",
+        autoplaySpeed: 3000,
+      },
     };
   },
   methods: {},

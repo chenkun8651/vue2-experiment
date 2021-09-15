@@ -16,7 +16,7 @@
         </a-radio-group>
         <div class="my-2 mr-5">
           <span class="mr-2">设置弹出框标题（内容）文本</span>
-          <a-input style="width: 200px" v-model="popconfirmTitle" />
+          <a-input class="w-60" v-model="popconfirmTitle" />
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置确定按钮文本</span>
@@ -28,7 +28,7 @@
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置图标（插槽）</span>
-          <a-input style="width: 200px" v-model="popconfirmIcon" />
+          <a-input class="w-60" v-model="popconfirmIcon" />
         </div>
       </div>
       <div>
@@ -49,7 +49,7 @@
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
         <div class="my-2 mr-5">
           <span class="mr-2">设置弹出框标题（内容）文本</span>
-          <a-input style="width: 200px" v-model="popconfirmTitleE" />
+          <a-input class="w-60" v-model="popconfirmTitleE" />
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置确定按钮文本</span>
@@ -79,11 +79,11 @@
         </a-radio-group>
         <div v-show="!popconfirmHideIconE" class="my-2 mr-5">
           <span class="mr-2">设置图标</span>
-          <a-input style="width: 200px" v-model="popconfirmIconE" />
+          <a-input class="w-60" v-model="popconfirmIconE" />
         </div>
         <div v-show="!popconfirmHideIconE" class="my-2 mr-5">
           <span class="mr-2">设置图标颜色</span>
-          <a-input style="width: 200px" v-model="popconfirmIconColorE" />
+          <a-input class="w-60" v-model="popconfirmIconColorE" />
         </div>
       </div>
       <div>

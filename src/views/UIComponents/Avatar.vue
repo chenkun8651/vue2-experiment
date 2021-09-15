@@ -7,10 +7,10 @@
         <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <div class="my-2 mr-5">
             <span class="mr-2">设置头像形状</span>
-            <a-select class="w-48" v-model="AntDesignVue.shape">
-              <a-select-option :value="'circle'">circle</a-select-option>
-              <a-select-option :value="'square'">square</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-48" v-model="AntDesignVue.shape">
+              <el-option :value="'circle'">circle</el-option>
+              <el-option :value="'square'">square</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置头像大小</span>
@@ -40,18 +40,18 @@
         <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <div class="my-2 mr-5">
             <span class="mr-2">设置头像形状</span>
-            <a-select class="w-48" v-model="ElementUI.shape">
-              <a-select-option :value="'circle'">circle</a-select-option>
-              <a-select-option :value="'square'">square</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-48" v-model="ElementUI.shape">
+              <el-option :value="'circle'">circle</el-option>
+              <el-option :value="'square'">square</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置头像大小（预设值）</span>
-            <a-select class="w-48" v-model="ElementUI.size">
-              <a-select-option :value="'large'">large</a-select-option>
-              <a-select-option :value="'medium'">medium</a-select-option>
-              <a-select-option :value="'small'">small</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-48" v-model="ElementUI.size">
+              <el-option :value="'large'">large</el-option>
+              <el-option :value="'medium'">medium</el-option>
+              <el-option :value="'small'">small</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置头像大小</span>
@@ -71,15 +71,13 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置链接图片的位置</span>
-            <a-select class="w-48" v-model="ElementUI.fit">
-              <a-select-option :value="'fill'">fill</a-select-option>
-              <a-select-option :value="'contain'">contain</a-select-option>
-              <a-select-option :value="'cover'">cover</a-select-option>
-              <a-select-option :value="'none'">none</a-select-option>
-              <a-select-option :value="'scale-down'">
-                scale-down
-              </a-select-option>
-            </a-select>
+            <el-select size="small" class="w-48" v-model="ElementUI.fit">
+              <el-option :value="'fill'">fill</el-option>
+              <el-option :value="'contain'">contain</el-option>
+              <el-option :value="'cover'">cover</el-option>
+              <el-option :value="'none'">none</el-option>
+              <el-option :value="'scale-down'"> scale-down </el-option>
+            </el-select>
           </div>
         </div>
         <div>
@@ -102,18 +100,18 @@
         <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <div class="my-2 mr-5">
             <span class="mr-2">设置头像形状</span>
-            <a-select class="w-48" v-model="ViewUI.shape">
-              <a-select-option :value="'circle'">circle</a-select-option>
-              <a-select-option :value="'square'">square</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-48" v-model="ViewUI.shape">
+              <el-option :value="'circle'">circle</el-option>
+              <el-option :value="'square'">square</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置头像大小（预设值）</span>
-            <a-select class="w-48" v-model="ViewUI.size">
-              <a-select-option :value="'large'">large</a-select-option>
-              <a-select-option :value="'default'">default</a-select-option>
-              <a-select-option :value="'small'">small</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-48" v-model="ViewUI.size">
+              <el-option :value="'large'">large</el-option>
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'small'">small</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置头像大小</span>

@@ -14,7 +14,19 @@
 
 <script>
 export default {
-  props: ["parentList", "parentRefs"],
+  name: "BasicAnchor",
+  props: {
+    parentList: {
+      // 渲染锚点数组
+      type: Array,
+      required: true,
+    },
+    parentRefs: {
+      // 控制锚点滚动区域节点
+      type: Object,
+      require: true,
+    },
+  },
   components: {
     BasicAnchorLink: () => import("./BasicAnchorLink.vue"),
   },

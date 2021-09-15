@@ -37,7 +37,7 @@
       </div>
       <div>
         <a-dropdown
-          style="margin-right: 50px"
+          class="mr-12"
           :disabled="dropdownDisabled"
           :trigger="dropdownTrigger"
           :placement="dropdownPlacement"
@@ -110,7 +110,7 @@
       </div>
       <div>
         <el-dropdown
-          style="margin-right: 50px"
+          class="mr-12"
           :placement="dropdownPlacementE"
           :show-timeout="dropdownShowTimeoutE"
           :hide-timeout="dropdownHideTimeoutE"

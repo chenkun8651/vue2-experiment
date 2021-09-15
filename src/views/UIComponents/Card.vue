@@ -1,180 +1,178 @@
 <template>
-  <!-- 卡片 -->
-  <div>
-    <!-- AntDesignVue -->
-    <a-card class="my-5" title="AntDesignVue 卡片">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="cardLoading">
-          <a-radio-button :value="true">加载</a-radio-button>
-          <a-radio-button :value="false">完成</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="cardBordered">
-          <a-radio-button :value="true">有边框</a-radio-button>
-          <a-radio-button :value="false">无边框</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="cardSize">
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-        </a-radio-group>
-      </div>
-      <div class="card">
-        <a-card
-          style="width: 300px"
-          title="卡片标题"
-          :loading="cardLoading"
-          :bordered="cardBordered"
-          :size="cardSize"
-        >
-          <div v-for="o in 3" :key="o" class="text item">
-            {{ "卡片内容 " + o }}
+  <div class="flex" ref="box">
+    <!-- 卡片 -->
+    <div class="w-9/12">
+      <!-- AntDesignVue -->
+      <a-card id="1" class="my-5" title="AntDesignVue 卡片">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示加载效果</span>
+            <a-switch v-model="AntDesignVue.loading" />
           </div>
-        </a-card>
-        <a-card
-          style="width: 300px"
-          title="网格型内嵌卡片标题"
-          :loading="cardLoading"
-          :bordered="cardBordered"
-          :size="cardSize"
-        >
-          <a-card-grid style="width: 25%; text-align: center">
-            内容
-          </a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center">
-            内容
-          </a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center">
-            内容
-          </a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center">
-            内容
-          </a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center">
-            内容
-          </a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center">
-            内容
-          </a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center">
-            内容
-          </a-card-grid>
-          <a-card-grid style="width: 25%; text-align: center">
-            内容
-          </a-card-grid>
-        </a-card>
-        <a-card
-          style="width: 300px"
-          :loading="cardLoading"
-          :bordered="cardBordered"
-          :size="cardSize"
-        >
-          <img
-            slot="cover"
-            alt="example"
-            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-          />
-          <template slot="actions" class="ant-card-actions">
-            <a-icon key="setting" type="setting" />
-            <a-icon key="edit" type="edit" />
-            <a-icon key="ellipsis" type="ellipsis" />
-          </template>
-          <a-card-meta title="信息卡片标题" description="描述卡片内容">
-            <a-avatar
-              slot="avatar"
-              src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-            />
-          </a-card-meta>
-        </a-card>
-      </div>
-    </a-card>
-    <!-- ElementUI -->
-    <a-card class="my-5" title="ElementUI 卡片">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="cardShadowE">
-          <a-radio-button :value="'always'">always</a-radio-button>
-          <a-radio-button :value="'hover'">hover</a-radio-button>
-          <a-radio-button :value="'never'">never</a-radio-button>
-        </a-radio-group>
-      </div>
-      <div>
-        <el-card style="width: 300px" :shadow="cardShadowE">
-          <div slot="header" class="clearfix">
-            <span>卡片标题</span>
-            <el-button style="float: right; padding: 3px 0" type="text">
-              操作按钮
-            </el-button>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示卡片边框</span>
+            <a-switch v-model="AntDesignVue.bordered" />
           </div>
-          <div v-for="o in 3" :key="o" class="text item">
-            {{ "卡片内容 " + o }}
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置卡片大小</span>
+            <el-select size="small" class="w-36" v-model="AntDesignVue.size">
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'small'">small</el-option>
+            </el-select>
           </div>
-        </el-card>
-      </div>
-    </a-card>
-    <!-- AtUI -->
-    <a-card class="my-5" title="AtUI 卡片">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="cardBorderedA">
-          <a-radio-button :value="true">有边框</a-radio-button>
-          <a-radio-button :value="false">无边框</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="cardNoHoverA">
-          <a-radio-button :value="true">隐藏阴影</a-radio-button>
-          <a-radio-button :value="false">显示阴影</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="cardLoadingA">
-          <a-radio-button :value="true">加载</a-radio-button>
-          <a-radio-button :value="false">完成</a-radio-button>
-        </a-radio-group>
-      </div>
-      <div>
-        <at-card
-          style="width: 300px"
-          :bordered="cardBorderedA"
-          :no-hover="cardNoHoverA"
-          :loading="cardLoadingA"
-        >
-          <h4 slot="title">卡片标题</h4>
-          <div slot="extra"><a>操作按钮</a></div>
-          <div v-for="o in 3" :key="o" class="text item">
-            {{ "卡片内容 " + o }}
-          </div>
-        </at-card>
-      </div>
-    </a-card>
-    <!-- ViewUI -->
-    <a-card class="my-5" title="ViewUI 卡片">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="cardBorderedV">
-          <a-radio-button :value="true">有边框</a-radio-button>
-          <a-radio-button :value="false">无边框</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="cardDisHoverV">
-          <a-radio-button :value="true">鼠标悬停隐藏阴影</a-radio-button>
-          <a-radio-button :value="false">鼠标悬停显示阴影</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="cardShadowV">
-          <a-radio-button :value="true">显示卡片阴影</a-radio-button>
-          <a-radio-button :value="false">隐藏卡片阴影</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置卡片内边距</span>
-          <a-input-number class="w-24" v-model="cardPaddingV" />
         </div>
-      </div>
-      <div>
-        <Card
-          style="width: 300px"
-          :bordered="cardBorderedV"
-          :dis-hover="cardDisHoverV"
-          :shadow="cardShadowV"
-          :padding="cardPaddingV"
-        >
-          <p slot="title">卡片标题</p>
-          <div v-for="o in 3" :key="o" class="text item">
-            {{ "卡片内容 " + o }}
+        <div class="card">
+          <a-card
+            class="w-80"
+            title="卡片标题"
+            :loading="AntDesignVue.loading"
+            :bordered="AntDesignVue.bordered"
+            :size="AntDesignVue.size"
+          >
+            <div class="text-sm mb-4" v-for="item in 3" :key="item">
+              {{ "卡片内容 " + item }}
+            </div>
+          </a-card>
+          <a-card
+            class="w-80"
+            title="网格型内嵌卡片标题"
+            :loading="AntDesignVue.loading"
+            :bordered="AntDesignVue.bordered"
+            :size="AntDesignVue.size"
+          >
+            <a-card-grid class="w-1/4 text-center">内容</a-card-grid>
+            <a-card-grid class="w-1/4 text-center">内容</a-card-grid>
+            <a-card-grid class="w-1/4 text-center">内容</a-card-grid>
+            <a-card-grid class="w-1/4 text-center">内容</a-card-grid>
+            <a-card-grid class="w-1/4 text-center">内容</a-card-grid>
+            <a-card-grid class="w-1/4 text-center">内容</a-card-grid>
+            <a-card-grid class="w-1/4 text-center">内容</a-card-grid>
+            <a-card-grid class="w-1/4 text-center">内容</a-card-grid>
+          </a-card>
+          <a-card
+            class="w-80"
+            :loading="AntDesignVue.loading"
+            :bordered="AntDesignVue.bordered"
+            :size="AntDesignVue.size"
+          >
+            <img
+              slot="cover"
+              alt="example"
+              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+            />
+            <template slot="actions" class="ant-card-actions">
+              <a-icon key="setting" type="setting" />
+              <a-icon key="edit" type="edit" />
+              <a-icon key="ellipsis" type="ellipsis" />
+            </template>
+            <a-card-meta title="信息卡片标题" description="描述卡片内容">
+              <a-avatar
+                slot="avatar"
+                src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+              />
+            </a-card-meta>
+          </a-card>
+        </div>
+      </a-card>
+      <!-- ElementUI -->
+      <a-card id="2" class="my-5" title="ElementUI 卡片">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置卡片阴影的显示方式</span>
+            <el-select size="small" class="w-36" v-model="ElementUI.shadow">
+              <el-option :value="'always'">always</el-option>
+              <el-option :value="'hover'">hover</el-option>
+              <el-option :value="'never'">never</el-option>
+            </el-select>
           </div>
-        </Card>
-      </div>
-    </a-card>
+        </div>
+        <div>
+          <el-card class="w-80" :shadow="ElementUI.shadow">
+            <div slot="header" class="clearfix">
+              <span>卡片标题</span>
+              <el-button class="float-right py-1" type="text">
+                操作按钮
+              </el-button>
+            </div>
+            <div class="text-sm mb-4" v-for="item in 3" :key="item">
+              {{ "卡片内容 " + item }}
+            </div>
+          </el-card>
+        </div>
+      </a-card>
+      <!-- AtUI -->
+      <a-card id="3" class="my-5" title="AtUI 卡片">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示加载效果</span>
+            <a-switch v-model="AtUI.loading" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示卡片边框</span>
+            <a-switch v-model="AtUI.bordered" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">鼠标悬停时是否隐藏阴影</span>
+            <a-switch v-model="AtUI.noHover" />
+          </div>
+        </div>
+        <div>
+          <at-card
+            class="w-80"
+            :loading="AtUI.loading"
+            :bordered="AtUI.bordered"
+            :no-hover="AtUI.noHover"
+          >
+            <h4 slot="title">卡片标题</h4>
+            <div slot="extra">操作按钮</div>
+            <div class="text-sm mb-4" v-for="item in 3" :key="item">
+              {{ "卡片内容 " + item }}
+            </div>
+          </at-card>
+        </div>
+      </a-card>
+      <!-- ViewUI -->
+      <a-card id="4" class="my-5" title="ViewUI 卡片">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示卡片边框</span>
+            <a-switch v-model="ViewUI.bordered" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示卡片阴影</span>
+            <a-switch v-model="ViewUI.shadow" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">鼠标悬停时是否隐藏阴影</span>
+            <a-switch v-model="ViewUI.disHover" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置卡片内边距</span>
+            <a-input-number class="w-24" v-model="ViewUI.padding" />
+          </div>
+        </div>
+        <div>
+          <Card
+            class="w-80"
+            :bordered="ViewUI.bordered"
+            :shadow="ViewUI.shadow"
+            :dis-hover="ViewUI.disHover"
+            :padding="ViewUI.padding"
+          >
+            <p slot="title">卡片标题</p>
+            <div class="text-sm mb-4" v-for="item in 3" :key="item">
+              {{ "卡片内容 " + item }}
+            </div>
+          </Card>
+        </div>
+      </a-card>
+    </div>
+    <!-- 查询锚点 -->
+    <BasicAnchor
+      :parentList="this.AnchorInfo.cardAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 
@@ -182,21 +180,25 @@
 export default {
   data() {
     return {
-      // AntDesignVue
-      cardLoading: false,
-      cardBordered: true,
-      cardSize: "default",
-      // ElementUI
-      cardShadowE: "always",
-      // AtUI
-      cardBorderedA: true,
-      cardNoHoverA: false,
-      cardLoadingA: false,
-      // ViewUI
-      cardBorderedV: true,
-      cardDisHoverV: false,
-      cardShadowV: false,
-      cardPaddingV: 16,
+      AntDesignVue: {
+        loading: false,
+        bordered: false,
+        size: "default",
+      },
+      ElementUI: {
+        cardShadowE: "always",
+      },
+      AtUI: {
+        loading: false,
+        bordered: false,
+        noHover: false,
+      },
+      ViewUI: {
+        bordered: false,
+        shadow: false,
+        disHover: false,
+        padding: 16,
+      },
     };
   },
   methods: {},
@@ -210,7 +212,6 @@ export default {
 .card >>> .ant-card {
   margin-right: 10px;
 }
-
 .clearfix:before,
 .clearfix:after {
   display: table;
@@ -218,11 +219,5 @@ export default {
 }
 .clearfix:after {
   clear: both;
-}
-.text {
-  font-size: 14px;
-}
-.item {
-  margin-bottom: 18px;
 }
 </style>

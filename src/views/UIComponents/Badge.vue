@@ -11,26 +11,25 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标类型</span>
-            <a-select
+            <el-select
+              size="small"
               class="w-40"
               v-model="AntDesignVue.dot"
               @change="changeDot"
             >
-              <a-select-option :value="''">数字徽标</a-select-option>
-              <a-select-option :value="false">圆点徽标</a-select-option>
-            </a-select>
+              <el-option :value="''">数字徽标</el-option>
+              <el-option :value="false">圆点徽标</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标状态</span>
-            <a-select class="w-40" v-model="AntDesignVue.status">
-              <a-select-option :value="'processing'">
-                processing
-              </a-select-option>
-              <a-select-option :value="'default'">default</a-select-option>
-              <a-select-option :value="'success'">success</a-select-option>
-              <a-select-option :value="'warning'">warning</a-select-option>
-              <a-select-option :value="'error'">error</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-40" v-model="AntDesignVue.status">
+              <el-option :value="'processing'"> processing </el-option>
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'warning'">warning</el-option>
+              <el-option :value="'error'">error</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标附加文本</span>
@@ -72,20 +71,20 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标类型</span>
-            <a-select class="w-40" v-model="ElementUI.isDot">
-              <a-select-option :value="false">数字徽标</a-select-option>
-              <a-select-option :value="true">圆点徽标</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-40" v-model="ElementUI.isDot">
+              <el-option :value="false">数字徽标</el-option>
+              <el-option :value="true">圆点徽标</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标状态</span>
-            <a-select class="w-40" v-model="ElementUI.type">
-              <a-select-option :value="'primary'">primary</a-select-option>
-              <a-select-option :value="'info'">info</a-select-option>
-              <a-select-option :value="'success'">success</a-select-option>
-              <a-select-option :value="'warning'">warning</a-select-option>
-              <a-select-option :value="'danger'">danger</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-40" v-model="ElementUI.type">
+              <el-option :value="'primary'">primary</el-option>
+              <el-option :value="'info'">info</el-option>
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'warning'">warning</el-option>
+              <el-option :value="'danger'">danger</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标显示数字</span>
@@ -109,7 +108,7 @@
         </div>
       </a-card>
       <!-- AtUI -->
-      <a-card class="my-5" title="AtUI 徽标数">
+      <a-card id="3" class="my-5" title="AtUI 徽标数">
         <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <div class="my-2 mr-5">
             <span class="mr-2">是否显示徽标</span>
@@ -117,18 +116,18 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标类型</span>
-            <a-select class="w-40" v-model="AtUI.dot">
-              <a-select-option :value="false">数字徽标</a-select-option>
-              <a-select-option :value="true">圆点徽标</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-40" v-model="AtUI.dot">
+              <el-option :value="false">数字徽标</el-option>
+              <el-option :value="true">圆点徽标</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标状态</span>
-            <a-select class="w-40" v-model="AtUI.status">
-              <a-select-option :value="'success'">success</a-select-option>
-              <a-select-option :value="'info'">info</a-select-option>
-              <a-select-option :value="'warning'">warning</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-40" v-model="AtUI.status">
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'info'">info</el-option>
+              <el-option :value="'warning'">warning</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标显示数字</span>
@@ -152,7 +151,7 @@
         </div>
       </a-card>
       <!-- ViewUI -->
-      <a-card class="my-5" title="ViewUI 徽标数">
+      <a-card id="4" class="my-5" title="ViewUI 徽标数">
         <div class="w-full flex flex-row flex-wrap justify-start items-center">
           <div class="my-2 mr-5">
             <span class="mr-2">数字0是否显示</span>
@@ -160,32 +159,30 @@
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标类型</span>
-            <a-select class="w-40" v-model="ViewUI.dot">
-              <a-select-option :value="false">数字徽标</a-select-option>
-              <a-select-option :value="''">圆点徽标</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-40" v-model="ViewUI.dot">
+              <el-option :value="false">数字徽标</el-option>
+              <el-option :value="''">圆点徽标</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置数字徽标状态</span>
-            <a-select class="w-40" v-model="ViewUI.type">
-              <a-select-option :value="'primary'">primary</a-select-option>
-              <a-select-option :value="'normal'">normal</a-select-option>
-              <a-select-option :value="'success'">success</a-select-option>
-              <a-select-option :value="'error'">error</a-select-option>
-              <a-select-option :value="'warning'">warning</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-40" v-model="ViewUI.type">
+              <el-option :value="'primary'">primary</el-option>
+              <el-option :value="'normal'">normal</el-option>
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'error'">error</el-option>
+              <el-option :value="'warning'">warning</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置圆点徽标状态</span>
-            <a-select class="w-40" v-model="ViewUI.status">
-              <a-select-option :value="'processing'">
-                processing
-              </a-select-option>
-              <a-select-option :value="'default'">default</a-select-option>
-              <a-select-option :value="'success'">success</a-select-option>
-              <a-select-option :value="'error'">error</a-select-option>
-              <a-select-option :value="'warning'">warning</a-select-option>
-            </a-select>
+            <el-select size="small" class="w-40" v-model="ViewUI.status">
+              <el-option :value="'processing'"> processing </el-option>
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'error'">error</el-option>
+              <el-option :value="'warning'">warning</el-option>
+            </el-select>
           </div>
           <div class="my-2 mr-5">
             <span class="mr-2">设置徽标展示数字</span>

@@ -17,7 +17,7 @@
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置消息内容</span>
-          <a-input style="width: 200px" v-model="messageContent" />
+          <a-input class="w-60" v-model="messageContent" />
         </div>
       </div>
       <div>
@@ -51,7 +51,7 @@
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置消息内容</span>
-          <a-input style="width: 200px" v-model="messageMessageE" />
+          <a-input class="w-60" v-model="messageMessageE" />
         </div>
       </div>
       <div>
@@ -73,7 +73,7 @@
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置消息内容</span>
-          <a-input style="width: 200px" v-model="messageMessageA" />
+          <a-input class="w-60" v-model="messageMessageA" />
         </div>
       </div>
       <div>
@@ -104,7 +104,7 @@
         </div>
         <div class="my-2 mr-5">
           <span class="mr-2">设置消息内容</span>
-          <a-input style="width: 200px" v-model="messageContentV" />
+          <a-input class="w-60" v-model="messageContentV" />
         </div>
       </div>
       <div>

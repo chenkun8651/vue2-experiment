@@ -11,6 +11,12 @@
 <script>
 export default {
   name: "BasicAnchorLink",
-  props: ["link"],
+  props: {
+    link: {
+      // 锚点节点
+      type: Object,
+      required: true,
+    },
+  },
 };
 </script>
