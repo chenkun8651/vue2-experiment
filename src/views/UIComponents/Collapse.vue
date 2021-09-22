@@ -111,7 +111,7 @@
     </div>
     <!-- 查询锚点 -->
     <BasicAnchor
-      :parentList="this.AnchorInfo.datePickerAnchor"
+      :parentList="this.AnchorInfo.collapseAnchor"
       :parentRefs="this.$refs"
     >
     </BasicAnchor>

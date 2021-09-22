@@ -1,159 +1,173 @@
 <template>
-  <!-- 图标 -->
-  <div>
-    <!-- AntDesignVue -->
-    <a-card class="my-5" title="AntDesignVue 图标">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="iconSpin">
-          <a-radio-button :value="true">开启旋转动画</a-radio-button>
-          <a-radio-button :value="false">关闭旋转动画</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标初始旋转角度</span>
-          <a-input-number class="w-24" v-model="iconRotate" />
+  <div class="flex" ref="box">
+    <!-- 图标 -->
+    <div class="w-9/12">
+      <!-- AntDesignVue -->
+      <a-card id="1" class="my-5" title="AntDesignVue 图标">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启旋转动画</span>
+            <a-switch v-model="AntDesignVue.spin" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标类型</span>
+            <el-select size="small" class="w-36" v-model="AntDesignVue.theme">
+              <el-option :value="'filled'">filled</el-option>
+              <el-option :value="'outlined'">outlined</el-option>
+              <el-option :value="'twoTone'">twoTone</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标名称</span>
+            <a-input class="w-36" v-model="AntDesignVue.type" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标大小</span>
+            <a-input-number class="w-24" v-model="AntDesignVue.fontSize" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置实心（描线）图标颜色</span>
+            <a-input class="w-24" v-model="AntDesignVue.color" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置双色图标颜色</span>
+            <a-input class="w-24" v-model="AntDesignVue.twoToneColor" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标初始旋转角度</span>
+            <a-input-number class="w-24" v-model="AntDesignVue.rotate" />
+          </div>
         </div>
-        <a-radio-group v-model="iconTheme">
-          <a-radio-button :value="'filled'">实心图标</a-radio-button>
-          <a-radio-button :value="'outlined'">描线图标</a-radio-button>
-          <a-radio-button :value="'twoTone'">双色图标</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标名称</span>
-          <a-input style="width: 150px" v-model="iconName" />
+        <div>
+          <a-icon
+            :style="{
+              fontSize: `${AntDesignVue.fontSize}px`,
+              color: `${AntDesignVue.color}`,
+            }"
+            :type="AntDesignVue.type"
+            :theme="AntDesignVue.theme"
+            :spin="AntDesignVue.spin"
+            :rotate="AntDesignVue.rotate"
+            :two-tone-color="AntDesignVue.twoToneColor"
+          >
+          </a-icon>
         </div>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标大小</span>
-          <a-input-number class="w-24" v-model="iconSize" />
+        <div>
+          <span>自定义图标</span>
+          <HeartIcon
+            class="m-1.5"
+            :style="{
+              fontSize: `${AntDesignVue.fontSize}px`,
+              color: `${AntDesignVue.color}`,
+            }"
+          />
+          <PandaIcon
+            class="m-1.5"
+            :style="{
+              fontSize: `${AntDesignVue.fontSize}px`,
+              color: `${AntDesignVue.color}`,
+            }"
+          />
+          <span class="ml-10">
+            <a target="_blank" href="http://iconfont.cn/">iconfont.cn</a>
+            图标库图标
+          </span>
+          <IconFont
+            class="m-1.5"
+            type="icon-facebook"
+            :style="{
+              fontSize: `${AntDesignVue.fontSize}px`,
+              color: `${AntDesignVue.color}`,
+            }"
+          />
+          <IconFont
+            class="m-1.5"
+            type="icon-twitter"
+            :style="{
+              fontSize: `${AntDesignVue.fontSize}px`,
+              color: `${AntDesignVue.color}`,
+            }"
+          />
         </div>
-        <div
-          v-show="iconTheme === 'filled' || iconTheme === 'outlined'"
-          class="my-2 mr-5"
-        >
-          <span class="mr-2">设置实心（描线）图标颜色</span>
-          <a-input class="w-24" v-model="iconColor" />
+      </a-card>
+      <!-- ElementUI -->
+      <a-card id="2" class="my-5" title="ElementUI 图标">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标名称</span>
+            <a-input class="w-36" v-model="ElementUI.class" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标大小</span>
+            <a-input-number class="w-24" v-model="ElementUI.fontSize" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标颜色</span>
+            <a-input class="w-24" v-model="ElementUI.color" />
+          </div>
         </div>
-        <div v-show="iconTheme === 'twoTone'" class="my-2 mr-5">
-          <span class="mr-2">设置双色图标颜色</span>
-          <a-input class="w-24" v-model="iconRotatTwoToneColor" />
+        <div>
+          <i
+            :style="{
+              fontSize: `${ElementUI.fontSize}px`,
+              color: `${ElementUI.color}`,
+            }"
+            :class="ElementUI.class"
+          >
+          </i>
         </div>
-      </div>
-      <div>
-        <a-icon
-          :style="{ fontSize: `${iconSize}px`, color: `${iconColor}` }"
-          :type="iconName"
-          :theme="iconTheme"
-          :spin="iconSpin"
-          :rotate="iconRotate"
-          :two-tone-color="iconRotatTwoToneColor"
-        >
-        </a-icon>
-      </div>
-      <div class="icons-list">
-        <span>自定义图标</span>
-        <HeartIcon
-          :style="{
-            fontSize: `${iconSize}px`,
-            color: `${iconColor}`,
-            margin: '5px',
-          }"
-        />
-        <PandaIcon
-          :style="{
-            fontSize: `${iconSize}px`,
-            color: `${iconColor}`,
-            margin: '5px',
-          }"
-        />
-        <span style="margin-left: 50px">
-          <a target="_blank" href="http://iconfont.cn/">iconfont.cn</a>
-          图标库图标
-        </span>
-        <IconFont
-          :style="{
-            fontSize: `${iconSize}px`,
-            color: `${iconColor}`,
-            margin: '5px',
-          }"
-          type="icon-facebook"
-        />
-        <IconFont
-          :style="{
-            fontSize: `${iconSize}px`,
-            color: `${iconColor}`,
-            margin: '5px',
-          }"
-          type="icon-twitter"
-        />
-      </div>
-    </a-card>
-    <!-- ElementUI -->
-    <a-card class="my-5" title="ElementUI 图标">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标名称</span>
-          <a-input style="width: 150px" v-model="iconNameE" />
+      </a-card>
+      <!-- AtUI -->
+      <a-card id="3" class="my-5" title="AtUI 图标">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标名称</span>
+            <a-input class="w-36" v-model="AtUI.class" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标大小</span>
+            <a-input-number class="w-24" v-model="AtUI.fontSize" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标颜色</span>
+            <a-input class="w-24" v-model="AtUI.color" />
+          </div>
         </div>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标大小</span>
-          <a-input-number class="w-24" v-model="iconSizeE" />
+        <div>
+          <i
+            :style="{ fontSize: `${AtUI.fontSize}px`, color: `${AtUI.color}` }"
+            :class="AtUI.class"
+          >
+          </i>
         </div>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标颜色</span>
-          <a-input class="w-24" v-model="iconColorE" />
+      </a-card>
+      <!-- ViewUI -->
+      <a-card id="4" class="my-5" title="ViewUI 图标">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标名称</span>
+            <a-input class="w-36" v-model="ViewUI.type" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标大小</span>
+            <a-input-number class="w-36" v-model="ViewUI.size" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置图标颜色</span>
+            <a-input class="w-36" v-model="ViewUI.color" />
+          </div>
         </div>
-      </div>
-      <div>
-        <i
-          :style="{ fontSize: `${iconSizeE}px`, color: `${iconColorE}` }"
-          :class="iconNameE"
-        >
-        </i>
-      </div>
-    </a-card>
-    <!-- AtUI -->
-    <a-card class="my-5" title="AtUI 图标">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标名称</span>
-          <a-input style="width: 150px" v-model="iconNameA" />
+        <div>
+          <Icon :type="ViewUI.type" :size="ViewUI.size" :color="ViewUI.color">
+          </Icon>
         </div>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标大小</span>
-          <a-input-number class="w-24" v-model="iconSizeA" />
-        </div>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标颜色</span>
-          <a-input class="w-24" v-model="iconColorA" />
-        </div>
-      </div>
-      <div>
-        <i
-          :style="{ fontSize: `${iconSizeA}px`, color: `${iconColorA}` }"
-          :class="iconNameA"
-        >
-        </i>
-      </div>
-    </a-card>
-    <!-- ViewUI -->
-    <a-card class="my-5" title="ViewUI 图标">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标名称</span>
-          <a-input style="width: 150px" v-model="iconNameV" />
-        </div>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标大小</span>
-          <a-input-number style="width: 150px" v-model="iconSizeV" />
-        </div>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置图标颜色</span>
-          <a-input style="width: 150px" v-model="iconColorV" />
-        </div>
-      </div>
-      <div>
-        <Icon :type="iconNameV" :size="iconSizeV" :color="iconColorV"></Icon>
-      </div>
-    </a-card>
+      </a-card>
+    </div>
+    <BasicAnchor
+      :parentList="this.AnchorInfo.iconAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 
@@ -208,26 +222,30 @@ const IconFont = Icon.createFromIconfontCN({
 export default {
   data() {
     return {
-      // AntDesignVue
-      iconSpin: false,
-      iconRotate: 0,
-      iconTheme: "filled",
-      iconName: "home",
-      iconSize: 30,
-      iconColor: "#111",
-      iconRotatTwoToneColor: "#ccc",
-      // ElementUI
-      iconNameE: "el-icon-edit",
-      iconSizeE: 30,
-      iconColorE: "#111",
-      // AtUI
-      iconNameA: "icon icon-zoom-in",
-      iconSizeA: 30,
-      iconColorA: "#111",
-      // ViewUI
-      iconNameV: "ios-add-circle",
-      iconSizeV: 30,
-      iconColorV: "#111",
+      AntDesignVue: {
+        fontSize: 30,
+        color: "#111",
+        spin: false,
+        theme: "filled",
+        type: "home",
+        twoToneColor: "#ccc",
+        rotate: 0,
+      },
+      ElementUI: {
+        class: "el-icon-edit",
+        fontSize: 30,
+        color: "#111",
+      },
+      AtUI: {
+        class: "icon icon-zoom-in",
+        fontSize: 30,
+        color: "#111",
+      },
+      ViewUI: {
+        type: "ios-add-circle",
+        size: 30,
+        color: "#111",
+      },
     };
   },
   components: {
