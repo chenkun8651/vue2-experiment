@@ -137,7 +137,7 @@
       </a-card>
     </div>
     <BasicAnchor
-      :parentList="this.AnchorInfo.datePickerAnchor"
+      :parentList="this.AnchorInfo.notificationAnchor"
       :parentRefs="this.$refs"
     >
     </BasicAnchor>
