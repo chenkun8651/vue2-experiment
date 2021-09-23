@@ -1,397 +1,445 @@
 <template>
-  <!-- 选择框 -->
-  <div>
-    <!-- AntDesignVue -->
-    <a-card class="my-5" title="AntDesignVue 选择框">
-      <!-- 通用API -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>通用API</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="AntDesignVue.selectDisabled">
-            <a-radio-button :value="true">禁用</a-radio-button>
-            <a-radio-button :value="false">启用</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="AntDesignVue.selectAllowClear">
-            <a-radio-button :value="true">开启清除</a-radio-button>
-            <a-radio-button :value="false">关闭清除</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="AntDesignVue.selectShowSearch">
-            <a-radio-button :value="true">开启搜索</a-radio-button>
-            <a-radio-button :value="false">关闭搜索</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="AntDesignVue.selectSize">
-            <a-radio-button :value="'large'">large</a-radio-button>
-            <a-radio-button :value="'default'">default</a-radio-button>
-            <a-radio-button :value="'small'">small</a-radio-button>
-          </a-radio-group>
-        </div>
-      </div>
-      <!-- 标准选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>标准选择框</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="AntDesignVue.selectMode">
-            <a-radio-button :value="'default'">default</a-radio-button>
-            <a-radio-button :value="'multiple'">multiple</a-radio-button>
-            <a-radio-button :value="'tags'">tags</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="AntDesignVue.selectShowArrow">
-            <a-radio-button :value="true">显示下拉小箭头</a-radio-button>
-            <a-radio-button :value="false">不显示下拉小箭头</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="AntDesignVue.selectDefaultActiveFirstOption">
-            <a-radio-button :value="true">开启默认高亮第一项</a-radio-button>
-            <a-radio-button :value="false">关闭默认高亮第一项</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="AntDesignVue.selectDropdownMatchSelectWidth">
-            <a-radio-button :value="true">开启选项和菜单同宽</a-radio-button>
-            <a-radio-button :value="false">关闭选项和菜单同宽</a-radio-button>
-          </a-radio-group>
-          <div class="my-2 mr-5">
-            <span class="mr-2">设置最多显示tag数</span>
-            <a-input-number
-              class="w-24"
-              v-model="AntDesignVue.selectMaxTagCount"
-              :min="0"
-            />
-          </div>
-          <div class="my-2 mr-5">
-            <span class="mr-2">设置最大显示tag的文本长度</span>
-            <a-input-number
-              class="w-24"
-              v-model="AntDesignVue.selectMaxTagTextLength"
-              :min="0"
-            />
+  <div class="flex" ref="box">
+    <!-- 选择框 -->
+    <div class="w-9/12">
+      <!-- AntDesignVue -->
+      <a-card id="1" class="my-5" title="AntDesignVue 选择框">
+        <!-- 通用API -->
+        <div id="1-1" class="mx-5 mt-3 pb-5 border-b">
+          <h3>通用API</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
+          >
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否禁用</span>
+              <a-switch v-model="AntDesignVue.disabled" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启清除</span>
+              <a-switch v-model="AntDesignVue.allowClear" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启搜索</span>
+              <a-switch v-model="AntDesignVue.showSearch" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置选择框大小</span>
+              <el-select size="small" class="w-36" v-model="AntDesignVue.size">
+                <el-option :value="'default'">default</el-option>
+                <el-option :value="'large'">large</el-option>
+                <el-option :value="'small'">small</el-option>
+              </el-select>
+            </div>
           </div>
         </div>
-        <div>
-          <el-select
-            :disabled="AntDesignVue.selectDisabled"
-            :allow-clear="AntDesignVue.selectAllowClear"
-            :show-search="AntDesignVue.selectShowSearch"
-            :size="AntDesignVue.selectSize"
-            v-model="AntDesignVue.selectValue"
-            class="w-60"
-            :mode="AntDesignVue.selectMode"
-            :show-arrow="AntDesignVue.selectShowArrow"
-            :default-active-first-option="
-              AntDesignVue.selectDefaultActiveFirstOption
-            "
-            :dropdown-match-select-width="
-              AntDesignVue.selectDropdownMatchSelectWidth
-            "
-            :max-tag-count="AntDesignVue.selectMaxTagCount"
-            :max-tag-text-length="AntDesignVue.selectMaxTagTextLength"
+        <!-- 标准选择框 -->
+        <div id="1-2" class="mx-5 mt-3 pb-5 border-b">
+          <h3>标准选择框</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
           >
-            <el-option
-              v-for="(item, index) in selectOptions"
-              :key="index"
-              :value="item.value"
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否显示下拉小箭头</span>
+              <a-switch v-model="AntDesignVue.showArrow" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启默认高亮第一项</span>
+              <a-switch v-model="AntDesignVue.defaultActiveFirstOption" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启选项和菜单同宽</span>
+              <a-switch v-model="AntDesignVue.dropdownMatchSelectWidth" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置选择框大小</span>
+              <el-select size="small" class="w-36" v-model="AntDesignVue.mode">
+                <el-option :value="'default'">default</el-option>
+                <el-option :value="'multiple'">multiple</el-option>
+                <el-option :value="'tags'">tags</el-option>
+              </el-select>
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置最多显示tag数</span>
+              <a-input-number class="w-24" v-model="AntDesignVue.maxTagCount" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置最大显示tag的文本长度</span>
+              <a-input-number
+                class="w-24"
+                v-model="AntDesignVue.maxTagTextLength"
+              />
+            </div>
+          </div>
+          <div>
+            <el-select
+              :disabled="AntDesignVue.disabled"
+              :allow-clear="AntDesignVue.allowClear"
+              :show-search="AntDesignVue.showSearch"
+              :size="AntDesignVue.size"
+              class="w-60"
+              v-model="AntDesignVue.selectValue"
+              :show-arrow="AntDesignVue.showArrow"
+              :default-active-first-option="
+                AntDesignVue.defaultActiveFirstOption
+              "
+              :dropdown-match-select-width="
+                AntDesignVue.dropdownMatchSelectWidth
+              "
+              :mode="AntDesignVue.mode"
+              :max-tag-count="AntDesignVue.maxTagCount"
+              :max-tag-text-length="AntDesignVue.maxTagTextLength"
             >
-              {{ item.label }}
-            </el-option>
-          </el-select>
-        </div>
-      </div>
-      <!-- 级联选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>级联选择框</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="AntDesignVue.cascaderExpandTrigger">
-            <a-radio-button :value="'click'">click</a-radio-button>
-            <a-radio-button :value="'hover'">hover</a-radio-button>
-          </a-radio-group>
-        </div>
-        <div>
-          <a-cascader
-            :disabled="AntDesignVue.selectDisabled"
-            :allow-clear="AntDesignVue.selectAllowClear"
-            :show-search="AntDesignVue.selectShowSearch"
-            :size="AntDesignVue.selectSize"
-            v-model="AntDesignVue.cascaderValue"
-            class="w-60"
-            :options="cascaderOptions"
-            :expand-trigger="AntDesignVue.cascaderExpandTrigger"
-          >
-          </a-cascader>
-        </div>
-      </div>
-      <!-- 树状选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>树状选择框</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="AntDesignVue.treeSelectTreeCheckable">
-            <a-radio-button :value="true">开启多选</a-radio-button>
-            <a-radio-button :value="false">关闭多选</a-radio-button>
-          </a-radio-group>
-        </div>
-        <div>
-          <a-tree-select
-            :disabled="AntDesignVue.selectDisabled"
-            :allow-clear="AntDesignVue.selectAllowClear"
-            :show-search="AntDesignVue.selectShowSearch"
-            :size="AntDesignVue.selectSize"
-            v-model="AntDesignVue.treeSelectValue"
-            class="w-60"
-            :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
-            :tree-data="treeSelectOptions"
-            :tree-checkable="AntDesignVue.treeSelectTreeCheckable"
-          >
-          </a-tree-select>
-        </div>
-      </div>
-    </a-card>
-    <!-- ElementUI -->
-    <a-card class="my-5" title="ElementUI 选择框">
-      <!-- 通用API -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>通用API</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="ElementUI.selectDisabled">
-            <a-radio-button :value="true">禁用</a-radio-button>
-            <a-radio-button :value="false">启用</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="ElementUI.selectClearable">
-            <a-radio-button :value="true">开启清除</a-radio-button>
-            <a-radio-button :value="false">关闭清除</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="ElementUI.selectSize">
-            <a-radio-button :value="'medium'">medium</a-radio-button>
-            <a-radio-button :value="'small'">small</a-radio-button>
-            <a-radio-button :value="'mini'">mini</a-radio-button>
-          </a-radio-group>
-        </div>
-      </div>
-      <!-- 标准选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>标准选择框</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="ElementUI.selectFilterable">
-            <a-radio-button :value="true">开启搜索</a-radio-button>
-            <a-radio-button :value="false">关闭搜索</a-radio-button>
-          </a-radio-group>
-          <a-radio-group
-            v-model="ElementUI.selectMultiple"
-            @change="ChangeElementUISelect"
-          >
-            <a-radio-button :value="true">开启多选</a-radio-button>
-            <a-radio-button :value="false">关闭多选</a-radio-button>
-          </a-radio-group>
-          <div class="my-2 mr-5">
-            <span class="mr-2">设置最多可以选择的项目数</span>
-            <a-input-number
-              class="w-24"
-              v-model="ElementUI.selectMultipleLimit"
-              :min="0"
-            />
+              <el-option
+                v-for="(item, index) in selectOptions"
+                :key="index"
+                :value="item.value"
+              >
+                {{ item.label }}
+              </el-option>
+            </el-select>
           </div>
         </div>
-        <div>
-          <el-select
-            :disabled="ElementUI.selectDisabled"
-            :clearable="ElementUI.selectClearable"
-            :filterable="ElementUI.selectFilterable"
-            :size="ElementUI.selectSize"
-            v-model="ElementUI.selectValue"
-            class="w-60"
-            :multiple="ElementUI.selectMultiple"
-            :multiple-limit="ElementUI.selectMultipleLimit"
+        <!-- 级联选择框 -->
+        <div id="1-3" class="mx-5 mt-3 pb-5 border-b">
+          <h3>级联选择框</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
           >
-            <el-option
-              v-for="(item, index) in selectOptions"
-              :key="index"
-              :label="item.label"
-              :value="item.value"
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置级联选择框次级选项触发方式</span>
+              <el-select
+                size="small"
+                class="w-36"
+                v-model="AntDesignVue.expandTrigger"
+              >
+                <el-option :value="'click'">click</el-option>
+                <el-option :value="'hover'">hover</el-option>
+              </el-select>
+            </div>
+          </div>
+          <div>
+            <a-cascader
+              :disabled="AntDesignVue.disabled"
+              :allow-clear="AntDesignVue.allowClear"
+              :show-search="AntDesignVue.showSearch"
+              :size="AntDesignVue.size"
+              class="w-60"
+              v-model="AntDesignVue.cascaderValue"
+              :options="cascaderOptions"
+              :expand-trigger="AntDesignVue.expandTrigger"
             >
-            </el-option>
-          </el-select>
-        </div>
-      </div>
-      <!-- 级联选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>级联选择框</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="ElementUI.cascaderShowAllLevels">
-            <a-radio-button :value="true">显示选中值的完整路径</a-radio-button>
-            <a-radio-button :value="false">隐藏选中值的完整路径</a-radio-button>
-          </a-radio-group>
-          <div class="my-2 mr-5">
-            <span class="mr-2">设置选项分隔符</span>
-            <a-input class="w-24" v-model="ElementUI.cascaderSeparator" />
+            </a-cascader>
           </div>
         </div>
-        <div>
-          <el-cascader
-            :disabled="ElementUI.selectDisabled"
-            :clearable="ElementUI.selectClearable"
-            :filterable="ElementUI.selectFilterable"
-            :size="ElementUI.selectSize"
-            class="w-60"
-            v-model="ElementUI.cascaderValue"
-            :options="cascaderOptions"
-            :show-all-levels="ElementUI.cascaderShowAllLevels"
-            :separator="ElementUI.cascaderSeparator"
+        <!-- 树状选择框 -->
+        <div id="1-4" class="mx-5 mt-3 pb-5 border-b">
+          <h3>树状选择框</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
           >
-          </el-cascader>
-        </div>
-      </div>
-      <!-- 树状选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <div class="text-red-500">ElementUI框架没有树状选择框</div>
-      </div>
-    </a-card>
-    <!-- AtUI -->
-    <a-card class="my-5" title="AtUI 选择框">
-      <!-- 标准选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>标准选择框</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="AtUI.selectDisabled">
-            <a-radio-button :value="true">禁用</a-radio-button>
-            <a-radio-button :value="false">启用</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="AtUI.selectClearable">
-            <a-radio-button :value="true">开启清除</a-radio-button>
-            <a-radio-button :value="false">关闭清除</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="AtUI.selectFilterable">
-            <a-radio-button :value="true">开启搜索</a-radio-button>
-            <a-radio-button :value="false">关闭搜索</a-radio-button>
-          </a-radio-group>
-          <a-radio-group
-            v-model="AtUI.selectMultiple"
-            @change="ChangeAtUISelect"
-          >
-            <a-radio-button :value="true">开启多选</a-radio-button>
-            <a-radio-button :value="false">关闭多选</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="AtUI.selectSize">
-            <a-radio-button :value="'large'">large</a-radio-button>
-            <a-radio-button :value="'normal'">normal</a-radio-button>
-            <a-radio-button :value="'small'">small</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="AtUI.selectPlacement">
-            <a-radio-button :value="'top'">top</a-radio-button>
-            <a-radio-button :value="'bottom'">bottom</a-radio-button>
-          </a-radio-group>
-        </div>
-        <div>
-          <at-select
-            class="w-60"
-            v-model="AtUI.selectValue"
-            :disabled="AtUI.selectDisabled"
-            :clearable="AtUI.selectClearable"
-            :filterable="AtUI.selectFilterable"
-            :multiple="AtUI.selectMultiple"
-            :size="AtUI.selectSize"
-            :placement="AtUI.selectPlacement"
-          >
-            <at-option
-              v-for="(item, index) in selectOptions"
-              :key="index"
-              :value="item.value"
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启多选</span>
+              <a-switch v-model="AntDesignVue.treeCheckable" />
+            </div>
+          </div>
+          <div>
+            <a-tree-select
+              :disabled="AntDesignVue.disabled"
+              :allow-clear="AntDesignVue.allowClear"
+              :show-search="AntDesignVue.showSearch"
+              :size="AntDesignVue.size"
+              class="w-60"
+              v-model="AntDesignVue.treeSelectValue"
+              :dropdown-style="{ maxHeight: '400px', overflow: 'auto' }"
+              :tree-data="treeSelectOptions"
+              :tree-checkable="AntDesignVue.treeCheckable"
             >
-              {{ item.label }}
-            </at-option>
-          </at-select>
+            </a-tree-select>
+          </div>
         </div>
-      </div>
-      <!-- 级联选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <div class="text-red-500">AtUI框架没有级联选择框</div>
-      </div>
-      <!-- 树状选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <div class="text-red-500">AtUI框架没有树状选择框</div>
-      </div>
-    </a-card>
-    <!-- ViewUI -->
-    <a-card class="my-5" title="ViewUI 选择框">
-      <!-- 通用API -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>通用API</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="ViewUI.selectDisabled">
-            <a-radio-button :value="true">禁用</a-radio-button>
-            <a-radio-button :value="false">启用</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="ViewUI.selectClearable">
-            <a-radio-button :value="true">开启清除</a-radio-button>
-            <a-radio-button :value="false">关闭清除</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="ViewUI.selectFilterable">
-            <a-radio-button :value="true">开启搜索</a-radio-button>
-            <a-radio-button :value="false">关闭搜索</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="ViewUI.selectSize">
-            <a-radio-button :value="'large'">large</a-radio-button>
-            <a-radio-button :value="'default'">default</a-radio-button>
-            <a-radio-button :value="'small'">small</a-radio-button>
-          </a-radio-group>
-        </div>
-      </div>
-      <!-- 标准选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>标准选择框</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="ViewUI.selectMultiple">
-            <a-radio-button :value="true">开启多选</a-radio-button>
-            <a-radio-button :value="false">关闭多选</a-radio-button>
-          </a-radio-group>
-          <a-radio-group v-model="ViewUI.selectPlacement">
-            <a-radio-button :value="'top'">top</a-radio-button>
-            <a-radio-button :value="'bottom'">bottom</a-radio-button>
-          </a-radio-group>
-        </div>
-        <div>
-          <Select
-            :disabled="ViewUI.selectDisabled"
-            :clearable="ViewUI.selectClearable"
-            :filterable="ViewUI.selectFilterable"
-            :size="ViewUI.selectSize"
-            class="w-60"
-            v-model="ViewUI.selectValue"
-            :multiple="ViewUI.selectMultiple"
-            :placement="ViewUI.selectPlacement"
+      </a-card>
+      <!-- ElementUI -->
+      <a-card id="2" class="my-5" title="ElementUI 选择框">
+        <!-- 通用API -->
+        <div id="2-1" class="mx-5 mt-3 pb-5 border-b">
+          <h3>通用API</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
           >
-            <Option
-              v-for="(item, index) in selectOptions"
-              :key="index"
-              :value="item.value"
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否禁用</span>
+              <a-switch v-model="ElementUI.disabled" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启清除</span>
+              <a-switch v-model="ElementUI.clearable" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启搜索</span>
+              <a-switch v-model="ElementUI.filterable" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置选择框大小</span>
+              <el-select size="small" class="w-36" v-model="ElementUI.size">
+                <el-option :value="'medium'">medium</el-option>
+                <el-option :value="'small'">small</el-option>
+                <el-option :value="'mini'">mini</el-option>
+              </el-select>
+            </div>
+          </div>
+        </div>
+        <!-- 标准选择框 -->
+        <div id="2-2" class="mx-5 mt-3 pb-5 border-b">
+          <h3>标准选择框</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
+          >
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启多选</span>
+              <a-switch
+                v-model="ElementUI.multiple"
+                @change="ChangeElementUISelect"
+              />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置可以选择最多的项目数</span>
+              <a-input-number class="w-24" v-model="ElementUI.multipleLimit" />
+            </div>
+          </div>
+          <div>
+            <el-select
+              :disabled="ElementUI.disabled"
+              :clearable="ElementUI.clearable"
+              :filterable="ElementUI.filterable"
+              :size="ElementUI.size"
+              class="w-60"
+              v-model="ElementUI.selectValue"
+              :multiple="ElementUI.multiple"
+              :multiple-limit="ElementUI.multipleLimit"
             >
-              {{ item.label }}
-            </Option>
-          </Select>
+              <el-option
+                v-for="(item, index) in selectOptions"
+                :key="index"
+                :label="item.label"
+                :value="item.value"
+              >
+              </el-option>
+            </el-select>
+          </div>
         </div>
-      </div>
-      <!-- 级联选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <h3>级联选择框</h3>
-        <div class="w-full flex flex-row flex-wrap justify-start items-center">
-          <a-radio-group v-model="ViewUI.cascaderTrigger">
-            <a-radio-button :value="'click'">click</a-radio-button>
-            <a-radio-button :value="'hover'">hover</a-radio-button>
-          </a-radio-group>
-        </div>
-        <div>
-          <Cascader
-            :disabled="ViewUI.selectDisabled"
-            :clearable="ViewUI.selectClearable"
-            :filterable="ViewUI.selectFilterable"
-            :size="ViewUI.selectSize"
-            class="w-60"
-            v-model="ViewUI.cascaderValue"
-            :data="cascaderOptions"
-            :trigger="ViewUI.cascaderTrigger"
+        <!-- 级联选择框 -->
+        <div id="2-3" class="mx-5 mt-3 pb-5 border-b">
+          <h3>级联选择框</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
           >
-          </Cascader>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否显示选中值的完整路径</span>
+              <a-switch v-model="ElementUI.showAllLevels" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置选项分隔符</span>
+              <a-input class="w-24" v-model="ElementUI.separator" />
+            </div>
+          </div>
+          <div>
+            <el-cascader
+              :disabled="ElementUI.disabled"
+              :clearable="ElementUI.clearable"
+              :filterable="ElementUI.filterable"
+              :size="ElementUI.size"
+              class="w-60"
+              v-model="ElementUI.cascaderValue"
+              :options="cascaderOptions"
+              :show-all-levels="ElementUI.showAllLevels"
+              :separator="ElementUI.separator"
+            >
+            </el-cascader>
+          </div>
         </div>
-      </div>
-      <!-- 树状选择框 -->
-      <div class="mx-5 mt-3 pb-5 border-b">
-        <div class="text-yellow-500">ViewUI框架的树状选择框需要付费使用</div>
-      </div>
-    </a-card>
+        <!-- 树状选择框 -->
+        <div id="2-4" class="mx-5 mt-3 pb-5 border-b">
+          <div class="text-red-500">ElementUI框架没有树状选择框</div>
+        </div>
+      </a-card>
+      <!-- AtUI -->
+      <a-card id="3" class="my-5" title="AtUI 选择框">
+        <!-- 标准选择框 -->
+        <div id="3-1" class="mx-5 mt-3 pb-5 border-b">
+          <h3>标准选择框</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
+          >
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否禁用</span>
+              <a-switch v-model="AtUI.disabled" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启清除</span>
+              <a-switch v-model="AtUI.clearable" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启搜索</span>
+              <a-switch v-model="AtUI.filterable" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启多选</span>
+              <a-switch v-model="AtUI.multiple" @change="ChangeAtUISelect" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置选择框大小</span>
+              <el-select size="small" class="w-36" v-model="AtUI.size">
+                <el-option :value="'large'">large</el-option>
+                <el-option :value="'normal'">normal</el-option>
+                <el-option :value="'small'">small</el-option>
+              </el-select>
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置选择框选项弹出位置</span>
+              <el-select size="small" class="w-36" v-model="AtUI.placement">
+                <el-option :value="'top'">top</el-option>
+                <el-option :value="'bottom'">bottom</el-option>
+              </el-select>
+            </div>
+          </div>
+          <div>
+            <at-select
+              class="w-60"
+              v-model="AtUI.selectValue"
+              :disabled="AtUI.disabled"
+              :clearable="AtUI.clearable"
+              :filterable="AtUI.filterable"
+              :multiple="AtUI.multiple"
+              :size="AtUI.size"
+              :placement="AtUI.placement"
+            >
+              <at-option
+                v-for="(item, index) in selectOptions"
+                :key="index"
+                :value="item.value"
+              >
+                {{ item.label }}
+              </at-option>
+            </at-select>
+          </div>
+        </div>
+        <!-- 级联选择框 -->
+        <div id="3-2" class="mx-5 mt-3 pb-5 border-b">
+          <div class="text-red-500">AtUI框架没有级联选择框</div>
+        </div>
+        <!-- 树状选择框 -->
+        <div id="3-3" class="mx-5 mt-3 pb-5 border-b">
+          <div class="text-red-500">AtUI框架没有树状选择框</div>
+        </div>
+      </a-card>
+      <!-- ViewUI -->
+      <a-card id="4" class="my-5" title="ViewUI 选择框">
+        <!-- 通用API -->
+        <div id="4-1" class="mx-5 mt-3 pb-5 border-b">
+          <h3>通用API</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
+          >
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否禁用</span>
+              <a-switch v-model="ViewUI.disabled" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启清除</span>
+              <a-switch v-model="ViewUI.clearable" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启搜索</span>
+              <a-switch v-model="ViewUI.filterable" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置选择框大小</span>
+              <el-select size="small" class="w-36" v-model="ViewUI.size">
+                <el-option :value="'default'">default</el-option>
+                <el-option :value="'large'">large</el-option>
+                <el-option :value="'small'">small</el-option>
+              </el-select>
+            </div>
+          </div>
+        </div>
+        <!-- 标准选择框 -->
+        <div id="4-2" class="mx-5 mt-3 pb-5 border-b">
+          <h3>标准选择框</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
+          >
+            <div class="my-2 mr-5">
+              <span class="mr-2">是否开启多选</span>
+              <a-switch v-model="ViewUI.multiple" />
+            </div>
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置选择框选项弹出位置</span>
+              <el-select size="small" class="w-36" v-model="ViewUI.placement">
+                <el-option :value="'top'">top</el-option>
+                <el-option :value="'bottom'">bottom</el-option>
+              </el-select>
+            </div>
+          </div>
+          <div>
+            <Select
+              :disabled="ViewUI.disabled"
+              :clearable="ViewUI.clearable"
+              :filterable="ViewUI.filterable"
+              :size="ViewUI.size"
+              class="w-60"
+              v-model="ViewUI.selectValue"
+              :multiple="ViewUI.multiple"
+              :placement="ViewUI.placement"
+            >
+              <Option
+                v-for="(item, index) in selectOptions"
+                :key="index"
+                :value="item.value"
+              >
+                {{ item.label }}
+              </Option>
+            </Select>
+          </div>
+        </div>
+        <!-- 级联选择框 -->
+        <div id="4-3" class="mx-5 mt-3 pb-5 border-b">
+          <h3>级联选择框</h3>
+          <div
+            class="w-full flex flex-row flex-wrap justify-start items-center"
+          >
+            <div class="my-2 mr-5">
+              <span class="mr-2">设置级联选择框次级选项触发方式</span>
+              <el-select size="small" class="w-36" v-model="ViewUI.trigger">
+                <el-option :value="'click'">click</el-option>
+                <el-option :value="'hover'">hover</el-option>
+              </el-select>
+            </div>
+          </div>
+          <div>
+            <Cascader
+              :disabled="ViewUI.disabled"
+              :clearable="ViewUI.clearable"
+              :filterable="ViewUI.filterable"
+              :size="ViewUI.size"
+              class="w-60"
+              v-model="ViewUI.cascaderValue"
+              :data="cascaderOptions"
+              :trigger="ViewUI.trigger"
+            >
+            </Cascader>
+          </div>
+        </div>
+        <!-- 树状选择框 -->
+        <div id="4-4" class="mx-5 mt-3 pb-5 border-b">
+          <div class="text-yellow-500">ViewUI框架的树状选择框需要付费使用</div>
+        </div>
+      </a-card>
+    </div>
+    <BasicAnchor
+      :parentList="this.AnchorInfo.selectAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 
@@ -471,66 +519,66 @@ export default {
       cascaderOptions: cascaderOptions,
       treeSelectOptions: treeSelectOptions,
       AntDesignVue: {
-        selectDisabled: false,
-        selectAllowClear: false,
-        selectShowSearch: false,
-        selectSize: "default",
+        disabled: false,
+        allowClear: false,
+        showSearch: false,
+        size: "default",
         selectValue: null,
-        selectMode: "default",
-        selectShowArrow: true,
-        selectDefaultActiveFirstOption: true,
-        selectDropdownMatchSelectWidth: true,
-        selectMaxTagCount: 5,
-        selectMaxTagTextLength: 5,
+        showArrow: false,
+        defaultActiveFirstOption: false,
+        dropdownMatchSelectWidth: false,
+        mode: "default",
+        maxTagCount: 5,
+        maxTagTextLength: 5,
         cascaderValue: null,
-        cascaderExpandTrigger: "hover",
+        expandTrigger: "hover",
         treeSelectValue: null,
-        treeSelectTreeCheckable: false,
+        treeCheckable: false,
       },
       ElementUI: {
-        selectDisabled: false,
-        selectClearable: false,
-        selectFilterable: false,
-        selectSize: "medium",
+        disabled: false,
+        clearable: false,
+        filterable: false,
+        size: "medium",
         selectValue: null,
-        selectMultiple: false,
-        selectMultipleLimit: 5,
+        multiple: false,
+        multipleLimit: 5,
         cascaderValue: null,
-        cascaderShowAllLevels: true,
-        cascaderSeparator: "/",
+        showAllLevels: false,
+        separator: "/",
       },
       AtUI: {
         selectValue: null,
-        selectDisabled: false,
-        selectClearable: false,
-        selectFilterable: false,
-        selectMultiple: false,
-        selectSize: "normal",
-        selectPlacement: "bottom",
+        disabled: false,
+        clearable: false,
+        filterable: false,
+        multiple: false,
+        size: "normal",
+        placement: "bottom",
       },
       ViewUI: {
-        selectDisabled: false,
-        selectClearable: false,
-        selectFilterable: false,
-        selectSize: "default",
+        disabled: false,
+        clearable: false,
+        filterable: false,
+        size: "default",
         selectValue: null,
-        selectMultiple: false,
-        selectPlacement: "bottom",
+        multiple: false,
+        placement: "bottom",
         cascaderValue: [],
-        cascaderTrigger: "click",
+        trigger: "click",
       },
     };
   },
   methods: {
     ChangeElementUISelect() {
-      if (this.ElementUI.selectMultiple) {
+      if (this.ElementUI.multiple) {
         this.ElementUI.selectValue = [];
       } else {
         this.ElementUI.selectValue = null;
       }
     },
     ChangeAtUISelect() {
-      if (this.AtUI.selectMultiple) {
+      if (this.AtUI.multiple) {
         this.AtUI.selectValue = [];
       } else {
         this.AtUI.selectValue = null;

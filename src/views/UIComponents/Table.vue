@@ -4,32 +4,35 @@
     <!-- AntDesignVue -->
     <a-card class="my-5" title="AntDesignVue 表格">
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="tableSize">
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'middle'">middle</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableBordered">
-          <a-radio-button :value="true">显示边框</a-radio-button>
-          <a-radio-button :value="false">隐藏边框</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableShowHeader">
-          <a-radio-button :value="true">显示表头</a-radio-button>
-          <a-radio-button :value="false">隐藏表头</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableLoading">
-          <a-radio-button :value="true">加载</a-radio-button>
-          <a-radio-button :value="false">完成</a-radio-button>
-        </a-radio-group>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否加载</span>
+          <a-switch v-model="AntDesignVue.loading" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否显示边框</span>
+          <a-switch v-model="AntDesignVue.bordered" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否显示表头</span>
+          <a-switch v-model="AntDesignVue.showHeader" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">设置表格大小</span>
+          <el-select size="small" class="w-36" v-model="AntDesignVue.size">
+            <el-option :value="'default'">default</el-option>
+            <el-option :value="'middle'">middle</el-option>
+            <el-option :value="'small'">small</el-option>
+          </el-select>
+        </div>
       </div>
       <div>
         <a-table
           :columns="tableColumnsA"
           :data-source="tableDataSource"
-          :size="tableSize"
-          :bordered="tableBordered"
-          :show-header="tableShowHeader"
-          :loading="tableLoading"
+          :bordered="AntDesignVue.bordered"
+          :show-header="AntDesignVue.showHeader"
+          :loading="AntDesignVue.loading"
+          :size="AntDesignVue.size"
         >
           <a slot="name" slot-scope="text">{{ text }}</a>
           <span slot="customTitle">姓名</span>
@@ -55,37 +58,40 @@
     <!-- ElementUI -->
     <a-card class="my-5" title="ElementUI 表格">
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="tableSizeE">
-          <a-radio-button :value="null">default</a-radio-button>
-          <a-radio-button :value="'medium'">medium</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-          <a-radio-button :value="'mini'">mini</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableBorderE">
-          <a-radio-button :value="true">显示边框</a-radio-button>
-          <a-radio-button :value="false">隐藏边框</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableShowHeaderE">
-          <a-radio-button :value="true">显示表头</a-radio-button>
-          <a-radio-button :value="false">隐藏表头</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableStripeE">
-          <a-radio-button :value="true">显示斑马条纹</a-radio-button>
-          <a-radio-button :value="false">隐藏斑马条纹</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableHighlightCurrentRowE">
-          <a-radio-button :value="true">高亮当前项</a-radio-button>
-          <a-radio-button :value="false">不高亮当前项</a-radio-button>
-        </a-radio-group>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否显示边框</span>
+          <a-switch v-model="ElementUI.border" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否显示表头</span>
+          <a-switch v-model="ElementUI.showHeader" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否显示斑马条纹</span>
+          <a-switch v-model="ElementUI.stripe" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否高亮显示当前项</span>
+          <a-switch v-model="ElementUI.highlightCurrentRow" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">设置表格大小</span>
+          <el-select size="small" class="w-36" v-model="ElementUI.size">
+            <el-option :value="null">default</el-option>
+            <el-option :value="'middle'">middle</el-option>
+            <el-option :value="'small'">small</el-option>
+            <el-option :value="'mini'">mini</el-option>
+          </el-select>
+        </div>
       </div>
       <div>
         <el-table
           :data="tableDataSource"
-          :size="tableSizeE"
-          :border="tableBorderE"
-          :show-header="tableShowHeaderE"
-          :stripe="tableStripeE"
-          :highlight-current-row="tableHighlightCurrentRowE"
+          :border="ElementUI.border"
+          :show-header="ElementUI.showHeader"
+          :stripe="ElementUI.stripe"
+          :highlight-current-row="ElementUI.highlightCurrentRow"
+          :size="ElementUI.size"
         >
           <el-table-column label="姓名" width="200">
             <template slot-scope="scope">
@@ -116,60 +122,60 @@
     <!-- AtUI -->
     <a-card class="my-5" title="AtUI 表格">
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="tableSizeA">
-          <a-radio-button :value="'large'">large</a-radio-button>
-          <a-radio-button :value="'normal'">normal</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableBorderA">
-          <a-radio-button :value="true">显示边框</a-radio-button>
-          <a-radio-button :value="false">隐藏边框</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableStripeA">
-          <a-radio-button :value="true">显示斑马条纹</a-radio-button>
-          <a-radio-button :value="false">隐藏斑马条纹</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableOptionalA">
-          <a-radio-button :value="true">开启选择</a-radio-button>
-          <a-radio-button :value="false">关闭选择</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tablePaginationA">
-          <a-radio-button :value="true">开启分页</a-radio-button>
-          <a-radio-button :value="false">关闭分页</a-radio-button>
-        </a-radio-group>
-        <div v-show="tablePaginationA" class="my-2 mr-5">
-          <span class="mr-2">设置分页条数</span>
-          <a-input-number class="w-24" v-model="tablePageSizeA" />
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否显示边框</span>
+          <a-switch v-model="AtUI.border" />
         </div>
-        <a-radio-group v-show="tablePaginationA" v-model="tableShowPageTotalA">
-          <a-radio-button :value="true">显示总条数</a-radio-button>
-          <a-radio-button :value="false">隐藏总条数</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-show="tablePaginationA" v-model="tableShowPageSizerA">
-          <a-radio-button :value="true">显示更改页数</a-radio-button>
-          <a-radio-button :value="false">隐藏更改页数</a-radio-button>
-        </a-radio-group>
-        <a-radio-group
-          v-show="tablePaginationA"
-          v-model="tableShowPageQuickjumpA"
-        >
-          <a-radio-button :value="true">显示快速跳转</a-radio-button>
-          <a-radio-button :value="false">隐藏快速跳转</a-radio-button>
-        </a-radio-group>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否显示斑马条纹</span>
+          <a-switch v-model="AtUI.stripe" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否开启选择功能</span>
+          <a-switch v-model="AtUI.optional" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否开启分页功能</span>
+          <a-switch v-model="AtUI.pagination" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">分页时是否显示总条数</span>
+          <a-switch v-model="AtUI.showPageTotal" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">分页时是否显示更改页数</span>
+          <a-switch v-model="AtUI.showPageSizer" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">分页时是否显示快速跳转</span>
+          <a-switch v-model="AtUI.showPageQuickjump" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">设置表格大小</span>
+          <el-select size="small" class="w-36" v-model="AtUI.size">
+            <el-option :value="'large'">large</el-option>
+            <el-option :value="'normal'">normal</el-option>
+            <el-option :value="'small'">small</el-option>
+          </el-select>
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">设置分页条数</span>
+          <a-input-number class="w-24" v-model="AtUI.pageSize" />
+        </div>
       </div>
       <div>
         <at-table
           :columns="tableColumnsB"
           :data="tableDataSource"
-          :size="tableSizeA"
-          :border="tableBorderA"
-          :stripe="tableStripeA"
-          :optional="tableOptionalA"
-          :pagination="tablePaginationA"
-          :page-size="tablePageSizeA"
-          :show-page-total="tableShowPageTotalA"
-          :show-page-sizer="tableShowPageSizerA"
-          :show-page-quickjump="tableShowPageQuickjumpA"
+          :border="AtUI.border"
+          :stripe="AtUI.stripe"
+          :optional="AtUI.optional"
+          :pagination="AtUI.pagination"
+          :show-page-total="AtUI.showPageTotal"
+          :show-page-sizer="AtUI.showPageSizer"
+          :show-page-quickjump="AtUI.showPageQuickjump"
+          :size="AtUI.size"
+          :page-size="AtUI.pageSize"
         >
         </at-table>
       </div>
@@ -177,47 +183,50 @@
     <!-- ViewUI -->
     <a-card class="my-5" title="ViewUI 表格">
       <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="tableSizeV">
-          <a-radio-button :value="'large'">large</a-radio-button>
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableBorderV">
-          <a-radio-button :value="true">显示边框</a-radio-button>
-          <a-radio-button :value="false">隐藏边框</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableShowHeaderV">
-          <a-radio-button :value="true">显示表头</a-radio-button>
-          <a-radio-button :value="false">隐藏表头</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableStripeV">
-          <a-radio-button :value="true">显示斑马条纹</a-radio-button>
-          <a-radio-button :value="false">隐藏斑马条纹</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableLoadingV">
-          <a-radio-button :value="true">加载</a-radio-button>
-          <a-radio-button :value="false">完成</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableHighlightCurrentRowV">
-          <a-radio-button :value="true">高亮当前行</a-radio-button>
-          <a-radio-button :value="false">不高亮当前行</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tableDisabledHoverV">
-          <a-radio-button :value="true">关闭鼠标悬停高亮</a-radio-button>
-          <a-radio-button :value="false">开启鼠标悬停高亮</a-radio-button>
-        </a-radio-group>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否加载</span>
+          <a-switch v-model="ViewUI.loading" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否显示边框</span>
+          <a-switch v-model="ViewUI.border" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否显示表头</span>
+          <a-switch v-model="ViewUI.showHeader" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否显示斑马条纹</span>
+          <a-switch v-model="ViewUI.stripe" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否高亮显示当前行</span>
+          <a-switch v-model="ViewUI.highlightCurrentRow" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">是否关闭鼠标悬停时高亮显示</span>
+          <a-switch v-model="ViewUI.disabledHover" />
+        </div>
+        <div class="my-2 mr-5">
+          <span class="mr-2">设置表格大小</span>
+          <el-select size="small" class="w-36" v-model="ViewUI.size">
+            <el-option :value="'default'">default</el-option>
+            <el-option :value="'large'">large</el-option>
+            <el-option :value="'small'">small</el-option>
+          </el-select>
+        </div>
       </div>
       <div>
         <Table
           :columns="tableColumnsB"
           :data="tableDataSource"
-          :size="tableSizeV"
-          :border="tableBorderV"
-          :show-header="tableShowHeaderV"
-          :stripe="tableStripeV"
-          :loading="tableLoadingV"
-          :highlight-row="tableHighlightCurrentRowV"
-          :disabled-hover="tableDisabledHoverV"
+          :loading="ViewUI.loading"
+          :border="ViewUI.border"
+          :show-header="ViewUI.showHeader"
+          :stripe="ViewUI.stripe"
+          :highlight-row="ViewUI.highlightCurrentRow"
+          :disabled-hover="ViewUI.disabledHover"
+          :size="ViewUI.size"
         >
         </Table>
       </div>
@@ -312,35 +321,39 @@ export default {
       tableDataSource: tableDataSource,
       tableColumnsA: tableColumnsA,
       tableColumnsB: tableColumnsB,
-      // AntDesignVue
-      tableSize: "default",
-      tableBordered: true,
-      tableShowHeader: true,
-      tableLoading: false,
-      // ElementUI
-      tableSizeE: null,
-      tableBorderE: true,
-      tableShowHeaderE: true,
-      tableStripeE: false,
-      tableHighlightCurrentRowE: false,
-      // AtUI
-      tableSizeA: "normal",
-      tableBorderA: true,
-      tableStripeA: false,
-      tableOptionalA: false,
-      tablePaginationA: false,
-      tablePageSizeA: 10,
-      tableShowPageTotalA: true,
-      tableShowPageSizerA: true,
-      tableShowPageQuickjumpA: true,
-      // ViewUI
-      tableSizeV: "default",
-      tableBorderV: true,
-      tableShowHeaderV: true,
-      tableStripeV: false,
-      tableLoadingV: false,
-      tableHighlightCurrentRowV: false,
-      tableDisabledHoverV: false,
+      AntDesignVue: {
+        loading: false,
+        bordered: false,
+        showHeader: false,
+        size: "default",
+      },
+      ElementUI: {
+        border: false,
+        showHeader: false,
+        stripe: false,
+        highlightCurrentRow: false,
+        size: null,
+      },
+      AtUI: {
+        border: false,
+        stripe: false,
+        optional: false,
+        pagination: false,
+        showPageTotal: false,
+        showPageSizer: false,
+        showPageQuickjump: false,
+        size: "normal",
+        pageSize: 10,
+      },
+      ViewUI: {
+        loading: false,
+        border: false,
+        showHeader: false,
+        stripe: false,
+        highlightCurrentRow: false,
+        disabledHover: false,
+        size: "default",
+      },
     };
   },
   methods: {},
