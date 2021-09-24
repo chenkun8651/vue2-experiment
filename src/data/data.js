@@ -1008,4 +1008,180 @@ export const AnchorInfo = {
             children: null,
         },
     ],
+    tableAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 表格",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 表格",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 表格",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 表格",
+            children: null,
+        },
+    ],
+    tabsAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 标签页",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 标签页",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 标签页",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 标签页",
+            children: null,
+        },
+    ],
+    tagAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 标签",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 标签",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 标签",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 标签",
+            children: null,
+        },
+    ],
+    timelineAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 时间轴",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 时间轴",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 时间轴",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 时间轴",
+            children: null,
+        },
+    ],
+    tooltipAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 文字提示",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 文字提示",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 文字提示",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 文字提示",
+            children: null,
+        },
+    ],
+    transferAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 穿梭框",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 穿梭框",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 穿梭框",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 穿梭框",
+            children: null,
+        },
+    ],
+    treeAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 树形控件",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 树形控件",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 树形控件",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 树形控件",
+            children: null,
+        },
+    ],
+    uploadAnchor: [
+        {
+            href: "#1",
+            title: "AntDesignVue 上传",
+            children: null,
+        },
+        {
+            href: "#2",
+            title: "ElementUI 上传",
+            children: null,
+        },
+        {
+            href: "#3",
+            title: "AtUI 上传",
+            children: null,
+        },
+        {
+            href: "#4",
+            title: "ViewUI 上传",
+            children: null,
+        },
+    ],
 }

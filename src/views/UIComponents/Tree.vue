@@ -1,88 +1,95 @@
 <template>
-  <!-- 树形控件 -->
-  <div>
-    <!-- AntDesignVue -->
-    <a-card class="my-5" title="AntDesignVue 树形控件">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="treeDisabled">
-          <a-radio-button :value="true">禁用</a-radio-button>
-          <a-radio-button :value="false">启用</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="treeShowLine">
-          <a-radio-button :value="true">显示连接线</a-radio-button>
-          <a-radio-button :value="false">隐藏连接线</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="treeCheckable">
-          <a-radio-button :value="true">开启节点复选功能</a-radio-button>
-          <a-radio-button :value="false">关闭节点复选功能</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="treeBlockNode">
-          <a-radio-button :value="true">开启节点占据一行</a-radio-button>
-          <a-radio-button :value="false">关闭节点占据一行</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="treeAutoExpandParent">
-          <a-radio-button :value="true">开启展开父节点</a-radio-button>
-          <a-radio-button :value="false">关闭展开父节点</a-radio-button>
-        </a-radio-group>
-      </div>
-      <div>
-        <a-tree
-          :tree-data="treeTreeData"
-          :disabled="treeDisabled"
-          :show-line="treeShowLine"
-          :checkable="treeCheckable"
-          :block-node="treeBlockNode"
-          :auto-expand-parent="treeAutoExpandParent"
-        >
-        </a-tree>
-      </div>
-    </a-card>
-    <!-- ElementUI -->
-    <a-card class="my-5" title="ElementUI 树形控件">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="treeShowCheckboxE">
-          <a-radio-button :value="true">开启节点复选功能</a-radio-button>
-          <a-radio-button :value="false">关闭节点复选功能</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="treeHighlightCurrentE">
-          <a-radio-button :value="true">显示当前节点高亮</a-radio-button>
-          <a-radio-button :value="false">隐藏当前节点高亮</a-radio-button>
-        </a-radio-group>
-      </div>
-      <div>
-        <el-tree
-          :data="treeTreeData"
-          :highlight-current="treeHighlightCurrentE"
-          :show-checkbox="treeShowCheckboxE"
-        >
-        </el-tree>
-      </div>
-    </a-card>
-    <!-- AtUI -->
-    <a-card class="my-5" title="AtUI 树形控件">
-      <div class="text-red-500">AtUI框架没有树形控件</div>
-    </a-card>
-    <!-- ViewUI -->
-    <a-card class="my-5" title="ViewUI 树形控件">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="treeShowCheckboxV">
-          <a-radio-button :value="true">开启节点复选功能</a-radio-button>
-          <a-radio-button :value="false">关闭节点复选功能</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="treeExpandNode">
-          <a-radio-button :value="true">开启点击标题展开</a-radio-button>
-          <a-radio-button :value="false">关闭点击标题展开</a-radio-button>
-        </a-radio-group>
-      </div>
-      <div>
-        <Tree
-          :data="treeTreeData"
-          :show-checkbox="treeShowCheckboxV"
-          :expand-node="treeExpandNode"
-        >
-        </Tree>
-      </div>
-    </a-card>
+  <div class="flex" ref="box">
+    <!-- 树形控件 -->
+    <div class="w-9/12">
+      <!-- AntDesignVue -->
+      <a-card id="1" class="my-5" title="AntDesignVue 树形控件">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否禁用</span>
+            <a-switch v-model="AntDesignVue.disabled" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示连接线</span>
+            <a-switch v-model="AntDesignVue.showLine" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启节点复选功能</span>
+            <a-switch v-model="AntDesignVue.checkable" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启节点单独占据一行功能</span>
+            <a-switch v-model="AntDesignVue.blockNode" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否自动展开父节点</span>
+            <a-switch v-model="AntDesignVue.autoExpandParent" />
+          </div>
+        </div>
+        <div>
+          <a-tree
+            :tree-data="treeTreeData"
+            :disabled="AntDesignVue.disabled"
+            :show-line="AntDesignVue.showLine"
+            :checkable="AntDesignVue.checkable"
+            :block-node="AntDesignVue.blockNode"
+            :auto-expand-parent="AntDesignVue.autoExpandParent"
+          >
+          </a-tree>
+        </div>
+      </a-card>
+      <!-- ElementUI -->
+      <a-card id="2" class="my-5" title="ElementUI 树形控件">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启节点复选功能</span>
+            <a-switch v-model="ElementUI.showCheckbox" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否高亮显示当前节点</span>
+            <a-switch v-model="ElementUI.highlightCurrent" />
+          </div>
+        </div>
+        <div>
+          <el-tree
+            :data="treeTreeData"
+            :show-checkbox="ElementUI.showCheckbox"
+            :highlight-current="ElementUI.highlightCurrent"
+          >
+          </el-tree>
+        </div>
+      </a-card>
+      <!-- AtUI -->
+      <a-card id="3" class="my-5" title="AtUI 树形控件">
+        <div class="text-red-500">AtUI框架没有树形控件</div>
+      </a-card>
+      <!-- ViewUI -->
+      <a-card id="4" class="my-5" title="ViewUI 树形控件">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启节点复选功能</span>
+            <a-switch v-model="ViewUI.showCheckbox" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启点击标题展开功能</span>
+            <a-switch v-model="ViewUI.expandNode" />
+          </div>
+        </div>
+        <div>
+          <Tree
+            :data="treeTreeData"
+            :show-checkbox="ViewUI.showCheckbox"
+            :expand-node="ViewUI.expandNode"
+          >
+          </Tree>
+        </div>
+      </a-card>
+    </div>
+    <BasicAnchor
+      :parentList="this.AnchorInfo.treeAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 
@@ -171,18 +178,21 @@ export default {
   data() {
     return {
       treeTreeData: treeTreeData,
-      // AntDesignVue
-      treeDisabled: false,
-      treeShowLine: true,
-      treeCheckable: true,
-      treeBlockNode: true,
-      treeAutoExpandParent: true,
-      // ElementUI
-      treeShowCheckboxE: true,
-      treeHighlightCurrentE: true,
-      // ViewUI
-      treeShowCheckboxV: true,
-      treeExpandNode: true,
+      AntDesignVue: {
+        disabled: false,
+        showLine: false,
+        checkable: false,
+        blockNode: false,
+        autoExpandParent: false,
+      },
+      ElementUI: {
+        showCheckbox: false,
+        highlightCurrent: false,
+      },
+      ViewUI: {
+        showCheckbox: false,
+        expandNode: false,
+      },
     };
   },
   methods: {},

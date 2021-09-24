@@ -1,159 +1,191 @@
 <template>
-  <!-- 标签 -->
-  <div>
-    <!-- AntDesignVue -->
-    <a-card class="my-5" title="AntDesignVue 标签">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="tagVisible">
-          <a-radio-button :value="true">显示标签</a-radio-button>
-          <a-radio-button :value="false">隐藏标签</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tagClosable">
-          <a-radio-button :value="true">显示关闭按钮</a-radio-button>
-          <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置标签颜色（十六进制码）</span>
-          <a-input class="w-24" v-model="tagColor" />
+  <div class="flex" ref="box">
+    <!-- 标签 -->
+    <div class="w-9/12">
+      <!-- AntDesignVue -->
+      <a-card id="1" class="my-5" title="AntDesignVue 标签">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示标签</span>
+            <a-switch v-model="AntDesignVue.visible" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否关闭按钮</span>
+            <a-switch v-model="AntDesignVue.closable" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签颜色（十六进制码）</span>
+            <a-input class="w-24" v-model="AntDesignVue.color" />
+          </div>
         </div>
-      </div>
-      <div>
-        <a-tag :closable="tagClosable" :color="tagColor" :visible="tagVisible">
-          标签
-        </a-tag>
-      </div>
-    </a-card>
-    <!-- ElementUI -->
-    <a-card class="my-5" title="ElementUI 标签">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="tagDisableTransitionsE">
-          <a-radio-button :value="true">开启渐变动画</a-radio-button>
-          <a-radio-button :value="false">关闭渐变动画</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tagSizeE">
-          <a-radio-button :value="null">large</a-radio-button>
-          <a-radio-button :value="'medium'">medium</a-radio-button>
-          <a-radio-button :value="'small'">small</a-radio-button>
-          <a-radio-button :value="'mini'">mini</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tagEffectE">
-          <a-radio-button :value="'light'">light</a-radio-button>
-          <a-radio-button :value="'dark'">dark</a-radio-button>
-          <a-radio-button :value="'plain'">plain</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tagTypeE">
-          <a-radio-button :value="null">default</a-radio-button>
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'info'">info</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-          <a-radio-button :value="'danger'">danger</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tagClosableE">
-          <a-radio-button :value="true">显示关闭按钮</a-radio-button>
-          <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tagHitE">
-          <a-radio-button :value="true">显示边框描线</a-radio-button>
-          <a-radio-button :value="false">隐藏边框描线</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置标签背景色（十六进制码）</span>
-          <a-input class="w-24" v-model="tagColorE" />
+        <div>
+          <a-tag
+            :visible="AntDesignVue.visible"
+            :closable="AntDesignVue.closable"
+            :color="AntDesignVue.color"
+          >
+            标签
+          </a-tag>
         </div>
-      </div>
-      <div>
-        <el-tag
-          :type="tagTypeE"
-          :closable="tagClosableE"
-          :disable-transitions="tagDisableTransitionsE"
-          :hit="tagHitE"
-          :color="tagColorE"
-          :size="tagSizeE"
-          :effect="tagEffectE"
-        >
-          标签
-        </el-tag>
-      </div>
-    </a-card>
-    <!-- AtUI -->
-    <a-card class="my-5" title="AtUI 标签">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="tagColorA">
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'primary'">primary</a-radio-button>
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'error'">error</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-          <a-radio-button :value="'info'">info</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="tagClosableA">
-          <a-radio-button :value="true">显示关闭按钮</a-radio-button>
-          <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置标签颜色（十六进制码）</span>
-          <a-input class="w-24" v-model="tagColorA" />
+      </a-card>
+      <!-- ElementUI -->
+      <a-card id="2" class="my-5" title="ElementUI 标签">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启渐变动画</span>
+            <a-switch v-model="ElementUI.disableTransitions" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否关闭按钮</span>
+            <a-switch v-model="ElementUI.closable" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示边框线</span>
+            <a-switch v-model="ElementUI.hit" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签主题</span>
+            <el-select size="small" class="w-36" v-model="ElementUI.effect">
+              <el-option :value="'light'">light</el-option>
+              <el-option :value="'dark'">dark</el-option>
+              <el-option :value="'plain'">plain</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签类型</span>
+            <el-select size="small" class="w-36" v-model="ElementUI.type">
+              <el-option :value="null">default</el-option>
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'warning'">warning</el-option>
+              <el-option :value="'danger'">danger</el-option>
+              <el-option :value="'info'">info</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签大小</span>
+            <el-select size="small" class="w-36" v-model="ElementUI.size">
+              <el-option :value="null">default</el-option>
+              <el-option :value="'medium'">medium</el-option>
+              <el-option :value="'small'">small</el-option>
+              <el-option :value="'mini'">mini</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签背景色（十六进制码）</span>
+            <a-input class="w-24" v-model="ElementUI.color" />
+          </div>
         </div>
-      </div>
-      <div>
-        <at-tag :closable="tagClosableA" :color="tagColorA">标签</at-tag>
-      </div>
-    </a-card>
-    <!-- ViewUI -->
-    <a-card class="my-5" title="ViewUI 标签">
-      <div class="w-full flex flex-row flex-wrap justify-start items-center">
-        <a-radio-group v-model="TagFadeV">
-          <a-radio-button :value="true">开启渐变动画</a-radio-button>
-          <a-radio-button :value="false">关闭渐变动画</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="TagSizeV">
-          <a-radio-button :value="'large'">large</a-radio-button>
-          <a-radio-button :value="'medium'">medium</a-radio-button>
-          <a-radio-button :value="'default'">default</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="TagTypeV">
-          <a-radio-button :value="null">default</a-radio-button>
-          <a-radio-button :value="'border'">border</a-radio-button>
-          <a-radio-button :value="'dot'">dot</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="TagColorV">
-          <a-radio-button :value="'default'">default</a-radio-button>
-          <a-radio-button :value="'primary'">primary</a-radio-button>
-          <a-radio-button :value="'success'">success</a-radio-button>
-          <a-radio-button :value="'error'">error</a-radio-button>
-          <a-radio-button :value="'warning'">warning</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-model="TagClosableV">
-          <a-radio-button :value="true">显示关闭按钮</a-radio-button>
-          <a-radio-button :value="false">隐藏关闭按钮</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-show="TagTypeV === null" v-model="TagCheckableV">
-          <a-radio-button :value="true">开启标签选择</a-radio-button>
-          <a-radio-button :value="false">关闭标签选择</a-radio-button>
-        </a-radio-group>
-        <a-radio-group v-show="TagTypeV === null" v-model="TagCheckedV">
-          <a-radio-button :value="true">选中标签状态</a-radio-button>
-          <a-radio-button :value="false">未选中标签状态</a-radio-button>
-        </a-radio-group>
-        <div class="my-2 mr-5">
-          <span class="mr-2">设置标签颜色（十六进制码）</span>
-          <a-input class="w-24" v-model="TagColorV" />
+        <div>
+          <el-tag
+            :disable-transitions="ElementUI.disableTransitions"
+            :closable="ElementUI.closable"
+            :hit="ElementUI.hit"
+            :effect="ElementUI.effect"
+            :type="ElementUI.type"
+            :size="ElementUI.size"
+            :color="ElementUI.color"
+          >
+            标签
+          </el-tag>
         </div>
-      </div>
-      <div>
-        <Tag
-          :type="TagTypeV"
-          :color="TagColorV"
-          :closable="TagClosableV"
-          :fade="TagFadeV"
-          :size="TagSizeV"
-          :checkable="TagCheckableV"
-          :checked="TagCheckedV"
-        >
-          标签
-        </Tag>
-      </div>
-    </a-card>
+      </a-card>
+      <!-- AtUI -->
+      <a-card id="3" class="my-5" title="AtUI 标签">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示关闭按钮</span>
+            <a-switch v-model="AtUI.closable" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签颜色（预设值）</span>
+            <el-select size="small" class="w-36" v-model="AtUI.color">
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'primary'">primary</el-option>
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'warning'">warning</el-option>
+              <el-option :value="'error'">error</el-option>
+              <el-option :value="'info'">info</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签颜色（十六进制码）</span>
+            <a-input class="w-24" v-model="AtUI.color" />
+          </div>
+        </div>
+        <div>
+          <at-tag :closable="AtUI.closable" :color="AtUI.color">标签</at-tag>
+        </div>
+      </a-card>
+      <!-- ViewUI -->
+      <a-card id="4" class="my-5" title="ViewUI 标签">
+        <div class="w-full flex flex-row flex-wrap justify-start items-center">
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启渐变动画</span>
+            <a-switch v-model="ViewUI.fade" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否开启标签选择</span>
+            <a-switch v-model="ViewUI.checkable" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示关闭按钮</span>
+            <a-switch v-model="ViewUI.closable" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">是否显示选中标签状态</span>
+            <a-switch v-model="ViewUI.checked" />
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签类型</span>
+            <el-select size="small" class="w-36" v-model="ViewUI.type">
+              <el-option :value="null">default</el-option>
+              <el-option :value="'border'">border</el-option>
+              <el-option :value="'dot'">dot</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签大小</span>
+            <el-select size="small" class="w-36" v-model="ViewUI.size">
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'large'">large</el-option>
+              <el-option :value="'medium'">medium</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签颜色</span>
+            <el-select size="small" class="w-36" v-model="ViewUI.color">
+              <el-option :value="'default'">default</el-option>
+              <el-option :value="'primary'">primary</el-option>
+              <el-option :value="'success'">success</el-option>
+              <el-option :value="'warning'">warning</el-option>
+              <el-option :value="'error'">error</el-option>
+            </el-select>
+          </div>
+          <div class="my-2 mr-5">
+            <span class="mr-2">设置标签颜色（十六进制码）</span>
+            <a-input class="w-24" v-model="ViewUI.color" />
+          </div>
+        </div>
+        <div>
+          <Tag
+            :fade="ViewUI.fade"
+            :checkable="ViewUI.checkable"
+            :closable="ViewUI.closable"
+            :checked="ViewUI.checked"
+            :type="ViewUI.type"
+            :size="ViewUI.size"
+            :color="ViewUI.color"
+          >
+            标签
+          </Tag>
+        </div>
+      </a-card>
+    </div>
+    <BasicAnchor
+      :parentList="this.AnchorInfo.tagAnchor"
+      :parentRefs="this.$refs"
+    >
+    </BasicAnchor>
   </div>
 </template>
 
@@ -161,29 +193,33 @@
 export default {
   data() {
     return {
-      // AntDesignVue
-      tagVisible: true,
-      tagClosable: false,
-      tagColor: "blue",
-      // ElementUI
-      tagTypeE: null,
-      tagClosableE: false,
-      tagDisableTransitionsE: false,
-      tagHitE: false,
-      tagSizeE: null,
-      tagEffectE: "light",
-      tagColorE: null,
-      // AtUI
-      tagClosableA: false,
-      tagColorA: "default",
-      // ViewUI
-      TagTypeV: null,
-      TagColorV: "default",
-      TagClosableV: false,
-      TagFadeV: true,
-      TagSizeV: "default",
-      TagCheckableV: false,
-      TagCheckedV: true,
+      AntDesignVue: {
+        visible: false,
+        closable: false,
+        color: "blue",
+      },
+      ElementUI: {
+        disableTransitions: false,
+        closable: false,
+        hit: false,
+        effect: "light",
+        type: null,
+        size: null,
+        color: "blue",
+      },
+      AtUI: {
+        closable: false,
+        color: "primary",
+      },
+      ViewUI: {
+        fade: false,
+        checkable: false,
+        closable: false,
+        checked: false,
+        type: null,
+        size: "default",
+        color: "primary",
+      },
     };
   },
   methods: {},
