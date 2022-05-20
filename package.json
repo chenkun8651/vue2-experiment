@@ -1,11 +1,11 @@
 {
-  "name": "vue-experiment",
+  "name": "vue2-experiment",
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "dev": "vue-cli-service serve"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@tailwindcss/postcss7-compat": "^2.2.9",
@@ -17,6 +17,7 @@
     "element-ui": "^2.15.5",
     "postcss": "^7.0.36",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.9",
+    "tesseract.js": "^2.1.5",
     "view-design": "^4.6.1",
     "vue": "^2.6.14",
     "vue-router": "^3.5.2"
